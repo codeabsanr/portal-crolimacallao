@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Colegio Regional de Obstetras III Lima-Callao - Inicio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="./assets/js/tailwind-config.js"></script>
+    <!-- Global Styles -->
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-sans antialiased transition-colors duration-200">
+    <div class="bg-secondary text-white py-2 px-4 text-sm hidden md:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center"><span class="material-icons-outlined text-base mr-1">phone</span> +51
+                    982 520 891</span>
+                <span class="flex items-center"><span class="material-icons-outlined text-base mr-1">email</span>
+                    tramitedocumentario@crolimacallao.org.pe</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a class="hover:underline" href="admin/index.html">Intranet / Mi Cuenta</a>
+                <a class="hover:underline" href="tramites/mesa-partes.html">Mesa de Partes</a>
+            </div>
+        </div>
+    </div>
+    <a href="#main" class="sr-only focus:not-sr-only bg-primary text-white px-4 py-2 absolute top-0 left-0 z-50">Saltar al contenido principal</a>
+    <header
+        class="bg-surface-light dark:bg-surface-dark shadow-md sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center group">
+                        <img src="./assets/img/logo-text.png" alt="Colegio Regional de Obstetras III Lima-Callao"
+                            class="h-16 lg:h-20 w-auto transition-transform group-hover:scale-[1.02]">
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-6 items-center">
+                    <a class="text-primary font-bold border-b-2 border-primary pb-1" href="index.html">Inicio</a>
+                    <a class="text-slate-700 dark:text-slate-200 font-medium py-2" href="institucional/index.html">Institución</a>
+                    <a class="text-slate-700 dark:text-slate-200 font-medium py-2" href="tramites/index.html">Trámites</a>
+                    <a class="text-slate-700 dark:text-slate-200 font-medium py-2" href="colegiados/index.html">Colegiados</a>
+                    <a class="text-slate-700 dark:text-slate-200 font-medium py-2" href="capacitacion/index.html">Capacitación</a>
+                    <a class="text-slate-700 dark:text-slate-200 font-medium py-2" href="normativa/index.html">Normativa</a>
+                    <a class="text-slate-700 dark:text-slate-200 font-medium py-2" href="contacto/index.html">Contacto</a>
+                </nav>
+                <div class="hidden md:flex items-center">
+                    <a class="inline-flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary shadow-sm transition-colors"
+                        href="admin/index.html">
+                        <span class="material-icons-outlined mr-2">person</span>
+                        Mi Cuenta
+                    </a>
+                </div>
+                <!-- Menú Móvil Botón -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-500 dark:text-slate-300 hover:text-slate-700 focus:outline-none p-2"
+                        type="button">
+                        <span class="sr-only">Abrir menú</span>
+                        <span class="material-icons-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Full-screen -->
+        <div id="mobile-menu-container" class="fixed inset-0 z-[100] bg-primary transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col h-screen overflow-y-auto">
+            <div class="flex justify-end p-6">
+                <button id="close-mobile-menu" class="text-white hover:text-gray-200 focus:outline-none p-2" aria-label="Cerrar menú">
+                    <span class="material-icons-outlined text-4xl">close</span>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col px-6 pb-6 space-y-6 flex-grow">
+                <a href="index.html" class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Inicio <span class="material-icons-outlined">chevron_right</span></a>
+                <a href="institucional/index.html" class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Institución <span class="material-icons-outlined">chevron_right</span></a>
+                <a href="tramites/index.html" class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Trámites <span class="material-icons-outlined">chevron_right</span></a>
+                <a href="colegiados/index.html" class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Colegiados <span class="material-icons-outlined">chevron_right</span></a>
+                <a href="capacitacion/index.html" class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Capacitación <span class="material-icons-outlined">chevron_right</span></a>
+                <a href="normativa/index.html" class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Normativa <span class="material-icons-outlined">chevron_right</span></a>
+                <a href="contacto/index.html" class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Contacto <span class="material-icons-outlined">chevron_right</span></a>
+
+                <div class="pt-8 space-y-4">
+                    <h3 class="text-white/70 text-sm uppercase tracking-wider mb-4">Accesos Rápidos</h3>
+                    <a href="admin/index.html" class="flex justify-between items-center bg-transparent border border-white text-white p-4 rounded-sm hover:bg-white/10 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <span class="material-icons-outlined text-2xl">person</span>
+                            <span class="font-bold text-lg">Mi Cuenta</span>
+                        </div>
+                        <span class="material-icons-outlined border border-white p-1 rounded-sm">arrow_forward</span>
+                    </a>
+                    <a href="tramites/mesa-partes.html" class="flex justify-between items-center bg-transparent border border-white text-white p-4 rounded-sm hover:bg-white/10 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <span class="material-icons-outlined text-2xl">folder_open</span>
+                            <span class="font-bold text-lg">Mesa de Partes</span>
+                        </div>
+                        <span class="material-icons-outlined border border-white p-1 rounded-sm">arrow_forward</span>
+                    </a>
+                    <a href="https://crolimacallao.org.pe/BBB/libro.php" target="_blank" class="flex justify-between items-center bg-transparent border border-white text-white p-4 rounded-sm hover:bg-white/10 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <span class="material-icons-outlined text-2xl">menu_book</span>
+                            <span class="font-bold text-lg">Libro de Reclamaciones</span>
+                        </div>
+                        <span class="material-icons-outlined border border-white p-1 rounded-sm">launch</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <section class="relative bg-white dark:bg-background-dark overflow-hidden">
+            <div
+                class="absolute right-0 top-0 h-full w-1/3 bg-slate-100 dark:bg-slate-800 skew-x-12 transform origin-top-right z-0 hidden lg:block">
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative z-10">
+                <div class="lg:w-2/3">
+                    <div
+                        class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-primary uppercase bg-red-100 dark:bg-red-900/30 rounded-sm">
+                        Portal Institucional Accesible
+                    </div>
+                    <h1 class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
+                        Servicios y trámites para la <br class="hidden lg:block" />
+                        <span class="text-primary">Comunidad Obstétrica</span>
+                    </h1>
+                    <p class="text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-2xl leading-relaxed">
+                        Bienvenido al portal del CRO III Lima-Callao. Realice sus consultas, inscripciones y trámites
+                        administrativos de manera rápida y sencilla.
+                    </p>
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark p-2 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 max-w-2xl flex flex-col sm:flex-row gap-2">
+                        <div class="relative flex-grow">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <span class="material-icons-outlined text-slate-400 text-2xl">search</span>
+                            </div>
+                            <input
+                                class="block w-full pl-12 pr-4 py-4 border-transparent bg-transparent text-slate-900 dark:text-white placeholder-slate-500 focus:border-transparent focus:ring-0 text-lg"
+                                placeholder="¿Qué trámite desea realizar hoy?" type="text" />
+                        </div>
+                        <button
+                            class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-sm text-lg transition-colors flex items-center justify-center">
+                            Buscar
+                        </button>
+                    </div>
+                    <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">
+                        Ejemplos: <a class="underline hover:text-primary" href="#">Colegiatura</a>, <a
+                            class="underline hover:text-primary" href="#">Habilidad Profesional</a>, <a
+                            class="underline hover:text-primary" href="#">Certificados</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="py-12 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-end mb-8">
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Accesos Directos</h2>
+                        <p class="text-lg text-slate-600 dark:text-slate-400 mt-2">Gestione sus necesidades más
+                            frecuentes</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark p-8 rounded-md shadow-sm hover:shadow-lg transition-shadow border-l-4 border-primary group cursor-pointer relative overflow-hidden">
+                        <div
+                            class="absolute top-4 right-4 bg-red-50 dark:bg-slate-700 p-3 rounded-full group-hover:bg-primary group-hover:text-white transition-colors text-primary dark:text-red-400">
+                            <span class="material-icons-outlined text-3xl">badge</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3 mt-2">Colegiatura</h3>
+                        <p class="text-slate-600 dark:text-slate-300 mb-8 text-lg leading-relaxed">
+                            Inicie su proceso de inscripción oficial para ejercer legalmente la profesión en la región.
+                        </p>
+                        <a class="inline-flex items-center text-primary font-bold text-lg hover:underline decoration-2 underline-offset-4"
+                            href="tramites/index.html">
+                            Iniciar Trámite <span class="material-icons-outlined ml-2">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark p-8 rounded-md shadow-sm hover:shadow-lg transition-shadow border-l-4 border-primary group cursor-pointer relative overflow-hidden">
+                        <div
+                            class="absolute top-4 right-4 bg-red-50 dark:bg-slate-700 p-3 rounded-full group-hover:bg-primary group-hover:text-white transition-colors text-primary dark:text-red-400">
+                            <span class="material-icons-outlined text-3xl">school</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3 mt-2">Capacitación</h3>
+                        <p class="text-slate-600 dark:text-slate-300 mb-8 text-lg leading-relaxed">
+                            Inscríbase en cursos, diplomados y talleres para su desarrollo profesional continuo.
+                        </p>
+                        <a class="inline-flex items-center text-primary font-bold text-lg hover:underline decoration-2 underline-offset-4"
+                            href="cursos.html">
+                            Ver Cursos Disponibles <span class="material-icons-outlined ml-2">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark p-8 rounded-md shadow-sm hover:shadow-lg transition-shadow border-l-4 border-primary group cursor-pointer relative overflow-hidden">
+                        <div
+                            class="absolute top-4 right-4 bg-red-50 dark:bg-slate-700 p-3 rounded-full group-hover:bg-primary group-hover:text-white transition-colors text-primary dark:text-red-400">
+                            <span class="material-icons-outlined text-3xl">calendar_month</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3 mt-2">Agenda Institucional
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-300 mb-8 text-lg leading-relaxed">
+                            Consulte el calendario de eventos, asambleas y fechas importantes del colegio.
+                        </p>
+                        <a class="inline-flex items-center text-primary font-bold text-lg hover:underline decoration-2 underline-offset-4"
+                            href="#">
+                            Consultar Agenda <span class="material-icons-outlined ml-2">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-16 bg-white dark:bg-background-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="border-l-4 border-primary pl-4 mb-6">
+                            <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Noticias Recientes</h2>
+                        </div>
+                        <div class="space-y-6">
+                            <article class="flex flex-col sm:flex-row gap-4 group cursor-pointer">
+                                <div
+                                    class="bg-slate-200 dark:bg-slate-700 w-full sm:w-32 h-24 flex-shrink-0 rounded-sm flex items-center justify-center text-slate-400">
+                                    <span class="material-icons-outlined">image</span>
+                                </div>
+                                <div>
+                                    <span class="text-sm font-semibold text-primary mb-1 block">COMUNICADO
+                                        OFICIAL</span>
+                                    <h3
+                                        class="text-xl font-bold text-slate-800 dark:text-slate-100 group-hover:text-primary transition-colors mb-2">
+                                        Nuevo reglamento para la certificación profesional 2024</h3>
+                                    <span class="text-sm text-slate-500 dark:text-slate-400">Hace 2 días</span>
+                                </div>
+                            </article>
+                            <article class="flex flex-col sm:flex-row gap-4 group cursor-pointer">
+                                <div
+                                    class="bg-slate-200 dark:bg-slate-700 w-full sm:w-32 h-24 flex-shrink-0 rounded-sm flex items-center justify-center text-slate-400">
+                                    <span class="material-icons-outlined">image</span>
+                                </div>
+                                <div>
+                                    <span class="text-sm font-semibold text-primary mb-1 block">EVENTOS</span>
+                                    <h3
+                                        class="text-xl font-bold text-slate-800 dark:text-slate-100 group-hover:text-primary transition-colors mb-2">
+                                        Ceremonia de juramentación de nuevos colegiados - Octubre</h3>
+                                    <span class="text-sm text-slate-500 dark:text-slate-400">Hace 5 días</span>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="mt-8">
+                            <a class="inline-flex items-center justify-center px-6 py-3 border border-slate-300 dark:border-slate-600 shadow-sm text-base font-medium rounded-sm text-slate-700 dark:text-slate-200 bg-white dark:bg-surface-dark hover:bg-slate-50 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary w-full sm:w-auto"
+                                href="#">
+                                Ver todas las noticias
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-secondary rounded-lg p-8 text-white relative overflow-hidden">
+                        <div class="absolute -right-10 -top-10 opacity-10">
+                            <span class="material-icons-outlined" style="font-size: 200px;">support_agent</span>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-4 relative z-10">¿Necesita asistencia personalizada?</h2>
+                        <p class="text-lg text-slate-300 mb-8 relative z-10 leading-relaxed">
+                            Nuestro equipo de soporte técnico está disponible para guiarlo paso a paso en su trámite.
+                            Contáctenos por vía telefónica o chat.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 relative z-10">
+                            <button
+                                class="bg-white text-secondary hover:bg-slate-100 font-bold py-3 px-6 rounded-sm flex items-center justify-center transition-colors">
+                                <span class="material-icons-outlined mr-2">call</span>
+                                +51 982 520 891
+                            </button>
+                            <button
+                                class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-6 rounded-sm flex items-center justify-center transition-colors border border-transparent">
+                                <span class="material-icons-outlined mr-2">chat</span>
+                                Chat en Vivo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-white dark:bg-surface-dark border-t border-slate-200 dark:border-slate-700 pt-12 pb-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="./assets/img/logo-circular.png" alt="Logo" class="h-20 w-auto mb-6">
+                    <p class="text-slate-500 text-sm">Institución comprometida con la excelencia en obstetricia.<br><br>Mariscal Sucre 1351, Pueblo Libre.</p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a class="hover:text-primary" href="./normativa/reglamentos.html">Estatutos</a></li>
+                        <li><a class="hover:text-primary" href="./institucional/transparencia.html">Transparencia</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase mb-4">Herramientas</h3>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a class="hover:text-primary" href="./colegiados/listados.html">Bolsa de Trabajo</a></li>
+                        <li><a class="hover:text-primary" href="./normativa/repositorio.html">Biblioteca Virtual</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase mb-4">Soporte</h3>
+                    <a href="./contacto/index.html" class="text-sm text-primary font-bold hover:underline">Central de Ayuda</a>
+                </div>
+            </div>
+            <div class="border-t border-slate-100 dark:border-slate-800 pt-8 text-center text-sm text-slate-400">
+                &copy; 2026 CRO III Lima-Callao. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

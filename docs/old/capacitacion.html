@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Capacitación | Colegio Regional de Obstetras III Lima-Callao</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="./assets/js/tailwind-config.js"></script>
+    <!-- Global Styles -->
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-sans antialiased transition-colors duration-200">
+    <div class="bg-secondary text-white py-2 px-4 text-sm hidden md:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center"><span class="material-icons-outlined text-base mr-1">phone</span> +51
+                    982 520 891</span>
+                <span class="flex items-center"><span class="material-icons-outlined text-base mr-1">email</span>
+                    tramitedocumentario@crolimacallao.org.pe</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a class="hover:underline" href="#">Intranet</a>
+                <a class="hover:underline" href="#">Mesa de Partes</a>
+            </div>
+        </div>
+    </div>
+    <a href="#main" class="sr-only focus:not-sr-only bg-primary text-white px-4 py-2 absolute top-0 left-0 z-50">Saltar al contenido principal</a>\n    <header
+        class="bg-surface-light dark:bg-surface-dark shadow-md sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center group">
+                        <img src="./assets/img/logo-text.png" alt="Colegio Regional de Obstetras III Lima-Callao"
+                            class="h-16 lg:h-20 w-auto transition-transform group-hover:scale-[1.02]">
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <!-- Inicio -->
+                    <a class="text-slate-700 dark:text-slate-200 font-medium py-2" href="index.html">Inicio</a>
+
+                    <!-- Institución Dropdown -->
+                    <div class="relative group">
+                        <button class="text-slate-700 dark:text-slate-200 font-medium py-2 inline-flex items-center gap-1 group-hover:text-primary transition-colors focus:outline-none" aria-haspopup="true" aria-expanded="false">
+                            Institución
+                            <span class="material-icons-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform origin-top-left scale-95 group-hover:scale-100">
+                            <div class="bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 rounded-sm shadow-xl py-2 flex flex-col">
+                                <a href="institucion-quienes-somos.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Quiénes somos</a>
+                                <a href="institucion-autoridades.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Autoridades</a>
+                                <a href="institucion-historia.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Historia</a>
+                                <a href="institucion-transparencia.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Transparencia / Documentos</a>
+                                <a href="institucion-convenios.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Convenios</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trámites Dropdown -->
+                    <div class="relative group">
+                        <button class="text-slate-700 dark:text-slate-200 font-medium py-2 inline-flex items-center gap-1 group-hover:text-primary transition-colors focus:outline-none" aria-haspopup="true" aria-expanded="false">
+                            Trámites
+                            <span class="material-icons-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform origin-top-left scale-95 group-hover:scale-100">
+                            <div class="bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 rounded-sm shadow-xl py-2 flex flex-col">
+                                <a href="tramites-habilidad.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Habilidad</a>
+                                <a href="tramites-colegiatura.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Colegiatura</a>
+                                <a href="tramites-registros.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Registros (Esp/Mae/Doc)</a>
+                                <a href="tramites-carne.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Carné</a>
+                                <div class="border-t border-gray-100 dark:border-gray-700 my-1"></div>
+                                <a href="tramites-mesa-partes.html" class="px-4 py-2.5 text-sm text-primary font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors flex items-center justify-between">Mesa de Partes Virtual <span class="material-icons-outlined !text-sm">open_in_new</span></a>
+                                <a href="tramites-faq.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Preguntas frecuentes</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Colegiados Dropdown -->
+                    <div class="relative group">
+                        <button class="text-slate-700 dark:text-slate-200 font-medium py-2 inline-flex items-center gap-1 group-hover:text-primary transition-colors focus:outline-none" aria-haspopup="true" aria-expanded="false">
+                            Colegiados
+                            <span class="material-icons-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform origin-top-left scale-95 group-hover:scale-100">
+                            <div class="bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 rounded-sm shadow-xl py-2 flex flex-col">
+                                <a href="colegiados-buscador.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Buscador de colegiados</a>
+                                <a href="colegiados-listados.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Listados por categoría</a>
+                                <a href="colegiados-guia.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Guía de habilitación</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Capacitación Dropdown -->
+                    <div class="relative group">
+                        <button class="text-primary font-bold border-b-2 border-primary pb-1 inline-flex items-center gap-1 group-hover:text-primary transition-colors focus:outline-none" aria-haspopup="true" aria-expanded="false">
+                            Capacitación
+                            <span class="material-icons-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform origin-top-left scale-95 group-hover:scale-100">
+                            <div class="bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 rounded-sm shadow-xl py-2 flex flex-col">
+                                <a href="capacitacion-calendario.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Calendario</a>
+                                <a href="capacitacion-cursos.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Cursos</a>
+                                <a href="capacitacion-congresos.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Congresos</a>
+                                <div class="border-t border-gray-100 dark:border-gray-700 my-1"></div>
+                                <a href="https://plataformadecapacitacion.crolimacallao.org.pe" target="_blank" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors flex items-center justify-between">Aula Virtual <span class="material-icons-outlined !text-sm text-slate-400">launch</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Normativa Dropdown -->
+                    <div class="relative group">
+                        <button class="text-slate-700 dark:text-slate-200 font-medium py-2 inline-flex items-center gap-1 group-hover:text-primary transition-colors focus:outline-none" aria-haspopup="true" aria-expanded="false">
+                            Normativa
+                            <span class="material-icons-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform origin-top-left scale-95 group-hover:scale-100">
+                            <div class="bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 rounded-sm shadow-xl py-2 flex flex-col">
+                                <a href="normativa-leyes.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Leyes</a>
+                                <a href="normativa-reglamentos.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Reglamentos</a>
+                                <a href="normativa-guias.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors">Guías</a>
+                                <div class="border-t border-gray-100 dark:border-gray-700 my-1"></div>
+                                <a href="normativa-repositorio.html" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors flex items-center justify-between">Repositorio completo <span class="material-icons-outlined !text-sm">arrow_forward</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contacto Dropdown -->
+                    <div class="relative group">
+                        <button class="text-slate-700 dark:text-slate-200 font-medium py-2 inline-flex items-center gap-1 group-hover:text-primary transition-colors focus:outline-none" aria-haspopup="true" aria-expanded="false">
+                            Contacto
+                            <span class="material-icons-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform origin-top-right scale-95 group-hover:scale-100">
+                            <div class="bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 rounded-sm shadow-xl py-2 flex flex-col">
+                                <a href="contacto-canales.html"</a>
+                                <a href="contacto-horarios.html"</a>
+                                <div class="border-t border-gray-100 dark:border-gray-700 my-1"></div>
+                                <a href="https://crolimacallao.org.pe/BBB/libro.php" target="_blank" class="px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary font-medium transition-colors flex items-center justify-between">Libro de reclamaciones <span class="material-icons-outlined !text-sm text-slate-400">launch</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="hidden md:flex items-center">
+                    <a class="inline-flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary shadow-sm transition-colors"
+                        href="admin/index.html">
+                        <span class="material-icons-outlined mr-2">person</span>
+                        Mi Cuenta
+                    </a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button class="text-slate-500 dark:text-slate-300 hover:text-slate-700 focus:outline-none p-2"
+                        type="button">
+                        <span class="sr-only">Abrir menú</span>
+                        <span class="material-icons-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 md:px-10 py-8" id="main">
+        <!-- Breadcrumbs & Header -->
+        <div class="mb-8">
+            <nav class="flex items-center gap-2 text-sm font-medium text-slate-500 dark:text-slate-400 mb-4">
+                <a class="hover:underline hover:text-primary transition-colors" href="index.html">Inicio</a>
+                <span class="material-icons-outlined text-sm">chevron_right</span>
+                <span class="text-slate-900 dark:text-slate-200">Capacitación</span>
+            </nav>
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div class="max-w-3xl">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 mb-4 text-sm font-bold tracking-wider text-primary uppercase bg-red-100 dark:bg-red-900/30 rounded-sm">
+                        <span class="material-icons-outlined text-base">school</span>
+                        Desarrollo Profesional Continuo
+                    </div>
+                    <h1 class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
+                        Especialización en Ecografía Obstétrica y Ginecológica
+                    </h1>
+                    <p class="text-xl text-slate-600 dark:text-slate-300 mb-6 max-w-2xl leading-relaxed">
+                        Programa avanzado diseñado para obstetras colegiados que buscan perfeccionar sus habilidades en
+                        diagnóstico por ultrasonido en la práctica clínica diaria.
+                    </p>
+                </div>
+                <div class="flex gap-2 mb-6 md:mb-0">
+                    <button
+                        class="inline-flex items-center justify-center px-6 py-3 border border-slate-300 dark:border-slate-600 shadow-sm text-base font-medium rounded-sm text-slate-700 dark:text-slate-200 bg-white dark:bg-surface-dark hover:bg-slate-50 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors">
+                        <span class="material-icons-outlined mr-2 text-lg">share</span>
+                        Compartir
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Grid Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- Left Column: Content -->
+            <div class="lg:col-span-8 space-y-8">
+                <!-- Tab Navigation -->
+                <div
+                    class="border-b border-slate-200 dark:border-slate-700 flex gap-8 overflow-x-auto no-scrollbar mb-8">
+                    <button
+                        class="pb-4 text-lg font-bold border-b-2 border-primary text-primary whitespace-nowrap outline-none">Información
+                        General</button>
+                    <button
+                        class="pb-4 text-lg font-bold border-b-2 border-transparent text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors whitespace-nowrap outline-none">Programa
+                        Detallado</button>
+                    <button
+                        class="pb-4 text-lg font-bold border-b-2 border-transparent text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors whitespace-nowrap outline-none">Docentes</button>
+                    <button
+                        class="pb-4 text-lg font-bold border-b-2 border-transparent text-slate-600 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors whitespace-nowrap outline-none">Certificación</button>
+                </div>
+
+                <!-- Objectives Section -->
+                <section class="mb-12">
+                    <div class="flex items-center gap-2 mb-6">
+                        <h2 class="text-3xl font-bold text-slate-900 dark:text-white border-l-4 border-primary pl-4">
+                            Objetivos del Curso</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark p-6 rounded-sm shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 text-primary">01 /
+                                Diagnóstico Preciso</h3>
+                            <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">Identificar y evaluar
+                                la anatomía fetal normal y reconocer las principales anomalías morfológicas mediante
+                                ultrasonido.</p>
+                        </div>
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark p-6 rounded-sm shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 text-primary">02 /
+                                Monitoreo Fetal</h3>
+                            <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">Aplicar técnicas de
+                                Doppler obstétrico para la evaluación del bienestar fetal y el manejo de embarazos de
+                                alto riesgo.</p>
+                        </div>
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark p-6 rounded-sm shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 text-primary">03 /
+                                Patología Ginecológica</h3>
+                            <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">Diagnosticar
+                                patologías pélvicas benignas y malignas utilizando ecografía transvaginal y
+                                transabdominal.</p>
+                        </div>
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark p-6 rounded-sm shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md transition-shadow">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 text-primary">04 /
+                                Evidencia Clínica</h3>
+                            <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">Elaborar informes
+                                ecográficos estandarizados basados en guías y consensos internacionales actualizados.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Prerequisites Section -->
+                <section
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-sm shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md transition-shadow mb-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="material-icons-outlined text-primary text-3xl">verified_user</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Requisitos Previos</h2>
+                    </div>
+                    <ul class="space-y-4 text-lg text-slate-600 dark:text-slate-300 leading-relaxed pl-2">
+                        <li class="flex items-start gap-3">
+                            <span class="material-icons-outlined text-primary mt-1">check_circle</span>
+                            Título Profesional de Licenciado/a en Obstetricia colegiado y habilitado.
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-icons-outlined text-primary mt-1">check_circle</span>
+                            Conocimientos básicos de anatomía pélvica y fisiología fetal.
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-icons-outlined text-primary mt-1">check_circle</span>
+                            Experiencia mínima de 1 año en atención clínica obstétrica.
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Detailed Program -->
+                <section>
+                    <div class="flex items-center gap-2 mb-6">
+                        <h2 class="text-3xl font-bold text-slate-900 dark:text-white border-l-4 border-primary pl-4">
+                            Estructura Curricular</h2>
+                    </div>
+                    <div class="border border-slate-200 dark:border-slate-700 rounded-sm overflow-hidden shadow-sm">
+                        <table class="w-full text-left text-base">
+                            <thead
+                                class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold border-b border-slate-200 dark:border-slate-700">
+                                <tr>
+                                    <th class="px-4 py-4 border-r border-slate-200 dark:border-slate-700 uppercase">
+                                        Módulo</th>
+                                    <th class="px-4 py-4 border-r border-slate-200 dark:border-slate-700 uppercase">Tema
+                                        Principal</th>
+                                    <th class="px-4 py-4 text-center uppercase">Horas Prácticas</th>
+                                </tr>
+                            </thead>
+                            <tbody
+                                class="divide-y divide-slate-200 dark:divide-slate-700 bg-white dark:bg-surface-dark">
+                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                    <td
+                                        class="px-4 py-4 font-bold border-r border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-center text-lg">
+                                        01</td>
+                                    <td class="px-4 py-4">
+                                        <div class="font-bold text-slate-900 dark:text-white text-lg">Bases Físicas del
+                                            Ultrasonido</div>
+                                        <div class="text-sm text-slate-500 dark:text-slate-400 mt-1">Instrumentación,
+                                            bioseguridad y optimización de la imagen ecográfica.</div>
+                                    </td>
+                                    <td class="px-4 py-4 text-center font-medium text-slate-700 dark:text-slate-300">10h
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="bg-slate-50/50 dark:bg-slate-800/30 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                    <td
+                                        class="px-4 py-4 font-bold border-r border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-center text-lg">
+                                        02</td>
+                                    <td class="px-4 py-4">
+                                        <div class="font-bold text-slate-900 dark:text-white text-lg">Ecografía
+                                            Obstétrica Temprana</div>
+                                        <div class="text-sm text-slate-500 dark:text-slate-400 mt-1">Evaluación del
+                                            embarazo del primer trimestre y cribado de aneuploidías (11-14 semanas).
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4 text-center font-medium text-slate-700 dark:text-slate-300">20h
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                    <td
+                                        class="px-4 py-4 font-bold border-r border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-center text-lg">
+                                        03</td>
+                                    <td class="px-4 py-4">
+                                        <div class="font-bold text-slate-900 dark:text-white text-lg">Neurosonografía y
+                                            Morfología Fetal</div>
+                                        <div class="text-sm text-slate-500 dark:text-slate-400 mt-1">Estudio anatómico
+                                            detallado del segundo trimestre (20-24 semanas).</div>
+                                    </td>
+                                    <td class="px-4 py-4 text-center font-medium text-slate-700 dark:text-slate-300">25h
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="bg-slate-50/50 dark:bg-slate-800/30 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                    <td
+                                        class="px-4 py-4 font-bold border-r border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-center text-lg">
+                                        04</td>
+                                    <td class="px-4 py-4">
+                                        <div class="font-bold text-slate-900 dark:text-white text-lg">Doppler y
+                                            Crecimiento Fetal</div>
+                                        <div class="text-sm text-slate-500 dark:text-slate-400 mt-1">Evaluación
+                                            hemodinámica, restricción del crecimiento y preeclampsia.</div>
+                                    </td>
+                                    <td class="px-4 py-4 text-center font-medium text-slate-700 dark:text-slate-300">20h
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column: Registration Widget -->
+            <div class="lg:col-span-4">
+                <div class="sticky top-28 space-y-6">
+                    <!-- Main Card -->
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 rounded-sm shadow-sm overflow-hidden hover:shadow-lg transition-shadow">
+                        <div
+                            class="relative h-56 w-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
+                            <!-- Placeholder image for Medical context -->
+                            <span class="material-icons-outlined text-6xl text-slate-400">medical_information</span>
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <span
+                                    class="bg-primary text-white text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm">Certificación
+                                    Nacional</span>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-baseline gap-2 mb-6">
+                                <span class="text-4xl font-extrabold text-slate-900 dark:text-white">S/ 450.00</span>
+                                <span class="text-sm font-medium text-slate-500 dark:text-slate-400">Pago único</span>
+                            </div>
+
+                            <div
+                                class="grid grid-cols-2 gap-px bg-slate-200 dark:bg-slate-700 mb-8 rounded-sm overflow-hidden border border-slate-200 dark:border-slate-700">
+                                <div
+                                    class="bg-surface-light dark:bg-surface-dark p-4 text-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                    <div class="text-xs uppercase font-bold text-slate-500 mb-1">Créditos</div>
+                                    <div class="text-2xl font-bold text-primary">5.0 CR</div>
+                                </div>
+                                <div
+                                    class="bg-surface-light dark:bg-surface-dark p-4 text-center hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                    <div class="text-xs uppercase font-bold text-slate-500 mb-1">Cupos</div>
+                                    <div class="text-2xl font-bold text-slate-900 dark:text-white">20 DISP.</div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4 mb-8">
+                                <div
+                                    class="flex items-start justify-between text-sm border-b border-slate-100 dark:border-slate-800 pb-3">
+                                    <span class="text-slate-500 font-medium">Modalidad:</span>
+                                    <span
+                                        class="text-slate-900 dark:text-slate-200 font-bold text-right leading-tight">Semipresencial<br><span
+                                            class="text-slate-500 font-normal">(Prácticas Clínicas)</span></span>
+                                </div>
+                                <div
+                                    class="flex items-center justify-between text-sm border-b border-slate-100 dark:border-slate-800 pb-3">
+                                    <span class="text-slate-500 font-medium">Duración:</span>
+                                    <span class="text-slate-900 dark:text-slate-200 font-bold">120 Horas lectivas</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-slate-500 font-medium">Inicio:</span>
+                                    <span class="text-primary font-bold">Próximamente</span>
+                                </div>
+                            </div>
+
+                            <button
+                                class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 px-6 rounded-sm text-lg transition-colors flex items-center justify-center shadow-sm">
+                                Pre-Inscribirse <span class="material-icons-outlined ml-2">arrow_forward</span>
+                            </button>
+                            <p class="text-xs text-center text-slate-500 font-medium mt-4">
+                                Válido para recertificación profesional
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Secondary Info Widget -->
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 p-6 rounded-sm flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-start gap-4">
+                            <span class="material-icons-outlined text-primary text-3xl">contact_support</span>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-1">¿Dudas sobre el curso?
+                                </h4>
+                                <p class="text-sm text-slate-600 dark:text-slate-400">Nuestra área académica está lista
+                                    para ayudarte con los requisitos.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 mt-2">
+                            <a class="text-base font-medium text-slate-700 dark:text-slate-300 flex items-center gap-2 hover:text-primary dark:hover:text-primary transition-colors"
+                                href="tel:+51982520891">
+                                <span class="material-icons-outlined text-xl text-slate-400">call</span>
+                                +51 982 520 891
+                            </a>
+                            <a class="text-base font-medium text-slate-700 dark:text-slate-300 flex items-center gap-2 hover:text-primary dark:hover:text-primary transition-colors hover:underline"
+                                href="mailto:capacitacion@crolimacallao.org.pe">
+                                <span class="material-icons-outlined text-xl text-slate-400">mail</span>
+                                capacitacion@crolimacallao.org.pe
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white dark:bg-surface-dark border-t border-slate-200 dark:border-slate-700 pt-12 pb-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="mb-6">
+                        <img src="./assets/img/logo-circular.png" alt="Logo Colegio Regional de Obstetras III"
+                            class="h-24 w-auto">
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
+                        Institución comprometida con la excelencia y el desarrollo de la obstetricia en nuestra región.<br><br><span class="material-icons-outlined !text-sm align-middle">location_on</span> Mariscal Sucre 1351, Pueblo Libre, Lima<br><span class="material-icons-outlined !text-sm align-middle">schedule</span> Lunes a Viernes 9:00 a.m. a 5:30 p.m. / Sábados 9:00 a.m. a 12 m.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span
+                                class="sr-only">Facebook</span>FB</a>
+                        <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span
+                                class="sr-only">Twitter</span>TW</a>
+                        <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span
+                                class="sr-only">LinkedIn</span>LI</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Legal y
+                        Transparencia</h3>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a class="hover:text-primary underline" href="#">Estatutos Institucionales</a></li>
+                        <li><a class="hover:text-primary underline" href="#">Términos y Condiciones</a></li>
+                        <li><a class="hover:text-primary underline" href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Enlaces
+                        de Interés</h3>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a class="hover:text-primary underline" href="#">Bolsa de Trabajo</a></li>
+                        <li><a class="hover:text-primary underline" href="#">Biblioteca Virtual</a></li>
+                        <li><a class="hover:text-primary underline" href="#">Convenios Institucionales</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-4">
+                        Accesibilidad</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">
+                        Este portal cumple con los estándares WCAG 2.1 para garantizar el acceso a todos los ciudadanos.
+                    </p>
+                    <div class="flex space-x-2">
+                        <button aria-label="Cambiar modo oscuro"
+                            class="bg-slate-100 dark:bg-slate-700 p-2 rounded hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
+                            onclick="document.documentElement.classList.toggle('dark')">
+                            <span class="material-icons-outlined text-slate-700 dark:text-slate-200">brightness_4</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-slate-200 dark:border-slate-700 pt-8 mt-8 text-center text-sm text-slate-500 dark:text-slate-400">
+                &copy; 2026 Colegio Regional de Obstetras III Lima-Callao.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

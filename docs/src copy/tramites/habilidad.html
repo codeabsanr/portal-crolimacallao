@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Habilidad Profesional | Colegio Regional de Obstetras III</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="../assets/js/tailwind-config.js"></script>
+    <!-- Global Styles -->
+    <link href="../assets/css/styles.css" rel="stylesheet" />
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-sans antialiased transition-colors duration-200">
+
+    <!-- Top Bar -->
+    <div class="bg-secondary text-white py-2 px-4 text-sm hidden md:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center"><span class="material-icons-outlined text-base mr-1">phone</span> +51
+                    982 520 891</span>
+                <span class="flex items-center"><span class="material-icons-outlined text-base mr-1">email</span>
+                    tramitedocumentario@crolimacallao.org.pe</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a class="hover:underline" href="#">Intranet</a>
+                <a class="hover:underline" href="#">Mesa de Partes</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <a href="#main" class="sr-only focus:not-sr-only bg-primary text-white px-4 py-2 absolute top-0 left-0 z-50">Saltar al contenido principal</a>
+    <header
+        class="bg-surface-light dark:bg-surface-dark shadow-md sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="flex items-center group">
+                        <img src="../assets/img/logo-text.png" alt="Colegio Regional de Obstetras III Lima-Callao"
+                            class="h-16 lg:h-20 w-auto transition-transform group-hover:scale-[1.02]">
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-6 items-center">
+                    <a class="text-slate-700 dark:text-slate-200 font-medium py-2" href="../index.html">Inicio</a>
+                    <a class="text-slate-700 dark:text-slate-200 font-medium py-2" href="../institucional/index.html">Institución</a>
+                    <a class="text-primary font-bold border-b-2 border-primary pb-1" href="../tramites/index.html">Trámites</a>
+                    <a class="text-slate-700 dark:text-slate-200 font-medium py-2" href="../colegiados/index.html">Colegiados</a>
+                    <a class="text-slate-700 dark:text-slate-200 font-medium py-2" href="../capacitacion/index.html">Capacitación</a>
+                    <a class="text-slate-700 dark:text-slate-200 font-medium py-2" href="../normativa/index.html">Normativa</a>
+                    <a class="text-slate-700 dark:text-slate-200 font-medium py-2" href="../contacto/index.html">Contacto</a>
+                </nav>
+                <div class="hidden md:flex items-center">
+                    <a class="inline-flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary shadow-sm transition-colors"
+                        href="../admin/index.html">
+                        <span class="material-icons-outlined mr-2">person</span>
+                        Mi Cuenta
+                    </a>
+                </div>
+                <!-- Menú Móvil Botón -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-500 dark:text-slate-300 hover:text-slate-700 focus:outline-none p-2"
+                        type="button">
+                        <span class="sr-only">Abrir menú</span>
+                        <span class="material-icons-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Full-screen -->
+        <div id="mobile-menu-container" class="fixed inset-0 z-[100] bg-primary transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col h-screen overflow-y-auto">
+            <div class="flex justify-end p-6">
+                <button id="close-mobile-menu" class="text-white hover:text-gray-200 focus:outline-none p-2" aria-label="Cerrar menú">
+                    <span class="material-icons-outlined text-4xl">close</span>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col px-6 pb-6 space-y-6 flex-grow">
+                <a href="../index.html" class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Inicio <span class="material-icons-outlined">chevron_right</span></a>
+                <a href="../institucional/index.html" class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Institución <span class="material-icons-outlined">chevron_right</span></a>
+                <a href="../tramites/index.html" class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Trámites <span class="material-icons-outlined">chevron_right</span></a>
+                <a href="../colegiados/index.html" class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Colegiados <span class="material-icons-outlined">chevron_right</span></a>
+                <a href="../capacitacion/index.html" class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Capacitación <span class="material-icons-outlined">chevron_right</span></a>
+                <a href="../normativa/index.html" class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Normativa <span class="material-icons-outlined">chevron_right</span></a>
+                <a href="../contacto/index.html" class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Contacto <span class="material-icons-outlined">chevron_right</span></a>
+
+                <div class="pt-8 space-y-4">
+                    <h3 class="text-white/70 text-sm uppercase tracking-wider mb-4">Accesos Rápidos</h3>
+                    <a href="../admin/index.html" class="flex justify-between items-center bg-transparent border border-white text-white p-4 rounded-sm hover:bg-white/10 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <span class="material-icons-outlined text-2xl">person</span>
+                            <span class="font-bold text-lg">Mi Cuenta</span>
+                        </div>
+                        <span class="material-icons-outlined border border-white p-1 rounded-sm">arrow_forward</span>
+                    </a>
+                    <a href="../tramites/mesa-partes.html" class="flex justify-between items-center bg-transparent border border-white text-white p-4 rounded-sm hover:bg-white/10 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <span class="material-icons-outlined text-2xl">folder_open</span>
+                            <span class="font-bold text-lg">Mesa de Partes</span>
+                        </div>
+                        <span class="material-icons-outlined border border-white p-1 rounded-sm">arrow_forward</span>
+                    </a>
+                    <a href="https://crolimacallao.org.pe/BBB/libro.php" target="_blank" class="flex justify-between items-center bg-transparent border border-white text-white p-4 rounded-sm hover:bg-white/10 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <span class="material-icons-outlined text-2xl">menu_book</span>
+                            <span class="font-bold text-lg">Libro de Reclamaciones</span>
+                        </div>
+                        <span class="material-icons-outlined border border-white p-1 rounded-sm">launch</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="min-h-screen bg-slate-50 dark:bg-slate-900 pb-16">
+        <!-- Simplified Header/Hero for Subpages -->
+        <div class="bg-primary text-white py-12 md:py-16 shadow-inner">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="material-icons-outlined text-4xl opacity-80">verified</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold">Habilidad Profesional</h1>
+                </div>
+                <p class="text-lg md:text-xl opacity-90">Certificado indispensable para el ejercicio legal de la profesión.</p>
+            </div>
+        </div>
+        
+        <!-- Main Content Area with isolated semantic tags -->
+        <div class="max-w-4xl mx-auto px-6 mt-12">
+            
+            <section id="requisitos-habilidad" class="mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 border-l-4 border-primary pl-4 mb-6">Requisitos</h2>
+                <ul class="space-y-4 bg-white p-6 rounded-lg border shadow-sm text-slate-700">
+                    <li class="flex items-start gap-3"><span class="material-icons-outlined text-green-500 mt-0.5">check_circle</span> Estar al día en sus cuotas mensuales.</li>
+                    <li class="flex items-start gap-3"><span class="material-icons-outlined text-green-500 mt-0.5">check_circle</span> Pagar el derecho de certificado de habilidad.</li>
+                </ul>
+                <div class="mt-8">
+                    <a href="../admin/index.html" class="inline-flex items-center bg-primary text-white px-6 py-3 rounded hover:bg-primary-dark transition-colors font-bold">
+                        Solicitar por el Portal Colegiado <span class="material-icons-outlined ml-2">open_in_new</span>
+                    </a>
+                </div>
+            </section>
+        
+            
+            <div class="mt-12 flex justify-start">
+                <a href="javascript:history.back()" class="inline-flex items-center text-primary font-bold hover:underline">
+                    <span class="material-icons-outlined mr-1">arrow_back</span> Regresar
+                </a>
+            </div>
+        </div>
+    </main>
+        </div>
+
+        <!-- Mesa de Partes & FAQ -->
+        <section class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
+                class="bg-primary text-white p-8 lg:p-12 rounded-sm shadow-sm relative overflow-hidden flex flex-col justify-between group">
+                <div class="relative z-10">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-icons-outlined text-4xl">cloud_upload</span>
+                        <h2 class="text-3xl font-bold">Mesa de Partes Virtual</h2>
+                    </div>
+                    <p class="text-lg text-primary-light mb-8 max-w-sm">
+                        Envíe sus documentos y solicitudes en línea las 24 horas del día sin necesidad de acercarse a
+                        nuestra sede.
+                    </p>
+                </div>
+                <a href="#"
+                    class="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-base font-bold rounded-sm hover:bg-white hover:text-primary focus:outline-none transition-colors w-max relative z-10">
+                    Ingresar Ahora <span class="material-icons-outlined ml-2">open_in_new</span>
+                </a>
+                <span
+                    class="material-icons-outlined absolute -bottom-8 -right-8 text-9xl text-primary-dark opacity-50 group-hover:scale-110 transition-transform duration-500">description</span>
+            </div>
+
+            <div
+                class="bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 p-8 lg:p-12 rounded-sm shadow-sm">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-icons-outlined text-primary text-3xl">help_outline</span>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Preguntas Frecuentes (FAQ)</h2>
+                </div>
+                <ul class="space-y-4">
+                    <li>
+                        <details class="group/faq text-lg text-slate-600 dark:text-slate-300">
+                            <summary
+                                class="font-bold text-slate-900 dark:text-white cursor-pointer hover:text-primary transition-colors flex items-center justify-between">
+                                ¿Cuánto tiempo demora el trámite de colegiatura?
+                                <span
+                                    class="material-icons-outlined group-open/faq:rotate-180 transition-transform">expand_more</span>
+                            </summary>
+                            <p class="mt-2 text-base">El proceso de colegiatura ordinaria toma aproximadamente 15 días
+                                hábiles desde la recepción física de todos los documentos en nuestra sede.</p>
+                        </details>
+                    </li>
+                    <li class="border-t border-gray-200 dark:border-gray-700 pt-4">
+                        <details class="group/faq text-lg text-slate-600 dark:text-slate-300">
+                            <summary
+                                class="font-bold text-slate-900 dark:text-white cursor-pointer hover:text-primary transition-colors flex items-center justify-between">
+                                ¿Cómo puedo pagar mis cuotas atrasadas?
+                                <span
+                                    class="material-icons-outlined group-open/faq:rotate-180 transition-transform">expand_more</span>
+                            </summary>
+                            <p class="mt-2 text-base">Puede realizar el pago a través de nuestra Intranet (Portal del
+                                Colegiado) o generando un ticket de atención mediante la Mesa de Partes Virtual.</p>
+                        </details>
+                    </li>
+                    <li class="border-t border-gray-200 dark:border-gray-700 pt-4">
+                        <details class="group/faq text-lg text-slate-600 dark:text-slate-300">
+                            <summary
+                                class="font-bold text-slate-900 dark:text-white cursor-pointer hover:text-primary transition-colors flex items-center justify-between">
+                                ¿El certificado de habilidad se envía por correo?
+                                <span
+                                    class="material-icons-outlined group-open/faq:rotate-180 transition-transform">expand_more</span>
+                            </summary>
+                            <p class="mt-2 text-base">Sí, el certificado de habilidad cuenta con código QR y firma
+                                digital, y es enviado automáticamente al correo registrado en un plazo máximo de 24 a 48
+                                horas.</p>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    
+    <footer class="bg-white dark:bg-surface-dark border-t border-slate-200 dark:border-slate-700 pt-12 pb-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="../assets/img/logo-circular.png" alt="Logo" class="h-20 w-auto mb-6">
+                    <p class="text-slate-500 text-sm">Institución comprometida con la excelencia en obstetricia.<br><br>Mariscal Sucre 1351, Pueblo Libre.</p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a class="hover:text-primary" href="../normativa/reglamentos.html">Estatutos</a></li>
+                        <li><a class="hover:text-primary" href="../institucional/transparencia.html">Transparencia</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase mb-4">Herramientas</h3>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a class="hover:text-primary" href="../colegiados/listados.html">Bolsa de Trabajo</a></li>
+                        <li><a class="hover:text-primary" href="../normativa/repositorio.html">Biblioteca Virtual</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase mb-4">Soporte</h3>
+                    <a href="../contacto/index.html" class="text-sm text-primary font-bold hover:underline">Central de Ayuda</a>
+                </div>
+            </div>
+            <div class="border-t border-slate-100 dark:border-slate-800 pt-8 text-center text-sm text-slate-400">
+                &copy; 2026 CRO III Lima-Callao. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
