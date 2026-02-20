@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&amp;family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a50d3b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221016",
+                        "text-main": "#1a1a1a",
+                        "text-muted": "#4a4a4a"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Atkinson Hyperlegible", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Atkinson Hyperlegible', sans-serif;
+            line-height: 1.6;
+        }
+        h1, h2, h3, .font-display {
+            font-family: 'Lexend', sans-serif;
+        }
+        /* High contrast focus states for accessibility */
+        *:focus {
+            outline: 3px solid #a50d3b !important;
+            outline-offset: 2px;
+        }
+        /* Readable line length for seniors */
+        .readable-content {
+            max-width: 70ch;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="border-b-4 border-primary bg-white dark:bg-slate-900 sticky top-0 z-50">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span aria-hidden="true" class="material-symbols-outlined text-4xl">account_balance</span>
+</div>
+<h2 class="text-xl md:text-2xl font-bold tracking-tight font-display">Portal Institucional</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-lg font-bold hover:underline decoration-primary decoration-2 underline-offset-4" href="#">Inicio</a>
+<a class="text-lg font-bold hover:underline decoration-primary decoration-2 underline-offset-4" href="#">Trámites</a>
+<a class="text-lg font-bold hover:underline decoration-primary decoration-2 underline-offset-4" href="#">Contacto</a>
+</nav>
+<button aria-label="Ajustes de accesibilidad" class="bg-primary text-white p-2 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">settings_accessibility</span>
+</button>
+</div>
+</header>
+<main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+<!-- Back Navigation Button -->
+<nav class="mb-8">
+<a class="inline-flex items-center gap-3 bg-primary/10 hover:bg-primary/20 text-primary font-bold py-4 px-6 rounded-lg border-2 border-primary transition-colors text-lg md:text-xl group" href="#">
+<span class="material-symbols-outlined font-bold group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span>Volver a Noticias</span>
+</a>
+</nav>
+<!-- Article Header -->
+<article class="space-y-6">
+<header class="space-y-4">
+<div class="flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-sm md:text-base">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<time datetime="2023-10-15">15 de Octubre, 2023</time>
+</div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white leading-tight font-display">
+                    Nueva iniciativa de accesibilidad para personas mayores en centros urbanos
+                </h1>
+<p class="text-xl md:text-2xl text-slate-600 dark:text-slate-300 italic font-body">
+                    El programa busca mejorar la señalización y el tránsito peatonal en zonas de alta concurrencia.
+                </p>
+</header>
+<!-- Featured Image -->
+<figure class="my-10 space-y-3">
+<div class="aspect-video w-full overflow-hidden rounded-xl border-2 border-slate-200 dark:border-slate-700 shadow-lg">
+<img alt="Grupo de personas mayores caminando por un parque urbano bien señalizado" class="w-full h-full object-cover" data-alt="People walking in an accessible urban park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDro0oAHxwoW9KcSdXuUVjOL2cg-KiGljFhvKqRkvILXakhKLGGi7Kp7n8zapl18upy1drV9OIVuF_lzBZrYv0to-P7iSRjmsxYGjJd49qeSnOmbLQ5Sz9vVRlE2RLcyDLQ5yOtXQNTh7nwXrXM6pmVaRPzb4Ne3lervHQ1p8TMJ6sTKCsvKJ2sfhu0xfN2hoIwic6NBHvezBApwKBFasB_u_UX2IeIXwOGvGymaI8mDCfhsxEaSqdptf162ezWtL7SgOQjZ9C8ANw"/>
+</div>
+<figcaption class="text-lg text-slate-500 dark:text-slate-400 flex items-center gap-2">
+<span class="material-symbols-outlined text-base">image</span>
+                    Imagen: Modernización de espacios públicos urbanos.
+                </figcaption>
+</figure>
+<!-- Text Control Utility (For Seniors) -->
+<div class="flex flex-wrap items-center gap-4 p-4 bg-slate-100 dark:bg-slate-800 rounded-lg border-l-4 border-primary">
+<span class="font-bold text-lg">Controles de lectura:</span>
+<div class="flex gap-2">
+<button class="bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 px-4 py-2 rounded font-bold text-lg hover:bg-slate-50">A-</button>
+<button class="bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 px-4 py-2 rounded font-bold text-xl hover:bg-slate-50">A+</button>
+</div>
+<button class="flex items-center gap-2 bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 px-4 py-2 rounded font-bold text-lg hover:bg-slate-50 ml-auto">
+<span class="material-symbols-outlined">volume_up</span>
+                    Escuchar noticia
+                </button>
+</div>
+<!-- Article Body -->
+<div class="readable-content mx-auto space-y-8 text-xl md:text-2xl text-slate-800 dark:text-slate-200 font-body leading-relaxed py-6">
+<p>
+                    Las autoridades locales han anunciado hoy el lanzamiento del programa <strong>"Ciudad Amigable"</strong>, una iniciativa integral diseñada para transformar la infraestructura urbana pensando en la autonomía de las personas mayores. 
+                </p>
+<h2 class="text-3xl md:text-4xl font-bold text-primary pt-4 font-display">Mejoras en la vía pública</h2>
+<p>
+                    El proyecto contempla la instalación de más de 500 nuevos puntos de descanso, semáforos con alertas sonoras mejoradas y la ampliación de rampas en esquinas críticas. Estas medidas buscan reducir el riesgo de caídas y facilitar el desplazamiento de quienes utilizan elementos de apoyo.
+                </p>
+<blockquote class="border-l-8 border-primary pl-6 py-4 my-10 bg-primary/5 italic text-2xl font-bold text-slate-900 dark:text-white">
+                    "Nuestra prioridad es asegurar que cada ciudadano, independientemente de su edad o movilidad, pueda disfrutar plenamente de su ciudad con seguridad y dignidad."
+                </blockquote>
+<p>
+                    Además de los cambios físicos, se implementará un sistema de señalización de alto contraste y tipografía legible en todos los edificios públicos y paradas de transporte, facilitando la orientación espacial para personas con visión reducida.
+                </p>
+<p>
+                    Las obras comenzarán el próximo mes en el distrito central y se extenderán gradualmente a los barrios periféricos durante el próximo año. Se han habilitado canales de consulta telefónica gratuita para que los vecinos puedan conocer el cronograma de trabajos en su zona.
+                </p>
+</div>
+<!-- Share and Print Actions -->
+<footer class="mt-12 pt-8 border-t-2 border-slate-200 dark:border-slate-700 flex flex-wrap gap-4">
+<button class="flex-1 min-w-[200px] flex items-center justify-center gap-3 bg-primary text-white font-bold py-5 px-8 rounded-xl text-xl hover:brightness-110 transition-all shadow-md">
+<span class="material-symbols-outlined">share</span>
+                    Compartir Noticia
+                </button>
+<button class="flex-1 min-w-[200px] flex items-center justify-center gap-3 bg-white dark:bg-slate-800 text-primary border-4 border-primary font-bold py-5 px-8 rounded-xl text-xl hover:bg-primary/5 transition-all shadow-md">
+<span class="material-symbols-outlined">print</span>
+                    Imprimir Versión Grande
+                </button>
+</footer>
+</article>
+<!-- Related Content / Next Steps -->
+<section class="mt-16 bg-slate-100 dark:bg-slate-800 p-8 rounded-2xl border-2 border-slate-200 dark:border-slate-700">
+<h3 class="text-2xl md:text-3xl font-bold mb-6 font-display">Otras noticias de interés</h3>
+<ul class="space-y-4">
+<li>
+<a class="group flex items-center gap-4 text-xl font-bold text-slate-700 dark:text-slate-300 hover:text-primary underline underline-offset-8" href="#">
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        Calendario de vacunación para adultos mayores 2024
+                    </a>
+</li>
+<li>
+<a class="group flex items-center gap-4 text-xl font-bold text-slate-700 dark:text-slate-300 hover:text-primary underline underline-offset-8" href="#">
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        Talleres de tecnología y redes sociales en centros culturales
+                    </a>
+</li>
+</ul>
+</section>
+</main>
+<!-- Simple Accessibility Footer -->
+<footer class="bg-slate-900 text-white mt-20 py-12">
+<div class="max-w-5xl mx-auto px-4 text-center space-y-6">
+<div class="flex justify-center gap-4 mb-4">
+<span class="material-symbols-outlined text-4xl">blind</span>
+<span class="material-symbols-outlined text-4xl">hearing</span>
+<span class="material-symbols-outlined text-4xl">hearing_aid</span>
+</div>
+<p class="text-xl font-bold">Portal de Noticias Accesible</p>
+<p class="text-lg text-slate-400">Diseñado para la máxima legibilidad y facilidad de uso.</p>
+<div class="pt-6 border-t border-slate-700">
+<p class="text-sm uppercase tracking-widest text-slate-500">Gobierno Institucional © 2023</p>
+</div>
+</div>
+</footer>
+</body></html>

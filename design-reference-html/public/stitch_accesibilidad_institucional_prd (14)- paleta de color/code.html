@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sistema de Diseño: Accesibilidad Institucional</title>
+<!-- Fonts: Merriweather and Atkinson Hyperlegible -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&amp;family=Merriweather:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#8B1E3F', // Granate
+              light: '#A02E52',
+            },
+            surface: '#FFFFFF',
+            background: '#F9FAFB',
+            'text-main': '#1F2937',
+            'text-muted': '#4B5563',
+            success: '#065F46',
+            'success-light': '#D1FAE5',
+            error: '#991B1B',
+            'error-light': '#FEE2E2',
+            gold: '#F59E0B',
+          },
+          fontFamily: {
+            serif: ['Merriweather', 'serif'],
+            sans: ['Atkinson Hyperlegible', 'sans-serif'],
+          },
+          boxShadow: {
+            'hard': '4px 4px 0px #E5E7EB',
+            'hard-hover': '6px 6px 0px #8B1E3F',
+          },
+          borderRadius: {
+            'inst': '4px',
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles for Specific Behaviors -->
+<style data-purpose="accessibility-focus">
+    /* High visibility focus state for keyboard navigation */
+    *:focus-visible {
+      outline: 3px solid #F59E0B !material-important;
+      outline-offset: 2px;
+    }
+    
+    body {
+      background-color: #F9FAFB;
+      color: #1F2937;
+      font-family: 'Atkinson Hyperlegible', sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+    }
+  </style>
+<style data-purpose="component-geometry">
+    .btn-primary {
+      min-height: 56px;
+      padding: 0 24px;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+    
+    .action-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .action-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="p-8 md:p-16">
+<!-- BEGIN: Style Guide Header -->
+<header class="max-w-6xl mx-auto mb-16 border-b-2 border-gray-200 pb-8">
+<h1 class="text-5xl text-primary mb-4">Accesibilidad Institucional</h1>
+<p class="text-xl text-text-muted max-w-3xl">
+      Guía de Estilo para el Colegio Regional de Obstetras III Lima Callao. Un sistema diseñado para la claridad, 
+      la alta legibilidad y la reducción de la carga cognitiva en trámites institucionales.
+    </p>
+</header>
+<!-- END: Style Guide Header -->
+<main class="max-w-6xl mx-auto space-y-24">
+<!-- BEGIN: Color Palette Section -->
+<section data-purpose="color-palette-showcase">
+<h2 class="text-3xl mb-8">Paleta de Colores</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Primary Color -->
+<div class="space-y-3">
+<div class="h-32 w-full bg-primary rounded-inst shadow-hard border border-gray-200"></div>
+<div>
+<p class="font-bold">Primary (Granate)</p>
+<code class="text-sm">#8B1E3F</code>
+<p class="text-sm text-text-muted">Acciones principales y encabezados.</p>
+</div>
+</div>
+<!-- Background/Surface -->
+<div class="space-y-3">
+<div class="h-32 w-full bg-background rounded-inst shadow-hard border border-gray-200"></div>
+<div>
+<p class="font-bold">Background</p>
+<code class="text-sm">#F9FAFB</code>
+<p class="text-sm text-text-muted">Fondo para reducir el deslumbramiento.</p>
+</div>
+</div>
+<!-- Success Status -->
+<div class="space-y-3">
+<div class="h-32 w-full bg-success rounded-inst shadow-hard border border-gray-200"></div>
+<div>
+<p class="font-bold">Success (Emerald)</p>
+<code class="text-sm">#065F46</code>
+<p class="text-sm text-text-muted">Estados habilitados y éxito.</p>
+</div>
+</div>
+<!-- Text Main -->
+<div class="space-y-3">
+<div class="h-32 w-full bg-text-main rounded-inst shadow-hard border border-gray-200"></div>
+<div>
+<p class="font-bold">Text Main</p>
+<code class="text-sm">#1F2937</code>
+<p class="text-sm text-text-muted">Máxima legibilidad (AA+).</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Color Palette Section -->
+<!-- BEGIN: Typography Section -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-12" data-purpose="typography-showcase">
+<div class="space-y-6">
+<h2 class="text-3xl mb-8">Tipografía</h2>
+<div class="space-y-2">
+<span class="text-sm uppercase tracking-widest text-text-muted">Heading 1 - Merriweather 42px</span>
+<h1 class="text-[42px] leading-tight text-text-main">Bienvenida, Colegiada.</h1>
+</div>
+<div class="space-y-2">
+<span class="text-sm uppercase tracking-widest text-text-muted">Heading 2 - Merriweather 32px</span>
+<h2 class="text-[32px] text-text-main">Mesa de Partes Virtual</h2>
+</div>
+<div class="space-y-2">
+<span class="text-sm uppercase tracking-widest text-text-muted">Heading 3 - Merriweather 24px</span>
+<h3 class="text-[24px] text-text-main">Noticias del Colegio</h3>
+</div>
+</div>
+<div class="bg-white p-8 rounded-inst shadow-hard border border-gray-200">
+<h3 class="text-xl mb-4 font-sans font-bold">Atkinson Hyperlegible</h3>
+<p class="text-[20px] mb-4">Body Large (20px): Diseñada específicamente para personas con baja visión, diferenciando caracteres similares como I, l, y 1.</p>
+<p class="text-[18px] text-text-main mb-4">Body Default (18px): Este es el tamaño estándar para lectura. Ningún texto debe ser menor a 16px para garantizar el acceso universal.</p>
+<p class="text-[16px] text-text-muted italic">Captions (16px): Se utiliza para información secundaria o etiquetas de menor jerarquía.</p>
+</div>
+</section>
+<!-- END: Typography Section -->
+<!-- BEGIN: UI Components Section -->
+<section data-purpose="ui-components-showcase">
+<h2 class="text-3xl mb-8">Componentes de Interfaz</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Buttons and Inputs -->
+<div class="space-y-10">
+<div class="space-y-4">
+<p class="font-bold text-sm text-text-muted uppercase">Botones (Min-height 56px)</p>
+<div class="flex flex-wrap gap-4">
+<button class="btn-primary bg-primary text-white rounded-inst shadow-hard hover:bg-primary-light active:translate-y-1">
+                Iniciar Trámite
+              </button>
+<button class="btn-primary border-2 border-primary text-primary rounded-inst hover:bg-gray-50">
+                Cancelar
+              </button>
+</div>
+</div>
+<div class="space-y-4">
+<p class="font-bold text-sm text-text-muted uppercase">Campos de Formulario</p>
+<div class="max-w-md">
+<label class="block font-bold mb-2" for="example-input">Número de Colegiatura (CMP)</label>
+<input class="w-full h-[56px] border-2 border-gray-400 rounded-inst px-4 focus:ring-0 focus:border-primary" id="example-input" placeholder="Ej. 12345" type="text"/>
+<p class="mt-2 text-sm text-error font-bold">Este campo es obligatorio</p>
+</div>
+</div>
+</div>
+<!-- Action Card Sample -->
+<div class="space-y-4">
+<p class="font-bold text-sm text-text-muted uppercase">Action Card (Dashboard)</p>
+<div class="action-card bg-white p-8 rounded-inst border-2 border-gray-200 shadow-hard hover:shadow-hard-hover hover:border-primary cursor-pointer max-w-md">
+<div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6">
+<!-- Inline SVG for Document Icon -->
+<svg class="h-8 w-8 text-primary" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-2xl mb-2">Realizar Pagos</h3>
+<p class="text-text-muted">Gestione su cuota mensual y obtenga certificados de habilidad de forma inmediata.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: UI Components Section -->
+<!-- BEGIN: Accessibility Rules -->
+<section class="bg-primary text-white p-12 rounded-inst shadow-hard" data-purpose="accessibility-rules">
+<div class="max-w-3xl">
+<h2 class="text-3xl mb-6 font-serif">Compromiso de Accesibilidad</h2>
+<ul class="space-y-4 list-disc pl-6 text-lg">
+<li><strong>Contraste:</strong> Todos los elementos de texto mantienen una relación de contraste mínima de 7:1 (WCAG AAA) contra su fondo.</li>
+<li><strong>Objetivos Táctiles:</strong> Ningún elemento interactivo es menor a 48x48px para facilitar su uso a personas con movilidad reducida.</li>
+<li><strong>Navegación por Teclado:</strong> Los estados de foco son explícitos con un borde dorado de 3px.</li>
+<li><strong>Espaciado:</strong> Se utiliza una unidad base de 8px para mantener una jerarquía visual consistente y aireada.</li>
+</ul>
+</div>
+</section>
+<!-- END: Accessibility Rules -->
+</main>
+<footer class="max-w-6xl mx-auto mt-24 pb-16 text-center text-text-muted border-t border-gray-200 pt-8">
+<p>© 2023 Colegio Regional de Obstetras III Lima Callao</p>
+<p class="text-sm mt-2 font-bold">Diseñado para la inclusión digital.</p>
+</footer>
+</body></html>
