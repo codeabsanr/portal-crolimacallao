@@ -467,31 +467,43 @@
 @endphp
 
 @if ($hero)
-    @php($heroShellBg = $routeName === 'contacto' ? 'bg-white' : 'bg-[linear-gradient(180deg,#f8f4ea_0%,#edf3fb_34%,#e9eff7_100%)]')
-    <section class="relative overflow-hidden min-h-0 {{ $heroShellBg }}">
-        <div class="grid lg:grid-cols-2 border-y-2 border-slate-300">
-            <div class="bg-[linear-gradient(180deg,#ffffff_0%,#fffdfa_100%)]">
+    @php($isUnifiedHero = true)
+    <section class="relative overflow-hidden min-h-0 bg-inst-hero" style="background-image: linear-gradient(120deg, #071532 0%, #0b234a 52%, #1f3c66 100%);">
+        <div class="relative grid lg:grid-cols-2 border-y-2 border-slate-300">
+            @if ($isUnifiedHero)
+                <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 md:pr-4 z-[1]">
+                    <span class="absolute right-[8%] top-1/2 -translate-y-1/2 h-[48%] w-[48%] rounded-full bg-white/8 blur-3xl"></span>
+                    <span class="material-icons-outlined relative leading-[0.85] text-white/28 drop-shadow-[0_10px_24px_rgba(255,255,255,0.18)]" style="font-size: clamp(5.5rem, 18vh, 12rem);">{{ $hero['icon'] }}</span>
+                </div>
+            @endif
+            <div class="{{ $isUnifiedHero ? 'bg-transparent' : 'bg-[linear-gradient(180deg,#ffffff_0%,#fffdfa_100%)]' }}">
                 <div class="mx-auto lg:mx-0 w-full max-w-[40rem] lg:ml-auto lg:mr-0 px-4 sm:px-6 lg:px-8 py-10 md:py-12">
-                    <p class="text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-primary mb-2">{{ $hero['eyebrow'] }}</p>
-                    <h1 class="text-secondary text-4xl md:text-5xl font-black tracking-tight leading-[1.06] max-w-4xl">{{ $hero['title'] }}</h1>
+                    <p class="text-xs md:text-sm font-semibold uppercase tracking-[0.16em] {{ $isUnifiedHero ? 'text-brand-gold-light' : 'text-primary' }} mb-2">{{ $hero['eyebrow'] }}</p>
+                    <h1 class="{{ $isUnifiedHero ? 'text-white' : 'text-secondary' }} text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-[1.06] max-w-4xl">{{ $hero['title'] }}</h1>
                     <div class="mt-3 h-[3px] w-20 bg-brand-gold-light"></div>
-                    <p class="mt-5 max-w-3xl text-secondary-light text-base md:text-lg leading-relaxed">{{ $hero['summary'] }}</p>
+                    <p class="mt-5 max-w-3xl {{ $isUnifiedHero ? 'text-white/90' : 'text-secondary-light' }} text-base sm:text-lg leading-relaxed">{{ $hero['summary'] }}</p>
 
                     @php($cta1Href = $hero['cta1']['href'] ?? (!empty($hero['cta1']['route']) ? route($hero['cta1']['route']) : null))
                     @php($cta2Href = $hero['cta2']['href'] ?? (!empty($hero['cta2']['route']) ? route($hero['cta2']['route']) : null))
+                    @php($cta1IsAnchor = is_string($cta1Href) && str_starts_with($cta1Href, '#'))
                     <div class="mt-7 flex flex-col sm:flex-row gap-3">
                         @if (!empty($hero['cta1']['text']) && $cta1Href)
-                            <a href="{{ $cta1Href }}" class="inst-btn bg-primary text-white hover:bg-primary-dark w-full sm:w-auto">{{ $hero['cta1']['text'] }}</a>
+                            <a href="{{ $cta1Href }}" class="inst-btn bg-primary text-white hover:bg-primary-dark w-full sm:w-auto {{ $routeName === 'contacto' && $cta1IsAnchor ? 'inst-btn-scroll-guide' : '' }}">
+                                <span>{{ $hero['cta1']['text'] }}</span>
+                                @if ($routeName === 'contacto' && $cta1IsAnchor)
+                                    <span aria-hidden="true" class="material-icons-outlined text-[1.1rem]">south</span>
+                                @endif
+                            </a>
                         @endif
                         @if (!empty($hero['cta2']['text']) && $cta2Href)
-                            <a href="{{ $cta2Href }}" class="inst-btn border-secondary text-secondary hover:bg-brand-gold-soft hover:border-primary hover:text-primary w-full sm:w-auto">{{ $hero['cta2']['text'] }}</a>
+                            <a href="{{ $cta2Href }}" class="inst-btn {{ $isUnifiedHero ? 'border-white text-white hover:bg-white/10' : 'border-secondary text-secondary hover:bg-brand-gold-soft hover:border-primary hover:text-primary' }} w-full sm:w-auto">{{ $hero['cta2']['text'] }}</a>
                         @endif
                     </div>
 
                     @if (!empty($hero['chips']))
                         <div class="mt-6 flex flex-wrap gap-x-5 gap-y-2.5 text-sm md:text-base">
                             @foreach ($hero['chips'] as $chip)
-                                <span class="inline-flex items-center gap-1.5 text-secondary-light">
+                                <span class="inline-flex items-center gap-1.5 {{ $isUnifiedHero ? 'text-white/90' : 'text-secondary-light' }}">
                                     <span class="material-icons-outlined text-brand-gold text-[1.15rem]">check_circle</span>
                                     <span class="font-semibold">{{ $chip }}</span>
                                 </span>
@@ -501,17 +513,19 @@
                 </div>
             </div>
 
-            <aside class="relative bg-inst-hero text-white inst-tramites-cut">
+            <aside class="relative z-10 text-white {{ $isUnifiedHero ? 'bg-transparent' : 'bg-inst-hero inst-tramites-cut' }}">
                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(219,169,59,0.14),transparent_34%),radial-gradient(circle_at_88%_82%,rgba(255,255,255,0.06),transparent_38%)]"></div>
                 <div class="absolute inset-x-0 top-0 h-[2px] bg-[linear-gradient(90deg,#dba93b_0%,#ba7c00_46%,#f3cc79_100%)]"></div>
-                <div aria-hidden="true" class="absolute right-5 top-5 md:right-10 md:top-8 opacity-[0.08] z-0">
-                    <span class="material-icons-outlined text-[4.75rem] md:text-[7rem] leading-none">{{ $hero['icon'] }}</span>
-                </div>
+                @if (!$isUnifiedHero)
+                    <div aria-hidden="true" class="absolute right-5 top-5 md:right-10 md:top-8 opacity-[0.08] z-0">
+                        <span class="material-icons-outlined text-[4.75rem] md:text-[7rem] leading-none">{{ $hero['icon'] }}</span>
+                    </div>
+                @endif
 
-                <div class="relative z-10 mx-auto lg:mx-0 w-full max-w-[40rem] lg:mr-auto lg:ml-0 px-4 sm:px-6 lg:px-8 lg:pl-14 py-10 md:py-12">
-                    <div class="relative border border-white/25 bg-white/5 backdrop-blur-2xl p-5 md:p-6 shadow-hero-panel overflow-hidden">
+                <div class="relative z-10 mx-auto lg:mx-0 w-full max-w-[34rem] lg:mr-auto lg:ml-0 px-4 sm:px-6 lg:px-8 lg:pl-10 py-8 md:py-10">
+                    <div class="relative border border-white/20 bg-[#102a52]/55 backdrop-blur-xl p-4 md:p-5 shadow-hero-panel overflow-hidden">
                         <p class="text-xs uppercase tracking-[0.16em] text-brand-gold-light font-bold mb-2">{{ $hero['assistEyebrow'] }}</p>
-                        <p class="font-bold text-white text-xl md:text-2xl leading-tight">{{ $hero['assistTitle'] }}</p>
+                        <p class="font-bold text-white text-lg sm:text-xl md:text-2xl leading-tight">{{ $hero['assistTitle'] }}</p>
 
                         @if ($routeName === 'contacto')
                             <div class="mt-5 space-y-3">
@@ -524,16 +538,16 @@
                                     <span class="font-semibold">+51 982 520 891</span>
                                 </a>
                             </div>
-                            <p class="mt-5 text-sm md:text-base text-white/85">{{ $hero['assistFooter'] }}</p>
+                            <p class="mt-4 text-sm md:text-base text-white/85">{{ $hero['assistFooter'] }}</p>
                         @elseif ($routeName === 'tramites')
                             @if (!empty($hero['helpLinks']))
                                 @php($faqLink = $hero['helpLinks'][0])
                                 @php($faqHref = $faqLink['href'] ?? route($faqLink['route']))
-                                <a href="{{ $faqHref }}" class="mt-5 inst-btn !w-full !bg-white !text-primary hover:!bg-brand-gold-soft !py-3 !text-sm">
+                                <a href="{{ $faqHref }}" class="mt-4 inst-btn !w-full !bg-white !text-primary hover:!bg-brand-gold-soft !py-2.5 !text-sm">
                                     {{ $faqLink['label'] }}
                                 </a>
                             @endif
-                            <div class="mt-4 border border-white/20 bg-white/10 px-4 py-3 text-sm text-white/90">
+                            <div class="mt-3 border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white/90">
                                 <p class="font-semibold text-white">Llamar para soporte rápido</p>
                                 <a href="tel:+51982520891" class="mt-1 inline-flex items-center gap-2 text-brand-gold-soft hover:text-brand-gold-light">
                                     <span class="material-icons-outlined text-base">call</span>
@@ -542,22 +556,20 @@
                             </div>
                         @else
                             @if (!empty($hero['helpLinks']))
-                                <div class="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                                <div class="mt-4 grid sm:grid-cols-2 gap-2.5">
                                     @foreach ($hero['helpLinks'] as $link)
                                         @php($linkHref = $link['href'] ?? route($link['route']))
-                                        <a href="{{ $linkHref }}" class="group inline-flex items-center justify-between gap-3 border border-white/25 bg-white/10 px-3.5 py-3 text-white hover:bg-white/15 hover:border-white/40 transition-colors">
+                                        <a href="{{ $linkHref }}" class="group inline-flex items-center justify-between gap-2 border border-white/25 bg-white/10 px-3 py-2.5 text-white hover:bg-white/15 hover:border-white/40 transition-colors">
                                             <span class="inline-flex items-center gap-2">
                                                 <span class="material-icons-outlined text-lg text-brand-gold-light">{{ $link['icon'] ?? 'arrow_forward' }}</span>
-                                                <span class="text-base font-semibold">{{ $link['label'] }}</span>
+                                                <span class="text-sm sm:text-base font-semibold">{{ $link['label'] }}</span>
                                             </span>
-                                            <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center bg-white/95 text-primary transition-colors group-hover:bg-white group-hover:text-primary">
-                                                <span class="material-icons-outlined text-lg">east</span>
-                                            </span>
+                                            <span class="material-icons-outlined text-base text-white/90">east</span>
                                         </a>
                                     @endforeach
                                 </div>
                             @endif
-                            <p class="mt-5 text-sm md:text-base text-white/85">{{ $hero['assistFooter'] }}</p>
+                            <p class="mt-4 text-sm md:text-base text-white/85">{{ $hero['assistFooter'] }}</p>
                         @endif
                     </div>
                 </div>

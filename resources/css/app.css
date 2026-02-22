@@ -20,6 +20,21 @@
     }
 }
 
+@keyframes scrollGuideExpand {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.9;
+    }
+    55% {
+        transform: translateY(1px) scale(1.28);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
 :root {
     color-scheme: light;
     --inst-primary: #660219;
@@ -154,6 +169,10 @@ h6 {
     .inst-page-hero {
         min-height: clamp(22rem, 50vh, 35rem);
         border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+    }
+
+    .inst-btn-scroll-guide .material-icons-outlined {
+        animation: scrollGuideExpand 650ms cubic-bezier(.2,.7,.2,1) 1;
     }
 }
 
