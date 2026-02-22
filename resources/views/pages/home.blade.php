@@ -3,7 +3,11 @@
 @section('content')
     <main id="main">
         <section class="relative bg-white overflow-hidden border-b border-slate-200">
-            <div class="absolute right-0 top-0 h-full w-1/3 bg-slate-100 skew-x-12 transform origin-top-right z-0 hidden lg:block"></div>
+            <div class="absolute inset-0 z-0">
+                <img src="{{ asset('assets/img/foto_gestion_2025_2028.jpg') }}" alt="Fondo gestion actual CRO III Lima-Callao" class="h-full w-full object-cover object-center opacity-45" />
+                <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.85)_38%,rgba(248,250,252,0.76)_100%)]"></div>
+            </div>
+            <div class="absolute right-0 top-0 h-full w-1/3 bg-slate-100/40 skew-x-12 transform origin-top-right z-0 hidden lg:block"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 relative z-10">
                 <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-stretch">
                     <div>
@@ -38,6 +42,11 @@
                             [
                                 'tipo' => 'Gestion actual',
                                 'fecha' => 'Periodo 2025-2028',
+                                'estado' => 'Informativo',
+                                'icono' => 'groups',
+                                'color' => '#660219',
+                                'superficie' => '#ffffff',
+                                'overlay' => 'rgba(15,23,42,0.34)',
                                 'titulo' => 'Consejo Regional CRO III',
                                 'descripcion' => 'Decana Regional: Obst. Jenny Elenisse Zavaleta Lujan',
                                 'detalle' => 'Sede: Mariscal Sucre 1351, Pueblo Libre',
@@ -50,6 +59,11 @@
                             [
                                 'tipo' => 'Comunicado urgente',
                                 'fecha' => 'Aviso institucional',
+                                'estado' => 'Prioridad alta',
+                                'icono' => 'campaign',
+                                'color' => '#b91c1c',
+                                'superficie' => '#fff5f5',
+                                'overlay' => 'rgba(127,29,29,0.42)',
                                 'titulo' => 'Mesa de Partes: horario extraordinario',
                                 'descripcion' => 'Atencion extendida para recepcion documentaria hasta las 18:30.',
                                 'detalle' => 'Revise lineamientos y requisitos antes de acudir.',
@@ -62,6 +76,11 @@
                             [
                                 'tipo' => 'Evento destacado',
                                 'fecha' => 'Proximo encuentro',
+                                'estado' => 'Inscripciones abiertas',
+                                'icono' => 'event_available',
+                                'color' => '#0f766e',
+                                'superficie' => '#f0fdfa',
+                                'overlay' => 'rgba(15,118,110,0.36)',
                                 'titulo' => 'Jornada regional de actualizacion obstetrica',
                                 'descripcion' => 'Ponencias especializadas en salud materna y gestion del riesgo.',
                                 'detalle' => 'Modalidad mixta con certificacion para colegiadas habilitadas.',
@@ -74,6 +93,11 @@
                             [
                                 'tipo' => 'Curso y ponencia',
                                 'fecha' => 'Capacitacion continua',
+                                'estado' => 'Cupos limitados',
+                                'icono' => 'school',
+                                'color' => '#1d4ed8',
+                                'superficie' => '#eff6ff',
+                                'overlay' => 'rgba(29,78,216,0.34)',
                                 'titulo' => 'Programa de ponencias para fortalecimiento clinico',
                                 'descripcion' => 'Actualizacion en protocolos y competencias profesionales.',
                                 'detalle' => 'Cupos limitados con constancia institucional.',
@@ -86,6 +110,11 @@
                             [
                                 'tipo' => 'Noticia institucional',
                                 'fecha' => 'Actualidad CRO III',
+                                'estado' => 'Actualizacion',
+                                'icono' => 'newspaper',
+                                'color' => '#7c3aed',
+                                'superficie' => '#f5f3ff',
+                                'overlay' => 'rgba(76,29,149,0.34)',
                                 'titulo' => 'Nuevas acciones de articulacion interinstitucional',
                                 'descripcion' => 'Se fortalecen alianzas para formacion y servicios a colegiadas.',
                                 'detalle' => 'Conozca los avances y cronograma de implementacion.',
@@ -114,29 +143,44 @@
                         x-init="start()"
                         @mouseenter="stop()"
                         @mouseleave="start()"
-                        class="inst-card overflow-hidden border-primary/20 bg-white/95">
-                        <div class="relative h-full">
-                            <div class="relative min-h-[230px] sm:min-h-[280px]">
-                                <img :src="items[current].imagen" :alt="items[current].titulo" class="absolute inset-0 h-full w-full object-cover object-top" />
-                                <div class="absolute inset-0 bg-gradient-to-t from-secondary/45 via-secondary/10 to-transparent"></div>
+                        class="inst-card overflow-hidden border-primary/20 bg-white">
+                        <div class="h-full flex flex-col">
+                            <div class="grid grid-cols-5 gap-1.5 p-3 bg-slate-50 border-b border-slate-200">
+                                <template x-for="(item, idx) in items" :key="idx">
+                                    <button type="button" @click="go(idx)"
+                                        class="h-9 border text-[10px] font-bold uppercase tracking-[0.08em] px-1 transition-all inline-flex items-center justify-center gap-1"
+                                        :style="current === idx ? `background-color: ${item.color}; border-color: ${item.color}; color: white;` : ''"
+                                        :class="current !== idx ? 'bg-white text-slate-600 border-slate-300 hover:border-primary hover:text-primary' : ''">
+                                        <span class="material-icons-outlined text-sm" x-text="item.icono"></span>
+                                    </button>
+                                </template>
                             </div>
-                            <div class="p-4 sm:p-5 bg-white min-h-[250px]">
-                                <p class="text-[11px] uppercase tracking-[0.14em] text-primary font-bold" x-text="items[current].tipo"></p>
-                                <p class="text-[11px] uppercase tracking-[0.12em] text-slate-500 mt-1" x-text="items[current].fecha"></p>
-                                <h3 class="text-xl font-black text-slate-900 mt-2" x-text="items[current].titulo"></h3>
-                                <p class="text-sm text-slate-700 mt-2" x-text="items[current].descripcion"></p>
-                                <p class="text-sm text-slate-700" x-text="items[current].detalle"></p>
-                                <div class="mt-3 flex gap-2">
-                                    <a :href="items[current].cta1_link" class="inst-btn-primary !py-2 !px-3 !text-xs" x-text="items[current].cta1_texto"></a>
-                                    <a :href="items[current].cta2_link" class="inst-btn-secondary !py-2 !px-3 !text-xs" x-text="items[current].cta2_texto"></a>
+
+                            <div class="px-4 py-3 text-white" :style="`background-color: ${items[current].color}`">
+                                <div class="flex items-center justify-between gap-3">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-icons-outlined text-base" x-text="items[current].icono"></span>
+                                        <p class="text-[11px] uppercase tracking-[0.14em] font-bold" x-text="items[current].tipo"></p>
+                                    </div>
+                                    <span class="text-[10px] uppercase tracking-[0.12em] bg-white/20 px-2 py-1" x-text="items[current].estado"></span>
                                 </div>
-                                <div class="mt-4 grid grid-cols-5 gap-1.5">
-                                    <template x-for="(item, idx) in items" :key="idx">
-                                        <button type="button" @click="go(idx)"
-                                            class="h-8 border text-[10px] font-bold uppercase tracking-[0.08em] px-1 transition-colors"
-                                            :class="current === idx ? 'bg-primary text-white border-primary' : 'bg-white text-slate-600 border-slate-300 hover:border-primary hover:text-primary'"
-                                            x-text="item.tipo.split(' ')[0]"></button>
-                                    </template>
+                                <p class="text-[11px] uppercase tracking-[0.12em] text-white/80 mt-1" x-text="items[current].fecha"></p>
+                            </div>
+
+                            <div class="relative min-h-[210px] sm:min-h-[250px] border-b border-slate-200">
+                                <img :src="items[current].imagen" :alt="items[current].titulo" class="absolute inset-0 h-full w-full object-cover object-top" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent"></div>
+                                <div class="absolute bottom-3 left-3 right-3">
+                                    <p class="text-white text-lg sm:text-xl font-black leading-tight drop-shadow" x-text="items[current].titulo"></p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 sm:p-5" :style="`background-color: ${items[current].superficie}`">
+                                <p class="text-sm text-slate-700" x-text="items[current].descripcion"></p>
+                                <p class="text-sm text-slate-700 mt-1" x-text="items[current].detalle"></p>
+                                <div class="mt-4 flex gap-2">
+                                    <a :href="items[current].cta1_link" class="inst-btn !py-2 !px-3 !text-xs !text-white" :style="`background-color: ${items[current].color}`" x-text="items[current].cta1_texto"></a>
+                                    <a :href="items[current].cta2_link" class="inst-btn-secondary !py-2 !px-3 !text-xs" x-text="items[current].cta2_texto"></a>
                                 </div>
                             </div>
                         </div>
