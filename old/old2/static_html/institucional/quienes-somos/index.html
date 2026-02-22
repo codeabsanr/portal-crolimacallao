@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Quiénes somos | Colegio Regional de Obstetras III</title>
+    <!-- Tailwind CSS (Direct for performance) -->
+    <link href="../../assets/css/tailwind-pro.css" rel="stylesheet" />
+    
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <!-- Component Loader -->
+    <script src="../../assets/js/components.js" defer></script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-sans antialiased transition-colors duration-200" data-active-page="institucion">
+    <div data-include="navbar"></div>
+    <main id="main" class="min-h-screen bg-slate-50 dark:bg-slate-900 pb-16">
+        <!-- Simplified Header/Hero for Subpages -->
+        <div class="bg-primary text-white py-12 md:py-16 shadow-inner">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="material-icons-outlined text-4xl opacity-80">groups</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold">Quiénes somos</h1>
+                </div>
+                <p class="text-lg md:text-xl opacity-90">Nuestra misión, visión y valores institucionales delineando nuestro compromiso con la salud materno-perinatal.</p>
+            </div>
+        </div>
+        
+        <!-- Main Content Area with isolated semantic tags -->
+        <div class="max-w-4xl mx-auto px-6 mt-12">
+            
+            <section id="mision" class="mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 border-l-4 border-primary pl-4 mb-6">Misión</h2>
+                <p class="text-lg text-slate-700 leading-relaxed bg-white p-6 rounded-lg shadow-sm">Somos una institución deontológica que agrupa a los profesionales Obstetras de la Región Lima Callao, encargada de velar por el ejercicio ético y legal de la profesión...</p>
+            </section>
+            <section id="vision" class="mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 border-l-4 border-primary pl-4 mb-6">Visión</h2>
+                <p class="text-lg text-slate-700 leading-relaxed bg-white p-6 rounded-lg shadow-sm">Ser una institución líder, innovadora y proactiva, reconocida por su contribución al desarrollo de la salud pública, empoderando a la profesión obstétrica...</p>
+            </section>
+        
+            
+            <div class="mt-12 flex justify-start">
+                <a href="javascript:history.back()" class="inline-flex items-center text-primary font-bold hover:underline">
+                    <span class="material-icons-outlined mr-1">arrow_back</span> Regresar
+                </a>
+            </div>
+        </div>
+    <div data-include="support"></div>
+    </main>
+    <div data-include="footer"></div>
+    </body>
+
+</html>

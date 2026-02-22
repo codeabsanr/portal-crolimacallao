@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Horarios de Atención | Colegio Regional de Obstetras III</title>
+    <!-- Tailwind CSS (Direct for performance) -->
+    <link href="../../assets/css/tailwind-pro.css" rel="stylesheet" />
+    
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <!-- Component Loader -->
+    <script src="../../assets/js/components.js" defer></script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-sans antialiased transition-colors duration-200" data-active-page="contacto">
+    <div data-include="navbar"></div>
+    <main id="main" class="min-h-screen bg-slate-50 dark:bg-slate-900 pb-16">
+        <!-- Simplified Header/Hero for Subpages -->
+        <div class="bg-primary text-white py-12 md:py-16 shadow-inner">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="material-icons-outlined text-4xl opacity-80">schedule</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold">Horarios de Atención</h1>
+                </div>
+                <p class="text-lg md:text-xl opacity-90">Días y horas de labor en sede central y modalidades virtuales.</p>
+            </div>
+        </div>
+        
+        <!-- Main Content Area with isolated semantic tags -->
+        <div class="max-w-4xl mx-auto px-6 mt-12">
+            <section id="horarios-sede"><h2 class="text-3xl font-bold text-slate-900 border-l-4 border-primary pl-4 mb-6">Sede Administrativa</h2><table class="w-full text-left bg-white border rounded shadow-sm overflow-hidden"><thead class="bg-slate-100 border-b"><tr><th class="p-4">Día</th><th class="p-4">Horario</th></tr></thead><tbody><tr class="border-b"><td class="p-4 font-medium">Lunes a Viernes</td><td class="p-4 text-slate-600">9:00 a.m. a 5:30 p.m.</td></tr><tr><td class="p-4 font-medium">Sábados</td><td class="p-4 text-slate-600">9:00 a.m. a 12:00 m.</td></tr></tbody></table></section>
+            
+            <div class="mt-12 flex justify-start">
+                <a href="javascript:history.back()" class="inline-flex items-center text-primary font-bold hover:underline">
+                    <span class="material-icons-outlined mr-1">arrow_back</span> Regresar
+                </a>
+            </div>
+        </div>
+    <div data-include="support"></div>
+    </main>
+    <div data-include="footer"></div>
+    </body>
+
+</html>

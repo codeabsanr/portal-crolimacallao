@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cursos y Talleres | Colegio Regional de Obstetras III</title>
+    <!-- Tailwind CSS (Direct for performance) -->
+    <link href="../../assets/css/tailwind-pro.css" rel="stylesheet" />
+    
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <!-- Component Loader -->
+    <script src="../../assets/js/components.js" defer></script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-sans antialiased transition-colors duration-200" data-active-page="capacitacion">
+    <div data-include="navbar"></div>
+    <main id="main" class="min-h-screen bg-slate-50 dark:bg-slate-900 pb-16">
+        <!-- Simplified Header/Hero for Subpages -->
+        <div class="bg-primary text-white py-12 md:py-16 shadow-inner">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="material-icons-outlined text-4xl opacity-80">cast_for_education</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold">Cursos y Talleres</h1>
+                </div>
+                <p class="text-lg md:text-xl opacity-90">Oferta vigente de formación con puntaje válido para recertificación.</p>
+            </div>
+        </div>
+        
+        <!-- Main Content Area with isolated semantic tags -->
+        <div class="max-w-4xl mx-auto px-6 mt-12">
+            <section id="especializacion-ecografia" class="mb-16">
+                <div class="bg-white border rounded-xl overflow-hidden shadow-sm flex flex-col md:flex-row">
+                    <div class="md:w-1/3 bg-slate-200">
+                        <img src="../../assets/img/hero-image.jpg" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-8 md:w-2/3">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest">Diplomado 2026</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900 mt-2 mb-4">Especialización en Ecografía Obstétrica</h2>
+                        <p class="text-lg text-slate-600 mb-6">Capacitación intensiva con certificación nacional para la detección temprana de anomalías fetales y manejo de doppler avanzado.</p>
+                        <div class="flex flex-wrap gap-4 mb-6">
+                            <span class="bg-slate-100 px-3 py-1 rounded-sm text-sm font-medium">120 Horas</span>
+                            <span class="bg-slate-100 px-3 py-1 rounded-sm text-sm font-medium">Créditos: 5.0</span>
+                        </div>
+                        <a href="" class="bg-primary text-white px-8 py-3 rounded font-bold hover:bg-primary-dark transition-colors inline-block">Ver Temario Completo</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="taller-emergencias-obstetricas" class="mb-16">
+                <div class="bg-white border rounded-xl overflow-hidden shadow-sm flex flex-col md:flex-row">
+                    <div class="md:w-1/3 bg-slate-100 flex items-center justify-center">
+                        <span class="material-icons-outlined text-8xl text-slate-300">medical_services</span>
+                    </div>
+                    <div class="p-8 md:w-2/3">
+                        <span class="text-primary font-bold text-xs uppercase tracking-widest">Taller Presencial</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900 mt-2 mb-4">Clave Roja y Emergencias Obstétricas</h2>
+                        <p class="text-lg text-slate-600 mb-6">Entrenamiento práctico en simulación de alta fidelidad para el manejo de hemorragias postparto y shock hipovolémico.</p>
+                        <div class="flex flex-wrap gap-4 mb-6">
+                            <span class="bg-slate-100 px-3 py-1 rounded-sm text-sm font-medium">20 Horas</span>
+                            <span class="bg-slate-100 px-3 py-1 rounded-sm text-sm font-medium">Presencial</span>
+                        </div>
+                        <button class="bg-primary text-white px-8 py-3 rounded font-bold hover:bg-primary-dark transition-colors">Solicitar Información</button>
+                    </div>
+                </div>
+            </section>
+<div class="mt-12 flex justify-start">
+                <a href="javascript:history.back()" class="inline-flex items-center text-primary font-bold hover:underline">
+                    <span class="material-icons-outlined mr-1">arrow_back</span> Regresar
+                </a>
+            </div>
+        </div>
+    <div data-include="support"></div>
+    </main>
+    <div data-include="footer"></div>
+    </body>
+
+</html>

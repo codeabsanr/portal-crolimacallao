@@ -1,0 +1,129 @@
+<div class="bg-secondary text-white py-2 px-4 text-sm hidden md:block">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <span class="flex items-center"><span class="material-icons-outlined text-base mr-1">phone</span> +51
+                982 520 891</span>
+            <span class="flex items-center"><span class="material-icons-outlined text-base mr-1">email</span>
+                tramitedocumentario@crolimacallao.org.pe</span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a class="hover:underline" href="{prefix}admin/">Intranet / Mi Cuenta</a>
+            <a class="hover:underline" href="{prefix}tramites/mesa-partes/">Mesa de Partes</a>
+        </div>
+    </div>
+</div>
+<a href="#main" class="sr-only focus:not-sr-only bg-primary text-white px-4 py-2 absolute top-0 left-0 z-50">Saltar
+    al contenido principal</a>
+<header
+    class="bg-surface-light dark:bg-surface-dark shadow-md sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <div class="flex-shrink-0 flex items-center">
+                <a href="{prefix}" class="flex items-center group">
+                    <img src="{prefix}assets/img/logo-text.png" alt="Colegio Regional de Obstetras III Lima-Callao"
+                        class="h-16 lg:h-20 w-auto transition-transform group-hover:scale-[1.02]">
+                </a>
+            </div>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a class="nav-link text-slate-700 dark:text-slate-200 font-medium py-2" data-page="inicio"
+                    href="{prefix}">Inicio</a>
+                <a class="nav-link text-slate-700 dark:text-slate-200 font-medium py-2" data-page="institucion"
+                    href="{prefix}institucional/">Institución</a>
+                <a class="nav-link text-slate-700 dark:text-slate-200 font-medium py-2" data-page="tramites"
+                    href="{prefix}tramites/">Trámites</a>
+                <a class="nav-link text-slate-700 dark:text-slate-200 font-medium py-2" data-page="colegiados"
+                    href="{prefix}colegiados/">Colegiados</a>
+                <a class="nav-link text-slate-700 dark:text-slate-200 font-medium py-2" data-page="capacitacion"
+                    href="{prefix}capacitacion/">Capacitación</a>
+                <a class="nav-link text-slate-700 dark:text-slate-200 font-medium py-2" data-page="actualidad"
+                    href="{prefix}actualidad/">Actualidad</a>
+                <a class="nav-link text-slate-700 dark:text-slate-200 font-medium py-2" data-page="normativa"
+                    href="{prefix}normativa/">Normativa</a>
+                <a class="nav-link text-slate-700 dark:text-slate-200 font-medium py-2" data-page="contacto"
+                    href="{prefix}contacto/">Contacto</a>
+            </nav>
+            <div class="hidden md:flex items-center">
+                <a class="inline-flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary shadow-sm transition-colors"
+                    href="{prefix}admin/">
+                    <span class="material-icons-outlined mr-2">person</span>
+                    Mi Cuenta
+                </a>
+            </div>
+            <!-- Menú Móvil Botón -->
+            <div class="flex items-center md:hidden">
+                <button id="mobile-menu-btn"
+                    class="text-slate-500 dark:text-slate-300 hover:text-slate-700 focus:outline-none p-2"
+                    type="button">
+                    <span class="sr-only">Abrir menú</span>
+                    <span class="material-icons-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menú Móvil Full-screen -->
+    <div id="mobile-menu-container"
+        class="fixed inset-0 z-[100] bg-primary transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col h-screen overflow-y-auto">
+        <div class="flex justify-end p-6">
+            <button id="close-mobile-menu" class="text-white hover:text-gray-200 focus:outline-none p-2"
+                aria-label="Cerrar menú">
+                <span class="material-icons-outlined text-4xl">close</span>
+            </button>
+        </div>
+
+        <nav class="flex flex-col px-6 pb-6 space-y-6 flex-grow">
+            <a href="{prefix}"
+                class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Inicio
+                <span class="material-icons-outlined">chevron_right</span></a>
+            <a href="{prefix}institucional/"
+                class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Institución
+                <span class="material-icons-outlined">chevron_right</span></a>
+            <a href="{prefix}tramites/"
+                class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Trámites
+                <span class="material-icons-outlined">chevron_right</span></a>
+            <a href="{prefix}colegiados/"
+                class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Colegiados
+                <span class="material-icons-outlined">chevron_right</span></a>
+            <a href="{prefix}capacitacion/"
+                class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Capacitación
+                <span class="material-icons-outlined">chevron_right</span></a>
+            <a href="{prefix}actualidad/"
+                class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Actualidad
+                <span class="material-icons-outlined">chevron_right</span></a>
+            <a href="{prefix}normativa/"
+                class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Normativa
+                <span class="material-icons-outlined">chevron_right</span></a>
+            <a href="{prefix}contacto/"
+                class="flex justify-between items-center text-white text-2xl font-bold pb-4 border-b border-white/20">Contacto
+                <span class="material-icons-outlined">chevron_right</span></a>
+
+            <div class="pt-8 space-y-4">
+                <h3 class="text-white/70 text-sm uppercase tracking-wider mb-4">Accesos Rápidos</h3>
+                <a href="{prefix}admin/"
+                    class="flex justify-between items-center bg-transparent border border-white text-white p-4 rounded-sm hover:bg-white/10 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <span class="material-icons-outlined text-2xl">person</span>
+                        <span class="font-bold text-lg">Mi Cuenta</span>
+                    </div>
+                    <span class="material-icons-outlined border border-white p-1 rounded-sm">arrow_forward</span>
+                </a>
+                <a href="{prefix}tramites/mesa-partes/"
+                    class="flex justify-between items-center bg-transparent border border-white text-white p-4 rounded-sm hover:bg-white/10 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <span class="material-icons-outlined text-2xl">folder_open</span>
+                        <span class="font-bold text-lg">Mesa de Partes</span>
+                    </div>
+                    <span class="material-icons-outlined border border-white p-1 rounded-sm">arrow_forward</span>
+                </a>
+                <a href="https://crolimacallao.org.pe/BBB/libro.php" target="_blank"
+                    class="flex justify-between items-center bg-transparent border border-white text-white p-4 rounded-sm hover:bg-white/10 transition-colors">
+                    <div class="flex items-center gap-3">
+                        <span class="material-icons-outlined text-2xl">menu_book</span>
+                        <span class="font-bold text-lg">Libro de Reclamaciones</span>
+                    </div>
+                    <span class="material-icons-outlined border border-white p-1 rounded-sm">launch</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>

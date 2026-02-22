@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Actualidad - Colegio Regional de Obstetras III Lima-Callao</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="../assets/js/tailwind-config.js"></script>
+    <link href="../assets/css/styles.css" rel="stylesheet" />
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-sans antialiased transition-colors duration-200">
+    <!-- Navigation will be updated by update_nav.py -->
+    <main id="main" class="pt-10">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <h1 class="text-4xl font-extrabold text-slate-900 dark:text-white mb-8 border-l-4 border-primary pl-4">
+                Actualidad Institucional</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Noticias Card -->
+                <a href="noticias/"
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-md shadow-sm hover:shadow-lg transition-shadow border-l-4 border-primary group cursor-pointer relative overflow-hidden">
+                    <div
+                        class="absolute top-4 right-4 bg-red-50 dark:bg-slate-700 p-3 rounded-full group-hover:bg-primary group-hover:text-white transition-colors text-primary dark:text-red-400">
+                        <span class="material-icons-outlined text-3xl">newspaper</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3 mt-2">Noticias</h3>
+                    <p class="text-slate-600 dark:text-slate-300 mb-8 text-lg leading-relaxed">Mantente informado sobre
+                        los últimos comunicados, logros y novedades del colegio.</p>
+                    <span
+                        class="inline-flex items-center text-primary font-bold text-lg hover:underline decoration-2 underline-offset-4">Ver
+                        Noticias <span class="material-icons-outlined ml-2">arrow_forward</span></span>
+                </a>
+                <!-- Eventos Card -->
+                <a href="eventos/"
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-md shadow-sm hover:shadow-lg transition-shadow border-l-4 border-primary group cursor-pointer relative overflow-hidden">
+                    <div
+                        class="absolute top-4 right-4 bg-red-50 dark:bg-slate-700 p-3 rounded-full group-hover:bg-primary group-hover:text-white transition-colors text-primary dark:text-red-400">
+                        <span class="material-icons-outlined text-3xl">calendar_month</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3 mt-2">Eventos y Calendario</h3>
+                    <p class="text-slate-600 dark:text-slate-300 mb-8 text-lg leading-relaxed">Consulta la agenda de
+                        webinars, asambleas y actividades académicas.</p>
+                    <span
+                        class="inline-flex items-center text-primary font-bold text-lg hover:underline decoration-2 underline-offset-4">Ver
+                        Calendario <span class="material-icons-outlined ml-2">arrow_forward</span></span>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

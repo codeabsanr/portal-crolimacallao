@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
+
+/* Accessibility Focus States */
+*:focus-visible {
+    outline: 4px solid #000 !important;
+    outline-offset: 2px;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #1e293b;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.material-icons-outlined {
+    font-family: 'Material Icons Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Base Component Geometry */
+.btn-primary {
+    @apply px-8 py-3 font-bold transition-all duration-200 rounded;
+}
+
+.action-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.action-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Base Link Style Requested by User matching stitch 3 */
+.web-link {
+    @apply text-slate-600 dark:text-slate-400 hover:text-primary underline transition-colors;
+}
+
+/* Style for general articles to match link behavior */
+.content-wrapper a:not(.btn) {
+    @apply text-primary hover:text-red-800 underline transition-colors font-medium;
+}
+
+/* 
+ * A11y Font Resizing Overrides
+ * We target Tailwind's text utilities selectively so that changing the text size
+ * ONLY affects font-sizes and doesn't behave like a browser zoom (which would stretch margin/padding/widths).
+ */
+html.a11y-text-1 p,
+html.a11y-text-1 a,
+html.a11y-text-1 li,
+html.a11y-text-1 span,
+html.a11y-text-1 div {
+    font-size: 1.125rem;
+}
+
+html.a11y-text-1 .text-xs {
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+}
+
+html.a11y-text-1 .text-sm {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+}
+
+html.a11y-text-1 .text-base {
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
+}
+
+html.a11y-text-1 .text-lg {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+}
+
+html.a11y-text-1 .text-xl {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+}
+
+html.a11y-text-1 .text-2xl {
+    font-size: 1.875rem !important;
+    line-height: 2.25rem !important;
+}
+
+html.a11y-text-1 .text-3xl {
+    font-size: 2.25rem !important;
+    line-height: 2.5rem !important;
+}
+
+html.a11y-text-2 p,
+html.a11y-text-2 a,
+html.a11y-text-2 li,
+html.a11y-text-2 span,
+html.a11y-text-2 div {
+    font-size: 1.25rem;
+}
+
+html.a11y-text-2 .text-xs {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+}
+
+html.a11y-text-2 .text-sm {
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
+}
+
+html.a11y-text-2 .text-base {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+}
+
+html.a11y-text-2 .text-lg {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+}
+
+html.a11y-text-2 .text-xl {
+    font-size: 1.875rem !important;
+    line-height: 2.25rem !important;
+}
+
+html.a11y-text-2 .text-2xl {
+    font-size: 2.25rem !important;
+    line-height: 2.5rem !important;
+}
+
+html.a11y-text-2 .text-3xl {
+    font-size: 3rem !important;
+    line-height: 1 !important;
+}

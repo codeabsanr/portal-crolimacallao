@@ -1,0 +1,5 @@
+$env:Path = "C:\laragon\bin\php\php-8.3.30-Win32-vs16-x64;" + $env:Path; php artisan serve --port=8081
+
+
+Stop-Process -Name "php" -Force
+Stop-Process -Name "node" -Force
