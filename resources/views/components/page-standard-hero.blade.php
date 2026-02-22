@@ -468,7 +468,7 @@
 
 @if ($hero)
     @php($isUnifiedHero = true)
-    <section class="relative overflow-hidden min-h-0 bg-inst-hero" style="background-image: linear-gradient(120deg, #071532 0%, #0b234a 52%, #1f3c66 100%);">
+    <section class="relative overflow-hidden min-h-0 bg-inst-hero" style="background-image: linear-gradient(120deg, #660219 0%, #8c0f2f 40%, #17365b 100%);">
         <div class="relative grid lg:grid-cols-2 border-y-2 border-slate-300">
             @if ($isUnifiedHero)
                 <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 md:pr-4 z-[1]">

@@ -1,5 +1,8 @@
-<footer class="mt-16 border-t border-brand-gold/30 bg-footer text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12">
+<footer class="relative mt-16 border-t border-brand-gold/35 text-white overflow-hidden" style="background-image: radial-gradient(circle at 88% 92%, rgba(23,54,91,0.34) 0%, rgba(23,54,91,0) 45%), linear-gradient(180deg, #9b123a 0%, #7a0624 38%, #660219 66%, #4d0213 100%);">
+    <div aria-hidden="true" class="absolute inset-x-0 top-0 h-[2px] bg-[linear-gradient(90deg,#dba93b_0%,#f3cc79_50%,#dba93b_100%)]"></div>
+    <div aria-hidden="true" class="absolute inset-0 opacity-[0.14]" style="background-image: repeating-linear-gradient(180deg, rgba(255,255,255,0.11) 0px, rgba(255,255,255,0.11) 1px, transparent 1px, transparent 12px);"></div>
+    <div aria-hidden="true" class="absolute -top-24 right-0 h-64 w-64 rounded-full bg-brand-gold/10 blur-3xl"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
             <div>
                 <div class="flex items-center gap-3 mb-4">
@@ -67,4 +70,3 @@
         </div>
     </div>
 </footer>
-
