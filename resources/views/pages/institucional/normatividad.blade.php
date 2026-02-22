@@ -34,11 +34,11 @@
         </article>
 
         <div class="grid md:grid-cols-2 gap-4">
-            <article class="inst-card p-5">
+            <article class="inst-card p-5 border-t-2 border-t-primary hover:shadow-hard transition-all">
                 <h3 class="text-xl font-black text-slate-900 mb-3">Leyes</h3>
                 <p class="text-slate-700">Normas nacionales relacionadas con salud, regulación profesional, derechos laborales y ejercicio sanitario.</p>
             </article>
-            <article class="inst-card p-5">
+            <article class="inst-card p-5 border-t-2 border-t-primary hover:shadow-hard transition-all">
                 <h3 class="text-xl font-black text-slate-900 mb-3">Normas técnicas y guías</h3>
                 <p class="text-slate-700">Lineamientos de atención integral, emergencias obstétricas y buenas prácticas clínicas.</p>
             </article>

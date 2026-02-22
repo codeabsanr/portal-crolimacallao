@@ -23,14 +23,6 @@
     --inst-radius: 0.125rem;
 }
 
-/* Dark mode disabled globally by request. */
-.dark {
-    --inst-bg: #f8f9fa;
-    --inst-surface: #ffffff;
-    --inst-text: #1f2230;
-    --inst-text-muted: #64748b;
-}
-
 /* Accessibility Focus States */
 *:focus-visible {
     outline: 3px solid var(--inst-gold) !important;
@@ -131,7 +123,7 @@ h6 {
     }
 
     .inst-btn-secondary {
-        @apply inst-btn border-primary text-primary hover:bg-primary/5 dark:border-brand-gold dark:text-brand-gold dark:hover:bg-brand-gold/10;
+        @apply inst-btn border-primary text-primary hover:bg-primary/5;
     }
 
     .inst-input {
@@ -140,20 +132,12 @@ h6 {
         line-height: 1.4;
     }
 
-    .dark .inst-input {
-        @apply border-primary/40 bg-surface-dark text-slate-100 placeholder:text-slate-400 focus:border-brand-gold focus:ring-brand-gold/25;
-    }
-
     .inst-card {
         @apply rounded-xl border border-slate-200 bg-white shadow-inst;
     }
 
-    .dark .inst-card {
-        @apply border-primary/30 bg-surface-dark;
-    }
-
     .inst-section-title {
-        @apply text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white;
+        @apply text-3xl md:text-4xl font-black tracking-tight text-slate-900;
     }
 }
 
@@ -171,7 +155,7 @@ h6 {
 }
 
 .web-link {
-    @apply text-slate-600 dark:text-slate-400 hover:text-primary underline transition-colors;
+    @apply text-slate-600 hover:text-primary underline transition-colors;
 }
 
 .content-wrapper a:not(.btn) {

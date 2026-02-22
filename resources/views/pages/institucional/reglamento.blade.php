@@ -33,25 +33,25 @@
                         </tr>
                     </thead>
                     <tbody class="text-slate-700">
-                        <tr class="border-b border-slate-200">
+                        <tr class="border-b border-slate-200 hover:bg-slate-50 transition-colors">
                             <td class="px-4 py-3">Institucional</td>
                             <td class="px-4 py-3">Reglamento de insignia y uniforme oficial</td>
-                            <td class="px-4 py-3">PDF</td>
+                            <td class="px-4 py-3"><span class="inline-flex items-center px-2 py-0.5 text-xs font-semibold bg-primary/10 text-primary">PDF</span></td>
                         </tr>
-                        <tr class="border-b border-slate-200">
+                        <tr class="border-b border-slate-200 hover:bg-slate-50 transition-colors">
                             <td class="px-4 py-3">Resolución</td>
                             <td class="px-4 py-3">Resolución N.º 008-2017 CRO III-LC-D</td>
-                            <td class="px-4 py-3">PDF</td>
+                            <td class="px-4 py-3"><span class="inline-flex items-center px-2 py-0.5 text-xs font-semibold bg-primary/10 text-primary">PDF</span></td>
                         </tr>
-                        <tr class="border-b border-slate-200">
+                        <tr class="border-b border-slate-200 hover:bg-slate-50 transition-colors">
                             <td class="px-4 py-3">Reglamento</td>
                             <td class="px-4 py-3">Reglamento para otorgamiento de auspicios y anexos</td>
-                            <td class="px-4 py-3">PDF</td>
+                            <td class="px-4 py-3"><span class="inline-flex items-center px-2 py-0.5 text-xs font-semibold bg-primary/10 text-primary">PDF</span></td>
                         </tr>
-                        <tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
                             <td class="px-4 py-3">Anexos</td>
                             <td class="px-4 py-3">Última hoja de anexos</td>
-                            <td class="px-4 py-3">PDF</td>
+                            <td class="px-4 py-3"><span class="inline-flex items-center px-2 py-0.5 text-xs font-semibold bg-primary/10 text-primary">PDF</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -59,11 +59,11 @@
         </article>
 
         <div class="grid md:grid-cols-2 gap-4">
-            <article class="inst-card p-5">
+            <article class="inst-card p-5 border-t-2 border-t-primary hover:shadow-hard transition-all">
                 <p class="font-bold text-slate-900 mb-2">Aplicación institucional</p>
                 <p class="text-sm text-slate-700">Regula procedimientos administrativos, representación y protocolos oficiales.</p>
             </article>
-            <article class="inst-card p-5">
+            <article class="inst-card p-5 border-t-2 border-t-primary hover:shadow-hard transition-all">
                 <p class="font-bold text-slate-900 mb-2">Actualización y control</p>
                 <p class="text-sm text-slate-700">Todo documento debe revisarse según su vigencia y resoluciones complementarias.</p>
             </article>

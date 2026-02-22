@@ -25,19 +25,19 @@
         </article>
 
         <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
-            <article class="inst-card p-5 border-t-2 border-t-primary">
+            <article class="inst-card p-5 border-t-2 border-t-primary hover:shadow-hard transition-all">
                 <p class="text-xs uppercase tracking-[0.14em] text-slate-500">Creación legal</p>
                 <p class="text-2xl font-black text-slate-900 mt-2">D.L. 21210</p>
             </article>
-            <article class="inst-card p-5 border-t-2 border-t-primary">
+            <article class="inst-card p-5 border-t-2 border-t-primary hover:shadow-hard transition-all">
                 <p class="text-xs uppercase tracking-[0.14em] text-slate-500">Jurisdicción</p>
                 <p class="text-xl font-black text-slate-900 mt-2">Lima - Callao</p>
             </article>
-            <article class="inst-card p-5 border-t-2 border-t-primary">
+            <article class="inst-card p-5 border-t-2 border-t-primary hover:shadow-hard transition-all">
                 <p class="text-xs uppercase tracking-[0.14em] text-slate-500">Naturaleza</p>
                 <p class="text-xl font-black text-slate-900 mt-2">Sin fines de lucro</p>
             </article>
-            <article class="inst-card p-5 border-t-2 border-t-primary">
+            <article class="inst-card p-5 border-t-2 border-t-primary hover:shadow-hard transition-all">
                 <p class="text-xs uppercase tracking-[0.14em] text-slate-500">Sede principal</p>
                 <p class="text-xl font-black text-slate-900 mt-2">Pueblo Libre</p>
             </article>
@@ -46,17 +46,17 @@
         <article class="inst-card p-6 md:p-8">
             <h3 class="text-2xl font-black text-slate-900 mb-5">Pilares de acción institucional</h3>
             <div class="grid md:grid-cols-3 gap-4">
-                <div class="border border-slate-200 p-4 bg-slate-50">
+                <div class="border border-slate-200 p-4 bg-slate-50 hover:bg-white transition-colors">
                     <span class="material-icons-outlined text-primary text-2xl">handshake</span>
                     <p class="font-bold text-slate-900 mt-2">Representación gremial</p>
                     <p class="text-sm text-slate-700 mt-1">Defensa de derechos profesionales y articulación con entidades públicas y privadas.</p>
                 </div>
-                <div class="border border-slate-200 p-4 bg-slate-50">
+                <div class="border border-slate-200 p-4 bg-slate-50 hover:bg-white transition-colors">
                     <span class="material-icons-outlined text-primary text-2xl">school</span>
                     <p class="font-bold text-slate-900 mt-2">Fortalecimiento profesional</p>
                     <p class="text-sm text-slate-700 mt-1">Impulso de capacitación científica y desarrollo de competencias para el ejercicio seguro.</p>
                 </div>
-                <div class="border border-slate-200 p-4 bg-slate-50">
+                <div class="border border-slate-200 p-4 bg-slate-50 hover:bg-white transition-colors">
                     <span class="material-icons-outlined text-primary text-2xl">favorite</span>
                     <p class="font-bold text-slate-900 mt-2">Compromiso social</p>
                     <p class="text-sm text-slate-700 mt-1">Promoción de la salud de la mujer y de buenas prácticas en salud sexual y reproductiva.</p>

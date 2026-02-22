@@ -27,24 +27,50 @@
                 <h3 class="text-2xl font-black text-slate-900">Integrantes y cargos</h3>
                 <span class="text-xs uppercase tracking-[0.16em] text-primary font-bold">Gestión vigente</span>
             </div>
+            @php
+                $integrantes = [
+                    ['nombre' => 'Obst. Alicia Isla López', 'cargo' => 'Vicedecana', 'foto' => 'alicia-isla-lopez.jpg'],
+                    ['nombre' => 'Obst. Sara Carolina Zamora Chávez', 'cargo' => 'Secretaria Regional Administrativa', 'foto' => 'sara-carolina-zamora-chavez.jpg'],
+                    ['nombre' => 'Obst. Miriam Letona Gonzáles', 'cargo' => 'Secretaria de Asuntos Internos', 'foto' => 'miriam-letona-gonzales.jpg'],
+                    ['nombre' => 'Obst. Paulia Emiliana Alhuay Puca', 'cargo' => 'Secretaria de Asuntos Internos', 'foto' => 'paulia-emiliana-alhuay-puca.jpg'],
+                    ['nombre' => 'Obst. Elizabeth Soria Peña', 'cargo' => 'Tesorera', 'foto' => 'elizabeth-soria-pena.jpg'],
+                    ['nombre' => 'Obst. Oscar Josué Huamán Carreño', 'cargo' => 'Primera Vocal', 'foto' => 'oscar-josue-huaman-carreno.jpg'],
+                    ['nombre' => 'Obst. Bertha Aurora Landa Maturrano', 'cargo' => 'Segunda Vocal', 'foto' => 'bertha-aurora-landa-maturrano.jpg'],
+                ];
+            @endphp
             <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
-                <article class="border border-slate-200 p-4 bg-slate-50 border-t-2 border-t-primary"><p class="font-bold text-slate-900">Obst. Alicia Isla López</p><p class="text-primary text-sm font-semibold mt-1">Vicedecana</p></article>
-                <article class="border border-slate-200 p-4 bg-slate-50 border-t-2 border-t-primary"><p class="font-bold text-slate-900">Obst. Sara Carolina Zamora Chávez</p><p class="text-primary text-sm font-semibold mt-1">Secretaria Regional Administrativa</p></article>
-                <article class="border border-slate-200 p-4 bg-slate-50 border-t-2 border-t-primary"><p class="font-bold text-slate-900">Obst. Miriam Letona Gonzáles</p><p class="text-primary text-sm font-semibold mt-1">Secretaria de Asuntos Internos</p></article>
-                <article class="border border-slate-200 p-4 bg-slate-50 border-t-2 border-t-primary"><p class="font-bold text-slate-900">Obst. Paulia Emiliana Alhuay Puca</p><p class="text-primary text-sm font-semibold mt-1">Secretaria de Asuntos Internos</p></article>
-                <article class="border border-slate-200 p-4 bg-slate-50 border-t-2 border-t-primary"><p class="font-bold text-slate-900">Obst. Elizabeth Soria Peña</p><p class="text-primary text-sm font-semibold mt-1">Tesorera</p></article>
-                <article class="border border-slate-200 p-4 bg-slate-50 border-t-2 border-t-primary"><p class="font-bold text-slate-900">Obst. Oscar Josué Huamán Carreño</p><p class="text-primary text-sm font-semibold mt-1">Primera Vocal</p></article>
-                <article class="border border-slate-200 p-4 bg-slate-50 border-t-2 border-t-primary md:col-span-2 xl:col-span-3"><p class="font-bold text-slate-900">Obst. Bertha Aurora Landa Maturrano</p><p class="text-primary text-sm font-semibold mt-1">Segunda Vocal</p></article>
+                @foreach ($integrantes as $integrante)
+                    <article class="inst-card overflow-hidden border-t-2 border-t-primary bg-slate-50 hover:bg-white hover:shadow-hard transition-all h-full">
+                        <div class="relative aspect-[4/3] w-full bg-slate-200 border-b border-slate-200">
+                            <img
+                                src="{{ asset('institucional/consejo-directivo/' . $integrante['foto']) }}"
+                                alt="Foto de {{ $integrante['nombre'] }}"
+                                class="h-full w-full object-cover"
+                                loading="lazy"
+                                onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');" />
+                            <div class="hidden absolute inset-0 flex items-center justify-center text-center bg-slate-100 text-slate-500 p-4">
+                                <div>
+                                    <span class="material-icons-outlined text-3xl text-primary/70">portrait</span>
+                                    <p class="text-xs uppercase tracking-[0.12em] mt-2">Espacio para foto</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 min-h-[96px]">
+                            <p class="font-bold text-slate-900 leading-tight">{{ $integrante['nombre'] }}</p>
+                            <p class="text-primary text-sm font-semibold mt-1">{{ $integrante['cargo'] }}</p>
+                        </div>
+                    </article>
+                @endforeach
             </div>
         </article>
 
         <article class="inst-card p-6 md:p-8 bg-slate-50 border-slate-200">
             <h3 class="text-xl font-black text-slate-900 mb-4">Líneas estratégicas de la gestión</h3>
             <div class="grid md:grid-cols-4 gap-4">
-                <div class="bg-white border border-slate-200 p-4"><p class="font-bold text-slate-900">Ética y deontología</p><p class="text-sm text-slate-700 mt-1">Fortalecimiento del ejercicio responsable.</p></div>
-                <div class="bg-white border border-slate-200 p-4"><p class="font-bold text-slate-900">Capacitación</p><p class="text-sm text-slate-700 mt-1">Actualización académica continua.</p></div>
-                <div class="bg-white border border-slate-200 p-4"><p class="font-bold text-slate-900">Gestión administrativa</p><p class="text-sm text-slate-700 mt-1">Mejora de procesos y servicios.</p></div>
-                <div class="bg-white border border-slate-200 p-4"><p class="font-bold text-slate-900">Representación gremial</p><p class="text-sm text-slate-700 mt-1">Articulación con instituciones clave.</p></div>
+                <div class="bg-white border border-slate-200 p-4 hover:shadow-hard transition-all"><p class="font-bold text-slate-900">Ética y deontología</p><p class="text-sm text-slate-700 mt-1">Fortalecimiento del ejercicio responsable.</p></div>
+                <div class="bg-white border border-slate-200 p-4 hover:shadow-hard transition-all"><p class="font-bold text-slate-900">Capacitación</p><p class="text-sm text-slate-700 mt-1">Actualización académica continua.</p></div>
+                <div class="bg-white border border-slate-200 p-4 hover:shadow-hard transition-all"><p class="font-bold text-slate-900">Gestión administrativa</p><p class="text-sm text-slate-700 mt-1">Mejora de procesos y servicios.</p></div>
+                <div class="bg-white border border-slate-200 p-4 hover:shadow-hard transition-all"><p class="font-bold text-slate-900">Representación gremial</p><p class="text-sm text-slate-700 mt-1">Articulación con instituciones clave.</p></div>
             </div>
         </article>
     </x-institucional-page-shell>

@@ -25,27 +25,27 @@
         <article class="inst-card p-6 md:p-8">
             <h3 class="text-2xl font-black text-slate-900 mb-5">Convenios suscritos</h3>
             <ul class="space-y-3 text-slate-700">
-                <li class="border-l-2 border-primary pl-3 py-2 bg-slate-50">Convenio con Universidad Norbert Wiener (2020)</li>
-                <li class="border-l-2 border-primary pl-3 py-2 bg-slate-50">Convenio con L&amp;S Consultores Asociados (2019)</li>
-                <li class="border-l-2 border-primary pl-3 py-2 bg-slate-50">Convenio con SPEPP (2019)</li>
-                <li class="border-l-2 border-primary pl-3 py-2 bg-slate-50">Convenio Rebagliati - Diplomados (2019)</li>
-                <li class="border-l-2 border-primary pl-3 py-2 bg-slate-50">Convenio con CEPESEX (2018 - 2019)</li>
-                <li class="border-l-2 border-primary pl-3 py-2 bg-slate-50">Convenio con PRIVATEACHER (beneficios promocionales)</li>
-                <li class="border-l-2 border-primary pl-3 py-2 bg-slate-50">Convenio con MEDIFARMA</li>
-                <li class="border-l-2 border-primary pl-3 py-2 bg-slate-50">Convenio con Red de Promoción de la Mujer</li>
+                <li class="border-l-2 border-primary pl-3 py-2 bg-slate-50 hover:bg-white transition-colors">Convenio con Universidad Norbert Wiener (2020)</li>
+                <li class="border-l-2 border-primary pl-3 py-2 bg-slate-50 hover:bg-white transition-colors">Convenio con L&amp;S Consultores Asociados (2019)</li>
+                <li class="border-l-2 border-primary pl-3 py-2 bg-slate-50 hover:bg-white transition-colors">Convenio con SPEPP (2019)</li>
+                <li class="border-l-2 border-primary pl-3 py-2 bg-slate-50 hover:bg-white transition-colors">Convenio Rebagliati - Diplomados (2019)</li>
+                <li class="border-l-2 border-primary pl-3 py-2 bg-slate-50 hover:bg-white transition-colors">Convenio con CEPESEX (2018 - 2019)</li>
+                <li class="border-l-2 border-primary pl-3 py-2 bg-slate-50 hover:bg-white transition-colors">Convenio con PRIVATEACHER (beneficios promocionales)</li>
+                <li class="border-l-2 border-primary pl-3 py-2 bg-slate-50 hover:bg-white transition-colors">Convenio con MEDIFARMA</li>
+                <li class="border-l-2 border-primary pl-3 py-2 bg-slate-50 hover:bg-white transition-colors">Convenio con Red de Promoción de la Mujer</li>
             </ul>
         </article>
 
         <div class="grid md:grid-cols-3 gap-4">
-            <article class="inst-card p-5">
+            <article class="inst-card p-5 border-t-2 border-t-primary hover:shadow-hard transition-all">
                 <p class="font-bold text-slate-900 mb-2">Educación continua</p>
                 <p class="text-sm text-slate-700">Acceso a diplomados, cursos y actualización académica especializada.</p>
             </article>
-            <article class="inst-card p-5">
+            <article class="inst-card p-5 border-t-2 border-t-primary hover:shadow-hard transition-all">
                 <p class="font-bold text-slate-900 mb-2">Beneficios complementarios</p>
                 <p class="text-sm text-slate-700">Servicios promocionales y alianzas con instituciones de apoyo profesional.</p>
             </article>
-            <article class="inst-card p-5">
+            <article class="inst-card p-5 border-t-2 border-t-primary hover:shadow-hard transition-all">
                 <p class="font-bold text-slate-900 mb-2">Impacto institucional</p>
                 <p class="text-sm text-slate-700">Fortalecimiento de la red de colaboración para el gremio obstétrico regional.</p>
             </article>
