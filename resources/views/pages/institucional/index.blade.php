@@ -28,20 +28,20 @@
                         </div>
                     </div>
 
-                    <aside class="inst-card bg-white/10 border-white/20 p-5 md:p-6 text-white shadow-none">
-                        <p class="text-xs uppercase tracking-[0.16em] text-white/80">Resumen institucional</p>
+                    <aside class="inst-card bg-white/10 border-white/20 p-4 md:p-6 text-white shadow-none">
+                        <p class="text-[11px] md:text-xs uppercase tracking-[0.15em] text-white/80">Resumen institucional</p>
                         <div class="grid sm:grid-cols-2 gap-3 mt-3">
                             <div class="border border-white/20 bg-white/5 p-3">
-                                <p class="text-xs uppercase tracking-[0.14em] text-white/75">Fundación</p>
-                                <p class="text-2xl font-black mt-1">1995</p>
+                                <p class="text-[11px] md:text-xs uppercase tracking-[0.13em] text-white/75">Fundación</p>
+                                <p class="text-[1.9rem] md:text-2xl font-black leading-tight mt-1">1995</p>
                             </div>
                             <div class="border border-white/20 bg-white/5 p-3">
-                                <p class="text-xs uppercase tracking-[0.14em] text-white/75">Jurisdicción</p>
-                                <p class="text-2xl font-black mt-1">Lima y Callao</p>
+                                <p class="text-[11px] md:text-xs uppercase tracking-[0.13em] text-white/75">Jurisdicción</p>
+                                <p class="text-[1.85rem] md:text-2xl font-black leading-tight mt-1">Lima y Callao</p>
                             </div>
                             <div class="border border-white/20 bg-white/5 p-3 sm:col-span-2">
-                                <p class="text-xs uppercase tracking-[0.14em] text-white/75">Gestión vigente</p>
-                                <p class="text-xl md:text-2xl font-black mt-1">Consejo Regional 2025-2028</p>
+                                <p class="text-[11px] md:text-xs uppercase tracking-[0.13em] text-white/75">Gestión vigente</p>
+                                <p class="text-[1.55rem] md:text-2xl font-black leading-tight mt-1">Consejo Regional 2025-2028</p>
                             </div>
                         </div>
                     </aside>
