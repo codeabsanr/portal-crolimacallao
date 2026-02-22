@@ -23,6 +23,10 @@ export default {
             '6xl': ['2.9rem', { lineHeight: '1.08' }],
         },
         extend: {
+            backgroundImage: {
+                'inst-hero': 'linear-gradient(122deg, rgba(102,2,25,0.95) 0%, rgba(113,2,31,0.88) 38%, rgba(62,15,34,0.9) 70%, rgba(20,31,58,0.9) 100%)',
+                'inst-hero-overlay': 'radial-gradient(circle_at_14%_16%, rgba(255,255,255,0.14), transparent 34%), radial-gradient(circle_at_86%_80%, rgba(186,124,0,0.2), transparent 36%)',
+            },
             spacing: {
                 '6': '1.375rem',
                 '8': '1.75rem',
@@ -82,6 +86,7 @@ export default {
                 'hard': '4px 4px 0px #E5E7EB',
                 'hard-hover': '6px 6px 0px #660219',
                 'inst': '0 10px 30px -14px rgba(14, 12, 22, 0.35)',
+                'hero-panel': '0 24px 44px -32px rgba(15, 23, 42, 0.5)',
             },
             borderRadius: {
                 'DEFAULT': '0.125rem',

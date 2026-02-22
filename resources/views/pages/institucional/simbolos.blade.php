@@ -20,7 +20,7 @@
 
             <div class="mt-5 inst-card p-4 bg-white border-primary/20">
                 <p class="text-sm text-slate-700"><strong>Referencia:</strong> Ver Resolucion de Consejo Directivo Nacional N. 068-2017/CDN/COP.</p>
-                <a href="{{ asset('institucional/simbolos/resolucion-068-2017-cdn-cop.pdf') }}" class="inst-btn-primary mt-3 !py-2 !px-4 !text-xs">Clic aqui</a>
+                <a href="{{ asset('assets/institucional/simbolos/resolucion-068-2017-cdn-cop.pdf') }}" class="inst-btn-primary mt-3 !py-2 !px-4 !text-xs">Clic aqui</a>
             </div>
         </article>
 
@@ -54,15 +54,15 @@
 
             <div class="grid md:grid-cols-3 gap-3 mt-5">
                 <div class="relative aspect-square border border-slate-200 bg-slate-50">
-                    <img src="{{ asset('institucional/simbolos/insignia-frente.jpg') }}" alt="Insignia frente" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
+                    <img src="{{ asset('assets/institucional/simbolos/insignia-frente.jpg') }}" alt="Insignia frente" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                     <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para insignia frente</p></div>
                 </div>
                 <div class="relative aspect-square border border-slate-200 bg-slate-50">
-                    <img src="{{ asset('institucional/simbolos/solapero.jpg') }}" alt="Solapero" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
+                    <img src="{{ asset('assets/institucional/simbolos/solapero.jpg') }}" alt="Solapero" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                     <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para solapero</p></div>
                 </div>
                 <div class="relative aspect-square border border-slate-200 bg-slate-50">
-                    <img src="{{ asset('institucional/simbolos/carnet.jpg') }}" alt="Carnet institucional" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
+                    <img src="{{ asset('assets/institucional/simbolos/carnet.jpg') }}" alt="Carnet institucional" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                     <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para carnet</p></div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
 
             <div class="grid lg:grid-cols-[1fr_1fr] gap-4 mt-5">
                 <div class="relative aspect-[16/8] border border-slate-200 bg-slate-50">
-                    <img src="{{ asset('institucional/simbolos/himno-acto-oficial.jpg') }}" alt="Interpretacion del himno" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
+                    <img src="{{ asset('assets/institucional/simbolos/himno-acto-oficial.jpg') }}" alt="Interpretacion del himno" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                     <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para foto de interpretacion del himno</p></div>
                 </div>
                 <div class="inst-card p-4 bg-[linear-gradient(180deg,#ffffff_0%,#f7f8fb_100%)] border-slate-200">
@@ -85,9 +85,9 @@
                         <li>Partitura o archivo de referencia.</li>
                     </ul>
                     <div class="mt-3 flex flex-wrap gap-2">
-                        <a href="{{ asset('institucional/simbolos/himno-letra.pdf') }}" class="inst-btn-secondary !py-2 !px-3 !text-xs">Letra PDF</a>
-                        <a href="{{ asset('institucional/simbolos/himno.mp3') }}" class="inst-btn-secondary !py-2 !px-3 !text-xs">Audio MP3</a>
-                        <a href="{{ asset('institucional/simbolos/himno-partitura.pdf') }}" class="inst-btn-secondary !py-2 !px-3 !text-xs">Partitura</a>
+                        <a href="{{ asset('assets/institucional/simbolos/himno-letra.pdf') }}" class="inst-btn-secondary !py-2 !px-3 !text-xs">Letra PDF</a>
+                        <a href="{{ asset('assets/institucional/simbolos/himno.mp3') }}" class="inst-btn-secondary !py-2 !px-3 !text-xs">Audio MP3</a>
+                        <a href="{{ asset('assets/institucional/simbolos/himno-partitura.pdf') }}" class="inst-btn-secondary !py-2 !px-3 !text-xs">Partitura</a>
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@
             <div class="grid md:grid-cols-2 gap-4 mt-5">
                 <figure class="border border-slate-200 bg-slate-50 p-4">
                     <div class="relative aspect-[3/4] border border-slate-200 bg-white">
-                        <img src="{{ asset('institucional/simbolos/uniforme-mujer.jpg') }}" alt="Mujer con uniforme oficial" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
+                        <img src="{{ asset('assets/institucional/simbolos/uniforme-mujer.jpg') }}" alt="Mujer con uniforme oficial" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                         <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para uniforme mujer</p></div>
                     </div>
                     <figcaption class="text-sm text-slate-700 mt-3 text-center">Mujer con uniforme</figcaption>
@@ -113,7 +113,7 @@
 
                 <figure class="border border-slate-200 bg-slate-50 p-4">
                     <div class="relative aspect-[3/4] border border-slate-200 bg-white">
-                        <img src="{{ asset('institucional/simbolos/uniforme-hombre.jpg') }}" alt="Hombre con uniforme oficial" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
+                        <img src="{{ asset('assets/institucional/simbolos/uniforme-hombre.jpg') }}" alt="Hombre con uniforme oficial" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                         <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para uniforme hombre</p></div>
                     </div>
                     <figcaption class="text-sm text-slate-700 mt-3 text-center">Hombre con uniforme</figcaption>
@@ -127,7 +127,7 @@
             <div class="grid lg:grid-cols-3 gap-4">
                 <article class="inst-card p-4 bg-white border-t-2 border-t-brand-gold">
                     <div class="relative aspect-[16/10] border border-slate-200 bg-slate-50">
-                        <img src="{{ asset('institucional/simbolos/estandarte.jpg') }}" alt="Estandarte institucional" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
+                        <img src="{{ asset('assets/institucional/simbolos/estandarte.jpg') }}" alt="Estandarte institucional" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                         <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para estandarte</p></div>
                     </div>
                     <h4 class="font-black text-slate-900 mt-3">Estandarte</h4>
@@ -137,7 +137,7 @@
 
                 <article class="inst-card p-4 bg-white border-t-2 border-t-brand-gold">
                     <div class="relative aspect-[16/10] border border-slate-200 bg-slate-50">
-                        <img src="{{ asset('institucional/simbolos/solapero.jpg') }}" alt="Solapero institucional" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
+                        <img src="{{ asset('assets/institucional/simbolos/solapero.jpg') }}" alt="Solapero institucional" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                         <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para solapero</p></div>
                     </div>
                     <h4 class="font-black text-slate-900 mt-3">Solapero</h4>
@@ -147,7 +147,7 @@
 
                 <article class="inst-card p-4 bg-white border-t-2 border-t-brand-gold">
                     <div class="relative aspect-[16/10] border border-slate-200 bg-slate-50">
-                        <img src="{{ asset('institucional/simbolos/carnet.jpg') }}" alt="Carnet institucional" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
+                        <img src="{{ asset('assets/institucional/simbolos/carnet.jpg') }}" alt="Carnet institucional" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                         <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para carnet</p></div>
                     </div>
                     <h4 class="font-black text-slate-900 mt-3">Carnet</h4>
@@ -159,3 +159,4 @@
 
     </x-institucional-page-shell>
 @endsection
+

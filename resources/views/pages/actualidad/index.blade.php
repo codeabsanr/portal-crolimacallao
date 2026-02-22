@@ -2,15 +2,6 @@
 
 @section('content')
     <main id="main">
-        <section class="relative overflow-hidden bg-secondary text-white">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(186,124,0,0.22),transparent_42%),radial-gradient(circle_at_85%_0%,rgba(102,2,25,0.7),transparent_40%)]"></div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 relative z-10">
-                <p class="text-sm uppercase tracking-[0.16em] text-brand-gold-light font-bold mb-4">Información institucional</p>
-                <h1 class="text-white">Actualidad institucional</h1>
-                <p class="mt-4 text-white/90 max-w-3xl">Noticias, comunicados y agenda de actividades para la comunidad profesional.</p>
-            </div>
-        </section>
-
         <section class="py-10 md:py-14 bg-background-light">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -46,3 +37,4 @@
         </section>
     </main>
 @endsection
+

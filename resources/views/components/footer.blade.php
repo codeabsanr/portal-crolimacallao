@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
             <div>
                 <div class="flex items-center gap-3 mb-4">
-                    <img src="{{ asset('build/assets/img/logo-circular.png') }}" alt="Logo CRO III Lima-Callao" class="h-10 w-10 object-contain" />
+                    <img src="{{ asset('assets/img/logo-circular.png') }}" alt="Logo CRO III Lima-Callao" class="h-10 w-10 object-contain" />
                     <div>
                         <p class="font-extrabold leading-none">CRO III Lima-Callao</p>
                         <p class="text-xs uppercase tracking-[0.2em] text-white/70 mt-1">Institucional</p>
@@ -13,9 +13,9 @@
                     Institución representativa de las obstetras en Lima y Callao, comprometida con la ética, la excelencia y el desarrollo profesional continuo.
                 </p>
                 <div class="mt-4 flex items-center gap-2">
-                    <a href="#" class="h-9 w-9 bg-white/10 hover:bg-brand-gold hover:text-secondary flex items-center justify-center transition-colors" aria-label="Facebook"><span class="material-icons-outlined text-base">public</span></a>
-                    <a href="#" class="h-9 w-9 bg-white/10 hover:bg-brand-gold hover:text-secondary flex items-center justify-center transition-colors" aria-label="X"><span class="material-icons-outlined text-base">alternate_email</span></a>
-                    <a href="#" class="h-9 w-9 bg-white/10 hover:bg-brand-gold hover:text-secondary flex items-center justify-center transition-colors" aria-label="Instagram"><span class="material-icons-outlined text-base">photo_camera</span></a>
+                    <a href="{{ route('contacto') }}" class="h-9 w-9 bg-white/10 hover:bg-brand-gold hover:text-secondary flex items-center justify-center transition-colors" aria-label="Facebook"><span class="material-icons-outlined text-base">public</span></a>
+                    <a href="{{ route('contacto') }}" class="h-9 w-9 bg-white/10 hover:bg-brand-gold hover:text-secondary flex items-center justify-center transition-colors" aria-label="X"><span class="material-icons-outlined text-base">alternate_email</span></a>
+                    <a href="{{ route('contacto') }}" class="h-9 w-9 bg-white/10 hover:bg-brand-gold hover:text-secondary flex items-center justify-center transition-colors" aria-label="Instagram"><span class="material-icons-outlined text-base">photo_camera</span></a>
                 </div>
             </div>
 
@@ -37,7 +37,7 @@
                     <li><a href="{{ route('colegiados') }}" class="hover:text-brand-gold-light transition-colors">Busca Obstetra</a></li>
                     <li><a href="{{ route('normativa') }}" class="hover:text-brand-gold-light transition-colors">Repositorio Normativo</a></li>
                     <li><a href="{{ route('capacitacion') }}" class="hover:text-brand-gold-light transition-colors">Capacitación</a></li>
-                    <li><a href="{{ url('admin') }}" class="hover:text-brand-gold-light transition-colors">Portal del Colegiado</a></li>
+                    <li><a href="{{ route('admin.intranet') }}" class="hover:text-brand-gold-light transition-colors">Portal del Colegiado</a></li>
                 </ul>
             </div>
 
@@ -61,9 +61,10 @@
         <div class="mt-8 pt-5 border-t border-white/15 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/60">
             <p class="leading-relaxed">&copy; {{ date('Y') }} Colegio Regional de Obstetras III Lima-Callao. Todos los derechos reservados.</p>
             <div class="flex flex-col sm:flex-row gap-2 sm:gap-3 sm:items-center">
-                <a href="{{ route('institucional') }}" class="hover:text-brand-gold-light transition-colors">Términos y condiciones</a>
-                <a href="{{ route('institucional') }}" class="hover:text-brand-gold-light transition-colors">Política de privacidad</a>
+                <a href="{{ route('terminos') }}" class="hover:text-brand-gold-light transition-colors">Términos y condiciones</a>
+                <a href="{{ route('privacidad') }}" class="hover:text-brand-gold-light transition-colors">Política de privacidad</a>
             </div>
         </div>
     </div>
 </footer>
+

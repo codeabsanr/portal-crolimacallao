@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Canonical URL: never expose "/public" in the browser URL.
+    RewriteRule ^public/(.*)$ /$1 [R=301,L,NC]
+
+    # If a real file or directory exists at project root, serve it directly.
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Otherwise, forward requests to Laravel's public front controller.
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

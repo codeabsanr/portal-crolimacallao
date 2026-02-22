@@ -43,7 +43,7 @@
                     <article class="inst-card overflow-hidden border-t-2 border-t-primary bg-slate-50 hover:bg-white hover:shadow-hard transition-all h-full">
                         <div class="relative aspect-[4/3] w-full bg-slate-200 border-b border-slate-200">
                             <img
-                                src="{{ asset('institucional/consejo-directivo/' . $integrante['foto']) }}"
+                                src="{{ asset('assets/institucional/consejo-directivo/' . $integrante['foto']) }}"
                                 alt="Foto de {{ $integrante['nombre'] }}"
                                 class="h-full w-full object-cover"
                                 loading="lazy"
@@ -75,3 +75,4 @@
         </article>
     </x-institucional-page-shell>
 @endsection
+

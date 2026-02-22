@@ -2,30 +2,6 @@
 
 @section('content')
     <main id="main">
-        <section class="relative overflow-hidden bg-secondary text-white">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(186,124,0,0.22),transparent_42%),radial-gradient(circle_at_85%_0%,rgba(102,2,25,0.7),transparent_40%)]"></div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 relative z-10">
-                <p class="text-sm uppercase tracking-[0.16em] text-brand-gold-light font-bold mb-4">Gestión institucional</p>
-                <div class="grid lg:grid-cols-2 gap-10 items-center">
-                    <div>
-                        <h1 class="text-white">Trámites y servicios al colegiado</h1>
-                        <p class="mt-5 text-white/90 max-w-2xl">
-                            Realice sus solicitudes con una ruta clara: requisitos, registro, validación y respuesta.
-                            Diseñado para obstetras con atención administrativa ágil y formal.
-                        </p>
-                    </div>
-                    <div class="inst-card p-6 bg-white/10 border-white/20">
-                        <h2 class="text-2xl font-bold text-white mb-4">Canales disponibles</h2>
-                        <ul class="space-y-3 text-white/90">
-                            <li class="inline-flex items-center gap-2"><span class="material-icons-outlined">cloud_upload</span>Mesa de Partes Virtual</li>
-                            <li class="inline-flex items-center gap-2"><span class="material-icons-outlined">account_circle</span>Portal del Colegiado</li>
-                            <li class="inline-flex items-center gap-2"><span class="material-icons-outlined">support_agent</span>Atención administrativa en sede</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="py-10 md:py-14 bg-background-light">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="mb-8">
@@ -119,3 +95,4 @@
         </section>
     </main>
 @endsection
+

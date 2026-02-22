@@ -12,11 +12,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-14 relative z-10 w-full">
             <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-5 md:gap-8 items-center">
                 <div>
-                    <p class="text-xs uppercase tracking-[0.16em] text-white/75 mb-3">
-                        <a href="{{ route('home') }}" class="hover:text-brand-gold-light transition-colors">Inicio</a>
-                        <span class="mx-1 text-white/50">/</span>
-                        <a href="{{ route('institucional') }}" class="hover:text-brand-gold-light transition-colors">Institucional</a>
-                    </p>
                     <p class="inline-block text-[11px] md:text-sm uppercase tracking-[0.18em] bg-primary px-3 py-1 text-white font-bold mb-4">{{ $eyebrow }}</p>
                     <h1 class="text-white max-w-4xl text-[clamp(1.7rem,7vw,3.3rem)] leading-[1.06]">{{ $title }}</h1>
                     @if ($summary)

@@ -2,14 +2,6 @@
 
 @section('content')
     <main id="main">
-        <section class="relative overflow-hidden bg-secondary text-white">
-            <div class="absolute inset-0 opacity-50 bg-[radial-gradient(circle_at_10%_20%,rgba(186,124,0,0.18),transparent_36%),radial-gradient(circle_at_85%_0%,rgba(102,2,25,0.75),transparent_44%)]"></div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 relative z-10 text-center">
-                <h1 class="text-white">Contáctanos</h1>
-                <p class="text-base md:text-lg text-white/85 mt-4 max-w-3xl mx-auto">Estamos aquí para escucharte. Encuentra nuestra información institucional o envíanos un mensaje directo.</p>
-            </div>
-        </section>
-
         <section class="py-10 md:py-14 bg-background-light">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-5 gap-8 items-start">
@@ -118,3 +110,4 @@
         </section>
     </main>
 @endsection
+
