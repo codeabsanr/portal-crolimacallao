@@ -157,6 +157,13 @@ h6 {
     }
 }
 
+@media (min-width: 1024px) {
+    .inst-tramites-cut {
+        -webkit-clip-path: polygon(3.25rem 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(3.25rem 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
 /* Base Component Geometry */
 .btn-primary {
     @apply px-8 py-3 font-bold transition-all duration-200 rounded;

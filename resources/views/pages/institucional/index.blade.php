@@ -2,53 +2,6 @@
 
 @section('content')
     <main id="main">
-        <section class="relative overflow-hidden border-b border-primary/25 bg-[linear-gradient(125deg,#660219_0%,#4d0213_45%,#0f172a_100%)]">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_12%_20%,rgba(248,236,208,0.22),transparent_35%),radial-gradient(circle_at_82%_12%,rgba(186,124,0,0.18),transparent_36%)]"></div>
-            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-                <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-6 md:gap-8 items-end">
-                    <div>
-                        <p class="text-xs uppercase tracking-[0.14em] text-white/70 mb-3">
-                            <a href="{{ route('home') }}" class="hover:text-brand-gold-light transition-colors">Inicio</a>
-                            <span class="mx-1 text-white/40">/</span>
-                            <span class="text-white/90">Institucional</span>
-                        </p>
-                        <p class="text-xs font-bold uppercase tracking-[0.18em] text-brand-gold-light">Colegio Regional de Obstetras III</p>
-                        <h1 class="text-white mt-3 max-w-3xl leading-[1.02]">Institucional</h1>
-                        <p class="mt-5 text-white/90 max-w-2xl text-sm md:text-base">
-                            Portal oficial de gobierno institucional, representación gremial y orientación normativa para las obstetras de Lima y Callao.
-                        </p>
-                        <div class="mt-7 flex flex-wrap gap-3">
-                            <a href="{{ route('institucional.quienes-somos') }}" class="inst-btn !bg-white !text-primary hover:!bg-brand-gold-soft">Conocer la institución</a>
-                            <a href="{{ route('institucional.normatividad') }}" class="inst-btn !border-white !text-white hover:!bg-white/10">Marco normativo</a>
-                        </div>
-                        <div class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/85">
-                            <p class="inline-flex items-center gap-1.5"><span class="material-icons-outlined text-base text-brand-gold-light">verified</span>Representación oficial</p>
-                            <p class="inline-flex items-center gap-1.5"><span class="material-icons-outlined text-base text-brand-gold-light">balance</span>Ética y legalidad</p>
-                            <p class="inline-flex items-center gap-1.5"><span class="material-icons-outlined text-base text-brand-gold-light">support_agent</span>Atención institucional</p>
-                        </div>
-                    </div>
-
-                    <aside class="inst-card bg-white/10 border-white/20 p-4 md:p-6 text-white shadow-none">
-                        <p class="text-[11px] md:text-xs uppercase tracking-[0.15em] text-white/80">Resumen institucional</p>
-                        <div class="grid sm:grid-cols-2 gap-3 mt-3">
-                            <div class="border border-white/20 bg-white/5 p-3">
-                                <p class="text-[11px] md:text-xs uppercase tracking-[0.13em] text-white/75">Fundación</p>
-                                <p class="text-[1.9rem] md:text-2xl font-black leading-tight mt-1">1995</p>
-                            </div>
-                            <div class="border border-white/20 bg-white/5 p-3">
-                                <p class="text-[11px] md:text-xs uppercase tracking-[0.13em] text-white/75">Jurisdicción</p>
-                                <p class="text-[1.85rem] md:text-2xl font-black leading-tight mt-1">Lima y Callao</p>
-                            </div>
-                            <div class="border border-white/20 bg-white/5 p-3 sm:col-span-2">
-                                <p class="text-[11px] md:text-xs uppercase tracking-[0.13em] text-white/75">Gestión vigente</p>
-                                <p class="text-[1.55rem] md:text-2xl font-black leading-tight mt-1">Consejo Regional 2025-2028</p>
-                            </div>
-                        </div>
-                    </aside>
-                </div>
-            </div>
-        </section>
-
         <section class="bg-white border-b border-slate-200 sticky top-16 md:top-20 z-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
                 <nav aria-label="Navegación interna institucional" class="overflow-x-auto">

@@ -33,11 +33,19 @@
         'tramites' => [
             'eyebrow' => 'Gestión institucional',
             'title' => 'Trámites y servicios al colegiado',
-            'summary' => 'Realice sus solicitudes con una ruta clara: requisitos, registro, validación y respuesta.',
+            'summary' => 'Consulte requisitos, pagos y pasos para colegiatura, habilidad profesional, registros académicos, carné y trámite documentario.',
             'icon' => 'folder_open',
-            'chips' => ['Mesa de partes', 'Colegiatura', 'Asesoría'],
+            'chips' => ['Colegiatura', 'Habilidad profesional', 'Mesa de Partes Virtual'],
             'cta1' => ['text' => 'Ver catálogo', 'route' => 'tramites'],
             'cta2' => ['text' => 'Contactar soporte', 'route' => 'contacto'],
+            'helpLinks' => [
+                ['label' => 'Habilidad', 'route' => 'tramites.habilidad', 'icon' => 'verified'],
+                ['label' => 'Colegiatura', 'route' => 'tramites.colegiatura', 'icon' => 'school'],
+                ['label' => 'Registros', 'route' => 'tramites.registros', 'icon' => 'workspace_premium'],
+                ['label' => 'Carné', 'route' => 'tramites.carne', 'icon' => 'credit_card'],
+                ['label' => 'Mesa de Partes', 'route' => 'tramites.mesa-partes', 'icon' => 'forward_to_inbox'],
+                ['label' => 'Buscador de obstetra', 'route' => 'colegiados.buscador', 'icon' => 'person_search'],
+            ],
             'stats' => [
                 ['label' => 'Canal preferente', 'value' => 'Mesa de Partes Virtual'],
                 ['label' => 'Modalidad', 'value' => 'Atención híbrida'],
@@ -169,6 +177,12 @@
             'chips' => ['Calendario', 'Cursos', 'Congresos'],
             'cta1' => ['text' => 'Ver cursos', 'route' => 'capacitacion.cursos'],
             'cta2' => ['text' => 'Ver calendario', 'route' => 'capacitacion.calendario'],
+            'helpLinks' => [
+                ['label' => 'Calendario', 'route' => 'capacitacion.calendario', 'icon' => 'event'],
+                ['label' => 'Cursos', 'route' => 'capacitacion.cursos', 'icon' => 'cast_for_education'],
+                ['label' => 'Congresos', 'route' => 'capacitacion.congresos', 'icon' => 'festival'],
+                ['label' => 'Aula virtual', 'route' => 'capacitacion.aula-virtual', 'icon' => 'desktop_windows'],
+            ],
             'stats' => [
                 ['label' => 'Modalidad', 'value' => 'Presencial, virtual e híbrida'],
                 ['label' => 'Alcance', 'value' => 'Formación continua'],
@@ -388,47 +402,116 @@
 @endphp
 
 @if ($hero)
+    @if ($routeName === 'tramites')
+        <section class="relative overflow-hidden min-h-0 bg-[linear-gradient(180deg,#f8f4ea_0%,#edf3fb_34%,#e9eff7_100%)]">
+            <div class="grid lg:grid-cols-2 border-y-2 border-slate-300">
+                <div class="bg-[linear-gradient(180deg,#ffffff_0%,#fffdfa_100%)]">
+                    <div class="mx-auto lg:mx-0 w-full max-w-[40rem] lg:ml-auto lg:mr-0 px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+                        <p class="text-xs uppercase tracking-[0.16em] text-primary font-bold">{{ $hero['eyebrow'] }}</p>
+                        <h1 class="text-secondary text-4xl md:text-[2.55rem] lg:text-[2.9rem] font-black tracking-tight leading-[1.08] mt-2">{{ $hero['title'] }}</h1>
+                        <div class="mt-3 h-[3px] w-20 bg-brand-gold-light"></div>
+                        <p class="mt-4 text-secondary-light text-base md:text-lg leading-relaxed max-w-3xl">{{ $hero['summary'] }}</p>
+
+                        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                            <a href="{{ route($hero['cta1']['route']) }}" class="inst-btn bg-primary text-white hover:bg-primary-dark w-full sm:w-auto">{{ $hero['cta1']['text'] }}</a>
+                            <a href="{{ route($hero['cta2']['route']) }}" class="inst-btn border-brand-gold text-secondary hover:bg-brand-gold-soft hover:border-brand-gold hover:text-primary w-full sm:w-auto">{{ $hero['cta2']['text'] }}</a>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="relative bg-inst-hero text-white inst-tramites-cut">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(219,169,59,0.18),transparent_34%),radial-gradient(circle_at_88%_82%,rgba(255,255,255,0.08),transparent_38%)]"></div>
+                    <div class="absolute inset-x-0 top-0 h-[2px] bg-[linear-gradient(90deg,#dba93b_0%,#ba7c00_46%,#f3cc79_100%)]"></div>
+                    <div class="relative z-10 mx-auto lg:mx-0 w-full max-w-[40rem] lg:mr-auto lg:ml-0 px-4 sm:px-6 lg:px-8 lg:pl-14 py-8 md:py-10">
+                        <p class="text-xs uppercase tracking-[0.15em] text-brand-gold-light font-semibold">Ayuda de trámites</p>
+                        <p class="font-bold mt-1 text-xl text-white">Accesos rápidos por tipo de solicitud</p>
+                        <div class="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                            @foreach ($hero['helpLinks'] as $link)
+                                <a href="{{ route($link['route']) }}" class="group inline-flex items-center justify-between gap-3 border border-white/20 bg-white/10 px-3 py-2.5 text-white hover:bg-brand-gold-soft/10 hover:border-brand-gold-light/40 hover:text-brand-gold-soft transition-colors">
+                                    <span class="inline-flex items-center gap-2">
+                                        <span class="material-icons-outlined text-base text-brand-gold-light">{{ $link['icon'] }}</span>
+                                        <span>{{ $link['label'] }}</span>
+                                    </span>
+                                    <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center bg-white text-primary transition-colors group-hover:bg-brand-gold-soft group-hover:text-primary">
+                                        <span class="material-icons-outlined text-[1.1rem]">east</span>
+                                    </span>
+                                </a>
+                            @endforeach
+                        </div>
+                        <div class="mt-5 pt-3 w-full flex items-center justify-center text-center text-sm text-white/90">
+                            <a href="#tramites-contenido" class="inline-flex items-center gap-2 hover:text-brand-gold-soft transition-colors">
+                                <span class="material-icons-outlined text-base animate-bounce">south</span>
+                                <span>Desliza para ver requisitos, pasos y preguntas frecuentes</span>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    @else
     <section class="inst-page-hero relative overflow-hidden text-white">
-        <div class="absolute inset-0 bg-inst-hero"></div>
-        <div class="absolute inset-0 bg-inst-hero-overlay"></div>
-        <div aria-hidden="true" class="absolute right-5 top-5 md:right-10 md:top-8 opacity-[0.1]">
-            <span class="material-icons-outlined text-[5.5rem] md:text-[8.5rem] leading-none">{{ $hero['icon'] }}</span>
+        <div class="{{ $routeName === 'capacitacion' ? 'absolute inset-0 bg-[linear-gradient(122deg,#5b0d26_0%,#6a1a38_42%,#2a3655_100%)]' : 'absolute inset-0 bg-inst-hero' }}"></div>
+        <div class="{{ $routeName === 'capacitacion' ? 'absolute inset-0 bg-[radial-gradient(circle_at_18%_16%,rgba(255,255,255,0.08),transparent_36%),radial-gradient(circle_at_84%_80%,rgba(186,124,0,0.12),transparent_38%)]' : 'absolute inset-0 bg-inst-hero-overlay' }}"></div>
+        <div aria-hidden="true" class="absolute right-5 top-5 md:right-10 md:top-8 opacity-[0.08]">
+            <span class="material-icons-outlined text-[4.75rem] md:text-[7rem] leading-none">{{ $hero['icon'] }}</span>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 relative z-10">
             <div class="grid lg:grid-cols-[1.08fr_0.92fr] gap-6 md:gap-8 items-stretch">
                 <div>
-                    <p class="text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-white/75 mb-2">{{ $hero['eyebrow'] }}</p>
-                    <h1 class="text-white text-4xl md:text-5xl xl:text-6xl font-black tracking-tight leading-[1.08] max-w-4xl">{{ $hero['title'] }}</h1>
-                    <p class="mt-4 max-w-3xl text-white/90 text-base md:text-xl leading-relaxed">{{ $hero['summary'] }}</p>
+                    <p class="text-xs md:text-sm font-semibold uppercase tracking-[0.16em] {{ $routeName === 'capacitacion' ? 'text-brand-gold-soft' : 'text-white/75' }} mb-2">{{ $hero['eyebrow'] }}</p>
+                    <h1 class="text-white text-4xl md:text-5xl font-black tracking-tight leading-[1.08] max-w-4xl">{{ $hero['title'] }}</h1>
+                    <p class="mt-4 max-w-3xl {{ $routeName === 'capacitacion' ? 'text-white/85' : 'text-white/90' }} text-base md:text-lg leading-relaxed">{{ $hero['summary'] }}</p>
 
                     <div class="mt-6 flex flex-col sm:flex-row gap-2.5 sm:gap-3">
                         <a href="{{ route($hero['cta1']['route']) }}" class="inst-btn border-white bg-white text-primary hover:bg-brand-gold-soft w-full sm:w-auto">{{ $hero['cta1']['text'] }}</a>
-                        <a href="{{ route($hero['cta2']['route']) }}" class="inst-btn-secondary border-white text-white hover:bg-white/10 w-full sm:w-auto">{{ $hero['cta2']['text'] }}</a>
+                        <a href="{{ route($hero['cta2']['route']) }}" class="inst-btn-secondary {{ $routeName === 'capacitacion' ? 'border-brand-gold-light text-brand-gold-soft hover:bg-brand-gold-soft hover:text-primary hover:border-brand-gold' : 'border-white text-white hover:bg-white/10' }} w-full sm:w-auto">{{ $hero['cta2']['text'] }}</a>
                     </div>
 
                     <div class="mt-5 flex flex-wrap gap-x-5 gap-y-2.5 text-sm md:text-base">
                         @foreach ($hero['chips'] as $chip)
-                            <span class="inline-flex items-center gap-1.5 text-white/90">
-                                <span class="material-icons-outlined text-brand-gold-light text-[1.15rem]">check_circle</span>
+                            <span class="inline-flex items-center gap-1.5 {{ $routeName === 'capacitacion' ? 'text-white/85' : 'text-white/90' }}">
+                                <span class="material-icons-outlined {{ $routeName === 'capacitacion' ? 'text-brand-gold' : 'text-brand-gold-light' }} text-[1.15rem]">check_circle</span>
                                 <span class="font-semibold">{{ $chip }}</span>
                             </span>
                         @endforeach
                     </div>
                 </div>
 
-                <aside class="border border-white/20 bg-white/10 backdrop-blur-sm p-4 md:p-5 shadow-hero-panel">
-                    <p class="text-xs uppercase tracking-[0.16em] text-white/80 font-bold mb-4">Resumen institucional</p>
-                    <div class="grid gap-3">
-                        @foreach ($hero['stats'] as $stat)
-                            <div class="border border-white/20 bg-white/[0.04] px-4 py-3">
-                                <p class="text-xs uppercase tracking-[0.14em] text-white/80">{{ $stat['label'] }}</p>
-                                <p class="text-2xl md:text-3xl font-black leading-tight text-white mt-1">{{ $stat['value'] }}</p>
-                            </div>
-                        @endforeach
-                    </div>
-                </aside>
+                @if ($routeName === 'capacitacion' && !empty($hero['helpLinks']))
+                    <aside class="relative border border-white/15 bg-[linear-gradient(142deg,#223550_0%,#3b3551_58%,#4c2e46_100%)] p-4 md:p-5 shadow-hero-panel overflow-hidden">
+                        <div class="absolute inset-x-0 top-0 h-[2px] bg-[linear-gradient(90deg,#cfa349_0%,#ba7c00_46%,#e4c98a_100%)]"></div>
+                        <p class="text-xs uppercase tracking-[0.16em] text-brand-gold-light font-bold mb-2">Ayuda de capacitación</p>
+                        <p class="font-bold text-white text-xl">Accesos rápidos por tipo de formación</p>
+                        <div class="mt-4 grid sm:grid-cols-2 gap-2.5">
+                            @foreach ($hero['helpLinks'] as $link)
+                                <a href="{{ route($link['route']) }}" class="group inline-flex items-center justify-between gap-3 border border-white/15 bg-white/8 px-3 py-2.5 text-white/95 hover:bg-white/12 hover:border-brand-gold-light/45 hover:text-white transition-colors">
+                                    <span class="inline-flex items-center gap-2">
+                                        <span class="material-icons-outlined text-base text-brand-gold-light">{{ $link['icon'] }}</span>
+                                        <span>{{ $link['label'] }}</span>
+                                    </span>
+                                    <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center bg-brand-gold-soft text-primary transition-colors group-hover:bg-brand-gold-light group-hover:text-primary">
+                                        <span class="material-icons-outlined text-[1.1rem]">east</span>
+                                    </span>
+                                </a>
+                            @endforeach
+                        </div>
+                    </aside>
+                @else
+                    <aside class="border border-white/20 bg-white/10 backdrop-blur-sm p-4 md:p-5 shadow-hero-panel">
+                        <p class="text-xs uppercase tracking-[0.16em] text-white/80 font-bold mb-4">Resumen institucional</p>
+                        <div class="grid gap-3">
+                            @foreach ($hero['stats'] as $stat)
+                                <div class="border border-white/20 bg-white/[0.04] px-4 py-3">
+                                    <p class="text-xs uppercase tracking-[0.14em] text-white/80">{{ $stat['label'] }}</p>
+                                    <p class="text-xl md:text-2xl font-black leading-tight text-white mt-1">{{ $stat['value'] }}</p>
+                                </div>
+                            @endforeach
+                        </div>
+                    </aside>
+                @endif
             </div>
         </div>
     </section>
+    @endif
 @endif

@@ -4,11 +4,11 @@
 
 <li {{ $attributes }}>
     <details class="group">
-        <summary class="cursor-pointer list-none flex items-center justify-between font-semibold text-slate-900">
+        <summary class="cursor-pointer list-none flex items-center justify-between font-semibold text-secondary hover:text-primary transition-colors">
             {{ $question }}
-            <span class="material-icons-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            <span class="material-icons-outlined text-brand-gold group-open:rotate-180 transition-transform">expand_more</span>
         </summary>
-        <p class="mt-2 text-slate-600">
+        <p class="mt-2 text-slate-600 leading-relaxed">
             {{ $slot }}
         </p>
     </details>
