@@ -1,15 +1,18 @@
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" x-data="{ 
-        darkMode: localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches),
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" x-data="{
         fontSize: localStorage.getItem('fontSize') || 'base',
-        toggleTheme() {
-            this.darkMode = !this.darkMode;
-            localStorage.setItem('theme', this.darkMode ? 'dark' : 'light');
-        },
         increaseFont() {
             this.fontSize = this.fontSize === 'base' ? 'large' : (this.fontSize === 'large' ? 'xlarge' : 'base');
             localStorage.setItem('fontSize', this.fontSize);
         }
-    }" :class="{ 'dark': darkMode, 'a11y-text-1': fontSize === 'large', 'a11y-text-2': fontSize === 'xlarge' }">
+    }" :class="{ 'a11y-text-1': fontSize === 'large', 'a11y-text-2': fontSize === 'xlarge' }">
+{{-- Modo oscuro desactivado por solicitud.
+    darkMode: localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches),
+    toggleTheme() {
+        this.darkMode = !this.darkMode;
+        localStorage.setItem('theme', this.darkMode ? 'dark' : 'light');
+    },
+    :class="{ 'dark': darkMode, ... }"
+--}}
 
 <head>
     <meta charset="utf-8">

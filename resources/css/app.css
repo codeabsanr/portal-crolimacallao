@@ -1,21 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
+:root {
+    --inst-primary: #660219;
+    --inst-primary-soft: #8c0f2f;
+    --inst-primary-dark: #4d0213;
+    --inst-gold: #ba7c00;
+    --inst-gold-soft: #f8ecd0;
+    --inst-bg: #f8f9fa;
+    --inst-surface: #ffffff;
+    --inst-text: #1f2230;
+    --inst-text-muted: #64748b;
+    --inst-radius: 0.625rem;
+}
+
+.dark {
+    --inst-bg: #15070d;
+    --inst-surface: #221017;
+    --inst-text: #f5eaee;
+    --inst-text-muted: #d2bbc3;
+}
 
 /* Accessibility Focus States */
 *:focus-visible {
-    outline: 4px solid #000 !important;
+    outline: 3px solid var(--inst-gold) !important;
     outline-offset: 2px;
 }
 
+html,
 body {
-    background-color: #f8f9fa;
-    color: #1e293b;
+    background-color: var(--inst-bg);
+    color: var(--inst-text);
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.55;
 }
 
 h1,
@@ -26,6 +48,52 @@ h5,
 h6 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+@layer base {
+    h1 {
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        line-height: 1.12;
+        font-weight: 900;
+    }
+
+    h2 {
+        font-size: clamp(1.6rem, 2.1vw, 2.2rem);
+        line-height: 1.18;
+        font-weight: 800;
+    }
+
+    h3 {
+        font-size: clamp(1.25rem, 1.45vw, 1.6rem);
+        line-height: 1.25;
+        font-weight: 700;
+    }
+
+    p,
+    li,
+    label,
+    input,
+    select,
+    textarea,
+    button {
+        font-size: 0.975rem;
+        line-height: 1.6;
+    }
+
+    button,
+    input,
+    select,
+    textarea,
+    .rounded,
+    .rounded-md,
+    .rounded-lg,
+    .rounded-xl,
+    .inst-card,
+    .inst-btn,
+    .inst-input {
+        border-radius: var(--inst-radius);
+    }
 }
 
 .material-icons-outlined {
@@ -44,6 +112,44 @@ h6 {
     -webkit-font-smoothing: antialiased;
 }
 
+@layer components {
+    .inst-btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-md border border-transparent px-6 py-3 text-sm font-bold transition-all duration-200;
+        min-height: 48px;
+        line-height: 1.2;
+    }
+
+    .inst-btn-primary {
+        @apply inst-btn bg-primary text-white hover:bg-primary-dark;
+    }
+
+    .inst-btn-secondary {
+        @apply inst-btn border-primary text-primary hover:bg-primary/5 dark:border-brand-gold dark:text-brand-gold dark:hover:bg-brand-gold/10;
+    }
+
+    .inst-input {
+        @apply block w-full rounded-md border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500 shadow-sm transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20;
+        min-height: 48px;
+        line-height: 1.4;
+    }
+
+    .dark .inst-input {
+        @apply border-primary/40 bg-surface-dark text-slate-100 placeholder:text-slate-400 focus:border-brand-gold focus:ring-brand-gold/25;
+    }
+
+    .inst-card {
+        @apply rounded-xl border border-slate-200 bg-white shadow-inst;
+    }
+
+    .dark .inst-card {
+        @apply border-primary/30 bg-surface-dark;
+    }
+
+    .inst-section-title {
+        @apply text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white;
+    }
+}
+
 /* Base Component Geometry */
 .btn-primary {
     @apply px-8 py-3 font-bold transition-all duration-200 rounded;
@@ -57,17 +163,15 @@ h6 {
     transform: translateY(-2px);
 }
 
-/* Base Link Style Requested by User matching stitch 3 */
 .web-link {
     @apply text-slate-600 dark:text-slate-400 hover:text-primary underline transition-colors;
 }
 
-/* Style for general articles to match link behavior */
 .content-wrapper a:not(.btn) {
     @apply text-primary hover:text-red-800 underline transition-colors font-medium;
 }
 
-/* 
+/*
  * A11y Font Resizing Overrides
  * We target Tailwind's text utilities selectively so that changing the text size
  * ONLY affects font-sizes and doesn't behave like a browser zoom (which would stretch margin/padding/widths).

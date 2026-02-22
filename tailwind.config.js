@@ -16,20 +16,28 @@ export default {
                     DEFAULT: '#660219',
                     dark: '#4d0213',
                     light: '#800320',
+                    soft: '#8c0f2f',
                 },
+                footer: '#4d0213',
                 secondary: {
                     DEFAULT: '#0f172a',
                     light: '#1e293b',
                 },
                 background: {
                     light: '#f8f9fa',
-                    dark: '#1e293b',
+                    dark: '#15070d',
                 },
                 surface: {
                     light: '#ffffff',
-                    dark: '#334155',
+                    dark: '#221017',
                 },
-                'text-main': '#1e293b',
+                brand: {
+                    gold: '#BA7C00',
+                    'gold-light': '#dba93b',
+                    'gold-soft': '#f8ecd0',
+                    'ink-light': '#f5eaee',
+                },
+                'text-main': '#1f2230',
                 'text-muted': '#64748b',
                 success: {
                     DEFAULT: '#059669',
@@ -50,14 +58,15 @@ export default {
             boxShadow: {
                 'hard': '4px 4px 0px #E5E7EB',
                 'hard-hover': '6px 6px 0px #660219',
+                'inst': '0 10px 30px -14px rgba(14, 12, 22, 0.35)',
             },
             borderRadius: {
-                'DEFAULT': '0.25rem',
-                'md': '0.375rem',
-                'lg': '0.5rem',
-                'xl': '0.75rem',
+                'DEFAULT': '0.625rem',
+                'md': '0.625rem',
+                'lg': '0.75rem',
+                'xl': '0.875rem',
                 'full': '9999px',
-                'inst': '0.25rem',
+                'inst': '0.625rem',
             }
         },
     },
