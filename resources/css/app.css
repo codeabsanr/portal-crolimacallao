@@ -5,7 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
+[x-cloak] {
+    display: none !important;
+}
+
 :root {
+    color-scheme: light;
     --inst-primary: #660219;
     --inst-primary-soft: #8c0f2f;
     --inst-primary-dark: #4d0213;
@@ -15,14 +20,15 @@
     --inst-surface: #ffffff;
     --inst-text: #1f2230;
     --inst-text-muted: #64748b;
-    --inst-radius: 0.625rem;
+    --inst-radius: 0.125rem;
 }
 
+/* Dark mode disabled globally by request. */
 .dark {
-    --inst-bg: #15070d;
-    --inst-surface: #221017;
-    --inst-text: #f5eaee;
-    --inst-text-muted: #d2bbc3;
+    --inst-bg: #f8f9fa;
+    --inst-surface: #ffffff;
+    --inst-text: #1f2230;
+    --inst-text-muted: #64748b;
 }
 
 /* Accessibility Focus States */
@@ -38,6 +44,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.55;
+    overflow-x: hidden;
 }
 
 h1,
@@ -92,7 +99,7 @@ h6 {
     .inst-card,
     .inst-btn,
     .inst-input {
-        border-radius: var(--inst-radius);
+        border-radius: var(--inst-radius) !important;
     }
 }
 

@@ -4,13 +4,13 @@
     <main id="main">
         <section class="relative overflow-hidden bg-secondary text-white">
             <div class="absolute inset-0 opacity-50 bg-[radial-gradient(circle_at_10%_20%,rgba(186,124,0,0.18),transparent_36%),radial-gradient(circle_at_85%_0%,rgba(102,2,25,0.75),transparent_44%)]"></div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 relative z-10 text-center">
-                <h1 class="text-4xl md:text-6xl font-black">Contáctanos</h1>
-                <p class="text-lg md:text-2xl text-white/85 mt-4 max-w-3xl mx-auto">Estamos aquí para escucharte. Encuentra nuestra información institucional o envíanos un mensaje directo.</p>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 relative z-10 text-center">
+                <h1 class="text-white">Contáctanos</h1>
+                <p class="text-base md:text-lg text-white/85 mt-4 max-w-3xl mx-auto">Estamos aquí para escucharte. Encuentra nuestra información institucional o envíanos un mensaje directo.</p>
             </div>
         </section>
 
-        <section class="py-12 md:py-16 bg-background-light dark:bg-background-dark">
+        <section class="py-10 md:py-14 bg-background-light dark:bg-background-dark">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-5 gap-8 items-start">
                     <aside class="lg:col-span-2 space-y-4">
@@ -108,7 +108,7 @@
                 <div class="inst-card overflow-hidden">
                     <iframe
                         src="https://www.google.com/maps?q=Mariscal%20Sucre%201351%20Pueblo%20Libre%20Lima&output=embed"
-                        class="w-full h-[480px] border-0"
+                        class="w-full h-[320px] md:h-[420px] border-0"
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
                         title="Ubicación CRO III Lima-Callao">

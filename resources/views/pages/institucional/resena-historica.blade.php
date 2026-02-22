@@ -1,0 +1,62 @@
+@extends('layouts.app')
+
+@section('content')
+    <x-institucional-page-shell
+        eyebrow="Institucional"
+        title="Reseña Histórica"
+        summary="Evolución de la obstetricia en el Perú y consolidación del Colegio de Obstetras como institución profesional.">
+
+        <article class="inst-card overflow-hidden border border-slate-300">
+            <div class="grid lg:grid-cols-[1.1fr_1fr]">
+                <div class="p-6 md:p-8">
+                    <p class="text-xs uppercase tracking-[0.16em] text-primary font-bold mb-2">Memoria institucional</p>
+                    <h2 class="text-2xl font-black text-slate-900 mb-4">Orígenes y consolidación</h2>
+                    <p class="text-slate-700 mb-3">La historia de la obstetricia peruana refleja una evolución científica y social sostenida, con aportes decisivos a la salud materna y reproductiva.</p>
+                    <p class="text-slate-700">El Colegio de Obstetras del Perú, creado por Decreto Ley N.º 21210, consolidó la representación profesional y estableció bases éticas y normativas para la práctica moderna.</p>
+                </div>
+                <img src="{{ asset('assets/img/foto_gestion_2025_2028.jpg') }}" alt="Reseña histórica institucional" class="h-full w-full object-cover min-h-[260px]" />
+            </div>
+        </article>
+
+        <article class="inst-card p-6 md:p-8">
+            <h3 class="text-2xl font-black text-slate-900 mb-6">Línea de tiempo institucional</h3>
+            <div class="space-y-4">
+                <div class="grid sm:grid-cols-[120px_1fr] gap-4 border-l-2 border-primary pl-4 py-1">
+                    <p class="text-sm font-bold text-primary uppercase tracking-[0.15em]">Prehispánico</p>
+                    <p class="text-slate-700">Registros de prácticas obstétricas tradicionales orientadas al cuidado materno en diversas culturas.</p>
+                </div>
+                <div class="grid sm:grid-cols-[120px_1fr] gap-4 border-l-2 border-primary pl-4 py-1">
+                    <p class="text-sm font-bold text-primary uppercase tracking-[0.15em]">1826</p>
+                    <p class="text-slate-700">Creación de la Casa de la Maternidad y Escuela de Partos, institución pionera en formación obstétrica.</p>
+                </div>
+                <div class="grid sm:grid-cols-[120px_1fr] gap-4 border-l-2 border-primary pl-4 py-1">
+                    <p class="text-sm font-bold text-primary uppercase tracking-[0.15em]">Siglo XIX-XX</p>
+                    <p class="text-slate-700">Aportes de Benita Paulina Cadeau de Fessel en la profesionalización científica de la obstetricia.</p>
+                </div>
+                <div class="grid sm:grid-cols-[120px_1fr] gap-4 border-l-2 border-primary pl-4 py-1">
+                    <p class="text-sm font-bold text-primary uppercase tracking-[0.15em]">1975</p>
+                    <p class="text-slate-700">Creación del Colegio de Obstetras del Perú mediante Decreto Ley N.º 21210, hito de institucionalización gremial.</p>
+                </div>
+                <div class="grid sm:grid-cols-[120px_1fr] gap-4 border-l-2 border-primary pl-4 py-1">
+                    <p class="text-sm font-bold text-primary uppercase tracking-[0.15em]">Actualidad</p>
+                    <p class="text-slate-700">Fortalecimiento regional del ejercicio profesional en Lima y Callao con enfoque ético y técnico.</p>
+                </div>
+            </div>
+        </article>
+
+        <div class="grid md:grid-cols-3 gap-4">
+            <article class="inst-card p-5 border-t-2 border-t-primary">
+                <p class="font-bold text-slate-900">Legado académico</p>
+                <p class="text-sm text-slate-700 mt-2">Promoción de actualización científica y fortalecimiento de capacidades profesionales.</p>
+            </article>
+            <article class="inst-card p-5 border-t-2 border-t-primary">
+                <p class="font-bold text-slate-900">Legado gremial</p>
+                <p class="text-sm text-slate-700 mt-2">Defensa de derechos y consolidación de la representación institucional obstétrica.</p>
+            </article>
+            <article class="inst-card p-5 border-t-2 border-t-primary">
+                <p class="font-bold text-slate-900">Legado social</p>
+                <p class="text-sm text-slate-700 mt-2">Contribución sostenida a la salud sexual y reproductiva en la población.</p>
+            </article>
+        </div>
+    </x-institucional-page-shell>
+@endsection
