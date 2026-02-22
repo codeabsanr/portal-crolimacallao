@@ -20,22 +20,22 @@
         <section id="resumen" class="scroll-mt-28 py-8 md:py-10 bg-white border-b border-slate-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
-                    <a href="{{ route('institucional.quienes-somos') }}" class="inst-card p-5 border-l-4 border-l-primary hover:-translate-y-0.5 hover:shadow-hard transition-all">
+                    <a href="{{ route('institucional.quienes-somos') }}" class="inst-card p-5 border border-primary/30 border-l-4 border-l-primary bg-[linear-gradient(180deg,#ffffff_0%,#fffdfa_100%)] hover:border-primary hover:shadow-[0_16px_30px_-24px_rgba(102,2,25,0.55)] transition-[border-color,box-shadow,background-color] duration-300">
                         <p class="text-xs uppercase tracking-[0.14em] text-slate-500">Identidad</p>
                         <p class="font-black text-slate-900 mt-2">Quiénes Somos</p>
                         <p class="text-sm text-slate-600 mt-2">Misión, visión y propósito institucional.</p>
                     </a>
-                    <a href="{{ route('institucional.consejo-directivo') }}" class="inst-card p-5 border-l-4 border-l-primary hover:-translate-y-0.5 hover:shadow-hard transition-all">
+                    <a href="{{ route('institucional.consejo-directivo') }}" class="inst-card p-5 border border-primary/30 border-l-4 border-l-primary bg-[linear-gradient(180deg,#ffffff_0%,#fffdfa_100%)] hover:border-primary hover:shadow-[0_16px_30px_-24px_rgba(102,2,25,0.55)] transition-[border-color,box-shadow,background-color] duration-300">
                         <p class="text-xs uppercase tracking-[0.14em] text-slate-500">Gobierno</p>
                         <p class="font-black text-slate-900 mt-2">Consejo Directivo</p>
                         <p class="text-sm text-slate-600 mt-2">Estructura de liderazgo y cargos.</p>
                     </a>
-                    <a href="{{ route('institucional.normatividad') }}" class="inst-card p-5 border-l-4 border-l-primary hover:-translate-y-0.5 hover:shadow-hard transition-all">
+                    <a href="{{ route('institucional.normatividad') }}" class="inst-card p-5 border border-primary/30 border-l-4 border-l-primary bg-[linear-gradient(180deg,#ffffff_0%,#fffdfa_100%)] hover:border-primary hover:shadow-[0_16px_30px_-24px_rgba(102,2,25,0.55)] transition-[border-color,box-shadow,background-color] duration-300">
                         <p class="text-xs uppercase tracking-[0.14em] text-slate-500">Legal</p>
                         <p class="font-black text-slate-900 mt-2">Normatividad</p>
                         <p class="text-sm text-slate-600 mt-2">Leyes, reglamentos y documentos vigentes.</p>
                     </a>
-                    <a href="{{ route('institucional.convenios') }}" class="inst-card p-5 border-l-4 border-l-primary hover:-translate-y-0.5 hover:shadow-hard transition-all">
+                    <a href="{{ route('institucional.convenios') }}" class="inst-card p-5 border border-primary/30 border-l-4 border-l-primary bg-[linear-gradient(180deg,#ffffff_0%,#fffdfa_100%)] hover:border-primary hover:shadow-[0_16px_30px_-24px_rgba(102,2,25,0.55)] transition-[border-color,box-shadow,background-color] duration-300">
                         <p class="text-xs uppercase tracking-[0.14em] text-slate-500">Cooperación</p>
                         <p class="font-black text-slate-900 mt-2">Convenios</p>
                         <p class="text-sm text-slate-600 mt-2">Alianzas y beneficios para colegiadas.</p>

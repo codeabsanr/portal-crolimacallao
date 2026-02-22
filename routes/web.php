@@ -43,7 +43,8 @@ Route::view('/capacitacion/calendario', 'pages.capacitacion.calendario')->name('
 Route::view('/capacitacion/cursos', 'pages.capacitacion.cursos')->name('capacitacion.cursos');
 Route::view('/capacitacion/congresos', 'pages.capacitacion.congresos')->name('capacitacion.congresos');
 Route::view('/capacitacion/aula-virtual', 'pages.capacitacion.aula-virtual')->name('capacitacion.aula-virtual');
-Route::view('/admin', 'pages.admin.index')->name('admin.intranet');
+Route::view('/portal-colegiado', 'pages.portal-colegiado')->name('portal.colegiado');
+Route::view('/admin', 'pages.admin.index')->middleware(['auth', 'verified'])->name('admin.intranet');
 Route::view('/pruebas/marca-contacto-propuestas', 'pages.lab.marca-contacto-propuestas')->name('lab.marca-contacto-propuestas');
 Route::view('/pruebas/page-hero-with-cta', 'pages.lab.page-hero-with-cta')->name('lab.page-hero-with-cta');
 

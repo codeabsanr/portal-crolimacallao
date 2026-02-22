@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Consulta de Habilidad y Acceso - CRO III Lima-Callao</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#781D2A", // Deep Maroon from PRD
+                        "primary-hover": "#5a1520",
+                        "accent": "#d4112e", // Secondary red from component list
+                        "success": "#059669",
+                        "warning": "#D97706",
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#111827",
+                        "surface": "#FFFFFF",
+                        "border-color": "#E5E7EB",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["IBM Plex Sans", "sans-serif"],
+                        "mono": ["IBM Plex Mono", "monospace"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "4px",
+                        "sm": "2px",
+                        "md": "4px", 
+                        "lg": "6px",
+                    },
+                    boxShadow: {
+                        "subtle": "0 1px 2px rgba(0,0,0,0.05)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for a more technical feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c1c1c1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8; 
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body class="bg-background-light text-slate-900 font-body antialiased min-h-screen flex flex-col md:flex-row overflow-hidden">
+<!-- Left Side: Public Utility (60%) -->
+<main class="w-full md:w-[60%] flex flex-col relative h-screen overflow-y-auto bg-[#F9FAFB]">
+<!-- Decorative Grid Background -->
+<div class="absolute inset-0 z-0 pointer-events-none opacity-40" data-alt="Technical grid background pattern representing data structure" style="background-image: linear-gradient(#E5E7EB 1px, transparent 1px), linear-gradient(90deg, #E5E7EB 1px, transparent 1px); background-size: 40px 40px;">
+</div>
+<!-- Top Navigation / Brand for Public Side -->
+<header class="relative z-10 w-full px-8 py-6 flex items-center justify-between border-b border-border-color bg-surface/80 backdrop-blur-sm">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 bg-primary text-white flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined">local_hospital</span>
+</div>
+<div class="flex flex-col">
+<h1 class="font-display font-bold text-lg leading-tight tracking-tight text-slate-900">
+                        CRO III LIMA-CALLAO
+                    </h1>
+<span class="text-xs text-slate-500 font-mono tracking-wide">SISTEMA DE GESTIÓN INSTITUCIONAL</span>
+</div>
+</div>
+<div class="hidden sm:flex items-center gap-2 text-sm text-slate-500 font-mono">
+<span class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+                SISTEMA OPERATIVO
+            </div>
+</header>
+<!-- Main Content Area -->
+<div class="relative z-10 flex-1 flex flex-col justify-center px-6 sm:px-12 lg:px-24 max-w-4xl mx-auto w-full">
+<div class="mb-10 space-y-2">
+<span class="inline-block px-2 py-1 bg-slate-200 text-slate-700 text-xs font-mono font-medium rounded-sm uppercase tracking-wider">
+                    Consulta Pública
+                </span>
+<h2 class="font-display text-4xl sm:text-5xl font-bold text-slate-900 tracking-tight">
+                    Verificación de<br/>Habilidad Profesional
+                </h2>
+<p class="text-slate-600 text-lg max-w-lg mt-4 font-light">
+                    Ingrese el número de colegiatura (CMP) o DNI para validar el estado de habilitación en tiempo real.
+                </p>
+</div>
+<!-- Search Component -->
+<div class="w-full bg-white p-2 rounded border border-slate-300 shadow-subtle mb-8 focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all duration-200">
+<form class="flex items-center" onsubmit="event.preventDefault(); document.getElementById('result-card').classList.remove('hidden');">
+<div class="pl-4 pr-3 text-slate-400">
+<span class="material-symbols-outlined text-3xl">search</span>
+</div>
+<input autofocus="" class="w-full h-16 text-xl sm:text-2xl font-mono text-slate-900 placeholder:text-slate-300 border-none focus:ring-0 bg-transparent" placeholder="Buscar por CMP o DNI..." type="text"/>
+<button class="hidden sm:flex h-12 px-8 bg-slate-900 text-white font-display font-semibold uppercase tracking-wide rounded-sm items-center hover:bg-slate-800 transition-colors" type="submit">
+                        Consultar
+                    </button>
+<button class="sm:hidden h-12 w-12 flex items-center justify-center bg-slate-900 text-white rounded-sm" type="submit">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</form>
+</div>
+<!-- Result Card (Hidden by default, shown for demo) -->
+<div class="bg-white border border-slate-200 rounded shadow-sm overflow-hidden animate-fade-in hidden" id="result-card">
+<div class="flex flex-col sm:flex-row border-b border-slate-100">
+<!-- Member Photo Placeholder -->
+<div class="w-full sm:w-48 h-48 bg-slate-100 flex items-center justify-center border-r border-slate-100 relative group">
+<span class="material-symbols-outlined text-6xl text-slate-300">person</span>
+<!-- Status Indicator Stripe -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-success"></div>
+</div>
+<!-- Member Details -->
+<div class="flex-1 p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-mono text-slate-400 uppercase tracking-widest">Colegiado Regular</span>
+<span class="material-symbols-outlined text-success">verified</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-slate-900 leading-tight mb-1">
+                                MARÍA ALEJANDRA <br/>RODRÍGUEZ VELASCO
+                            </h3>
+<div class="flex gap-6 mt-3 text-sm">
+<div>
+<span class="block text-xs text-slate-400 font-mono mb-0.5">CMP</span>
+<span class="font-mono font-medium text-slate-700">12940</span>
+</div>
+<div>
+<span class="block text-xs text-slate-400 font-mono mb-0.5">FECHA INSCRIPCIÓN</span>
+<span class="font-mono font-medium text-slate-700">14/03/2015</span>
+</div>
+</div>
+</div>
+<!-- Massive Status Badge -->
+<div class="mt-6 pt-4 border-t border-dashed border-slate-200 flex items-center justify-between">
+<span class="text-xs font-mono text-slate-400">ESTADO ACTUAL</span>
+<div class="inline-flex items-center px-3 py-1 bg-success/10 border border-success/20 text-success rounded-sm">
+<span class="w-2 h-2 rounded-full bg-success mr-2"></span>
+<span class="font-display font-bold tracking-wider text-lg">HABILITADO</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="bg-slate-50 px-6 py-3 border-t border-slate-200 flex justify-between items-center">
+<span class="text-xs text-slate-500 font-mono">Última actualización: Hoy, 09:41 AM</span>
+<button class="text-primary hover:text-primary-hover text-sm font-semibold font-display flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">print</span>
+                        Imprimir Ficha
+                    </button>
+</div>
+</div>
+<!-- Footer Links -->
+<div class="mt-12 flex flex-wrap gap-x-8 gap-y-2 text-sm text-slate-500 font-medium">
+<a class="hover:text-primary transition-colors" href="#">Mesa de Partes Virtual</a>
+<a class="hover:text-primary transition-colors" href="#">Directorio Institucional</a>
+<a class="hover:text-primary transition-colors" href="#">Normativa Vigente</a>
+</div>
+</div>
+<!-- Bottom Institutional Bar -->
+<div class="mt-auto border-t border-slate-200 px-8 py-4 bg-white z-10 flex justify-between items-center text-xs text-slate-400 font-mono">
+<span>© 2024 CRO III LIMA-CALLAO</span>
+<span>v2.4.0-release</span>
+</div>
+</main>
+<!-- Right Side: Member Login (40%) -->
+<aside class="w-full md:w-[40%] bg-primary text-white flex flex-col justify-center relative overflow-hidden min-h-[500px]">
+<!-- Abstract Background Pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" data-alt="Dotted pattern on maroon background" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;">
+</div>
+<!-- Large watermark logo -->
+<div class="absolute -right-20 -bottom-20 opacity-5 pointer-events-none">
+<svg fill="currentColor" height="400" viewbox="0 0 24 24" width="400" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="white" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M12 8V16M8 12H16" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="relative z-10 w-full max-w-md mx-auto px-8 md:px-12 py-12 flex flex-col">
+<div class="mb-10">
+<h2 class="font-display text-3xl font-bold tracking-tight mb-2">Acceso Colegiados</h2>
+<p class="text-white/70 font-light">
+                    Plataforma de gestión para miembros de la orden.
+                </p>
+</div>
+<!-- Login Form -->
+<form class="space-y-5">
+<div class="space-y-1">
+<label class="block text-xs font-mono font-medium text-white/80 uppercase tracking-wide">Código CMP</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 text-lg">badge</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-3 bg-white text-slate-900 border-none rounded-sm focus:ring-2 focus:ring-white/50 placeholder:text-slate-400 font-mono" placeholder="00000" type="text"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block text-xs font-mono font-medium text-white/80 uppercase tracking-wide">Contraseña</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 text-lg">lock</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-3 bg-white text-slate-900 border-none rounded-sm focus:ring-2 focus:ring-white/50 placeholder:text-slate-400 font-mono" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center">
+<input class="h-4 w-4 text-slate-900 border-gray-300 rounded focus:ring-white bg-white/10 border-white/20" type="checkbox"/>
+<span class="ml-2 text-xs text-white/80">Recordarme</span>
+</label>
+<a class="text-xs text-white underline decoration-white/30 underline-offset-4 hover:decoration-white transition-all" href="#">
+                        ¿Olvidó su clave?
+                    </a>
+</div>
+<button class="w-full bg-[#111827] hover:bg-black text-white font-display font-bold uppercase tracking-wider py-3.5 px-4 rounded-sm transition-all shadow-lg flex justify-center items-center gap-2 mt-4" type="button">
+                    Ingresar al Sistema
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</form>
+<div class="mt-10 pt-8 border-t border-white/10">
+<p class="text-white/60 text-sm mb-4">¿Es su primera vez aquí?</p>
+<a class="inline-flex items-center text-white text-sm font-semibold hover:translate-x-1 transition-transform" href="#">
+                    Activar cuenta digital
+                    <span class="material-symbols-outlined ml-1 text-lg">chevron_right</span>
+</a>
+</div>
+<!-- Support Info -->
+<div class="mt-12 flex items-start gap-3 bg-white/5 p-4 rounded-sm border border-white/10 backdrop-blur-sm">
+<span class="material-symbols-outlined text-white/70">support_agent</span>
+<div>
+<h4 class="text-sm font-bold text-white">Soporte Técnico</h4>
+<p class="text-xs text-white/60 mt-1 font-mono">
+                        Lunes a Viernes 8:00 - 17:00<br/>
+                        (01) 234-5678 anexo 102
+                    </p>
+</div>
+</div>
+</div>
+</aside>
+</body></html>
