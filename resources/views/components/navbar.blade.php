@@ -35,7 +35,7 @@
                 </nav>
 
                 <div class="hidden md:flex items-center">
-                    <a href="{{ route('portal.colegiado') }}" class="inst-btn-primary !py-2">Portal colegiado</a>
+                    <a href="{{ auth()->check() ? route('portal.colegiado') : route('login') }}" class="inst-btn-primary !py-2">Portal colegiado</a>
                 </div>
 
                 <button @click="open = true; panel = 'main'" class="md:hidden inline-flex items-center justify-center p-2 text-slate-700" aria-label="Abrir navegación" aria-controls="mobile-drawer" :aria-expanded="open.toString()" type="button">
@@ -85,7 +85,7 @@
                                 </div>
                                 <span class="material-icons-outlined bg-white text-primary-dark p-1">arrow_forward</span>
                             </a>
-                            <a @click="open = false; panel = 'main'" href="{{ route('portal.colegiado') }}" class="flex items-center justify-between border border-white/50 p-4">
+                            <a @click="open = false; panel = 'main'" href="{{ auth()->check() ? route('portal.colegiado') : route('login') }}" class="flex items-center justify-between border border-white/50 p-4">
                                 <div class="flex items-center gap-3">
                                     <span class="material-icons-outlined">person</span>
                                     <span class="font-semibold">Portal del Colegiado</span>
@@ -117,7 +117,7 @@
                             <button @click="panel = 'tramites_servicios'" type="button" class="w-full flex items-center justify-between py-4 text-white font-semibold">
                                 <span>Trámites especializados</span><span class="material-icons-outlined">chevron_right</span>
                             </button>
-                            <a @click="open = false; panel = 'main'" href="{{ route('portal.colegiado') }}" class="flex items-center justify-between py-4 text-white font-semibold">
+                            <a @click="open = false; panel = 'main'" href="{{ auth()->check() ? route('portal.colegiado') : route('login') }}" class="flex items-center justify-between py-4 text-white font-semibold">
                                 <span>Portal colegiado</span><span class="material-icons-outlined">chevron_right</span>
                             </a>
                         </nav>

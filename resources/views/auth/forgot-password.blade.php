@@ -1,25 +1,54 @@
-<x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
-    </div>
+<x-guest-layout :full="true">
+    <main class="h-screen overflow-hidden bg-background-light text-text-main">
+        <div class="flex h-full flex-col md:flex-row overflow-hidden">
+            <section class="relative hidden h-full md:flex md:w-[58%] overflow-hidden border-r border-slate-300/80">
+                <img src="{{ asset('assets/img/1foto_gestion_2025_2028.jpg') }}" alt="Cuidado obstetrico" class="absolute inset-0 h-full w-full object-cover object-center">
+                <div class="absolute inset-0 bg-inst-hero"></div>
+                <div class="absolute inset-0 bg-inst-hero-overlay"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent"></div>
 
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+                <div class="relative z-10 mt-auto p-8 lg:p-12 xl:p-16 text-white">
+                    <p class="mb-4 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em]">
+                        <img src="{{ asset('assets/img/logo-circular.png') }}" alt="Logo CRO III" class="h-6 w-6 object-contain">
+                        Colegio Regional de Obstetras
+                    </p>
+                    <h1 class="text-4xl lg:text-5xl font-black leading-tight tracking-tight">Recupera tu acceso de forma segura.</h1>
+                    <p class="mt-4 max-w-xl text-lg text-white/90">Te enviaremos un enlace de restablecimiento para que vuelvas a ingresar al portal.</p>
+                </div>
+            </section>
 
-    <form method="POST" action="{{ route('password.email') }}">
-        @csrf
+            <section class="h-full w-full overflow-y-auto md:w-[42%] bg-background-light">
+                <div class="mx-auto flex min-h-full w-full max-w-md flex-col justify-start md:justify-center px-5 sm:px-7 py-6 md:py-10">
+                    <a href="{{ route('login') }}" class="mb-8 inline-flex w-fit items-center gap-2 border border-slate-300 bg-white px-4 py-2 text-sm font-bold text-secondary transition-colors hover:border-primary hover:text-primary">
+                        <span class="material-icons-outlined text-[18px]">arrow_back</span>
+                        Regresar
+                    </a>
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                    <div class="mb-7">
+                        <p class="mb-4 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-primary">
+                            <img src="{{ asset('assets/img/logo-circular.png') }}" alt="Logo CRO III" class="h-6 w-6 object-contain">
+                            CRO III LIMA - CALLAO
+                        </p>
+                        <h2 class="inst-section-title">Recuperar contrasena</h2>
+                        <p class="mt-3 text-base md:text-lg text-slate-600">Ingresa tu correo y te enviaremos un enlace para restablecer tu contrasena.</p>
+                    </div>
+
+                    <x-auth-session-status class="mb-4 rounded-sm border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700" :status="session('status')" />
+
+                    <form method="POST" action="{{ route('password.email') }}" class="space-y-4">
+                        @csrf
+                        <div>
+                            <label for="email" class="mb-2 block text-sm font-bold text-slate-700">Correo electronico</label>
+                            <input id="email" name="email" type="email" value="{{ old('email') }}" required autofocus placeholder="usuario@correo.pe" class="inst-input !bg-slate-100 !border-slate-200">
+                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                        </div>
+
+                        <button type="submit" class="inst-btn-primary w-full !py-3.5 !text-sm !tracking-[0.1em]">
+                            Enviar enlace
+                        </button>
+                    </form>
+                </div>
+            </section>
         </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Email Password Reset Link') }}
-            </x-primary-button>
-        </div>
-    </form>
+    </main>
 </x-guest-layout>

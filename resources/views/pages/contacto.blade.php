@@ -51,7 +51,7 @@
                         </article>
                     </aside>
 
-                    <section class="lg:col-span-3 inst-card p-6 md:p-8 border-t-4 border-t-primary">
+                    <section id="contacto-formulario" class="lg:col-span-3 inst-card p-6 md:p-8 border-t-4 border-t-primary scroll-mt-28">
                         <h2 class="text-3xl font-black text-slate-900 mb-6">Envíanos un mensaje</h2>
                         <form action="#" method="POST" class="space-y-5">
                             @csrf

@@ -1,83 +1,92 @@
 <x-guest-layout :full="true">
-    <main class="min-h-screen flex flex-col lg:flex-row bg-white overflow-hidden">
-        <section class="relative hidden lg:flex lg:w-[58%] overflow-hidden">
-            <img src="{{ asset('assets/img/1foto_gestion_2025_2028.jpg') }}" alt="Comunidad profesional del CRO III Lima-Callao" class="absolute inset-0 h-full w-full object-cover" />
-            <div class="absolute inset-0 bg-[linear-gradient(165deg,rgba(35,12,20,0.5)_0%,rgba(102,2,25,0.56)_48%,rgba(20,31,58,0.62)_100%)]"></div>
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_16%_20%,rgba(255,255,255,0.14),transparent_36%),radial-gradient(circle_at_80%_82%,rgba(186,124,0,0.24),transparent_42%)]"></div>
+    <main class="h-screen overflow-hidden bg-background-light text-text-main">
+        <div class="flex h-full flex-col md:flex-row overflow-hidden">
+            <section class="relative hidden h-full md:flex md:w-[58%] overflow-hidden border-r border-slate-300/80">
+                <img src="{{ asset('assets/img/1foto_gestion_2025_2028.jpg') }}" alt="Cuidado obstetrico" class="absolute inset-0 h-full w-full object-cover object-center">
+                <div class="absolute inset-0 bg-inst-hero"></div>
+                <div class="absolute inset-0 bg-inst-hero-overlay"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent"></div>
 
-            <div class="relative z-10 mt-auto px-10 xl:px-16 pb-12 xl:pb-16 text-white">
-                <div class="inline-flex items-center gap-3 rounded-md border border-white/20 bg-black/20 px-4 py-2 backdrop-blur-sm">
-                    <span class="material-icons-outlined text-2xl text-brand-gold-light">workspace_premium</span>
-                    <span class="text-sm font-bold uppercase tracking-[0.12em]">Portal Colegiado CRO III</span>
+                <div class="relative z-10 mt-auto p-8 lg:p-12 xl:p-16 text-white">
+                    <div class="mb-6 inline-flex items-center gap-3">
+                        <span class="inline-flex h-12 w-12 items-center justify-center bg-white/20 backdrop-blur-sm">
+                            <img src="{{ asset('assets/img/logo-circular.png') }}" alt="Logo CRO III" class="h-8 w-8 object-contain">
+                        </span>
+                        <span class="text-sm font-bold uppercase tracking-[0.12em]">Colegio Regional de Obstetras</span>
+                    </div>
+                    <h1 class="text-4xl lg:text-5xl font-black leading-tight tracking-tight text-white">Excelencia y calidez en cada nueva vida.</h1>
+                    <p class="mt-4 max-w-xl text-lg text-white/90">Activa tu cuenta institucional y accede a tramites, formacion continua y servicios del colegio.</p>
                 </div>
-                <h1 class="mt-6 text-5xl xl:text-6xl font-black leading-[1.03] tracking-tight max-w-2xl">Activa tu cuenta institucional.</h1>
-                <p class="mt-5 max-w-xl text-xl leading-relaxed text-white/90">Registra tu acceso para gestionar trámites, capacitación y servicios digitales del Colegio Regional de Obstetras III.</p>
-            </div>
-        </section>
+            </section>
 
-        <section class="w-full lg:w-[42%] bg-white flex items-center justify-center px-6 sm:px-10 py-10 lg:py-12">
-            <div class="w-full max-w-md">
-                <div class="inline-flex items-center gap-2.5 text-secondary mb-6">
-                    <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary/10">
-                        <span class="material-icons-outlined text-lg text-primary">app_registration</span>
-                    </span>
-                    <span class="text-sm font-black uppercase tracking-[0.12em]">CRO III LIMA - CALLAO</span>
+            <section class="h-full w-full overflow-y-auto md:w-[42%] bg-background-light">
+                <div class="mx-auto flex min-h-full w-full max-w-md flex-col justify-start md:justify-center px-5 sm:px-7 py-6 md:py-10">
+                    <a href="{{ route('home') }}" class="mb-8 inline-flex w-fit items-center gap-2 border border-slate-300 bg-white px-4 py-2 text-sm font-bold text-secondary transition-colors hover:border-primary hover:text-primary">
+                        <span class="material-icons-outlined text-[18px]">arrow_back</span>
+                        Regresar
+                    </a>
+
+                    <div class="mb-7">
+                        <p class="mb-4 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-primary">
+                            <img src="{{ asset('assets/img/logo-circular.png') }}" alt="Logo CRO III" class="h-6 w-6 object-contain">
+                            CRO III LIMA - CALLAO
+                        </p>
+                        <h2 class="inst-section-title">Crear cuenta</h2>
+                        <p class="mt-3 text-base md:text-lg text-slate-600">Completa tus datos para activar tu acceso al portal.</p>
+                    </div>
+
+                    @if ($errors->any())
+                        <div class="mb-4 rounded-sm border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                            Revisa la informacion ingresada e intentalo nuevamente.
+                        </div>
+                    @endif
+
+                    <form method="POST" action="{{ route('register') }}" class="space-y-4">
+                        @csrf
+
+                        <div>
+                            <label for="name" class="mb-2 block text-sm font-bold text-slate-700">Nombres y apellidos</label>
+                            <input id="name" name="name" type="text" value="{{ old('name') }}" required autofocus autocomplete="name" placeholder="Ingrese su nombre completo" class="inst-input !bg-slate-100 !border-slate-200">
+                            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                        </div>
+
+                        <div>
+                            <label for="email" class="mb-2 block text-sm font-bold text-slate-700">Correo electronico</label>
+                            <input id="email" name="email" type="email" value="{{ old('email') }}" required autocomplete="username" placeholder="usuario@correo.pe" class="inst-input !bg-slate-100 !border-slate-200">
+                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                        </div>
+
+                        <div>
+                            <label for="password" class="mb-2 block text-sm font-bold text-slate-700">Contrasena</label>
+                            <input id="password" name="password" type="password" required autocomplete="new-password" placeholder="Cree una contrasena segura" class="inst-input !bg-slate-100 !border-slate-200">
+                            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                        </div>
+
+                        <div>
+                            <label for="password_confirmation" class="mb-2 block text-sm font-bold text-slate-700">Confirmar contrasena</label>
+                            <input id="password_confirmation" name="password_confirmation" type="password" required autocomplete="new-password" placeholder="Repita su contrasena" class="inst-input !bg-slate-100 !border-slate-200">
+                            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+                        </div>
+
+                        <button type="submit" class="inst-btn-primary w-full !py-3.5 !text-sm !tracking-[0.1em]">
+                            Activar cuenta
+                        </button>
+                    </form>
+
+                    <div class="mt-8 border-t border-slate-200 pt-6 text-center text-sm text-slate-600">
+                        Ya tienes una cuenta activa?
+                        <a href="{{ route('login') }}" class="font-bold text-secondary underline decoration-primary/40 underline-offset-4 hover:text-primary">Inicia sesion aqui</a>
+                    </div>
+
+                    <div class="mt-6 border-t border-slate-200 pt-5 flex flex-wrap items-center justify-center gap-3 text-sm text-slate-500">
+                        <a href="{{ route('terminos') }}" class="hover:text-primary">Terminos y Condiciones</a>
+                        <span class="text-slate-300">•</span>
+                        <a href="{{ route('privacidad') }}" class="hover:text-primary">Politica de Privacidad</a>
+                        <span class="text-slate-300">•</span>
+                        <a href="{{ route('contacto') }}" class="hover:text-primary">Ayuda</a>
+                    </div>
                 </div>
-
-                <h2 class="text-5xl font-black tracking-tight text-secondary">Registro</h2>
-                <p class="mt-3 text-xl text-slate-500 leading-relaxed">Crea tu cuenta para ingresar al portal colegiado.</p>
-
-                @if ($errors->any())
-                    <div class="mt-5 rounded-md border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
-                        Revisa los campos del formulario para completar el registro.
-                    </div>
-                @endif
-
-                <form method="POST" action="{{ route('register') }}" class="mt-7 space-y-4">
-                    @csrf
-
-                    <div>
-                        <label for="name" class="mb-2 block text-sm font-bold text-slate-700">Nombres y apellidos</label>
-                        <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" class="inst-input !bg-slate-100 !border-slate-200 !text-base !py-3.5" placeholder="Ingrese su nombre completo" />
-                        <x-input-error :messages="$errors->get('name')" class="mt-2" />
-                    </div>
-
-                    <div>
-                        <label for="email" class="mb-2 block text-sm font-bold text-slate-700">Correo electrónico</label>
-                        <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="username" class="inst-input !bg-slate-100 !border-slate-200 !text-base !py-3.5" placeholder="nombre@correo.pe" />
-                        <x-input-error :messages="$errors->get('email')" class="mt-2" />
-                    </div>
-
-                    <div>
-                        <label for="password" class="mb-2 block text-sm font-bold text-slate-700">Contraseña</label>
-                        <input id="password" type="password" name="password" required autocomplete="new-password" class="inst-input !bg-slate-100 !border-slate-200 !text-base !py-3.5" placeholder="Cree una contraseña segura" />
-                        <x-input-error :messages="$errors->get('password')" class="mt-2" />
-                    </div>
-
-                    <div>
-                        <label for="password_confirmation" class="mb-2 block text-sm font-bold text-slate-700">Confirmar contraseña</label>
-                        <input id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password" class="inst-input !bg-slate-100 !border-slate-200 !text-base !py-3.5" placeholder="Repita su contraseña" />
-                        <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-                    </div>
-
-                    <button type="submit" class="mt-2 w-full rounded-xl bg-primary px-6 py-3.5 text-lg font-black uppercase tracking-[0.08em] text-white transition-colors hover:bg-primary-dark">
-                        Crear cuenta
-                    </button>
-                </form>
-
-                <div class="mt-7 text-center text-slate-500">
-                    ¿Ya tienes una cuenta activa?
-                    <a href="{{ route('login') }}" class="ml-1 font-black text-secondary underline decoration-primary/40 underline-offset-4 hover:text-primary">Ingresa aquí</a>
-                </div>
-
-                <div class="mt-7 border-t border-slate-200 pt-5 flex flex-wrap items-center justify-center gap-3 text-sm text-slate-500">
-                    <a href="{{ route('terminos') }}" class="hover:text-primary">Términos y Condiciones</a>
-                    <span class="text-slate-300">•</span>
-                    <a href="{{ route('privacidad') }}" class="hover:text-primary">Política de Privacidad</a>
-                    <span class="text-slate-300">•</span>
-                    <a href="{{ route('contacto') }}" class="hover:text-primary">Ayuda</a>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 </x-guest-layout>

@@ -1,226 +1,279 @@
 @extends('layouts.public-portal')
 
 @section('title', 'Portal del Colegiado | CRO III Lima-Callao')
-@section('meta_description', 'Acceso público al portal del colegiado del CRO III Lima-Callao.')
+@section('meta_description', 'Portal publico de acceso y consulta del Colegio Regional de Obstetras III Lima-Callao.')
 
 @section('content')
-<main id="main" class="min-h-screen flex flex-col lg:flex-row overflow-hidden">
-    <section class="relative w-full lg:w-[60%] min-h-[54vh] lg:min-h-screen border-r border-slate-300/80 bg-[#f8fafc]">
-        <div
-            class="absolute inset-0 opacity-40 pointer-events-none"
-            style="background-image: linear-gradient(#d6dbe4 1px, transparent 1px), linear-gradient(90deg, #d6dbe4 1px, transparent 1px); background-size: 44px 44px;"
-            aria-hidden="true"
-        ></div>
+<main id="main" class="md:h-screen md:overflow-hidden flex flex-col md:flex-row">
+    <section class="relative flex flex-col w-full md:w-[60%] min-h-[56vh] md:h-screen md:overflow-y-auto bg-background-light border-r border-slate-300/80">
+        <div class="absolute inset-0 opacity-40 pointer-events-none" style="background-image: linear-gradient(#d6dbe4 1px, transparent 1px), linear-gradient(90deg, #d6dbe4 1px, transparent 1px); background-size: 44px 44px;"></div>
 
-        <header class="relative z-10 border-b border-slate-300/80 bg-white/90 backdrop-blur px-5 sm:px-8 lg:px-10 py-5">
-            <div class="flex flex-wrap items-center justify-between gap-4">
+        <header class="relative z-10 border-b border-slate-300/80 bg-white/90 backdrop-blur px-6 lg:px-10 py-5">
+            <div class="flex items-center justify-between gap-4">
                 <div class="flex items-center gap-3">
-                    <span class="inline-flex h-11 w-11 items-center justify-center rounded-sm bg-primary text-white">
-                        <span class="material-icons-outlined text-[22px]">medical_services</span>
-                    </span>
+                    <img src="{{ asset('assets/img/logo-circular.png') }}" alt="Logo CRO III Lima-Callao" class="h-11 w-11 object-contain" />
                     <div class="leading-tight">
-                        <p class="text-xl sm:text-2xl font-black tracking-tight text-secondary">CRO III LIMA-CALLAO</p>
-                        <p class="text-xs sm:text-sm uppercase tracking-[0.18em] text-slate-500">Sistema de Gestión Institucional</p>
+                        <p class="text-2xl font-black tracking-tight text-secondary">CRO III LIMA-CALLAO</p>
+                        <p class="text-xs uppercase tracking-[0.18em] text-slate-500">Sistema de Gestion Institucional</p>
                     </div>
                 </div>
-                <p class="inline-flex items-center gap-2 text-sm uppercase tracking-[0.14em] text-slate-500 font-medium">
+                <p class="inline-flex items-center gap-2 text-sm uppercase tracking-[0.14em] text-slate-500">
                     <span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
                     Sistema operativo
                 </p>
             </div>
         </header>
 
-        <div class="relative z-10 mx-auto w-full max-w-5xl px-5 sm:px-8 lg:px-10 py-8 md:py-10 lg:py-12">
-            <span class="inline-flex items-center rounded-sm border border-slate-300 bg-slate-100 px-3 py-1 text-xs sm:text-sm font-semibold uppercase tracking-[0.14em] text-slate-600">
-                Consulta pública
-            </span>
+        <div class="relative z-10 mx-auto flex-1 w-full max-w-4xl px-5 sm:px-6 lg:px-10 py-8 md:py-12">
+            <span class="inline-flex items-center rounded-sm border border-slate-300 bg-slate-100 px-3 py-1 text-sm font-semibold uppercase tracking-[0.14em] text-slate-600">Consulta publica</span>
+            <h1 class="mt-5 text-4xl lg:text-5xl font-black leading-[1.06] tracking-tight text-secondary">Verificacion de habilidad profesional</h1>
+            <p class="mt-4 max-w-2xl text-base md:text-lg text-slate-600">Ingrese el numero de colegiatura (COP) o DNI para validar el estado de habilitacion en tiempo real.</p>
 
-            <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.03] tracking-tight text-secondary">
-                Verificación de<br>Habilidad Profesional
-            </h1>
-
-            <p class="mt-5 max-w-3xl text-lg sm:text-xl leading-relaxed text-slate-600">
-                Ingrese el número de colegiatura (CMP) o DNI para validar el estado de habilitación en tiempo real.
-            </p>
-
-            <form class="mt-8 w-full max-w-4xl rounded-md border border-primary/40 bg-white p-2 shadow-[0_16px_28px_-24px_rgba(15,23,42,0.4)]">
+            <form id="consulta-form" class="mt-8 w-full rounded-md border border-primary/45 bg-white p-2">
                 <div class="flex flex-col sm:flex-row sm:items-center">
-                    <label for="consulta-cmp" class="sr-only">Buscar por CMP o DNI</label>
-                    <div class="flex items-center gap-3 px-4 py-3 sm:py-0 w-full">
+                    <label for="consulta-publica" class="sr-only">Buscar por COP o DNI</label>
+                    <div class="flex items-center gap-3 px-3 sm:px-4 py-3 sm:py-0 w-full">
                         <span class="material-icons-outlined text-3xl text-slate-400">search</span>
-                        <input
-                            id="consulta-cmp"
-                            type="text"
-                            placeholder="Buscar por CMP o DNI..."
-                            class="w-full border-none bg-transparent px-0 py-0 text-xl sm:text-2xl font-medium text-secondary placeholder:text-slate-300 focus:ring-0"
-                        >
+                        <input id="consulta-publica" type="text" class="w-full border-none bg-transparent text-xl sm:text-2xl font-medium tracking-wide text-secondary placeholder:text-slate-300 focus:ring-0" placeholder="Buscar por COP o DNI...">
                     </div>
-                    <button
-                        type="button"
-                        class="mt-2 sm:mt-0 sm:ml-2 inline-flex h-14 min-w-[170px] items-center justify-center rounded-sm bg-secondary px-7 text-xl font-black uppercase tracking-wide text-white transition-colors hover:bg-secondary/90"
-                    >
+                    <button id="consulta-submit" type="button" class="mt-2 sm:mt-0 sm:ml-2 inst-btn-primary !h-12 !min-w-[170px] !rounded-sm !px-6 !text-sm">
                         Consultar
                     </button>
                 </div>
             </form>
 
-            <div class="mt-10 grid sm:grid-cols-3 gap-3 sm:gap-4 text-sm sm:text-base">
-                <a href="{{ route('tramites') }}" class="rounded-sm border border-slate-300 bg-white px-4 py-3 font-semibold text-slate-600 transition-colors hover:text-primary hover:border-primary/40">
-                    Mesa de Partes Virtual
-                </a>
-                <a href="{{ route('institucional') }}" class="rounded-sm border border-slate-300 bg-white px-4 py-3 font-semibold text-slate-600 transition-colors hover:text-primary hover:border-primary/40">
-                    Directorio Institucional
-                </a>
-                <a href="{{ route('institucional') }}#normativa" class="rounded-sm border border-slate-300 bg-white px-4 py-3 font-semibold text-slate-600 transition-colors hover:text-primary hover:border-primary/40">
-                    Normativa Vigente
-                </a>
-            </div>
-
-            <section class="mt-10 rounded-md border border-slate-300 bg-white p-5 sm:p-6">
-                <h2 class="text-lg sm:text-xl font-black text-secondary">Servicios disponibles para colegiadas y colegiados</h2>
-                <div class="mt-4 grid sm:grid-cols-2 xl:grid-cols-3 gap-3">
-                    <article class="rounded-sm border border-slate-200 bg-slate-50 px-4 py-3">
-                        <h3 class="font-bold text-secondary">Trámites en línea</h3>
-                        <p class="mt-1 text-sm text-slate-600">Solicitud y seguimiento de procedimientos institucionales.</p>
-                    </article>
-                    <article class="rounded-sm border border-slate-200 bg-slate-50 px-4 py-3">
-                        <h3 class="font-bold text-secondary">Habilidad profesional</h3>
-                        <p class="mt-1 text-sm text-slate-600">Consulta de estado y emisión de constancias según registro.</p>
-                    </article>
-                    <article class="rounded-sm border border-slate-200 bg-slate-50 px-4 py-3">
-                        <h3 class="font-bold text-secondary">Pagos y colegiatura</h3>
-                        <p class="mt-1 text-sm text-slate-600">Revisión de cuotas, cronogramas y cumplimiento administrativo.</p>
-                    </article>
-                    <article class="rounded-sm border border-slate-200 bg-slate-50 px-4 py-3">
-                        <h3 class="font-bold text-secondary">Capacitación continua</h3>
-                        <p class="mt-1 text-sm text-slate-600">Inscripción a cursos, agenda académica y actividades oficiales.</p>
-                    </article>
-                    <article class="rounded-sm border border-slate-200 bg-slate-50 px-4 py-3">
-                        <h3 class="font-bold text-secondary">Mesa de partes digital</h3>
-                        <p class="mt-1 text-sm text-slate-600">Presentación documentaria y trazabilidad de expedientes.</p>
-                    </article>
-                    <article class="rounded-sm border border-slate-200 bg-slate-50 px-4 py-3">
-                        <h3 class="font-bold text-secondary">Soporte colegial</h3>
-                        <p class="mt-1 text-sm text-slate-600">Atención para acceso, actualización de datos y orientación.</p>
-                    </article>
+            <section id="consulta-resultado" class="hidden mt-8 space-y-4">
+                <div class="flex items-center justify-between gap-3">
+                    <h2 class="text-xl md:text-2xl font-black text-secondary">Resultado de consulta</h2>
+                    <span id="resultado-cop-badge" class="text-xs uppercase tracking-[0.14em] text-slate-500 font-bold">COP 12874</span>
                 </div>
+
+                <article class="inst-card p-4 md:p-6 border border-primary/25">
+                    <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-4 mb-5">
+                        <p class="text-sm text-slate-600">Estado de habilitacion en tiempo real</p>
+                        <a id="resultado-perfil-link" href="{{ route('obstetras.perfil', ['cop' => '12874']) }}" class="inst-btn-secondary !px-4 !py-2 !text-xs">
+                            Ver perfil completo
+                        </a>
+                    </div>
+
+                    <div class="grid gap-5 lg:grid-cols-[1fr_180px] lg:items-start">
+                        <div>
+                            <h3 id="resultado-nombre" class="text-3xl md:text-4xl font-black leading-tight text-secondary">Obst. Maria Fernanda Quispe Ramirez</h3>
+                            <div class="mt-4 inline-flex items-center rounded-sm bg-emerald-600 px-4 py-3 text-white shadow-inst">
+                                <div>
+                                    <p id="resultado-habilitado" class="text-3xl md:text-4xl font-black leading-none tracking-tight">HABILITADO</p>
+                                    <p id="resultado-situacion" class="text-sm uppercase tracking-[0.12em] font-bold text-white/90 mt-1">Activo</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <img id="resultado-foto" src="https://i.pravatar.cc/260?img=47" alt="Foto de colegiada simulada" class="h-44 w-44 object-cover border-2 border-primary/30">
+                    </div>
+
+                    <div class="mt-5 grid sm:grid-cols-3 gap-3">
+                        <div class="border border-slate-200 bg-white p-4">
+                            <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold">Carrera</p>
+                            <p id="resultado-carrera" class="mt-1 text-2xl font-black text-slate-900">Obstetricia</p>
+                        </div>
+                        <div class="border border-slate-200 bg-white p-4">
+                            <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold">COP</p>
+                            <p id="resultado-cop" class="mt-1 text-2xl font-black text-slate-900">12874</p>
+                        </div>
+                        <div class="border border-slate-200 bg-white p-4">
+                            <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold">Especialidad</p>
+                            <p id="resultado-especialidad" class="mt-1 text-xl font-black text-slate-900">Salud Materno Perinatal</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 grid sm:grid-cols-2 gap-3">
+                        <div class="border border-slate-200 bg-white p-4">
+                            <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold">Situacion</p>
+                            <p id="resultado-situacion-resumen" class="mt-1 text-2xl font-black text-slate-900">Activo</p>
+                        </div>
+                        <div class="border border-slate-200 bg-white p-4">
+                            <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold">Habilitacion</p>
+                            <p id="resultado-habilitado-resumen" class="mt-1 text-2xl font-black text-emerald-700">HABILITADO</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 grid sm:grid-cols-2 gap-3">
+                        <div class="border border-slate-200 bg-white p-4">
+                            <p class="text-sm text-slate-600">Cursos de especializacion</p>
+                            <p id="resultado-curso" class="text-2xl font-black text-slate-900 mt-1">Emergencias Obstetricas 2024</p>
+                        </div>
+                        <div class="border border-slate-200 bg-white p-4">
+                            <p class="text-sm text-slate-600">Ponencias realizadas</p>
+                            <p id="resultado-ponencia" class="text-2xl font-black text-slate-900 mt-1">Lactancia y puerperio seguro</p>
+                        </div>
+                    </div>
+                </article>
             </section>
+
+            <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm md:text-base text-slate-600">
+                <a href="{{ route('obstetras.index') }}" class="hover:text-primary">Busca tu obstetra</a>
+                <a href="{{ route('bolsa.trabajo') }}" class="hover:text-primary">Bolsa de trabajo</a>
+                <a href="{{ route('tramites') }}#mesa-partes" class="hover:text-primary">Mesa de Partes Virtual</a>
+                <a href="{{ route('institucional') }}" class="hover:text-primary">Directorio Institucional</a>
+                <a href="{{ route('institucional') }}#normativa" class="hover:text-primary">Normativa Vigente</a>
+            </div>
         </div>
 
-        <footer class="relative z-10 mt-auto border-t border-slate-300 bg-white/95 px-5 sm:px-8 lg:px-10 py-3.5 text-xs sm:text-sm text-slate-500 flex items-center justify-between">
+        <footer class="relative z-10 mt-auto border-t border-slate-300 bg-white/95 px-6 lg:px-10 py-3.5 text-sm text-slate-500 flex items-center justify-between">
             <span>© {{ date('Y') }} CRO III LIMA-CALLAO</span>
-            <span>Portal de acceso público</span>
+            <span>v2.4.0-release</span>
         </footer>
     </section>
 
-    <aside class="relative w-full lg:w-[40%] min-h-[540px] lg:min-h-screen bg-[linear-gradient(155deg,#660219_0%,#7f0a2d_45%,#3a203f_100%)] text-white">
-        <div
-            class="absolute inset-0 opacity-10 pointer-events-none"
-            style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.9) 1px, transparent 0); background-size: 30px 30px;"
-            aria-hidden="true"
-        ></div>
-        <div class="absolute -right-16 -bottom-20 text-white/10 pointer-events-none" aria-hidden="true">
-            <span class="material-icons-outlined text-[260px]">workspace_premium</span>
-        </div>
+    <aside class="relative w-full md:w-[40%] min-h-[500px] md:h-screen md:overflow-y-auto bg-inst-hero text-white">
+        <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.9) 1px, transparent 0); background-size: 30px 30px;"></div>
 
-        <div class="relative z-10 mx-auto flex h-full w-full max-w-xl flex-col justify-center px-6 sm:px-9 lg:px-10 py-10 lg:py-12">
-            <div>
-                <h2 class="text-4xl sm:text-5xl font-black tracking-tight">Acceso Colegiados</h2>
-                <p class="mt-3 text-lg sm:text-xl text-white/85 leading-relaxed">
-                    Plataforma de gestión para miembros habilitados del Colegio Regional de Obstetras III Lima-Callao.
-                </p>
+        <div class="relative z-10 mx-auto flex h-full w-full max-w-xl flex-col justify-center px-6 sm:px-8 lg:px-10 py-8 lg:py-12">
+            <div class="flex items-center gap-3 mb-5">
+                <img src="{{ asset('assets/img/logo-circular.png') }}" alt="Logo CRO III Lima-Callao" class="h-11 w-11 object-contain" />
+                <p class="text-xs uppercase tracking-[0.16em] font-bold text-white/90">CRO III LIMA-CALLAO</p>
             </div>
+            <h2 class="text-4xl lg:text-5xl font-black tracking-tight">Acceso Colegiados</h2>
+            <p class="mt-3 text-base lg:text-lg text-white/85">Accede para gestionar tus tramites, constancias y servicios del Portal del Colegiado.</p>
 
-            <form method="POST" action="{{ route('login') }}" class="mt-9 space-y-5">
+            <form method="POST" action="{{ route('login') }}" class="mt-8 space-y-4">
                 @csrf
                 <div>
-                    <label for="email" class="mb-2 block text-xs font-bold uppercase tracking-[0.15em] text-white/80">Número de colegiatura o email</label>
+                    <label for="email" class="mb-2 block text-xs font-bold uppercase tracking-[0.15em] text-white/80">Codigo COP o email</label>
                     <div class="relative">
                         <span class="material-icons-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">badge</span>
-                        <input
-                            id="email"
-                            type="text"
-                            name="email"
-                            value="{{ old('email') }}"
-                            autocomplete="username"
-                            required
-                            class="w-full rounded-sm border border-white/25 bg-white px-10 py-3.5 text-secondary placeholder:text-slate-400 focus:border-brand-gold focus:ring-brand-gold/40"
-                            placeholder="Ej. 00000 o usuario@correo.pe"
-                        >
+                        <input id="email" name="email" type="text" value="{{ old('email') }}" required autocomplete="username" class="w-full rounded-sm border border-white/25 bg-white px-10 py-3 text-secondary placeholder:text-slate-400 focus:border-brand-gold focus:ring-brand-gold/30" placeholder="00000 o usuario@correo.pe">
                     </div>
-                    @error('email')
-                        <p class="mt-2 text-sm text-red-200">{{ $message }}</p>
-                    @enderror
                 </div>
-
                 <div>
-                    <label for="password" class="mb-2 block text-xs font-bold uppercase tracking-[0.15em] text-white/80">Contraseña</label>
+                    <label for="password" class="mb-2 block text-xs font-bold uppercase tracking-[0.15em] text-white/80">Contrasena</label>
                     <div class="relative">
                         <span class="material-icons-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">lock</span>
-                        <input
-                            id="password"
-                            type="password"
-                            name="password"
-                            autocomplete="current-password"
-                            required
-                            class="w-full rounded-sm border border-white/25 bg-white px-10 py-3.5 text-secondary placeholder:text-slate-400 focus:border-brand-gold focus:ring-brand-gold/40"
-                            placeholder="••••••••"
-                        >
+                        <input id="password" name="password" type="password" required autocomplete="current-password" class="w-full rounded-sm border border-white/25 bg-white px-10 py-3 text-secondary placeholder:text-slate-400 focus:border-brand-gold focus:ring-brand-gold/30" placeholder="••••••••">
                     </div>
-                    @error('password')
-                        <p class="mt-2 text-sm text-red-200">{{ $message }}</p>
-                    @enderror
                 </div>
 
-                <div class="flex items-center justify-between gap-4 pt-1">
-                    <label class="inline-flex items-center gap-2 text-sm text-white/85">
-                        <input type="checkbox" name="remember" class="h-4 w-4 rounded border-white/50 bg-transparent text-brand-gold focus:ring-brand-gold/50">
+                <div class="flex items-center justify-between gap-4 text-sm">
+                    <label class="inline-flex items-center gap-2 text-white/85">
+                        <input type="checkbox" name="remember" class="h-4 w-4 rounded border-white/40 bg-transparent text-brand-gold focus:ring-brand-gold/40">
                         <span>Recordarme</span>
                     </label>
-
                     @if (Route::has('password.request'))
-                        <a href="{{ route('password.request') }}" class="text-sm text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">
-                            ¿Olvidó su clave?
-                        </a>
+                        <a href="{{ route('password.request') }}" class="text-white hover:text-brand-gold-light">Olvido su clave?</a>
                     @endif
                 </div>
 
-                <button
-                    type="submit"
-                    class="inline-flex w-full items-center justify-center gap-2 rounded-sm bg-secondary px-6 py-3.5 text-lg font-black uppercase tracking-wide text-white transition-colors hover:bg-black"
-                >
+                <button type="submit" class="inst-btn !w-full !bg-brand-gold !text-white !py-3.5 !text-sm md:!text-base !tracking-[0.08em] hover:!bg-brand-gold-light">
                     Ingresar al sistema
-                    <span class="material-icons-outlined text-lg">arrow_forward</span>
                 </button>
             </form>
 
-            @if (Route::has('register'))
-                <div class="mt-8 border-t border-white/20 pt-6">
-                    <p class="text-white/80">¿Es su primera vez aquí?</p>
+            <div class="mt-8 border-t border-white/15 pt-6">
+                <p class="text-white/70">Es su primera vez aqui?</p>
+                @if (Route::has('register'))
                     <a href="{{ route('register') }}" class="mt-2 inline-flex items-center gap-1 text-base font-bold text-white hover:text-brand-gold-light">
                         Activar cuenta digital
                         <span class="material-icons-outlined text-base">chevron_right</span>
                     </a>
-                </div>
-            @endif
-
-            <section class="mt-8 rounded-sm border border-white/20 bg-white/10 p-4 backdrop-blur-sm">
-                <h3 class="text-sm font-bold uppercase tracking-[0.12em] text-brand-gold-light">¿Qué puedes hacer en el portal?</h3>
-                <ul class="mt-3 grid gap-2 text-sm text-white/90">
-                    <li>Gestionar trámites personales y revisar estados.</li>
-                    <li>Acceder a cursos, calendario y actividades académicas.</li>
-                    <li>Consultar pagos, colegiatura y constancias.</li>
-                    <li>Enviar documentación por mesa de partes virtual.</li>
-                </ul>
-            </section>
+                @endif
+            </div>
 
             <div class="mt-6 rounded-sm border border-white/20 bg-white/10 p-4">
-                <p class="text-sm font-bold text-white">Soporte técnico institucional</p>
-                <p class="mt-1 text-sm text-white/80">Lunes a viernes: 8:00 a. m. - 5:00 p. m.</p>
+                <p class="text-sm font-bold text-white">Soporte tecnico institucional</p>
+                <p class="mt-1 text-sm text-white/80">Lunes a viernes: 9:00 a. m. - 5:30 p. m.</p>
+                <p class="text-sm text-white/80">Sabados: 9:00 a. m. - 12:00 m.</p>
                 <p class="mt-1 text-sm text-white/80">tramitedocumentario@crolimacallao.org.pe</p>
                 <p class="text-sm text-white/80">+51 982 520 891</p>
             </div>
         </div>
     </aside>
 </main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('consulta-form');
+        const submit = document.getElementById('consulta-submit');
+        const input = document.getElementById('consulta-publica');
+        const result = document.getElementById('consulta-resultado');
+        const badge = document.getElementById('resultado-cop-badge');
+        const nombre = document.getElementById('resultado-nombre');
+        const habilitado = document.getElementById('resultado-habilitado');
+        const situacion = document.getElementById('resultado-situacion');
+        const foto = document.getElementById('resultado-foto');
+        const carrera = document.getElementById('resultado-carrera');
+        const cop = document.getElementById('resultado-cop');
+        const especialidad = document.getElementById('resultado-especialidad');
+        const curso = document.getElementById('resultado-curso');
+        const ponencia = document.getElementById('resultado-ponencia');
+        const situacionResumen = document.getElementById('resultado-situacion-resumen');
+        const habilitadoResumen = document.getElementById('resultado-habilitado-resumen');
+        const perfilLink = document.getElementById('resultado-perfil-link');
+        const perfilBase = @json(route('obstetras.perfil', ['cop' => '__COP__']));
+
+        const mockByCode = {
+            '12874': {
+                nombre: 'Obst. Maria Fernanda Quispe Ramirez',
+                habilitado: 'HABILITADO',
+                situacion: 'Activo',
+                foto: 'https://i.pravatar.cc/260?img=47',
+                carrera: 'Obstetricia',
+                cop: '12874',
+                especialidad: 'Salud Materno Perinatal',
+                curso: 'Emergencias Obstetricas 2024',
+                ponencia: 'Lactancia y puerperio seguro'
+            },
+            '30951': {
+                nombre: 'Obst. Ana Lucia Ramos Gutierrez',
+                habilitado: 'NO HABILITADO',
+                situacion: 'No activo',
+                foto: 'https://i.pravatar.cc/260?img=5',
+                carrera: 'Obstetricia',
+                cop: '30951',
+                especialidad: 'Gestion de Servicios de Salud',
+                curso: 'Auditoria clinica y calidad',
+                ponencia: 'Sin registro de ponencias'
+            }
+        };
+
+        const renderResult = function (data) {
+            nombre.textContent = data.nombre;
+            habilitado.textContent = data.habilitado;
+            situacion.textContent = data.situacion;
+            foto.src = data.foto;
+            cop.textContent = data.cop;
+            badge.textContent = `COP ${data.cop}`;
+            carrera.textContent = data.carrera;
+            especialidad.textContent = data.especialidad;
+            curso.textContent = data.curso;
+            ponencia.textContent = data.ponencia;
+            situacionResumen.textContent = data.situacion;
+            habilitadoResumen.textContent = data.habilitado;
+            perfilLink.href = perfilBase.replace('__COP__', data.cop);
+
+            if (data.habilitado === 'HABILITADO') {
+                habilitado.parentElement.parentElement.classList.remove('bg-rose-700');
+                habilitado.parentElement.parentElement.classList.add('bg-emerald-600');
+                habilitadoResumen.classList.remove('text-rose-700');
+                habilitadoResumen.classList.add('text-emerald-700');
+            } else {
+                habilitado.parentElement.parentElement.classList.remove('bg-emerald-600');
+                habilitado.parentElement.parentElement.classList.add('bg-rose-700');
+                habilitadoResumen.classList.remove('text-emerald-700');
+                habilitadoResumen.classList.add('text-rose-700');
+            }
+
+            result.classList.remove('hidden');
+            result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        };
+
+        const onSubmit = function (event) {
+            event.preventDefault();
+            const term = (input.value || '').trim();
+            const found = mockByCode[term] || mockByCode['12874'];
+            renderResult(found);
+        };
+
+        submit.addEventListener('click', onSubmit);
+        form.addEventListener('submit', onSubmit);
+    });
+</script>
 @endsection

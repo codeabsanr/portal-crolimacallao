@@ -21,6 +21,7 @@
         'institucional.convenios' => ['sectionLabel' => 'Institucional', 'sectionRoute' => 'institucional', 'currentLabel' => 'Convenios'],
 
         'tramites' => ['sectionLabel' => 'Trámites', 'sectionRoute' => 'tramites', 'currentLabel' => 'Catálogo de trámites'],
+        'tramites.faq' => ['sectionLabel' => 'Trámites', 'sectionRoute' => 'tramites', 'parentLabel' => 'Catálogo de trámites', 'parentRoute' => 'tramites', 'currentLabel' => 'Preguntas frecuentes'],
         'tramites.habilidad' => ['sectionLabel' => 'Trámites', 'sectionRoute' => 'tramites', 'parentLabel' => 'Catálogo de trámites', 'parentRoute' => 'tramites', 'currentLabel' => 'Habilidad profesional'],
         'tramites.colegiatura' => ['sectionLabel' => 'Trámites', 'sectionRoute' => 'tramites', 'parentLabel' => 'Catálogo de trámites', 'parentRoute' => 'tramites', 'currentLabel' => 'Colegiatura'],
         'tramites.registros' => ['sectionLabel' => 'Trámites', 'sectionRoute' => 'tramites', 'parentLabel' => 'Catálogo de trámites', 'parentRoute' => 'tramites', 'currentLabel' => 'Registros académicos'],

@@ -37,7 +37,7 @@
                     <li><a href="{{ route('colegiados') }}" class="hover:text-brand-gold-light transition-colors">Busca Obstetra</a></li>
                     <li><a href="{{ route('normativa') }}" class="hover:text-brand-gold-light transition-colors">Repositorio Normativo</a></li>
                     <li><a href="{{ route('capacitacion') }}" class="hover:text-brand-gold-light transition-colors">Capacitación</a></li>
-                    <li><a href="{{ route('portal.colegiado') }}" class="hover:text-brand-gold-light transition-colors">Portal del Colegiado</a></li>
+                    <li><a href="{{ auth()->check() ? route('portal.colegiado') : route('login') }}" class="hover:text-brand-gold-light transition-colors">Portal del Colegiado</a></li>
                 </ul>
             </div>
 

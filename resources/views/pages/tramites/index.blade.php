@@ -86,22 +86,14 @@
             </div>
         </section>
 
-        <section class="py-10 md:py-14 bg-[linear-gradient(180deg,#f7f9fc_0%,#eef3fa_100%)]">
+        <section id="tramites-faq" class="scroll-mt-28 py-10 md:py-14 bg-[linear-gradient(180deg,#f7f9fc_0%,#eef3fa_100%)]">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="inst-section-title text-center">Preguntas frecuentes</h2>
-                <div class="mx-auto mt-2 mb-8 h-[3px] w-24 bg-brand-gold-light"></div>
-                <div class="rounded-xl border border-primary/20 bg-white p-6 md:p-8 shadow-[0_18px_34px_-30px_rgba(15,23,42,0.45)]">
-                    <ul class="space-y-5">
-                        <x-faq-item question="¿Cuánto demora la colegiatura?">
-                            El plazo referencial es de 15 días hábiles desde la recepción de documentos completos.
-                        </x-faq-item>
-                        <x-faq-item question="¿Cómo regularizo cuotas pendientes?" class="border-t border-slate-200 pt-5">
-                            Puede gestionar pago y validación en el Portal del Colegiado o vía mesa de partes.
-                        </x-faq-item>
-                        <x-faq-item question="¿El certificado de habilidad es digital?" class="border-t border-slate-200 pt-5">
-                            Sí, se emite con validación institucional y puede ser remitido por correo registrado.
-                        </x-faq-item>
-                    </ul>
+                <div class="rounded-xl border border-primary/20 bg-white p-6 md:p-8 shadow-[0_18px_34px_-30px_rgba(15,23,42,0.45)] text-center">
+                    <p class="text-xs uppercase tracking-[0.15em] text-primary font-bold">Ayuda al colegiado</p>
+                    <h2 class="text-secondary text-3xl md:text-4xl font-black tracking-tight mt-2">Preguntas frecuentes</h2>
+                    <div class="mx-auto mt-3 h-[3px] w-24 bg-brand-gold-light"></div>
+                    <p class="mt-4 text-slate-600">Revisa respuestas rápidas en una página dedicada para orientación de trámites.</p>
+                    <a href="{{ route('tramites.faq') }}" class="inst-btn-primary mt-6 !px-6 !py-2.5">Ver preguntas frecuentes</a>
                 </div>
             </div>
         </section>

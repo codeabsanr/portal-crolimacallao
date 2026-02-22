@@ -30,11 +30,14 @@
         'contacto' => [
             'eyebrow' => 'Canales de atención',
             'title' => 'Contáctanos',
-            'summary' => 'Estamos aquí para escucharte y ayudarte con tus consultas institucionales y trámites.',
+            'summary' => 'Atención directa para consultas institucionales, trámites y soporte al colegiado.',
             'icon' => 'support_agent',
-            'chips' => ['Atención institucional', 'Mesa de partes', 'Soporte al colegiado'],
-            'cta1' => ['text' => 'Ver trámites', 'route' => 'tramites'],
-            'cta2' => ['text' => 'Intranet', 'route' => 'admin.intranet'],
+            'assistEyebrow' => 'Contacto único',
+            'assistTitle' => 'Te respondemos por canal oficial',
+            'assistFooter' => 'Elige el canal que prefieras y te orientamos según tu consulta.',
+            'chips' => [],
+            'cta1' => ['text' => 'Ir al formulario', 'href' => '#contacto-formulario'],
+            'cta2' => ['text' => 'Llamar ahora', 'href' => 'tel:+51982520891'],
             'stats' => [
                 ['label' => 'Teléfono', 'value' => '+51 982 520 891'],
                 ['label' => 'Correo', 'value' => 'tramitedocumentario@crolimacallao.org.pe'],
@@ -47,22 +50,33 @@
             'summary' => 'Consulte requisitos, pagos y pasos para colegiatura, habilidad profesional, registros académicos, carné y trámite documentario.',
             'icon' => 'folder_open',
             'assistEyebrow' => 'Ayuda de trámites',
-            'assistTitle' => 'Accesos rápidos por tipo de solicitud',
+            'assistTitle' => '¿Necesitas ayuda para iniciar?',
             'chips' => ['Colegiatura', 'Habilidad profesional', 'Mesa de Partes Virtual'],
             'cta1' => ['text' => 'Ver catálogo', 'route' => 'tramites'],
             'cta2' => ['text' => 'Contactar soporte', 'route' => 'contacto'],
             'helpLinks' => [
-                ['label' => 'Habilidad', 'route' => 'tramites.habilidad', 'icon' => 'verified'],
-                ['label' => 'Colegiatura', 'route' => 'tramites.colegiatura', 'icon' => 'school'],
-                ['label' => 'Registros', 'route' => 'tramites.registros', 'icon' => 'workspace_premium'],
-                ['label' => 'Carné', 'route' => 'tramites.carne', 'icon' => 'credit_card'],
-                ['label' => 'Mesa de Partes', 'route' => 'tramites.mesa-partes', 'icon' => 'forward_to_inbox'],
-                ['label' => 'Buscador de obstetra', 'route' => 'colegiados.buscador', 'icon' => 'person_search'],
+                ['label' => 'Ver preguntas frecuentes', 'route' => 'tramites.faq', 'icon' => 'help'],
             ],
             'stats' => [
                 ['label' => 'Canal preferente', 'value' => 'Mesa de Partes Virtual'],
                 ['label' => 'Modalidad', 'value' => 'Atención híbrida'],
                 ['label' => 'Flujo', 'value' => 'Registro, verificación y respuesta'],
+            ],
+        ],
+        'tramites.faq' => [
+            'eyebrow' => 'Gestión institucional',
+            'title' => 'Preguntas frecuentes',
+            'summary' => 'Resuelva dudas comunes sobre requisitos, pagos, tiempos de atención y canales de soporte de trámites.',
+            'icon' => 'help',
+            'assistEyebrow' => 'Ayuda rápida',
+            'assistTitle' => '¿No encuentras tu respuesta?',
+            'assistFooter' => 'Si tu caso requiere validación específica, te orientamos por contacto directo.',
+            'chips' => ['Requisitos', 'Pagos', 'Tiempos de respuesta'],
+            'cta1' => ['text' => 'Volver a trámites', 'route' => 'tramites'],
+            'cta2' => ['text' => 'Contactar soporte', 'route' => 'contacto'],
+            'stats' => [
+                ['label' => 'Tipo de consulta', 'value' => 'Orientación general'],
+                ['label' => 'Canal', 'value' => 'Web y soporte directo'],
             ],
         ],
         'tramites.habilidad' => [
@@ -453,7 +467,8 @@
 @endphp
 
 @if ($hero)
-    <section class="relative overflow-hidden min-h-0 bg-[linear-gradient(180deg,#f8f4ea_0%,#edf3fb_34%,#e9eff7_100%)]">
+    @php($heroShellBg = $routeName === 'contacto' ? 'bg-white' : 'bg-[linear-gradient(180deg,#f8f4ea_0%,#edf3fb_34%,#e9eff7_100%)]')
+    <section class="relative overflow-hidden min-h-0 {{ $heroShellBg }}">
         <div class="grid lg:grid-cols-2 border-y-2 border-slate-300">
             <div class="bg-[linear-gradient(180deg,#ffffff_0%,#fffdfa_100%)]">
                 <div class="mx-auto lg:mx-0 w-full max-w-[40rem] lg:ml-auto lg:mr-0 px-4 sm:px-6 lg:px-8 py-10 md:py-12">
@@ -462,19 +477,27 @@
                     <div class="mt-3 h-[3px] w-20 bg-brand-gold-light"></div>
                     <p class="mt-5 max-w-3xl text-secondary-light text-base md:text-lg leading-relaxed">{{ $hero['summary'] }}</p>
 
+                    @php($cta1Href = $hero['cta1']['href'] ?? (!empty($hero['cta1']['route']) ? route($hero['cta1']['route']) : null))
+                    @php($cta2Href = $hero['cta2']['href'] ?? (!empty($hero['cta2']['route']) ? route($hero['cta2']['route']) : null))
                     <div class="mt-7 flex flex-col sm:flex-row gap-3">
-                        <a href="{{ route($hero['cta1']['route']) }}" class="inst-btn bg-primary text-white hover:bg-primary-dark w-full sm:w-auto">{{ $hero['cta1']['text'] }}</a>
-                        <a href="{{ route($hero['cta2']['route']) }}" class="inst-btn border-secondary text-secondary hover:bg-brand-gold-soft hover:border-primary hover:text-primary w-full sm:w-auto">{{ $hero['cta2']['text'] }}</a>
+                        @if (!empty($hero['cta1']['text']) && $cta1Href)
+                            <a href="{{ $cta1Href }}" class="inst-btn bg-primary text-white hover:bg-primary-dark w-full sm:w-auto">{{ $hero['cta1']['text'] }}</a>
+                        @endif
+                        @if (!empty($hero['cta2']['text']) && $cta2Href)
+                            <a href="{{ $cta2Href }}" class="inst-btn border-secondary text-secondary hover:bg-brand-gold-soft hover:border-primary hover:text-primary w-full sm:w-auto">{{ $hero['cta2']['text'] }}</a>
+                        @endif
                     </div>
 
-                    <div class="mt-6 flex flex-wrap gap-x-5 gap-y-2.5 text-sm md:text-base">
-                        @foreach ($hero['chips'] as $chip)
-                            <span class="inline-flex items-center gap-1.5 text-secondary-light">
-                                <span class="material-icons-outlined text-brand-gold text-[1.15rem]">check_circle</span>
-                                <span class="font-semibold">{{ $chip }}</span>
-                            </span>
-                        @endforeach
-                    </div>
+                    @if (!empty($hero['chips']))
+                        <div class="mt-6 flex flex-wrap gap-x-5 gap-y-2.5 text-sm md:text-base">
+                            @foreach ($hero['chips'] as $chip)
+                                <span class="inline-flex items-center gap-1.5 text-secondary-light">
+                                    <span class="material-icons-outlined text-brand-gold text-[1.15rem]">check_circle</span>
+                                    <span class="font-semibold">{{ $chip }}</span>
+                                </span>
+                            @endforeach
+                        </div>
+                    @endif
                 </div>
             </div>
 
@@ -490,31 +513,50 @@
                         <p class="text-xs uppercase tracking-[0.16em] text-brand-gold-light font-bold mb-2">{{ $hero['assistEyebrow'] }}</p>
                         <p class="font-bold text-white text-xl md:text-2xl leading-tight">{{ $hero['assistTitle'] }}</p>
 
-                        @if (!empty($hero['helpLinks']))
-                            <div class="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                                @foreach ($hero['helpLinks'] as $link)
-                                    @php($linkHref = $link['href'] ?? route($link['route']))
-                                    <a href="{{ $linkHref }}" class="group inline-flex items-center justify-between gap-3 border border-white/25 bg-white/10 px-3.5 py-3 text-white hover:bg-white/15 hover:border-white/40 transition-colors">
-                                        <span class="inline-flex items-center gap-2">
-                                            <span class="material-icons-outlined text-lg text-brand-gold-light">{{ $link['icon'] ?? 'arrow_forward' }}</span>
-                                            <span class="text-base font-semibold">{{ $link['label'] }}</span>
-                                        </span>
-                                        <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center bg-white/95 text-primary transition-colors group-hover:bg-white group-hover:text-primary">
-                                            <span class="material-icons-outlined text-lg">east</span>
-                                        </span>
-                                    </a>
-                                @endforeach
+                        @if ($routeName === 'contacto')
+                            <div class="mt-5 space-y-3">
+                                <a href="mailto:tramitedocumentario@crolimacallao.org.pe" class="flex items-center gap-2 border border-white/25 bg-white/10 px-3.5 py-3 text-white hover:bg-white/15 transition-colors">
+                                    <span class="material-icons-outlined text-brand-gold-light">mail</span>
+                                    <span class="font-semibold">tramitedocumentario@crolimacallao.org.pe</span>
+                                </a>
+                                <a href="tel:+51982520891" class="flex items-center gap-2 border border-white/25 bg-white/10 px-3.5 py-3 text-white hover:bg-white/15 transition-colors">
+                                    <span class="material-icons-outlined text-brand-gold-light">call</span>
+                                    <span class="font-semibold">+51 982 520 891</span>
+                                </a>
                             </div>
-                        @endif
-
-                        @if ($routeName === 'tramites')
-                            <div class="mt-5 pt-3 w-full flex items-center justify-center text-center text-sm text-white/90">
-                                <a href="#tramites-contenido" class="inline-flex items-center gap-2 hover:text-brand-gold-soft transition-colors">
-                                    <span class="material-icons-outlined text-base animate-bounce">south</span>
-                                    <span>Desliza para ver requisitos, pasos y preguntas frecuentes</span>
+                            <p class="mt-5 text-sm md:text-base text-white/85">{{ $hero['assistFooter'] }}</p>
+                        @elseif ($routeName === 'tramites')
+                            @if (!empty($hero['helpLinks']))
+                                @php($faqLink = $hero['helpLinks'][0])
+                                @php($faqHref = $faqLink['href'] ?? route($faqLink['route']))
+                                <a href="{{ $faqHref }}" class="mt-5 inst-btn !w-full !bg-white !text-primary hover:!bg-brand-gold-soft !py-3 !text-sm">
+                                    {{ $faqLink['label'] }}
+                                </a>
+                            @endif
+                            <div class="mt-4 border border-white/20 bg-white/10 px-4 py-3 text-sm text-white/90">
+                                <p class="font-semibold text-white">Llamar para soporte rápido</p>
+                                <a href="tel:+51982520891" class="mt-1 inline-flex items-center gap-2 text-brand-gold-soft hover:text-brand-gold-light">
+                                    <span class="material-icons-outlined text-base">call</span>
+                                    <span>+51 982 520 891</span>
                                 </a>
                             </div>
                         @else
+                            @if (!empty($hero['helpLinks']))
+                                <div class="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                                    @foreach ($hero['helpLinks'] as $link)
+                                        @php($linkHref = $link['href'] ?? route($link['route']))
+                                        <a href="{{ $linkHref }}" class="group inline-flex items-center justify-between gap-3 border border-white/25 bg-white/10 px-3.5 py-3 text-white hover:bg-white/15 hover:border-white/40 transition-colors">
+                                            <span class="inline-flex items-center gap-2">
+                                                <span class="material-icons-outlined text-lg text-brand-gold-light">{{ $link['icon'] ?? 'arrow_forward' }}</span>
+                                                <span class="text-base font-semibold">{{ $link['label'] }}</span>
+                                            </span>
+                                            <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center bg-white/95 text-primary transition-colors group-hover:bg-white group-hover:text-primary">
+                                                <span class="material-icons-outlined text-lg">east</span>
+                                            </span>
+                                        </a>
+                                    @endforeach
+                                </div>
+                            @endif
                             <p class="mt-5 text-sm md:text-base text-white/85">{{ $hero['assistFooter'] }}</p>
                         @endif
                     </div>
