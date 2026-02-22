@@ -28,9 +28,9 @@
                 <nav class="hidden md:flex items-center gap-1 lg:gap-2">
                     <a href="{{ route('home') }}" class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('home') ? 'text-primary border-primary' : 'text-slate-700 border-transparent hover:text-primary' }}">Inicio</a>
                     <a href="{{ route('institucional') }}" class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('institucional*') ? 'text-primary border-primary' : 'text-slate-700 border-transparent hover:text-primary' }}">Institucional</a>
-                    <a href="{{ route('tramites') }}" class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('tramites') ? 'text-primary border-primary' : 'text-slate-700 border-transparent hover:text-primary' }}">Trámites</a>
-                    <a href="{{ route('capacitacion') }}" class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('capacitacion') ? 'text-primary border-primary' : 'text-slate-700 border-transparent hover:text-primary' }}">Cursos</a>
-                    <a href="{{ route('actualidad') }}" class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('actualidad') ? 'text-primary border-primary' : 'text-slate-700 border-transparent hover:text-primary' }}">Noticias</a>
+                    <a href="{{ route('tramites') }}" class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('tramites*') ? 'text-primary border-primary' : 'text-slate-700 border-transparent hover:text-primary' }}">Trámites</a>
+                    <a href="{{ route('capacitacion') }}" class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('capacitacion*') ? 'text-primary border-primary' : 'text-slate-700 border-transparent hover:text-primary' }}">Capacitación</a>
+                    <a href="{{ route('actualidad') }}" class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('actualidad*') ? 'text-primary border-primary' : 'text-slate-700 border-transparent hover:text-primary' }}">Actualidad</a>
                     <a href="{{ route('contacto') }}" class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('contacto') ? 'text-primary border-primary' : 'text-slate-700 border-transparent hover:text-primary' }}">Contacto</a>
                 </nav>
 
@@ -70,7 +70,7 @@
                                 <span>Servicios</span><span class="material-icons-outlined">chevron_right</span>
                             </button>
                             <a @click="open = false; panel = 'main'" href="{{ route('actualidad') }}" class="flex items-center justify-between py-3.5 text-white font-semibold">
-                                <span>Noticias</span><span class="material-icons-outlined">chevron_right</span>
+                                <span>Actualidad</span><span class="material-icons-outlined">chevron_right</span>
                             </a>
                             <a @click="open = false; panel = 'main'" href="{{ route('contacto') }}" class="flex items-center justify-between py-3.5 text-white font-semibold">
                                 <span>Contacto</span><span class="material-icons-outlined">chevron_right</span>
