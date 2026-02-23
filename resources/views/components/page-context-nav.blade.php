@@ -91,12 +91,16 @@
                 @php
                     $backRoute = $parentRoute ?? $sectionRoute ?? 'home';
                     $backLabel = $parentLabel ?? $sectionLabel ?? 'Inicio';
+                    $isOnSectionRoot = $sectionRoute && request()->routeIs($sectionRoute);
+                    $showBackButton = !$isOnSectionRoot;
                 @endphp
-                <a href="{{ route($backRoute) }}"
-                    class="inline-flex items-center justify-center gap-1.5 rounded-sm border border-[#C5A76B]/70 bg-[#F4F8FF] px-3.5 py-2 text-xs sm:text-sm font-semibold text-[#0B1F3A] shadow-[0_1px_0_rgba(15,23,42,0.04)] transition-[border-color,background-color,color,transform,box-shadow] duration-300 ease-[cubic-bezier(.2,.7,.2,1)] hover:-translate-y-[1px] hover:border-[#BA7C00] hover:bg-[#FFF5DD] hover:text-[#660219] hover:shadow-[0_10px_24px_-16px_rgba(186,124,0,0.7)] min-h-[44px]">
-                    <span class="material-icons-outlined text-base">arrow_back</span>
-                    <span>Volver a {{ $backLabel }}</span>
-                </a>
+                @if ($showBackButton)
+                    <a href="{{ route($backRoute) }}"
+                        class="inline-flex items-center justify-center gap-1.5 rounded-sm border border-[#C5A76B]/70 bg-[#F4F8FF] px-3.5 py-2 text-xs sm:text-sm font-semibold text-[#0B1F3A] shadow-[0_1px_0_rgba(15,23,42,0.04)] transition-[border-color,background-color,color,transform,box-shadow] duration-300 ease-[cubic-bezier(.2,.7,.2,1)] hover:-translate-y-[1px] hover:border-[#BA7C00] hover:bg-[#FFF5DD] hover:text-[#660219] hover:shadow-[0_10px_24px_-16px_rgba(186,124,0,0.7)] min-h-[44px]">
+                        <span class="material-icons-outlined text-base">arrow_back</span>
+                        <span>Volver a {{ $backLabel }}</span>
+                    </a>
+                @endif
             </div>
         </div>
     </section>
