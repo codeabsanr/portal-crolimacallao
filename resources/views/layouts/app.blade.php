@@ -39,6 +39,7 @@
     </main>
 
     <x-footer />
+    <x-help-floating-widget />
 
     @livewireScripts
 </body>

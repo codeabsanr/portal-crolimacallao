@@ -32,5 +32,9 @@
                 </div>
             </div>
         @endif
+
+        @if ($full)
+            <x-help-floating-widget />
+        @endif
     </body>
 </html>

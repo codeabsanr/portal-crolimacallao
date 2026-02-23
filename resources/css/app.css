@@ -35,6 +35,21 @@
     }
 }
 
+@keyframes helpFabPulse {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 10px 24px -14px rgba(15, 23, 42, 0.75);
+    }
+    50% {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 28px -14px rgba(15, 23, 42, 0.85);
+    }
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 10px 24px -14px rgba(15, 23, 42, 0.75);
+    }
+}
+
 :root {
     color-scheme: light;
     --inst-primary: #660219;
@@ -174,12 +189,62 @@ h6 {
     .inst-btn-scroll-guide .material-icons-outlined {
         animation: scrollGuideExpand 650ms cubic-bezier(.2,.7,.2,1) 1;
     }
+
+    .inst-hero-ads-dots {
+        @apply absolute bottom-3 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 rounded-full border border-white/35 bg-black/25 px-2.5 py-1.5 backdrop-blur-sm;
+    }
+
+    .inst-hero-ads-dot {
+        @apply relative h-4 w-4 overflow-hidden rounded-full border border-white bg-white transition-colors duration-300;
+    }
+
+    .inst-hero-ads-dot.is-active {
+        @apply border-brand-gold-light bg-brand-gold;
+    }
+
+    .inst-hero-ads-dot-progress {
+        @apply absolute inset-0 rounded-full bg-brand-gold;
+    }
+
+    .inst-hero-ads-stage {
+        height: clamp(24rem, 62vh, 44rem);
+    }
+
+    .inst-help-fab {
+        @apply inline-flex min-h-[44px] items-center gap-2 rounded-full border border-slate-800 bg-secondary px-4 py-2 text-white shadow-[0_10px_24px_-14px_rgba(15,23,42,0.75)] transition-[background-color,transform,box-shadow] duration-200 hover:bg-secondary-light;
+    }
+
+    .inst-help-fab.is-idle {
+        animation: helpFabPulse 2.2s cubic-bezier(.2,.7,.2,1) infinite;
+    }
+
+    .inst-help-fab.is-open {
+        @apply bg-secondary-light shadow-[0_14px_30px_-14px_rgba(15,23,42,0.85)];
+    }
+
+    .inst-help-panel {
+        @apply overflow-hidden rounded-md border border-white/20 bg-secondary/95 shadow-[0_18px_36px_-16px_rgba(15,23,42,0.8)] backdrop-blur-sm;
+    }
+
+    .inst-help-link {
+        @apply mb-2 inline-flex w-full min-h-[44px] items-center gap-2 rounded-sm border border-white/20 bg-white/5 px-3 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white/10;
+    }
+
+    .inst-help-link:last-child {
+        @apply mb-0;
+    }
 }
 
 @media (min-width: 1024px) {
     .inst-tramites-cut {
         -webkit-clip-path: polygon(3.25rem 0, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(3.25rem 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@media (max-width: 640px) {
+    .inst-hero-ads-stage {
+        height: clamp(22rem, 56vh, 34rem);
     }
 }
 
@@ -293,4 +358,10 @@ html.a11y-text-2 .text-2xl {
 html.a11y-text-2 .text-3xl {
     font-size: 3rem !important;
     line-height: 1 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .inst-help-fab.is-idle {
+        animation: none !important;
+    }
 }
