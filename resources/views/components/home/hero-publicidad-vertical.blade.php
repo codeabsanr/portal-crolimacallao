@@ -107,14 +107,14 @@
         <a :href="items[current].cta1_link"
            class="flex items-center justify-center min-h-[42px] px-3 py-2.5
                   text-[11px] font-black uppercase tracking-[0.1em] text-white
-                  transition-all duration-200 hover:opacity-90 hover:-translate-y-[1px] shadow-sm"
+                  transition-[background-color,opacity,box-shadow] duration-200 hover:opacity-90 shadow-sm"
            :style="`background-color: ${items[current].color};`"
            x-text="items[current].cta1_texto"></a>
         <a :href="items[current].cta2_link"
            class="flex items-center justify-center min-h-[42px] px-3 py-2.5
                   text-[11px] font-black uppercase tracking-[0.1em]
                   bg-white border border-slate-300 text-slate-800
-                  transition-all duration-200 hover:border-slate-400 hover:-translate-y-[1px] shadow-sm"
+                  transition-[background-color,border-color,color,box-shadow] duration-200 hover:border-slate-400 shadow-sm"
            x-text="items[current].cta2_texto"></a>
     </div>
 </aside>

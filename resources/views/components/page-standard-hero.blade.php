@@ -300,7 +300,8 @@
                     {{-- ── CTA fuera del card ────────────────────────────── --}}
                     <a :href="ads[current].cta_href" class="flex w-full items-center justify-center gap-2 min-h-[44px] px-5 py-3
                               text-sm font-bold uppercase tracking-[0.1em] text-white
-                              transition-all duration-200 hover:-translate-y-[1px] hover:opacity-90 shadow" :class="{
+                              transition-[background-color,opacity,box-shadow] duration-200 hover:opacity-90 shadow"
+                        :class="{
                            'bg-primary hover:bg-primary-dark':          ads[current].tone === 'informacion',
                            'bg-cyan-700 hover:bg-cyan-800':             ads[current].tone === 'desarrollo',
                            'bg-emerald-700 hover:bg-emerald-800':       ads[current].tone === 'calendario',
