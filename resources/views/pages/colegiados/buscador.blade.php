@@ -6,7 +6,7 @@
             subtitle="Consulte nombre, número de colegiatura y estado de habilitación de cualquier obstetra registrada."
             icon="person_search" backRoute="colegiados" backLabel="Volver a Colegiados" />
 
-        <section class="inst-section bg-background-light">
+        <section class="inst-section inst-bg-light-grid bg-background-light">
             <div class="max-w-5xl mx-auto inst-stack">
                 <div class="inst-card p-6 md:p-8 inst-stack-tight">
                     <x-page-section-intro eyebrow="Consulta institucional" title="Búsqueda rápida"
@@ -25,6 +25,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

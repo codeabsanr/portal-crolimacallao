@@ -6,7 +6,7 @@
             subtitle="Calendario de webinars, jornadas académicas, asambleas y actividades institucionales del CRO III."
             icon="calendar_month" backRoute="actualidad" backLabel="Volver a Actualidad" />
 
-        <section class="inst-section bg-background-light">
+        <section class="inst-section inst-bg-light-grid bg-background-light">
             <div class="max-w-7xl mx-auto inst-stack">
                 @php
                     $eventos = [
@@ -46,6 +46,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

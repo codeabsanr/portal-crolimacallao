@@ -2,7 +2,7 @@
 
 @section('content')
     <main id="main">
-        <section class="inst-section bg-background-light">
+        <section class="inst-section inst-bg-light-grid bg-background-light">
             <div class="max-w-7xl mx-auto inst-stack">
                 <div class="grid lg:grid-cols-3 gap-6 md:gap-7">
                     <article class="lg:col-span-2 rounded-xl border border-primary/25 bg-white p-6 md:p-8 shadow-[0_22px_40px_-30px_rgba(15,23,42,0.45)]">
@@ -75,6 +75,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

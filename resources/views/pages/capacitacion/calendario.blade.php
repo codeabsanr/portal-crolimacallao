@@ -6,7 +6,7 @@
             subtitle="Fechas, vacantes y modalidades de todos los cursos, talleres y webinars programados." icon="event"
             backRoute="capacitacion" backLabel="Volver a Capacitación" />
 
-        <section class="inst-section bg-white">
+        <section class="inst-section inst-bg-light-grid bg-white">
             <div class="max-w-7xl mx-auto inst-stack">
                 @php
                     $calendario = [
@@ -31,6 +31,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

@@ -6,7 +6,7 @@
             subtitle="Inscripción formal al Colegio de Obstetras. Documentación, evaluación y alta en el padrón oficial."
             icon="school" backRoute="tramites" backLabel="Volver al catálogo" />
 
-        <section class="inst-section bg-background-light">
+        <section class="inst-section inst-bg-light-grid bg-background-light">
             <div class="max-w-7xl mx-auto inst-stack">
                 <x-page-section-intro eyebrow="Pasos del proceso" title="¿Cómo colegiarme?"
                     subtitle="Siga los tres pasos del proceso de colegiatura para completar su inscripción oficial." />
@@ -49,6 +49,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

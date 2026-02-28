@@ -182,16 +182,16 @@
 @php($cta2Href = $hero['cta2']['href'] ?? (!empty($hero['cta2']['route']) ? route($hero['cta2']['route']) : null))
 @php($cta1IsAnchor = is_string($cta1Href) && str_starts_with($cta1Href, '#'))
 
-<section class="relative overflow-hidden bg-inst-hero text-white">
-    <div class="absolute inset-0 bg-inst-hero-overlay opacity-60 mix-blend-overlay"></div>
+<section class="relative overflow-hidden inst-bg-brand-grid text-text-main">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_78%_22%,rgba(102,2,25,0.08),transparent_48%)]"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div class="lg:col-span-7 flex self-start">
                 <div class="w-full inst-stack-tight">
-                    <p class="inst-eyebrow text-brand-gold-light drop-shadow-sm">{{ $hero['eyebrow'] }}</p>
-                    <h1 class="inst-title text-white drop-shadow-sm">{{ $hero['title'] }}</h1>
-                    <div class="h-[3px] w-20 bg-brand-gold-light"></div>
-                    <p class="inst-subtitle text-white/90 drop-shadow-sm">{{ $hero['summary'] }}</p>
+                    <p class="inst-eyebrow text-primary">{{ $hero['eyebrow'] }}</p>
+                    <h1 class="inst-title text-text-main">{{ $hero['title'] }}</h1>
+                    <div class="h-[3px] w-20 bg-primary"></div>
+                    <p class="inst-subtitle text-text-main">{{ $hero['summary'] }}</p>
 
                     <div class="flex flex-col sm:flex-row gap-3">
                         @if (!empty($hero['cta1']['text']) && $cta1Href)
@@ -205,7 +205,7 @@
                         @endif
                         @if (!empty($hero['cta2']['text']) && $cta2Href)
                             <a href="{{ $cta2Href }}"
-                                class="inline-flex min-h-[44px] items-center justify-center rounded-sm border border-brand-gold-light/40 bg-white/5 px-6 py-2.5 text-sm sm:text-base font-bold text-white transition-colors hover:bg-white/10 hover:border-brand-gold-light backdrop-blur-sm">
+                                class="inline-flex min-h-[44px] items-center justify-center rounded-sm border border-primary/30 bg-white px-6 py-2.5 text-sm sm:text-base font-bold text-primary transition-colors hover:bg-primary-tint hover:border-primary/45 backdrop-blur-sm">
                                 {{ $hero['cta2']['text'] }}
                             </a>
                         @endif
@@ -306,5 +306,6 @@
     </div>
 </section>
 @endif
+
 
 

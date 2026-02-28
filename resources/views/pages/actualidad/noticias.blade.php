@@ -6,7 +6,7 @@
             subtitle="Comunicados, acuerdos, novedades y publicaciones oficiales del CRO III Lima-Callao." icon="newspaper"
             backRoute="actualidad" backLabel="Volver a Actualidad" />
 
-        <section class="inst-section bg-white">
+        <section class="inst-section inst-bg-light-grid bg-white">
             <div class="max-w-7xl mx-auto inst-stack">
                 @php
                     $items = [
@@ -39,6 +39,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

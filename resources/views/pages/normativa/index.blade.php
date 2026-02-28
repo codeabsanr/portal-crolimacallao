@@ -2,7 +2,7 @@
 
 @section('content')
     <main id="main">
-        <section class="inst-section bg-background-light">
+        <section class="inst-section inst-bg-light-grid bg-background-light">
             <div class="max-w-7xl mx-auto inst-stack">
                 <x-page-section-intro eyebrow="Marco normativo" title="Normativa y documentación legal"
                     subtitle="Leyes, reglamentos, guías técnicas y repositorio documental del ejercicio profesional." />
@@ -22,7 +22,7 @@
             </div>
         </section>
 
-        <section class="inst-section bg-white">
+        <section class="inst-section inst-bg-light-grid bg-white">
             <div class="max-w-7xl mx-auto">
                 <div class="inst-card p-8 border-t-4 border-primary inst-stack-tight">
                     <h2 class="inst-title mb-2">Consulta rápida de documentos</h2>
@@ -34,5 +34,6 @@
         </section>
     </main>
 @endsection
+
 
 

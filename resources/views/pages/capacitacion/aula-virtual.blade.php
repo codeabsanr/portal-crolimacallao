@@ -6,7 +6,7 @@
             subtitle="Plataforma de aprendizaje en línea con recursos, actividades y certificación institucional para colegiadas."
             icon="desktop_windows" backRoute="capacitacion" backLabel="Volver a Capacitación" />
 
-        <section class="inst-section bg-background-light">
+        <section class="inst-section inst-bg-light-grid bg-background-light">
             <div class="max-w-5xl mx-auto inst-stack">
                 <div class="inst-card p-6 md:p-8 inst-stack-tight">
                     <x-page-section-intro eyebrow="Próximamente" title="Acceso al campus"
@@ -22,6 +22,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

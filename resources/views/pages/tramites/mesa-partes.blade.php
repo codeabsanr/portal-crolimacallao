@@ -6,7 +6,7 @@
             subtitle="Registre, envíe y haga seguimiento de sus expedientes administrativos de forma digital, sin necesidad de acudir a sede."
             icon="forward_to_inbox" backRoute="tramites" backLabel="Volver al catálogo" />
 
-        <section class="inst-section bg-white">
+        <section class="inst-section inst-bg-light-grid bg-white">
             <div class="max-w-7xl mx-auto inst-stack">
                 <div class="grid lg:grid-cols-2 gap-6 md:gap-7">
                     <div class="inst-card p-6 md:p-8 inst-stack-tight">
@@ -31,6 +31,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

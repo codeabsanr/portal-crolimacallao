@@ -74,7 +74,7 @@
 
         <x-home.hero5 :hero-ads="$heroAds" />
 
-        <section class="inst-section bg-primary-mist border-t border-slate-200">
+        <section class="inst-section inst-bg-light-grid bg-primary-mist border-t border-slate-200">
             <div class="max-w-7xl mx-auto inst-stack">
                 <div class="inst-stack-tight">
                     <p class="inst-eyebrow text-primary-dark">Accesos rápidos</p>
@@ -97,7 +97,7 @@
             </div>
         </section>
 
-        <section class="inst-section bg-white">
+        <section class="inst-section inst-bg-light-grid bg-white">
             <div class="max-w-7xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
                     <div class="inst-card p-8 inst-stack">
@@ -121,6 +121,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

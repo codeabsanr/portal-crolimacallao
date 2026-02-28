@@ -6,7 +6,7 @@
             subtitle="Eventos académicos regionales y nacionales de obstetricia para fortalecer el conocimiento profesional."
             icon="festival" backRoute="capacitacion" backLabel="Volver a Capacitación" />
 
-        <section class="inst-section bg-white">
+        <section class="inst-section inst-bg-light-grid bg-white">
             <div class="max-w-7xl mx-auto inst-stack">
                 <div class="inst-card p-6 md:p-8 border-t-4 border-primary inst-stack-tight">
                     <x-page-section-intro eyebrow="Eventos 2026" title="Agenda de congresos"
@@ -40,6 +40,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

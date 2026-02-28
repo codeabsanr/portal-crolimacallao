@@ -6,7 +6,7 @@
             subtitle="Padrones oficiales de obstetras hábiles, nuevas colegiaturas y especialidades registradas del CRO III."
             icon="format_list_bulleted" backRoute="colegiados" backLabel="Volver a Colegiados" />
 
-        <section class="inst-section bg-white">
+        <section class="inst-section inst-bg-light-grid bg-white">
             <div class="max-w-7xl mx-auto inst-stack">
                 @php
                     $listados = [
@@ -37,6 +37,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

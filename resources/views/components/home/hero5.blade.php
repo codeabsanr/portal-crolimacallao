@@ -1,12 +1,12 @@
 @props(['heroAds' => []])
 
-<section class="relative overflow-hidden border-b border-slate-200 min-h-[88vh] md:min-h-[calc(100vh-7rem)]">
+<section class="relative overflow-hidden inst-bg-brand-grid border-b border-slate-200 min-h-[88vh] md:min-h-[calc(100vh-7rem)]">
     <div class="absolute inset-0 z-0">
         <img src="{{ asset('assets/img/foto_gestion_2025_2028.jpg') }}" alt="Consejo Regional CRO III Lima-Callao"
             id="hero-bg-council" class="h-full w-full object-cover" style="object-position: center 12%;" />
-        <div class="absolute inset-0 bg-[linear-gradient(100deg,rgba(74,2,18,0.64)_0%,rgba(92,2,23,0.52)_38%,rgba(122,20,50,0.24)_66%,rgba(239,230,219,0.08)_100%)]"
+        <div class="absolute inset-0 bg-[linear-gradient(102deg,rgba(255,255,255,0.88)_0%,rgba(255,255,255,0.7)_34%,rgba(255,245,248,0.34)_62%,rgba(255,255,255,0.08)_100%)]"
             style="clip-path: polygon(0 48%, 38% 52%, 100% 62%, 100% 100%, 0 100%);"></div>
-        <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_40%,rgba(255,255,255,0.32)_64%,rgba(255,255,255,0.82)_82%,rgba(255,255,255,0.97)_100%),radial-gradient(circle_at_14%_90%,rgba(255,255,255,0.98)_0%,rgba(255,255,255,0.88)_22%,rgba(255,255,255,0)_52%),radial-gradient(circle_at_44%_92%,rgba(255,255,255,0.98)_0%,rgba(255,255,255,0.9)_20%,rgba(255,255,255,0)_50%),radial-gradient(circle_at_74%_90%,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.84)_22%,rgba(255,255,255,0)_50%),radial-gradient(circle_at_96%_88%,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.74)_20%,rgba(255,255,255,0)_48%)]"
+        <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.02)_0%,rgba(255,255,255,0.14)_46%,rgba(255,255,255,0.56)_68%,rgba(255,255,255,0.92)_84%,rgba(255,255,255,0.98)_100%),radial-gradient(circle_at_12%_90%,rgba(255,250,252,0.98)_0%,rgba(255,250,252,0.86)_24%,rgba(255,250,252,0)_54%),radial-gradient(circle_at_42%_92%,rgba(255,247,250,0.96)_0%,rgba(255,247,250,0.86)_20%,rgba(255,247,250,0)_50%),radial-gradient(circle_at_74%_90%,rgba(255,247,250,0.9)_0%,rgba(255,247,250,0.76)_22%,rgba(255,247,250,0)_50%),radial-gradient(circle_at_95%_88%,rgba(255,247,250,0.84)_0%,rgba(255,247,250,0.68)_20%,rgba(255,247,250,0)_48%)]"
             style="clip-path: polygon(0 48%, 38% 52%, 100% 62%, 100% 100%, 0 100%);"></div>
     </div>
     <div
@@ -192,4 +192,5 @@
         }
     })();
 </script>
+
 

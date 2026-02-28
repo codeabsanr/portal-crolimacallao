@@ -2,7 +2,7 @@
 
 @section('content')
     <main id="main">
-        <section id="actualidad-contenido" class="scroll-mt-28 inst-section bg-background-light">
+        <section id="actualidad-contenido" class="scroll-mt-28 inst-section inst-bg-light-grid bg-background-light">
             <div class="max-w-7xl mx-auto inst-stack">
                 <div class="inst-stack-tight">
                     <p class="inst-eyebrow">Información institucional</p>
@@ -27,7 +27,7 @@
             </div>
         </section>
 
-        <section class="inst-section bg-white">
+        <section class="inst-section inst-bg-light-grid bg-white">
             <div class="max-w-7xl mx-auto">
                 <div class="grid lg:grid-cols-3 gap-6 lg:gap-8">
                     <div class="lg:col-span-2 rounded-xl border border-primary/25 bg-white p-8 shadow-[0_22px_40px_-30px_rgba(15,23,42,0.45)]">
@@ -112,6 +112,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

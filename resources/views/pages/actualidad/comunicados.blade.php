@@ -6,7 +6,7 @@
             subtitle="Pronunciamientos, avisos y comunicaciones formales del Consejo Directivo y la secretaría institucional."
             icon="campaign" backRoute="actualidad" backLabel="Volver a Actualidad" />
 
-        <section class="inst-section bg-white">
+        <section class="inst-section inst-bg-light-grid bg-white">
             <div class="max-w-7xl mx-auto inst-stack">
                 @php
                     $comunicados = [
@@ -32,6 +32,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

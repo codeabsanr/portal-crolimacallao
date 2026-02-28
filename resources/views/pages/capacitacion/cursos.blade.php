@@ -6,7 +6,7 @@
             subtitle="Programas certificados de actualización y especialización para obstetras en ejercicio."
             icon="cast_for_education" backRoute="capacitacion" backLabel="Volver a Capacitación" />
 
-        <section class="inst-section bg-background-light">
+        <section class="inst-section inst-bg-light-grid bg-background-light">
             <div class="max-w-7xl mx-auto inst-stack">
                 <x-page-section-intro eyebrow="Programas disponibles" title="Cursos vigentes 2026"
                     subtitle="Seleccione el programa de su interés e inicie su proceso de inscripción." />
@@ -25,6 +25,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

@@ -6,7 +6,7 @@
             subtitle="Documentación para el registro de especialidades, maestrías y doctorados en el perfil del colegiado."
             icon="workspace_premium" backRoute="tramites" backLabel="Volver al catálogo" />
 
-        <section class="inst-section bg-white">
+        <section class="inst-section inst-bg-light-grid bg-white">
             <div class="max-w-6xl mx-auto inst-stack">
                 <div class="inst-card p-6 md:p-8 inst-stack-tight">
                     <x-page-section-intro eyebrow="Documentación" title="Documentos aceptados"
@@ -35,6 +35,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

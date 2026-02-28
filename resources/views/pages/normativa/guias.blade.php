@@ -6,7 +6,7 @@
             subtitle="Documentos de referencia para la práctica obstétrica y la gestión de servicios de salud."
             icon="import_contacts" backRoute="normativa" backLabel="Volver a Normativa" />
 
-        <section class="inst-section bg-white">
+        <section class="inst-section inst-bg-light-grid bg-white">
             <div class="max-w-7xl mx-auto inst-stack">
                 <div class="inst-card p-6 md:p-8 border-t-4 border-primary inst-stack-tight">
                     <x-page-section-intro eyebrow="Documentos" title="Guías disponibles"
@@ -30,6 +30,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

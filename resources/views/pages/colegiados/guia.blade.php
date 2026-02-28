@@ -6,7 +6,7 @@
             subtitle="Pasos recomendados para navegar el portal, usar el buscador y gestionar sus trámites en línea."
             icon="menu_book" backRoute="colegiados" backLabel="Volver a Colegiados" />
 
-        <section class="inst-section bg-background-light">
+        <section class="inst-section inst-bg-light-grid bg-background-light">
             <div class="max-w-5xl mx-auto inst-stack">
                 <div class="inst-card p-6 md:p-8 border-t-4 border-primary inst-stack-tight">
                     <x-page-section-intro eyebrow="Instrucciones" title="Pasos recomendados"
@@ -37,6 +37,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

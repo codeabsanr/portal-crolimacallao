@@ -2,7 +2,7 @@
 
 @section('content')
     <main id="main">
-        <section class="inst-section bg-background-light">
+        <section class="inst-section inst-bg-light-grid bg-background-light">
             <div class="max-w-7xl mx-auto inst-stack">
                 <x-page-section-intro eyebrow="Servicios para colegiados" title="Portal de consultas institucionales"
                     subtitle="Acceda al buscador de obstetras, padrones oficiales y guía de navegación del portal." />
@@ -20,7 +20,7 @@
             </div>
         </section>
 
-        <section class="inst-section bg-white">
+        <section class="inst-section inst-bg-light-grid bg-white">
             <div class="max-w-7xl mx-auto">
                 <div class="grid lg:grid-cols-5 gap-6 lg:gap-10">
                     <div class="lg:col-span-3 inst-card p-8 border-t-4 border-primary inst-stack-tight">
@@ -43,5 +43,6 @@
         </section>
     </main>
 @endsection
+
 
 

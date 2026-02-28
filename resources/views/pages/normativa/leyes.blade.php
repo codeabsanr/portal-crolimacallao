@@ -6,7 +6,7 @@
             subtitle="Marco legal vigente que regula el trabajo del obstetra y la organización del colegio en el Perú."
             icon="balance" backRoute="normativa" backLabel="Volver a Normativa" />
 
-        <section class="inst-section bg-white">
+        <section class="inst-section inst-bg-light-grid bg-white">
             <div class="max-w-7xl mx-auto inst-stack">
                 @php
                     $leyes = [
@@ -36,6 +36,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

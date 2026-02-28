@@ -2,7 +2,7 @@
 
 @section('content')
     <main id="main">
-        <section id="tramites-contenido" class="scroll-mt-28 inst-section bg-background-light">
+        <section id="tramites-contenido" class="scroll-mt-28 inst-section inst-bg-light-grid bg-background-light">
             <div class="max-w-7xl mx-auto inst-stack">
                 <div class="inst-stack-tight">
                     <p class="inst-eyebrow">Trámites y servicios</p>
@@ -100,6 +100,7 @@
         </section>
     </main>
 @endsection
+
 
 
 

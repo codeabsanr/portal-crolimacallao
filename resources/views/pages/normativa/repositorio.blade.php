@@ -6,7 +6,7 @@
             subtitle="Archivo institucional de leyes, resoluciones, compendios y documentos de gestión en un solo lugar."
             icon="folder_open" backRoute="normativa" backLabel="Volver a Normativa" />
 
-        <section class="inst-section bg-background-light">
+        <section class="inst-section inst-bg-light-grid bg-background-light">
             <div class="max-w-7xl mx-auto inst-stack">
                 <div class="inst-card p-6 md:p-8 inst-stack-tight">
                     <x-page-section-intro eyebrow="Búsqueda" title="Consulta el repositorio"
@@ -44,6 +44,7 @@
         </section>
     </main>
 @endsection
+
 
 
 
