@@ -39,19 +39,19 @@
 
                         <div>
                             <label for="email" class="mb-2 block text-sm font-bold text-slate-700">Correo electronico</label>
-                            <input id="email" name="email" type="email" value="{{ old('email', $request->email) }}" required autofocus autocomplete="username" class="inst-input !bg-slate-100 !border-slate-200">
+                            <input id="email" name="email" type="email" value="{{ old('email', $request->email) }}" required autofocus autocomplete="username" class="inst-input !bg-primary-tint !border-slate-200">
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
                         </div>
 
                         <div>
                             <label for="password" class="mb-2 block text-sm font-bold text-slate-700">Contrasena nueva</label>
-                            <input id="password" name="password" type="password" required autocomplete="new-password" class="inst-input !bg-slate-100 !border-slate-200">
+                            <input id="password" name="password" type="password" required autocomplete="new-password" class="inst-input !bg-primary-tint !border-slate-200">
                             <x-input-error :messages="$errors->get('password')" class="mt-2" />
                         </div>
 
                         <div>
                             <label for="password_confirmation" class="mb-2 block text-sm font-bold text-slate-700">Confirmar contrasena</label>
-                            <input id="password_confirmation" name="password_confirmation" type="password" required autocomplete="new-password" class="inst-input !bg-slate-100 !border-slate-200">
+                            <input id="password_confirmation" name="password_confirmation" type="password" required autocomplete="new-password" class="inst-input !bg-primary-tint !border-slate-200">
                             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                         </div>
 
@@ -64,3 +64,4 @@
         </div>
     </main>
 </x-guest-layout>
+

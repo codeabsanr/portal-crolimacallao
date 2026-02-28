@@ -52,7 +52,7 @@
             </div>
         </section>
 
-        <section id="eventos" class="py-10 md:py-14 bg-[linear-gradient(180deg,#f7f9fc_0%,#eef3fa_100%)] border-y border-slate-200">
+        <section id="eventos" class="py-10 md:py-14 bg-[linear-gradient(180deg,#faf3f5_0%,#f3e7eb_100%)] border-y border-slate-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 @php
                     $eventos = [
@@ -111,4 +111,5 @@
         </section>
     </main>
 @endsection
+
 

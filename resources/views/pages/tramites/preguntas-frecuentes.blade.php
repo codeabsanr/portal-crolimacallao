@@ -11,7 +11,7 @@
                         <div class="mt-3 h-[3px] w-20 bg-brand-gold-light"></div>
                         <p class="mt-4 text-slate-600">Encuentre respuestas rápidas antes de iniciar su solicitud formal.</p>
 
-                        <div class="mt-6 rounded-xl border border-primary/20 bg-[linear-gradient(180deg,#ffffff_0%,#f8fbff_100%)] p-5 md:p-6">
+                        <div class="mt-6 rounded-xl border border-primary/20 bg-[linear-gradient(180deg,#ffffff_0%,#fbf4f7_100%)] p-5 md:p-6">
                             <ul class="space-y-5">
                                 <x-faq-item question="¿Cuánto demora la colegiatura?">
                                     El plazo referencial es de 15 días hábiles desde la recepción de documentos completos.
@@ -52,7 +52,7 @@
             </div>
         </section>
 
-        <section class="py-10 md:py-14 bg-[linear-gradient(180deg,#f7f9fc_0%,#eef3fa_100%)] border-y border-slate-200">
+        <section class="py-10 md:py-14 bg-[linear-gradient(180deg,#faf3f5_0%,#f3e7eb_100%)] border-y border-slate-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid md:grid-cols-3 gap-4">
                     <article class="rounded-xl border border-primary/20 bg-white p-5">
@@ -75,4 +75,5 @@
         </section>
     </main>
 @endsection
+
 

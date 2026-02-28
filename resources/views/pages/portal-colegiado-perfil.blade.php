@@ -10,7 +10,7 @@
 @endphp
 <main id="main" class="md:h-screen md:overflow-hidden flex flex-col md:flex-row">
     <section class="relative flex flex-col w-full md:w-[65%] min-h-[56vh] md:h-screen md:overflow-y-auto bg-background-light border-r border-slate-300/80">
-        <div class="absolute inset-0 opacity-40 pointer-events-none" style="background-image: linear-gradient(#d6dbe4 1px, transparent 1px), linear-gradient(90deg, #d6dbe4 1px, transparent 1px); background-size: 44px 44px;"></div>
+        <div class="absolute inset-0 opacity-40 pointer-events-none" style="background-image: linear-gradient(#e4d4d9 1px, transparent 1px), linear-gradient(90deg, #e4d4d9 1px, transparent 1px); background-size: 44px 44px;"></div>
 
         <header class="relative z-10 border-b border-slate-300/80 bg-white/90 backdrop-blur px-6 lg:px-10 py-5">
             <div class="flex items-center justify-between gap-4">
@@ -98,7 +98,7 @@
                         <p class="mt-2 text-base font-black text-secondary">{{ $item['ultimo_centro'] ?? 'No registrado' }}</p>
                         <div class="mt-3 space-y-2">
                             @foreach (($item['experiencia'] ?? []) as $job)
-                                <article class="border border-slate-200 bg-slate-50 p-3">
+                                <article class="border border-slate-200 bg-primary-mist p-3">
                                     <p class="text-sm font-bold text-secondary">{{ $job['cargo'] }}</p>
                                     <p class="text-sm text-slate-600">{{ $job['institucion'] }}</p>
                                     <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold mt-1">{{ $job['periodo'] }}</p>
@@ -191,3 +191,5 @@
     </aside>
 </main>
 @endsection
+
+

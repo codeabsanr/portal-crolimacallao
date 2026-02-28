@@ -10,7 +10,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 relative z-10">
         <div class="grid lg:grid-cols-[0.88fr_1.12fr] gap-6 lg:gap-0 items-stretch">
             <div class="relative min-h-[520px] flex items-center p-5 md:p-7">
-                <div class="w-full max-w-2xl rounded-2xl border border-white/20 bg-slate-900/35 backdrop-blur-sm p-5 sm:p-7 shadow-[0_24px_60px_-36px_rgba(2,6,23,0.75)]">
+                <div class="w-full max-w-2xl rounded-2xl border border-white/20 bg-primary-dark/35 backdrop-blur-sm p-5 sm:p-7 shadow-[0_24px_60px_-36px_rgba(2,6,23,0.75)]">
                     <div class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-primary uppercase bg-red-100 rounded-md">
                         Portal institucional accesible
                     </div>
@@ -41,3 +41,4 @@
         </div>
     </div>
 </section>
+

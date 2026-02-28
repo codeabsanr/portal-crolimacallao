@@ -3,7 +3,7 @@
         @for ($i = 0; $i < ($limit ?? 3); $i++)
             <article class="flex flex-col sm:flex-row gap-4 group cursor-pointer">
                 <div
-                    class="bg-slate-200 w-full sm:w-32 h-24 flex-shrink-0 rounded-sm flex items-center justify-center text-slate-400">
+                    class="bg-primary-tint w-full sm:w-32 h-24 flex-shrink-0 rounded-sm flex items-center justify-center text-slate-400">
                     <img src="{{ asset('assets/img/logo-circular.png') }}" class="h-16 opacity-50" loading="lazy"
                         alt="Noticia {{$i}}">
                 </div>
@@ -26,4 +26,5 @@
         </div>
     @endif
 </div>
+
 

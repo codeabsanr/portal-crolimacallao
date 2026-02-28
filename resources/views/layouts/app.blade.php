@@ -28,7 +28,7 @@
     @livewireStyles
 </head>
 
-<body class="font-sans antialiased text-gray-900 bg-gray-50 flex flex-col min-h-screen">
+<body class="font-sans antialiased text-gray-900 bg-primary-mist flex flex-col min-h-screen">
     <x-navbar />
 
     <main class="flex-grow">
@@ -45,3 +45,4 @@
 </body>
 
 </html>
+

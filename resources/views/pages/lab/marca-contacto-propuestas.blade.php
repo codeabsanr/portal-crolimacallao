@@ -17,7 +17,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <article class="inst-card overflow-hidden border-slate-300">
                     <div class="grid lg:grid-cols-[1.08fr_0.92fr]">
-                        <div class="relative p-6 md:p-10 text-white bg-[linear-gradient(125deg,#0f172a_0%,#1e293b_45%,#660219_100%)]">
+                        <div class="relative p-6 md:p-10 text-white bg-[linear-gradient(125deg,#4d0213_0%,#660219_45%,#660219_100%)]">
                             <div class="absolute inset-0 bg-[radial-gradient(circle_at_16%_14%,rgba(248,236,208,0.18),transparent_32%),radial-gradient(circle_at_88%_78%,rgba(186,124,0,0.18),transparent_34%)]"></div>
                             <div class="relative z-10">
                                 <p class="text-xs uppercase tracking-[0.16em] text-brand-gold-light font-bold">Canales de atención</p>
@@ -98,3 +98,4 @@
         </section>
     </main>
 @endsection
+

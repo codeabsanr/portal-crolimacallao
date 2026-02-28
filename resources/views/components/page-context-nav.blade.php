@@ -76,26 +76,26 @@
     ];
 @endphp
 @if ($currentLabel && !request()->routeIs('home') && !in_array($routeName, $subheroRoutes))
-    <section class="relative border-b border-[#C8D6EA] bg-[#EAF1FB]">
+    <section class="relative border-b border-primary/20 bg-primary-mist">
         <div class="absolute inset-x-0 top-0 h-[2px] bg-[linear-gradient(90deg,#D4A62A_0%,#BA7C00_48%,#D4A62A_100%)]"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
             <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-                <nav aria-label="Breadcrumb" class="text-xs sm:text-sm text-[#2D4668]">
+                <nav aria-label="Breadcrumb" class="text-xs sm:text-sm text-text-main">
                     <ol class="flex flex-wrap items-center gap-y-1 gap-x-2">
-                        <li><a href="{{ route('home') }}" class="font-medium text-[#56759A] hover:text-[#0B1F3A] transition-colors">Inicio</a></li>
+                        <li><a href="{{ route('home') }}" class="font-medium text-text-muted hover:text-primary transition-colors">Inicio</a></li>
                         <li class="text-[#BA7C00]/80">/</li>
                         @if ($sectionLabel && $sectionRoute && !request()->routeIs($sectionRoute))
-                            <li><a href="{{ route($sectionRoute) }}" class="font-medium text-[#56759A] hover:text-[#0B1F3A] transition-colors">{{ $sectionLabel }}</a></li>
+                            <li><a href="{{ route($sectionRoute) }}" class="font-medium text-text-muted hover:text-primary transition-colors">{{ $sectionLabel }}</a></li>
                             <li class="text-[#BA7C00]/80">/</li>
                         @elseif ($sectionLabel)
-                            <li class="font-medium text-[#56759A]">{{ $sectionLabel }}</li>
+                            <li class="font-medium text-text-muted">{{ $sectionLabel }}</li>
                             <li class="text-[#BA7C00]/80">/</li>
                         @endif
                         @if ($parentLabel && $parentRoute)
-                            <li><a href="{{ route($parentRoute) }}" class="font-medium text-[#56759A] hover:text-[#0B1F3A] transition-colors">{{ $parentLabel }}</a></li>
+                            <li><a href="{{ route($parentRoute) }}" class="font-medium text-text-muted hover:text-primary transition-colors">{{ $parentLabel }}</a></li>
                             <li class="text-[#BA7C00]/80">/</li>
                         @endif
-                        <li class="font-bold text-[#0B1F3A] border-b-2 border-[#D4A62A]" aria-current="page">{{ $currentLabel }}</li>
+                        <li class="font-bold text-primary-dark border-b-2 border-brand-gold" aria-current="page">{{ $currentLabel }}</li>
                     </ol>
                 </nav>
 
@@ -107,7 +107,7 @@
                 @endphp
                 @if ($showBackButton)
                     <a href="{{ route($backRoute) }}"
-                        class="inline-flex items-center justify-center gap-1.5 rounded-sm border border-[#C5A76B]/70 bg-[#F4F8FF] px-3.5 py-2 text-xs sm:text-sm font-semibold text-[#0B1F3A] shadow-[0_1px_0_rgba(15,23,42,0.04)] transition-[border-color,background-color,color,transform,box-shadow] duration-300 ease-[cubic-bezier(.2,.7,.2,1)] hover:-translate-y-[1px] hover:border-[#BA7C00] hover:bg-[#FFF5DD] hover:text-[#660219] hover:shadow-[0_10px_24px_-16px_rgba(186,124,0,0.7)] min-h-[44px]">
+                        class="inline-flex items-center justify-center gap-1.5 rounded-sm border border-brand-gold/50 bg-brand-ink-soft px-3.5 py-2 text-xs sm:text-sm font-semibold text-primary-dark shadow-[0_1px_0_rgba(77,2,19,0.08)] transition-[border-color,background-color,color,transform,box-shadow] duration-300 ease-[cubic-bezier(.2,.7,.2,1)] hover:-translate-y-[1px] hover:border-brand-gold hover:bg-brand-gold-soft hover:text-primary hover:shadow-[0_10px_24px_-16px_rgba(186,124,0,0.7)] min-h-[44px]">
                         <span class="material-icons-outlined text-base">arrow_back</span>
                         <span>Volver a {{ $backLabel }}</span>
                     </a>

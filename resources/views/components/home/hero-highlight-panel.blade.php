@@ -22,7 +22,7 @@
     @mouseleave="start()"
     class="inst-card overflow-hidden border-primary/20 bg-white {{ $panelClass }}">
     <div class="h-full flex flex-col">
-        <div class="grid grid-cols-5 gap-1.5 p-3 bg-slate-50 border-b border-slate-200">
+        <div class="grid grid-cols-5 gap-1.5 p-3 bg-primary-mist border-b border-slate-200">
             <template x-for="(item, idx) in items" :key="idx">
                 <button type="button" @click="go(idx)"
                     class="h-9 border text-[10px] font-bold uppercase tracking-[0.08em] px-1 transition-all inline-flex items-center justify-center gap-1"
@@ -50,7 +50,7 @@
             </template>
             <template x-if="items[current].simulada">
                 <div class="absolute inset-0">
-                    <div class="absolute inset-0" :style="`background: linear-gradient(135deg, ${items[current].color} 0%, #0f172a 130%);`"></div>
+                    <div class="absolute inset-0" :style="`background: linear-gradient(135deg, ${items[current].color} 0%, #4d0213 130%);`"></div>
                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(255,255,255,0.18),transparent_36%),radial-gradient(circle_at_82%_74%,rgba(255,255,255,0.12),transparent_42%)]"></div>
                     <div class="absolute inset-0 flex items-center justify-center text-center px-6">
                         <div>
@@ -76,3 +76,5 @@
         </div>
     </div>
 </aside>
+
+

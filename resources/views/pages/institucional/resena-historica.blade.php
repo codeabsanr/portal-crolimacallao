@@ -30,7 +30,7 @@
                 <div class="space-y-5">
                     <article class="relative pl-12">
                         <span class="absolute left-[10px] top-2 h-4 w-4 rounded-full bg-primary ring-4 ring-white"></span>
-                        <div class="inst-card p-4 border-l-2 border-l-primary bg-slate-50 hover:bg-white transition-colors">
+                        <div class="inst-card p-4 border-l-2 border-l-primary bg-primary-mist hover:bg-white transition-colors">
                             <p class="text-xs font-black uppercase tracking-[0.16em] text-primary">Prehispánico</p>
                             <p class="text-slate-700 mt-2">Registros de prácticas obstétricas tradicionales orientadas al cuidado materno en diversas culturas.</p>
                         </div>
@@ -38,7 +38,7 @@
 
                     <article class="relative pl-12">
                         <span class="absolute left-[10px] top-2 h-4 w-4 rounded-full bg-primary ring-4 ring-white"></span>
-                        <div class="inst-card p-4 border-l-2 border-l-primary bg-slate-50 hover:bg-white transition-colors">
+                        <div class="inst-card p-4 border-l-2 border-l-primary bg-primary-mist hover:bg-white transition-colors">
                             <p class="text-xs font-black uppercase tracking-[0.16em] text-primary">1826</p>
                             <p class="text-slate-700 mt-2">Creación de la Casa de la Maternidad y Escuela de Partos, institución pionera en formación obstétrica.</p>
                         </div>
@@ -46,7 +46,7 @@
 
                     <article class="relative pl-12">
                         <span class="absolute left-[10px] top-2 h-4 w-4 rounded-full bg-primary ring-4 ring-white"></span>
-                        <div class="inst-card p-4 border-l-2 border-l-primary bg-slate-50 hover:bg-white transition-colors">
+                        <div class="inst-card p-4 border-l-2 border-l-primary bg-primary-mist hover:bg-white transition-colors">
                             <p class="text-xs font-black uppercase tracking-[0.16em] text-primary">Siglo XIX-XX</p>
                             <p class="text-slate-700 mt-2">Aportes de Benita Paulina Cadeau de Fessel en la profesionalización científica de la obstetricia.</p>
                         </div>
@@ -54,7 +54,7 @@
 
                     <article class="relative pl-12">
                         <span class="absolute left-[10px] top-2 h-4 w-4 rounded-full bg-primary ring-4 ring-white"></span>
-                        <div class="inst-card p-4 border-l-2 border-l-primary bg-slate-50 hover:bg-white transition-colors">
+                        <div class="inst-card p-4 border-l-2 border-l-primary bg-primary-mist hover:bg-white transition-colors">
                             <p class="text-xs font-black uppercase tracking-[0.16em] text-primary">1975</p>
                             <p class="text-slate-700 mt-2">Creación del Colegio de Obstetras del Perú mediante Decreto Ley N.º 21210, hito de institucionalización gremial.</p>
                         </div>
@@ -87,3 +87,4 @@
         </div>
     </x-institucional-page-shell>
 @endsection
+

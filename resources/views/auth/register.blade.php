@@ -46,25 +46,25 @@
 
                         <div>
                             <label for="name" class="mb-2 block text-sm font-bold text-slate-700">Nombres y apellidos</label>
-                            <input id="name" name="name" type="text" value="{{ old('name') }}" required autofocus autocomplete="name" placeholder="Ingrese su nombre completo" class="inst-input !bg-slate-100 !border-slate-200">
+                            <input id="name" name="name" type="text" value="{{ old('name') }}" required autofocus autocomplete="name" placeholder="Ingrese su nombre completo" class="inst-input !bg-primary-tint !border-slate-200">
                             <x-input-error :messages="$errors->get('name')" class="mt-2" />
                         </div>
 
                         <div>
                             <label for="email" class="mb-2 block text-sm font-bold text-slate-700">Correo electronico</label>
-                            <input id="email" name="email" type="email" value="{{ old('email') }}" required autocomplete="username" placeholder="usuario@correo.pe" class="inst-input !bg-slate-100 !border-slate-200">
+                            <input id="email" name="email" type="email" value="{{ old('email') }}" required autocomplete="username" placeholder="usuario@correo.pe" class="inst-input !bg-primary-tint !border-slate-200">
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
                         </div>
 
                         <div>
                             <label for="password" class="mb-2 block text-sm font-bold text-slate-700">Contrasena</label>
-                            <input id="password" name="password" type="password" required autocomplete="new-password" placeholder="Cree una contrasena segura" class="inst-input !bg-slate-100 !border-slate-200">
+                            <input id="password" name="password" type="password" required autocomplete="new-password" placeholder="Cree una contrasena segura" class="inst-input !bg-primary-tint !border-slate-200">
                             <x-input-error :messages="$errors->get('password')" class="mt-2" />
                         </div>
 
                         <div>
                             <label for="password_confirmation" class="mb-2 block text-sm font-bold text-slate-700">Confirmar contrasena</label>
-                            <input id="password_confirmation" name="password_confirmation" type="password" required autocomplete="new-password" placeholder="Repita su contrasena" class="inst-input !bg-slate-100 !border-slate-200">
+                            <input id="password_confirmation" name="password_confirmation" type="password" required autocomplete="new-password" placeholder="Repita su contrasena" class="inst-input !bg-primary-tint !border-slate-200">
                             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                         </div>
 
@@ -90,3 +90,4 @@
         </div>
     </main>
 </x-guest-layout>
+

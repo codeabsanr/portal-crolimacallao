@@ -39,7 +39,7 @@
                         @csrf
                         <div>
                             <label for="email" class="mb-2 block text-sm font-bold text-slate-700">Correo electronico</label>
-                            <input id="email" name="email" type="email" value="{{ old('email') }}" required autofocus placeholder="usuario@correo.pe" class="inst-input !bg-slate-100 !border-slate-200">
+                            <input id="email" name="email" type="email" value="{{ old('email') }}" required autofocus placeholder="usuario@correo.pe" class="inst-input !bg-primary-tint !border-slate-200">
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
                         </div>
 
@@ -52,3 +52,4 @@
         </div>
     </main>
 </x-guest-layout>
+

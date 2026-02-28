@@ -28,10 +28,11 @@
     <div class="grid sm:grid-cols-2 {{ $compact ? 'xl:grid-cols-2' : 'xl:grid-cols-4' }} gap-3">
         @foreach ($items as $item)
             <a href="{{ route($item['route']) }}"
-                class="border border-slate-200 bg-white px-4 py-4 border-t-2 {{ request()->routeIs($item['route']) ? 'border-t-primary ring-1 ring-primary/20' : 'border-t-slate-200 hover:border-t-primary hover:bg-slate-50' }} transition-colors">
+                class="border border-slate-200 bg-white px-4 py-4 border-t-2 {{ request()->routeIs($item['route']) ? 'border-t-primary ring-1 ring-primary/20' : 'border-t-slate-200 hover:border-t-primary hover:bg-primary-mist' }} transition-colors">
                 <p class="font-bold text-slate-900">{{ $item['label'] }}</p>
                 <p class="text-xs text-slate-600 mt-1">{{ $item['description'] }}</p>
             </a>
         @endforeach
     </div>
 </article>
+

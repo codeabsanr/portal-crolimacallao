@@ -6,7 +6,7 @@
 @section('content')
 <main id="main" class="md:h-screen md:overflow-hidden flex flex-col md:flex-row">
     <section class="relative flex flex-col w-full md:w-[60%] min-h-[56vh] md:h-screen md:overflow-y-auto bg-background-light border-r border-slate-300/80">
-        <div class="absolute inset-0 opacity-40 pointer-events-none" style="background-image: linear-gradient(#d6dbe4 1px, transparent 1px), linear-gradient(90deg, #d6dbe4 1px, transparent 1px); background-size: 44px 44px;"></div>
+        <div class="absolute inset-0 opacity-40 pointer-events-none" style="background-image: linear-gradient(#e4d4d9 1px, transparent 1px), linear-gradient(90deg, #e4d4d9 1px, transparent 1px); background-size: 44px 44px;"></div>
 
         <header class="relative z-10 border-b border-slate-300/80 bg-white/90 backdrop-blur px-6 lg:px-10 py-5">
             <div class="flex items-center justify-between gap-4">
@@ -25,7 +25,7 @@
         </header>
 
         <div class="relative z-10 mx-auto flex-1 w-full max-w-4xl px-5 sm:px-6 lg:px-10 py-8 md:py-12">
-            <span class="inline-flex items-center rounded-sm border border-slate-300 bg-slate-100 px-3 py-1 text-sm font-semibold uppercase tracking-[0.14em] text-slate-600">Consulta publica</span>
+            <span class="inline-flex items-center rounded-sm border border-slate-300 bg-primary-tint px-3 py-1 text-sm font-semibold uppercase tracking-[0.14em] text-slate-600">Consulta publica</span>
             <h1 class="mt-5 text-4xl lg:text-5xl font-black leading-[1.06] tracking-tight text-secondary">Verificacion de habilidad profesional</h1>
             <p class="mt-4 max-w-2xl text-base md:text-lg text-slate-600">Ingrese el numero de colegiatura (COP) o DNI para validar el estado de habilitacion en tiempo real.</p>
 
@@ -277,3 +277,5 @@
     });
 </script>
 @endsection
+
+

@@ -31,7 +31,7 @@
             </div>
 
             <div class="grid lg:grid-cols-[1fr_1.2fr] gap-5 mt-4">
-                <figure class="border border-slate-200 bg-[linear-gradient(180deg,#ffffff_0%,#f7f8fb_100%)] p-5">
+                <figure class="border border-slate-200 bg-[linear-gradient(180deg,#ffffff_0%,#f8f0f3_100%)] p-5">
                     <img src="{{ asset('assets/img/logo-circular.png') }}" alt="Emblema institucional" class="h-36 w-36 object-contain mx-auto" />
                     <figcaption class="text-sm text-slate-700 text-center mt-3">Emblema institucional</figcaption>
                 </figure>
@@ -45,7 +45,7 @@
             </div>
         </article>
 
-        <article class="inst-card p-6 md:p-8 border-primary/25 bg-[linear-gradient(180deg,#fff_0%,#f9fafc_100%)]">
+        <article class="inst-card p-6 md:p-8 border-primary/25 bg-[linear-gradient(180deg,#fff_0%,#f9f1f4_100%)]">
             <div class="flex items-center justify-between gap-3">
                 <h3 class="text-2xl font-black text-slate-900 inline-flex items-center gap-2"><span class="material-icons-outlined text-primary">military_tech</span>La insignia</h3>
                 <span class="text-[11px] uppercase tracking-[0.14em] font-bold text-primary bg-primary/10 px-2 py-1">Articulo 13</span>
@@ -53,15 +53,15 @@
             <p class="text-sm text-slate-700 mt-3"><strong>Articulo 13.</strong> La Insignia es el distintivo honorifico del colegiado y es de uso obligatorio.</p>
 
             <div class="grid md:grid-cols-3 gap-3 mt-5">
-                <div class="relative aspect-square border border-slate-200 bg-slate-50">
+                <div class="relative aspect-square border border-slate-200 bg-primary-mist">
                     <img src="{{ asset('assets/institucional/simbolos/insignia-frente.jpg') }}" alt="Insignia frente" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                     <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para insignia frente</p></div>
                 </div>
-                <div class="relative aspect-square border border-slate-200 bg-slate-50">
+                <div class="relative aspect-square border border-slate-200 bg-primary-mist">
                     <img src="{{ asset('assets/institucional/simbolos/solapero.jpg') }}" alt="Solapero" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                     <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para solapero</p></div>
                 </div>
-                <div class="relative aspect-square border border-slate-200 bg-slate-50">
+                <div class="relative aspect-square border border-slate-200 bg-primary-mist">
                     <img src="{{ asset('assets/institucional/simbolos/carnet.jpg') }}" alt="Carnet institucional" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                     <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para carnet</p></div>
                 </div>
@@ -73,11 +73,11 @@
             <p class="text-sm text-slate-700 mt-3">El Himno integra los simbolos representativos institucionales conforme al Articulo 8 del Estatuto.</p>
 
             <div class="grid lg:grid-cols-[1fr_1fr] gap-4 mt-5">
-                <div class="relative aspect-[16/8] border border-slate-200 bg-slate-50">
+                <div class="relative aspect-[16/8] border border-slate-200 bg-primary-mist">
                     <img src="{{ asset('assets/institucional/simbolos/himno-acto-oficial.jpg') }}" alt="Interpretacion del himno" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                     <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para foto de interpretacion del himno</p></div>
                 </div>
-                <div class="inst-card p-4 bg-[linear-gradient(180deg,#ffffff_0%,#f7f8fb_100%)] border-slate-200">
+                <div class="inst-card p-4 bg-[linear-gradient(180deg,#ffffff_0%,#f8f0f3_100%)] border-slate-200">
                     <p class="text-sm text-slate-700">Contenido recomendado para publicacion oficial:</p>
                     <ul class="mt-2 list-disc pl-4 text-sm text-slate-700 space-y-1">
                         <li>Letra oficial completa.</li>
@@ -103,7 +103,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-4 mt-5">
-                <figure class="border border-slate-200 bg-slate-50 p-4">
+                <figure class="border border-slate-200 bg-primary-mist p-4">
                     <div class="relative aspect-[3/4] border border-slate-200 bg-white">
                         <img src="{{ asset('assets/institucional/simbolos/uniforme-mujer.jpg') }}" alt="Mujer con uniforme oficial" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                         <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para uniforme mujer</p></div>
@@ -111,7 +111,7 @@
                     <figcaption class="text-sm text-slate-700 mt-3 text-center">Mujer con uniforme</figcaption>
                 </figure>
 
-                <figure class="border border-slate-200 bg-slate-50 p-4">
+                <figure class="border border-slate-200 bg-primary-mist p-4">
                     <div class="relative aspect-[3/4] border border-slate-200 bg-white">
                         <img src="{{ asset('assets/institucional/simbolos/uniforme-hombre.jpg') }}" alt="Hombre con uniforme oficial" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                         <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para uniforme hombre</p></div>
@@ -121,12 +121,12 @@
             </div>
         </article>
 
-        <article class="inst-card p-6 md:p-8 bg-[linear-gradient(180deg,#0f172a_0%,#1b2340_100%)] border-secondary text-white">
+        <article class="inst-card p-6 md:p-8 bg-[linear-gradient(180deg,#4d0213_0%,#5b0f27_100%)] border-secondary text-white">
             <h3 class="text-xl font-black text-white mb-2 inline-flex items-center gap-2"><span class="material-icons-outlined text-brand-gold-light">inventory_2</span>Otros elementos institucionales</h3>
             <p class="text-sm text-white/80 mb-4">Elementos complementarios de identificacion, protocolo y representacion institucional.</p>
             <div class="grid lg:grid-cols-3 gap-4">
                 <article class="inst-card p-4 bg-white border-t-2 border-t-brand-gold">
-                    <div class="relative aspect-[16/10] border border-slate-200 bg-slate-50">
+                    <div class="relative aspect-[16/10] border border-slate-200 bg-primary-mist">
                         <img src="{{ asset('assets/institucional/simbolos/estandarte.jpg') }}" alt="Estandarte institucional" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                         <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para estandarte</p></div>
                     </div>
@@ -136,7 +136,7 @@
                 </article>
 
                 <article class="inst-card p-4 bg-white border-t-2 border-t-brand-gold">
-                    <div class="relative aspect-[16/10] border border-slate-200 bg-slate-50">
+                    <div class="relative aspect-[16/10] border border-slate-200 bg-primary-mist">
                         <img src="{{ asset('assets/institucional/simbolos/solapero.jpg') }}" alt="Solapero institucional" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                         <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para solapero</p></div>
                     </div>
@@ -146,7 +146,7 @@
                 </article>
 
                 <article class="inst-card p-4 bg-white border-t-2 border-t-brand-gold">
-                    <div class="relative aspect-[16/10] border border-slate-200 bg-slate-50">
+                    <div class="relative aspect-[16/10] border border-slate-200 bg-primary-mist">
                         <img src="{{ asset('assets/institucional/simbolos/carnet.jpg') }}" alt="Carnet institucional" class="h-full w-full object-cover" loading="lazy" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
                         <div class="hidden absolute inset-0 flex items-center justify-center text-slate-500 text-center p-2"><p class="text-[11px] uppercase tracking-[0.12em]">Espacio para carnet</p></div>
                     </div>
@@ -159,4 +159,6 @@
 
     </x-institucional-page-shell>
 @endsection
+
+
 

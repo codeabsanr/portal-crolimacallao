@@ -7,11 +7,11 @@
                 <nav aria-label="Navegación interna institucional" class="overflow-x-auto">
                     <ul class="flex items-center gap-2 min-w-max">
                         <li><a href="#resumen" class="inline-flex items-center gap-1.5 border border-primary/30 text-primary bg-primary/5 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary/10 transition-colors">Resumen</a></li>
-                        <li><a href="#perfil" class="inline-flex items-center gap-1.5 border border-primary/20 text-slate-700 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-slate-50 transition-colors">Perfil</a></li>
-                        <li><a href="#objetivos" class="inline-flex items-center gap-1.5 border border-primary/20 text-slate-700 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-slate-50 transition-colors">Objetivos</a></li>
-                        <li><a href="#consejo" class="inline-flex items-center gap-1.5 border border-primary/20 text-slate-700 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-slate-50 transition-colors">Consejo</a></li>
-                        <li><a href="#normativa" class="inline-flex items-center gap-1.5 border border-primary/20 text-slate-700 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-slate-50 transition-colors">Normativa</a></li>
-                        <li><a href="#enlaces" class="inline-flex items-center gap-1.5 border border-primary/20 text-slate-700 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-slate-50 transition-colors">Enlaces</a></li>
+                        <li><a href="#perfil" class="inline-flex items-center gap-1.5 border border-primary/20 text-slate-700 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary-mist transition-colors">Perfil</a></li>
+                        <li><a href="#objetivos" class="inline-flex items-center gap-1.5 border border-primary/20 text-slate-700 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary-mist transition-colors">Objetivos</a></li>
+                        <li><a href="#consejo" class="inline-flex items-center gap-1.5 border border-primary/20 text-slate-700 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary-mist transition-colors">Consejo</a></li>
+                        <li><a href="#normativa" class="inline-flex items-center gap-1.5 border border-primary/20 text-slate-700 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary-mist transition-colors">Normativa</a></li>
+                        <li><a href="#enlaces" class="inline-flex items-center gap-1.5 border border-primary/20 text-slate-700 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary-mist transition-colors">Enlaces</a></li>
                     </ul>
                 </nav>
             </div>
@@ -195,3 +195,4 @@
         </section>
     </main>
 @endsection
+

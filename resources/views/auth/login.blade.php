@@ -67,7 +67,7 @@
                             </article>
 
                             <article data-slide class="absolute inset-0 transition-all duration-700 ease-[cubic-bezier(.2,.7,.2,1)] opacity-0 translate-y-2 pointer-events-none" aria-hidden="true">
-                                <div class="h-[245px] p-6 bg-[linear-gradient(150deg,#0f766e_0%,#0e5f6c_58%,#1b1d3a_120%)] border-b border-white/20 relative overflow-hidden">
+                                <div class="h-[245px] p-6 bg-[linear-gradient(150deg,#8c0f2f_0%,#7a1836_58%,#4d0213_120%)] border-b border-white/20 relative overflow-hidden">
                                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.2),transparent_36%),radial-gradient(circle_at_82%_78%,rgba(255,255,255,0.12),transparent_40%)]"></div>
                                     <div class="relative h-full flex items-center justify-center">
                                         <div class="text-center">
@@ -88,7 +88,7 @@
                             </article>
 
                             <article data-slide class="absolute inset-0 transition-all duration-700 ease-[cubic-bezier(.2,.7,.2,1)] opacity-0 translate-y-2 pointer-events-none" aria-hidden="true">
-                                <div class="h-[245px] p-6 bg-[linear-gradient(150deg,#0f766e_0%,#155e75_58%,#0f172a_120%)] border-b border-white/20 relative overflow-hidden">
+                                <div class="h-[245px] p-6 bg-[linear-gradient(150deg,#8c0f2f_0%,#7a1836_58%,#4d0213_120%)] border-b border-white/20 relative overflow-hidden">
                                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.2),transparent_36%),radial-gradient(circle_at_82%_78%,rgba(255,255,255,0.12),transparent_40%)]"></div>
                                     <div class="relative h-full flex items-center justify-center">
                                         <div class="text-center">
@@ -102,14 +102,14 @@
                                     <p class="mt-3 text-4xl font-black leading-tight text-secondary">Jornada regional de actualizacion obstetrica</p>
                                     <p class="mt-3 text-[1.5rem] leading-[1.45] text-slate-700">Inscripciones abiertas para modalidad presencial y virtual.</p>
                                     <div class="mt-5 grid grid-cols-2 gap-2">
-                                        <a href="{{ route('capacitacion.calendario') }}" class="inst-btn !py-2.5 !px-3 !text-base !text-white !justify-center !bg-[#0f766e] hover:!bg-[#0b5d58]">Ver agenda</a>
+                                        <a href="{{ route('capacitacion.calendario') }}" class="inst-btn !py-2.5 !px-3 !text-base !text-white !justify-center !bg-[#8c0f2f] hover:!bg-[#660219]">Ver agenda</a>
                                         <a href="{{ route('capacitacion.cursos') }}" class="inst-btn-secondary !py-2.5 !px-3 !text-base !justify-center">Inscribirme</a>
                                     </div>
                                 </div>
                             </article>
 
                             <article data-slide class="absolute inset-0 transition-all duration-700 ease-[cubic-bezier(.2,.7,.2,1)] opacity-0 translate-y-2 pointer-events-none" aria-hidden="true">
-                                <div class="h-[245px] p-6 bg-[linear-gradient(150deg,#1d4ed8_0%,#1e3a8a_58%,#0f172a_120%)] border-b border-white/20 relative overflow-hidden">
+                                <div class="h-[245px] p-6 bg-[linear-gradient(150deg,#8c0f2f_0%,#660219_58%,#4d0213_120%)] border-b border-white/20 relative overflow-hidden">
                                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.2),transparent_36%),radial-gradient(circle_at_82%_78%,rgba(255,255,255,0.12),transparent_40%)]"></div>
                                     <div class="relative h-full flex items-center justify-center">
                                         <div class="text-center">
@@ -123,7 +123,7 @@
                                     <p class="mt-3 text-4xl font-black leading-tight text-secondary">Programa de fortalecimiento clinico</p>
                                     <p class="mt-3 text-[1.5rem] leading-[1.45] text-slate-700">Cupos limitados con constancia institucional para colegiadas.</p>
                                     <div class="mt-5 grid grid-cols-2 gap-2">
-                                        <a href="{{ route('capacitacion.cursos') }}" class="inst-btn !py-2.5 !px-3 !text-base !text-white !justify-center !bg-[#1d4ed8] hover:!bg-[#1e3a8a]">Ver cursos</a>
+                                        <a href="{{ route('capacitacion.cursos') }}" class="inst-btn !py-2.5 !px-3 !text-base !text-white !justify-center !bg-[#8c0f2f] hover:!bg-[#660219]">Ver cursos</a>
                                         <a href="{{ route('bolsa.trabajo') }}" class="inst-btn-secondary !py-2.5 !px-3 !text-base !justify-center">Postular</a>
                                     </div>
                                 </div>
@@ -161,14 +161,14 @@
 
                         <div class="relative">
                             <label for="email" class="sr-only">Numero de Colegiatura o Email</label>
-                            <input id="email" name="email" type="text" value="{{ old('email') }}" required autofocus autocomplete="username" placeholder="Numero de Colegiatura o Email" class="inst-input !bg-slate-100 !border-slate-200 !pr-11">
+                            <input id="email" name="email" type="text" value="{{ old('email') }}" required autofocus autocomplete="username" placeholder="Numero de Colegiatura o Email" class="inst-input !bg-primary-tint !border-slate-200 !pr-11">
                             <span class="material-icons-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">badge</span>
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
                         </div>
 
                         <div class="relative">
                             <label for="password" class="sr-only">Contrasena</label>
-                            <input id="password" name="password" type="password" required autocomplete="current-password" placeholder="Contrasena" class="inst-input !bg-slate-100 !border-slate-200 !pr-11">
+                            <input id="password" name="password" type="password" required autocomplete="current-password" placeholder="Contrasena" class="inst-input !bg-primary-tint !border-slate-200 !pr-11">
                             <span class="material-icons-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">visibility_off</span>
                             <x-input-error :messages="$errors->get('password')" class="mt-2" />
                         </div>
@@ -303,3 +303,5 @@
         });
     </script>
 </x-guest-layout>
+
+

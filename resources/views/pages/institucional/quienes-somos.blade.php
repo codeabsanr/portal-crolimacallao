@@ -46,17 +46,17 @@
         <article class="inst-card p-6 md:p-8">
             <h3 class="text-2xl font-black text-slate-900 mb-5">Pilares de acción institucional</h3>
             <div class="grid md:grid-cols-3 gap-4">
-                <div class="border border-slate-200 p-4 bg-slate-50 hover:bg-white transition-colors">
+                <div class="border border-slate-200 p-4 bg-primary-mist hover:bg-white transition-colors">
                     <span class="material-icons-outlined text-primary text-2xl">handshake</span>
                     <p class="font-bold text-slate-900 mt-2">Representación gremial</p>
                     <p class="text-sm text-slate-700 mt-1">Defensa de derechos profesionales y articulación con entidades públicas y privadas.</p>
                 </div>
-                <div class="border border-slate-200 p-4 bg-slate-50 hover:bg-white transition-colors">
+                <div class="border border-slate-200 p-4 bg-primary-mist hover:bg-white transition-colors">
                     <span class="material-icons-outlined text-primary text-2xl">school</span>
                     <p class="font-bold text-slate-900 mt-2">Fortalecimiento profesional</p>
                     <p class="text-sm text-slate-700 mt-1">Impulso de capacitación científica y desarrollo de competencias para el ejercicio seguro.</p>
                 </div>
-                <div class="border border-slate-200 p-4 bg-slate-50 hover:bg-white transition-colors">
+                <div class="border border-slate-200 p-4 bg-primary-mist hover:bg-white transition-colors">
                     <span class="material-icons-outlined text-primary text-2xl">favorite</span>
                     <p class="font-bold text-slate-900 mt-2">Compromiso social</p>
                     <p class="text-sm text-slate-700 mt-1">Promoción de la salud de la mujer y de buenas prácticas en salud sexual y reproductiva.</p>
@@ -79,3 +79,4 @@
         </article>
     </x-institucional-page-shell>
 @endsection
+

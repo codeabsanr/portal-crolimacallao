@@ -1,6 +1,6 @@
 @props(['heroHighlights' => []])
 
-<section class="relative overflow-hidden border-b border-slate-200 bg-slate-100">
+<section class="relative overflow-hidden border-b border-slate-200 bg-primary-tint">
     <div class="absolute inset-0 z-0">
         <img src="{{ asset('assets/img/foto_gestion_2025_2028.jpg') }}" alt="Gestion actual CRO III Lima-Callao" class="h-full w-full object-cover object-[center_18%] opacity-70" />
         <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,250,252,0.86)_0%,rgba(248,250,252,0.8)_28%,rgba(248,250,252,0.66)_62%,rgba(248,250,252,0.9)_100%)]"></div>
@@ -41,3 +41,4 @@
         </div>
     </div>
 </section>
+

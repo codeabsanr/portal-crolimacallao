@@ -8,7 +8,8 @@
     <title>@yield('title', 'Portal CRO III Lima-Callao')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-screen bg-slate-100 text-slate-900 antialiased">
+<body class="min-h-screen bg-primary-tint text-slate-900 antialiased">
     @yield('content')
 </body>
 </html>
+

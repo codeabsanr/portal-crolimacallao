@@ -86,7 +86,7 @@
             </div>
         </section>
 
-        <section id="tramites-faq" class="scroll-mt-28 py-10 md:py-14 bg-[linear-gradient(180deg,#f7f9fc_0%,#eef3fa_100%)]">
+        <section id="tramites-faq" class="scroll-mt-28 py-10 md:py-14 bg-[linear-gradient(180deg,#faf3f5_0%,#f3e7eb_100%)]">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="rounded-xl border border-primary/20 bg-white p-6 md:p-8 shadow-[0_18px_34px_-30px_rgba(15,23,42,0.45)] text-center">
                     <p class="text-xs uppercase tracking-[0.15em] text-primary font-bold">Ayuda al colegiado</p>
@@ -99,4 +99,5 @@
         </section>
     </main>
 @endsection
+
 

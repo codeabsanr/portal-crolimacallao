@@ -57,10 +57,10 @@
     --inst-primary-dark: #4d0213;
     --inst-gold: #ba7c00;
     --inst-gold-soft: #f8ecd0;
-    --inst-bg: #f8f9fa;
+    --inst-bg: #f8f1f4;
     --inst-surface: #ffffff;
     --inst-text: #1f2230;
-    --inst-text-muted: #64748b;
+    --inst-text-muted: #6f5560;
     --inst-radius: 0.125rem;
 }
 
@@ -160,30 +160,30 @@ h6 {
     }
 
     .inst-btn-primary {
-        @apply inst-btn bg-primary text-white hover:bg-primary-dark;
+        @apply inst-btn bg-primary text-white hover:bg-primary-dark focus-visible:ring-2 focus-visible:ring-primary/30;
     }
 
     .inst-btn-secondary {
-        @apply inst-btn border-primary text-primary hover:bg-primary/5;
+        @apply inst-btn border-primary/40 bg-primary-mist text-primary hover:border-primary hover:bg-primary-tint focus-visible:ring-2 focus-visible:ring-primary/20;
     }
 
     .inst-input {
-        @apply block w-full rounded-md border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500 shadow-sm transition-[border-color,box-shadow,background-color] duration-300 ease-[cubic-bezier(.2,.7,.2,1)] focus:border-primary focus:ring-2 focus:ring-primary/20;
+        @apply block w-full rounded-md border border-primary/20 bg-surface-light px-4 py-3 text-sm text-text-main placeholder:text-text-muted shadow-sm transition-[border-color,box-shadow,background-color] duration-300 ease-[cubic-bezier(.2,.7,.2,1)] focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20;
         min-height: 48px;
         line-height: 1.4;
     }
 
     .inst-card {
-        @apply rounded-xl border border-slate-200 bg-white shadow-inst;
+        @apply rounded-xl border border-primary/15 bg-surface-light shadow-inst;
     }
 
     .inst-section-title {
-        @apply text-3xl md:text-4xl font-black tracking-tight text-slate-900;
+        @apply text-3xl md:text-4xl font-black tracking-tight text-text-main;
     }
 
     .inst-page-hero {
         min-height: clamp(22rem, 50vh, 35rem);
-        border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+        border-bottom: 1px solid rgba(102, 2, 25, 0.18);
     }
 
     .inst-btn-scroll-guide .material-icons-outlined {
@@ -211,7 +211,7 @@ h6 {
     }
 
     .inst-help-fab {
-        @apply inline-flex min-h-[44px] items-center gap-2 rounded-full border border-slate-800 bg-secondary px-4 py-2 text-white shadow-[0_10px_24px_-14px_rgba(15,23,42,0.75)] transition-[background-color,transform,box-shadow] duration-200 hover:bg-secondary-light;
+        @apply inline-flex min-h-[44px] items-center gap-2 rounded-full border border-primary-dark bg-secondary px-4 py-2 text-white shadow-[0_10px_24px_-14px_rgba(77,2,19,0.68)] transition-[background-color,transform,box-shadow] duration-200 hover:bg-secondary-light;
     }
 
     .inst-help-fab.is-idle {
@@ -219,11 +219,11 @@ h6 {
     }
 
     .inst-help-fab.is-open {
-        @apply bg-secondary-light shadow-[0_14px_30px_-14px_rgba(15,23,42,0.85)];
+        @apply bg-secondary-light shadow-[0_14px_30px_-14px_rgba(77,2,19,0.82)];
     }
 
     .inst-help-panel {
-        @apply overflow-hidden rounded-md border border-white/20 bg-secondary/95 shadow-[0_18px_36px_-16px_rgba(15,23,42,0.8)] backdrop-blur-sm;
+        @apply overflow-hidden rounded-md border border-white/20 bg-secondary/95 shadow-[0_18px_36px_-16px_rgba(77,2,19,0.78)] backdrop-blur-sm;
     }
 
     .inst-help-link {
@@ -262,7 +262,7 @@ h6 {
 }
 
 .web-link {
-    @apply text-slate-600 hover:text-primary underline transition-colors;
+    @apply text-text-muted hover:text-primary underline transition-colors;
 }
 
 .content-wrapper a:not(.btn) {

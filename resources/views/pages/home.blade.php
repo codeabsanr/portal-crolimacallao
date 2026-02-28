@@ -23,8 +23,8 @@
                 [
                     'tipo' => 'Evento',
                     'fecha' => 'Destacado',
-                    'color' => '#0f766e',
-                    'superficie' => '#f0fdfa',
+                    'color' => '#8c0f2f',
+                    'superficie' => '#f9f1f4',
                     'icono' => 'event_available',
                     'simulada' => false,
                     'simulada_titulo' => 'Evento destacado',
@@ -39,8 +39,8 @@
                 [
                     'tipo' => 'Curso',
                     'fecha' => 'Capacitacion',
-                    'color' => '#1d4ed8',
-                    'superficie' => '#eff6ff',
+                    'color' => '#8c0f2f',
+                    'superficie' => '#f8f0f3',
                     'icono' => 'school',
                     'simulada' => false,
                     'simulada_titulo' => 'Curso y ponencia',
@@ -74,7 +74,7 @@
 
         <x-home.hero5 :hero-ads="$heroAds" />
 
-        <section class="py-10 md:py-12 bg-slate-50 border-t border-slate-200">
+        <section class="py-10 md:py-12 bg-primary-mist border-t border-slate-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="mb-8">
                     <h2 class="inst-section-title">Accesos directos</h2>
@@ -119,3 +119,6 @@
         </section>
     </main>
 @endsection
+
+
+

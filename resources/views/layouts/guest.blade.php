@@ -20,7 +20,7 @@
         @if ($full)
             {{ $slot }}
         @else
-            <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+            <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-primary-tint">
                 <div>
                     <a href="/">
                         <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
@@ -38,3 +38,4 @@
         @endif
     </body>
 </html>
+

@@ -57,12 +57,12 @@
             'secondary' => 'border border-rose-300 text-rose-800 hover:bg-rose-100',
         ],
         'azul' => [
-            'card' => 'border-sky-200 bg-sky-50',
-            'tag' => 'border-sky-300 bg-sky-100 text-sky-800',
-            'title' => 'text-sky-950',
-            'text' => 'text-sky-900/80',
-            'primary' => 'bg-sky-700 text-white hover:bg-sky-800',
-            'secondary' => 'border border-sky-300 text-sky-800 hover:bg-sky-100',
+            'card' => 'border-primary/30 bg-primary-mist',
+            'tag' => 'border-primary/35 bg-primary-tint text-primary-dark',
+            'title' => 'text-primary-dark',
+            'text' => 'text-primary-dark/80',
+            'primary' => 'bg-primary text-white hover:bg-primary-dark',
+            'secondary' => 'border border-primary/35 text-primary-dark hover:bg-primary-tint',
         ],
         'verde' => [
             'card' => 'border-emerald-200 bg-emerald-50',
@@ -76,9 +76,9 @@
 @endphp
 <main id="main" class="md:h-screen md:overflow-hidden flex flex-col md:flex-row">
     <section class="relative flex flex-col w-full md:w-[65%] min-h-[56vh] md:h-screen md:overflow-y-auto bg-background-light border-r border-slate-300/80">
-        <div class="absolute inset-0 opacity-35 pointer-events-none" style="background-image: radial-gradient(circle at 1px 1px, #cbd5e1 1px, transparent 0); background-size: 26px 26px;"></div>
+        <div class="absolute inset-0 opacity-35 pointer-events-none" style="background-image: radial-gradient(circle at 1px 1px, #e4d4d9 1px, transparent 0); background-size: 26px 26px;"></div>
 
-        <header class="relative z-10 border-b border-slate-300/80 bg-slate-950 px-6 lg:px-10 py-5 text-white">
+        <header class="relative z-10 border-b border-slate-300/80 bg-primary-dark px-6 lg:px-10 py-5 text-white">
             <div class="flex items-center justify-between gap-4">
                 <div class="flex items-center gap-3">
                     <img src="{{ asset('assets/img/logo-circular.png') }}" alt="Logo CRO III Lima-Callao" class="h-11 w-11 object-contain" />
@@ -98,7 +98,7 @@
             <div class="grid gap-4 lg:grid-cols-[1.15fr_0.95fr]">
                 <div class="space-y-4">
                     <section class="border border-slate-200 bg-white shadow-[0_18px_30px_-28px_rgba(15,23,42,0.8)]">
-                        <div class="border-b border-slate-200 bg-[linear-gradient(120deg,#0f172a_0%,#1e293b_60%,#334155_100%)] p-5 text-white">
+                        <div class="border-b border-slate-200 bg-[linear-gradient(120deg,#4d0213_0%,#660219_60%,#7a1836_100%)] p-5 text-white">
                             <div class="flex flex-wrap items-center gap-2">
                                 <span class="inline-flex rounded-sm border border-white/35 px-2.5 py-1 text-[11px] font-black uppercase tracking-[0.12em]">Perfil profesional</span>
                                 <span class="inline-flex rounded-sm border border-white/35 px-2.5 py-1 text-[11px] font-black uppercase tracking-[0.12em]">COP {{ $item['cop'] }}</span>
@@ -117,15 +117,15 @@
                                         <span class="inline-flex items-center rounded-sm border border-slate-300 bg-white px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-slate-700">{{ $item['documento'] }}</span>
                                     </div>
                                     <div class="mt-4 grid grid-cols-3 gap-2">
-                                        <article class="border border-slate-200 bg-slate-50 p-2.5">
+                                        <article class="border border-slate-200 bg-primary-mist p-2.5">
                                             <p class="text-[11px] uppercase tracking-[0.12em] text-slate-500 font-bold">Experiencia</p>
                                             <p class="mt-1 text-lg font-black text-slate-900">{{ $item['experiencia_anios'] ?? '0' }} anos</p>
                                         </article>
-                                        <article class="border border-slate-200 bg-slate-50 p-2.5">
+                                        <article class="border border-slate-200 bg-primary-mist p-2.5">
                                             <p class="text-[11px] uppercase tracking-[0.12em] text-slate-500 font-bold">Modalidad</p>
                                             <p class="mt-1 text-sm font-bold text-slate-900">{{ $item['modalidad'] ?? 'No registrado' }}</p>
                                         </article>
-                                        <article class="border border-slate-200 bg-slate-50 p-2.5">
+                                        <article class="border border-slate-200 bg-primary-mist p-2.5">
                                             <p class="text-[11px] uppercase tracking-[0.12em] text-slate-500 font-bold">Disponibilidad</p>
                                             <p class="mt-1 text-sm font-bold {{ $isHabilitado && $isActivo ? 'text-emerald-700' : 'text-primary' }}">{{ $item['disponibilidad'] ?? 'No registrado' }}</p>
                                         </article>
@@ -158,7 +158,7 @@
                             <p class="mt-2 text-base font-black text-secondary">{{ $item['ultimo_centro'] ?? 'No registrado' }}</p>
                             <div class="mt-3 space-y-2">
                                 @foreach (($item['experiencia'] ?? []) as $job)
-                                    <div class="border border-slate-200 bg-slate-50 p-3">
+                                    <div class="border border-slate-200 bg-primary-mist p-3">
                                         <p class="text-sm font-bold text-secondary">{{ $job['cargo'] }}</p>
                                         <p class="text-sm text-slate-600">{{ $job['institucion'] }}</p>
                                         <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold mt-1">{{ $job['periodo'] }}</p>
@@ -230,7 +230,7 @@
                         </div>
                     </section>
 
-                    <section class="border border-slate-900 bg-slate-900 text-white p-4">
+                    <section class="border border-slate-900 bg-primary-dark text-white p-4">
                         <p class="text-xs uppercase tracking-[0.12em] font-black text-brand-gold-light">Contacto rapido</p>
                         <h3 class="mt-1 text-lg font-black">Si no puedes ingresar, comunicate aqui</h3>
                         <p class="mt-2 text-sm text-white/80">Atencion para colegiadas con problemas de acceso, validacion o recuperacion de credenciales.</p>
@@ -311,3 +311,5 @@
     </aside>
 </main>
 @endsection
+
+

@@ -42,7 +42,7 @@
                  :class="idx === current ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1 pointer-events-none'">
 
                 {{-- Fondo siempre oscuro (para imágenes con transparencia / contain) --}}
-                <div class="absolute inset-0 bg-slate-900"></div>
+                <div class="absolute inset-0 bg-primary-dark"></div>
 
                 {{-- Imagen: contain para mostrar flyers completos --}}
                 <template x-if="!item.simulada">
@@ -54,7 +54,7 @@
                 <template x-if="item.simulada">
                     <div class="absolute inset-0">
                         <div class="absolute inset-0"
-                             :style="`background: linear-gradient(160deg, ${item.color} 0%, #0f172a 130%);`"></div>
+                             :style="`background: linear-gradient(160deg, ${item.color} 0%, #4d0213 130%);`"></div>
                         <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.18),transparent_38%),radial-gradient(circle_at_80%_75%,rgba(255,255,255,0.12),transparent_44%)]"></div>
                         <div class="absolute inset-0 flex items-center justify-center text-center px-5">
                             <div>
@@ -118,3 +118,5 @@
            x-text="items[current].cta2_texto"></a>
     </div>
 </aside>
+
+

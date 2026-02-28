@@ -44,7 +44,7 @@
                     <p class="text-sm font-bold text-slate-900">A2: Color puro (azul dominante + vino)</p>
                 </header>
                 <div class="relative text-white">
-                    <div class="absolute inset-0 bg-[linear-gradient(122deg,#0f172a_0%,#1e293b_58%,#660219_100%)]"></div>
+                    <div class="absolute inset-0 bg-[linear-gradient(122deg,#4d0213_0%,#660219_58%,#660219_100%)]"></div>
                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_84%_14%,rgba(186,124,0,0.16),transparent_36%)]"></div>
                     <div class="relative z-10 grid lg:grid-cols-[1.06fr_0.94fr] gap-6 p-6 md:p-8">
                         <div>
@@ -103,7 +103,7 @@
                         </aside>
                     </div>
                 </div>
-                <a href="#seccion-siguiente" class="block border-t border-slate-200 bg-slate-900/5 px-6 py-3 text-center text-sm text-slate-700 hover:text-primary transition-colors">
+                <a href="#seccion-siguiente" class="block border-t border-slate-200 bg-primary/5 px-6 py-3 text-center text-sm text-slate-700 hover:text-primary transition-colors">
                     Continuar hacia contenido de la sección
                     <span class="material-icons-outlined text-base align-middle ml-1">south</span>
                 </a>
@@ -114,7 +114,7 @@
                     <p class="text-sm font-bold text-slate-900">A4: Corte diagonal + borde interno</p>
                 </header>
                 <div class="relative overflow-hidden bg-white">
-                    <div class="absolute inset-y-0 right-0 w-[46%] bg-[linear-gradient(145deg,#1e293b_0%,#660219_100%)]"></div>
+                    <div class="absolute inset-y-0 right-0 w-[46%] bg-[linear-gradient(145deg,#660219_0%,#660219_100%)]"></div>
                     <div class="absolute top-0 right-[42%] h-full w-28 bg-white rotate-[8deg] origin-top-right"></div>
                     <div class="relative z-10 grid lg:grid-cols-[1.05fr_0.95fr] gap-6 p-6 md:p-8">
                         <div class="border border-slate-200 p-5 md:p-6 bg-background-light">
@@ -156,3 +156,5 @@
         </section>
     </main>
 @endsection
+
+

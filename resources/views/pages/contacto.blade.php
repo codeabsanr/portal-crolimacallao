@@ -91,7 +91,7 @@
             </div>
         </section>
 
-        <section class="py-12 bg-slate-200/70">
+        <section class="py-12 bg-primary-tint/70">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-6">
                     <h2 class="text-3xl md:text-4xl font-black text-slate-900">Nuestra ubicación</h2>
@@ -110,4 +110,5 @@
         </section>
     </main>
 @endsection
+
 

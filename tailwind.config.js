@@ -24,7 +24,7 @@ export default {
         },
         extend: {
             backgroundImage: {
-                'inst-hero': 'linear-gradient(122deg, rgba(102,2,25,0.95) 0%, rgba(113,2,31,0.88) 38%, rgba(62,15,34,0.9) 70%, rgba(20,31,58,0.9) 100%)',
+                'inst-hero': 'linear-gradient(122deg, rgba(102,2,25,0.95) 0%, rgba(113,2,31,0.88) 38%, rgba(77,2,19,0.92) 70%, rgba(45,2,13,0.9) 100%)',
                 'inst-hero-overlay': 'radial-gradient(circle_at_14%_16%, rgba(255,255,255,0.14), transparent 34%), radial-gradient(circle_at_86%_80%, rgba(186,124,0,0.2), transparent 36%)',
             },
             spacing: {
@@ -44,18 +44,22 @@ export default {
                     dark: '#4d0213',
                     light: '#800320',
                     soft: '#8c0f2f',
+                    tint: '#f3e7eb',
+                    mist: '#f8f1f4',
                 },
                 footer: '#4d0213',
                 secondary: {
-                    DEFAULT: '#0f172a',
-                    light: '#1e293b',
+                    DEFAULT: '#4a0b1c',
+                    light: '#6d1730',
                 },
                 background: {
-                    light: '#f8f9fa',
+                    light: '#f8f1f4',
+                    canvas: '#fcf7f8',
                     dark: '#15070d',
                 },
                 surface: {
                     light: '#ffffff',
+                    soft: '#fff8fa',
                     dark: '#221017',
                 },
                 brand: {
@@ -63,9 +67,10 @@ export default {
                     'gold-light': '#dba93b',
                     'gold-soft': '#f8ecd0',
                     'ink-light': '#f5eaee',
+                    'ink-soft': '#fbf6f7',
                 },
                 'text-main': '#1f2230',
-                'text-muted': '#64748b',
+                'text-muted': '#6f5560',
                 success: {
                     DEFAULT: '#059669',
                     light: '#d1fae5',
@@ -83,10 +88,10 @@ export default {
                 serif: ['Roboto', 'sans-serif'],
             },
             boxShadow: {
-                'hard': '4px 4px 0px #E5E7EB',
+                'hard': '4px 4px 0px #EADFE3',
                 'hard-hover': '6px 6px 0px #660219',
-                'inst': '0 10px 30px -14px rgba(14, 12, 22, 0.35)',
-                'hero-panel': '0 24px 44px -32px rgba(15, 23, 42, 0.5)',
+                'inst': '0 10px 30px -14px rgba(47, 8, 22, 0.3)',
+                'hero-panel': '0 24px 44px -32px rgba(77, 2, 19, 0.45)',
             },
             borderRadius: {
                 'DEFAULT': '0.125rem',

@@ -267,7 +267,7 @@
                                 class="absolute inset-0 transition-all duration-500 ease-[cubic-bezier(.2,.7,.2,1)]"
                                 :class="idx === current ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-1 pointer-events-none'"
                                 :aria-hidden="idx === current ? 'false' : 'true'">
-                                <div class="absolute inset-0 bg-slate-900"></div>
+                                <div class="absolute inset-0 bg-primary-dark"></div>
                                 <img :src="ad.image" :alt="ad.titulo"
                                     class="absolute inset-0 h-full w-full object-contain object-center">
                                 <div class="absolute inset-0" :style="`background: ${ad.overlay};`"></div>
@@ -303,10 +303,10 @@
                               transition-[background-color,opacity,box-shadow] duration-200 hover:opacity-90 shadow"
                         :class="{
                            'bg-primary hover:bg-primary-dark':          ads[current].tone === 'informacion',
-                           'bg-cyan-700 hover:bg-cyan-800':             ads[current].tone === 'desarrollo',
-                           'bg-emerald-700 hover:bg-emerald-800':       ads[current].tone === 'calendario',
+                           'bg-primary-soft hover:bg-primary':           ads[current].tone === 'desarrollo',
+                           'bg-primary-light hover:bg-primary':          ads[current].tone === 'calendario',
                            'bg-brand-gold hover:bg-brand-gold-light':   ads[current].tone === 'tramites',
-                           'bg-indigo-700 hover:bg-indigo-800':         ads[current].tone === 'normativa'
+                           'bg-primary hover:bg-primary-dark':           ads[current].tone === 'normativa'
                        }" x-text="ads[current].cta_text"></a>
                 </div>
             </aside>

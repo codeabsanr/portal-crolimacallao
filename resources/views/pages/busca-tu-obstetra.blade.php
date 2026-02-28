@@ -6,7 +6,7 @@
 @section('content')
 <main class="md:h-screen md:overflow-hidden flex flex-col md:flex-row">
     <section class="relative w-full md:w-[64%] md:h-screen md:overflow-y-auto bg-background-light border-r border-slate-300/80">
-        <div class="absolute inset-0 opacity-40 pointer-events-none" style="background-image: linear-gradient(#d6dbe4 1px, transparent 1px), linear-gradient(90deg, #d6dbe4 1px, transparent 1px); background-size: 44px 44px;"></div>
+        <div class="absolute inset-0 opacity-40 pointer-events-none" style="background-image: linear-gradient(#e4d4d9 1px, transparent 1px), linear-gradient(90deg, #e4d4d9 1px, transparent 1px); background-size: 44px 44px;"></div>
 
         <header class="relative z-10 border-b border-slate-300/80 bg-white/90 backdrop-blur px-6 lg:px-10 py-5">
             <div class="flex items-center justify-between gap-4">
@@ -186,3 +186,4 @@
     });
 </script>
 @endsection
+
