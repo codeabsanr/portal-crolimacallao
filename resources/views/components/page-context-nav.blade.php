@@ -76,26 +76,43 @@
     ];
 @endphp
 @if ($currentLabel && !request()->routeIs('home') && !in_array($routeName, $subheroRoutes))
-    <section class="relative border-b border-primary/20 bg-primary-mist">
-        <div class="absolute inset-x-0 top-0 h-[2px] bg-[linear-gradient(90deg,#D4A62A_0%,#BA7C00_48%,#D4A62A_100%)]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
-            <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-                <nav aria-label="Breadcrumb" class="text-xs sm:text-sm text-text-main">
-                    <ol class="flex flex-wrap items-center gap-y-1 gap-x-2">
-                        <li><a href="{{ route('home') }}" class="font-medium text-text-muted hover:text-primary transition-colors">Inicio</a></li>
-                        <li class="text-[#BA7C00]/80">/</li>
+    <section class="relative border-b border-primary/10 bg-gradient-to-b from-white via-white to-primary-tint/35">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 md:py-6">
+            <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                <nav aria-label="Breadcrumb"
+                    class="rounded-md border border-slate-200/80 bg-white/90 px-3.5 py-2.5 text-sm text-text-main shadow-[0_12px_30px_-26px_rgba(15,23,42,0.65)] backdrop-blur-sm md:text-[0.95rem]">
+                    <ol class="flex flex-wrap items-center gap-y-2 gap-x-1.5">
+                        <li><a href="{{ route('home') }}"
+                                class="inline-flex items-center rounded-full px-2.5 py-1 font-medium text-text-muted transition-colors duration-150 hover:bg-primary-tint hover:text-primary">Inicio</a>
+                        </li>
+                        <li class="text-slate-300">
+                            <span class="material-icons-outlined text-[1rem] leading-none">chevron_right</span>
+                        </li>
                         @if ($sectionLabel && $sectionRoute && !request()->routeIs($sectionRoute))
-                            <li><a href="{{ route($sectionRoute) }}" class="font-medium text-text-muted hover:text-primary transition-colors">{{ $sectionLabel }}</a></li>
-                            <li class="text-[#BA7C00]/80">/</li>
+                            <li><a href="{{ route($sectionRoute) }}"
+                                    class="inline-flex items-center rounded-full px-2.5 py-1 font-medium text-text-muted transition-colors duration-150 hover:bg-primary-tint hover:text-primary">{{ $sectionLabel }}</a>
+                            </li>
+                            <li class="text-slate-300">
+                                <span class="material-icons-outlined text-[1rem] leading-none">chevron_right</span>
+                            </li>
                         @elseif ($sectionLabel)
-                            <li class="font-medium text-text-muted">{{ $sectionLabel }}</li>
-                            <li class="text-[#BA7C00]/80">/</li>
+                            <li class="inline-flex items-center rounded-full bg-primary-tint px-2.5 py-1 font-medium text-primary">
+                                {{ $sectionLabel }}
+                            </li>
+                            <li class="text-slate-300">
+                                <span class="material-icons-outlined text-[1rem] leading-none">chevron_right</span>
+                            </li>
                         @endif
                         @if ($parentLabel && $parentRoute)
-                            <li><a href="{{ route($parentRoute) }}" class="font-medium text-text-muted hover:text-primary transition-colors">{{ $parentLabel }}</a></li>
-                            <li class="text-[#BA7C00]/80">/</li>
+                            <li><a href="{{ route($parentRoute) }}"
+                                    class="inline-flex items-center rounded-full px-2.5 py-1 font-medium text-text-muted transition-colors duration-150 hover:bg-primary-tint hover:text-primary">{{ $parentLabel }}</a>
+                            </li>
+                            <li class="text-slate-300">
+                                <span class="material-icons-outlined text-[1rem] leading-none">chevron_right</span>
+                            </li>
                         @endif
-                        <li class="font-bold text-primary-dark border-b-2 border-brand-gold" aria-current="page">{{ $currentLabel }}</li>
+                        <li class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-1 font-semibold text-slate-700"
+                            aria-current="page">{{ $currentLabel }}</li>
                     </ol>
                 </nav>
 
@@ -107,9 +124,12 @@
                 @endphp
                 @if ($showBackButton)
                     <a href="{{ route($backRoute) }}"
-                        class="inline-flex items-center justify-center gap-1.5 rounded-sm border border-brand-gold/50 bg-brand-ink-soft px-3.5 py-2 text-xs sm:text-sm font-semibold text-primary-dark shadow-[0_1px_0_rgba(77,2,19,0.08)] transition-[border-color,background-color,color,transform,box-shadow] duration-300 ease-[cubic-bezier(.2,.7,.2,1)] hover:-translate-y-[1px] hover:border-brand-gold hover:bg-brand-gold-soft hover:text-primary hover:shadow-[0_10px_24px_-16px_rgba(186,124,0,0.7)] min-h-[44px]">
-                        <span class="material-icons-outlined text-base">arrow_back</span>
-                        <span>Volver a {{ $backLabel }}</span>
+                        class="group inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md border border-primary/20 bg-white px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-[0_12px_24px_-20px_rgba(77,2,19,0.55)] transition-[border-color,background-color,color,transform,box-shadow] duration-200 ease-out hover:-translate-y-[1px] hover:border-primary/40 hover:bg-primary-tint/60 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-2">
+                        <span
+                            class="inline-flex size-7 items-center justify-center rounded-full bg-primary-tint text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                            <span class="material-icons-outlined text-base leading-none">arrow_back</span>
+                        </span>
+                        <span class="whitespace-nowrap">Volver a {{ $backLabel }}</span>
                     </a>
                 @endif
             </div>

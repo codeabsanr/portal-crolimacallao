@@ -16,11 +16,11 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans text-gray-900 antialiased">
+    <body class="font-sans text-text-main antialiased bg-white">
         @if ($full)
             {{ $slot }}
         @else
-            <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-primary-tint">
+            <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-white">
                 <div>
                     <a href="/">
                         <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
@@ -33,9 +33,6 @@
             </div>
         @endif
 
-        @if ($full)
-            <x-help-floating-widget />
-        @endif
+        <x-site-scroll-assist />
     </body>
 </html>
-

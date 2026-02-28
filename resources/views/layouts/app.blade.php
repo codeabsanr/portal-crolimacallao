@@ -28,7 +28,7 @@
     @livewireStyles
 </head>
 
-<body class="font-sans antialiased text-gray-900 bg-primary-mist flex flex-col min-h-screen">
+<body class="font-sans antialiased text-text-main bg-white flex flex-col min-h-screen">
     <x-navbar />
 
     <main class="flex-grow">
@@ -38,11 +38,10 @@
         {{ $slot ?? '' }}
     </main>
 
+    <x-site-scroll-assist />
     <x-footer />
-    <x-help-floating-widget />
 
     @livewireScripts
 </body>
 
 </html>
-

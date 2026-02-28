@@ -84,7 +84,7 @@
             'tone' => 'informacion',
             'image' => asset('assets/img/ads/ads_01.jpeg'),
             'duration_ms' => 5000,
-            'overlay' => 'linear-gradient(170deg, rgba(102,2,25,0.12) 0%, rgba(22,30,55,0.28) 100%)',
+            'overlay' => 'linear-gradient(170deg, rgba(102,2,25,0.16) 0%, rgba(186,124,0,0.22) 100%)',
         ],
         [
             'tipo' => 'Desarrollo profesional',
@@ -95,7 +95,7 @@
             'tone' => 'desarrollo',
             'image' => asset('assets/img/ads/ads_02.jpeg'),
             'duration_ms' => 9000,
-            'overlay' => 'linear-gradient(170deg, rgba(12,72,98,0.12) 0%, rgba(15,23,42,0.26) 100%)',
+            'overlay' => 'linear-gradient(170deg, rgba(140,15,47,0.16) 0%, rgba(186,124,0,0.2) 100%)',
         ],
         [
             'tipo' => 'Desarrollo profesional',
@@ -106,7 +106,7 @@
             'tone' => 'calendario',
             'image' => asset('assets/img/ads/ads_03.jpeg'),
             'duration_ms' => 6500,
-            'overlay' => 'linear-gradient(170deg, rgba(26,78,59,0.12) 0%, rgba(15,23,42,0.26) 100%)',
+            'overlay' => 'linear-gradient(170deg, rgba(128,3,32,0.16) 0%, rgba(186,124,0,0.2) 100%)',
         ],
         [
             'tipo' => 'Tramites y servicios',
@@ -117,7 +117,7 @@
             'tone' => 'tramites',
             'image' => asset('assets/img/ads/ads_04.jpeg'),
             'duration_ms' => 4200,
-            'overlay' => 'linear-gradient(170deg, rgba(148,79,8,0.14) 0%, rgba(15,23,42,0.28) 100%)',
+            'overlay' => 'linear-gradient(170deg, rgba(186,124,0,0.22) 0%, rgba(102,2,25,0.2) 100%)',
         ],
         [
             'tipo' => 'Normativa y cumplimiento',
@@ -128,7 +128,7 @@
             'tone' => 'normativa',
             'image' => asset('assets/img/ads/ads_05.jpeg'),
             'duration_ms' => 8000,
-            'overlay' => 'linear-gradient(170deg, rgba(67,56,202,0.12) 0%, rgba(15,23,42,0.26) 100%)',
+            'overlay' => 'linear-gradient(170deg, rgba(102,2,25,0.16) 0%, rgba(186,124,0,0.22) 100%)',
         ],
     ];
 

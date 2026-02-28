@@ -24,8 +24,11 @@ export default {
         },
         extend: {
             backgroundImage: {
-                'inst-hero': 'linear-gradient(122deg, rgba(102,2,25,0.95) 0%, rgba(113,2,31,0.88) 38%, rgba(77,2,19,0.92) 70%, rgba(45,2,13,0.9) 100%)',
+                'inst-hero': 'linear-gradient(124deg, #4d0213 0%, #660219 42%, #8c0f2f 72%, #BA7C00 100%)',
                 'inst-hero-overlay': 'radial-gradient(circle_at_14%_16%, rgba(255,255,255,0.14), transparent 34%), radial-gradient(circle_at_86%_80%, rgba(186,124,0,0.2), transparent 36%)',
+                'inst-brand-gradient': 'linear-gradient(128deg, #4d0213 0%, #660219 52%, #BA7C00 100%)',
+                'inst-brand-soft': 'linear-gradient(180deg, #ffffff 0%, #fdfbfd 62%, #fbf4e8 100%)',
+                'inst-brand-section': 'linear-gradient(180deg, #fdfbfd 0%, #f9f5f7 100%)',
             },
             spacing: {
                 '6': '1.375rem',
@@ -44,8 +47,8 @@ export default {
                     dark: '#4d0213',
                     light: '#800320',
                     soft: '#8c0f2f',
-                    tint: '#f3e7eb',
-                    mist: '#f8f1f4',
+                    tint: '#f9f4f6',
+                    mist: '#fdfbfc',
                 },
                 footer: '#4d0213',
                 secondary: {
@@ -53,21 +56,21 @@ export default {
                     light: '#6d1730',
                 },
                 background: {
-                    light: '#f8f1f4',
-                    canvas: '#fcf7f8',
+                    light: '#fbfaf9',
+                    canvas: '#fefdfd',
                     dark: '#15070d',
                 },
                 surface: {
                     light: '#ffffff',
-                    soft: '#fff8fa',
+                    soft: '#fffdfd',
                     dark: '#221017',
                 },
                 brand: {
                     gold: '#BA7C00',
                     'gold-light': '#dba93b',
                     'gold-soft': '#f8ecd0',
-                    'ink-light': '#f5eaee',
-                    'ink-soft': '#fbf6f7',
+                    'ink-light': '#faf7f8',
+                    'ink-soft': '#fdfcfc',
                 },
                 'text-main': '#1f2230',
                 'text-muted': '#6f5560',
@@ -88,7 +91,7 @@ export default {
                 serif: ['Roboto', 'sans-serif'],
             },
             boxShadow: {
-                'hard': '4px 4px 0px #EADFE3',
+                'hard': '4px 4px 0px #F1E8EB',
                 'hard-hover': '6px 6px 0px #660219',
                 'inst': '0 10px 30px -14px rgba(47, 8, 22, 0.3)',
                 'hero-panel': '0 24px 44px -32px rgba(77, 2, 19, 0.45)',

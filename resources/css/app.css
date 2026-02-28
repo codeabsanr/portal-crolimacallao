@@ -57,7 +57,7 @@
     --inst-primary-dark: #4d0213;
     --inst-gold: #ba7c00;
     --inst-gold-soft: #f8ecd0;
-    --inst-bg: #f8f1f4;
+    --inst-bg: #fbfaf9;
     --inst-surface: #ffffff;
     --inst-text: #1f2230;
     --inst-text-muted: #6f5560;
@@ -76,7 +76,10 @@ body {
     color: var(--inst-text);
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    line-height: 1.55;
+    line-height: 1.62;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
 }
 
@@ -88,7 +91,7 @@ h5,
 h6 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.012em;
 }
 
 @layer base {
@@ -117,8 +120,8 @@ h6 {
     select,
     textarea,
     button {
-        font-size: 0.975rem;
-        line-height: 1.6;
+        font-size: 1rem;
+        line-height: 1.68;
     }
 
     button,
@@ -232,6 +235,38 @@ h6 {
 
     .inst-help-link:last-child {
         @apply mb-0;
+    }
+
+    .inst-scroll-assist {
+        @apply inline-flex min-h-[44px] items-center justify-center gap-1.5 rounded-sm border border-slate-200 bg-white px-4 py-2 text-slate-600 shadow-[0_8px_18px_-14px_rgba(15,23,42,0.35)] transition-[border-color,color,box-shadow,transform] duration-200;
+    }
+
+    .inst-scroll-assist:hover {
+        @apply -translate-y-px border-slate-300 text-slate-800 shadow-[0_12px_22px_-14px_rgba(15,23,42,0.42)];
+    }
+
+    .inst-scroll-assist-label {
+        @apply text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500;
+    }
+
+    .inst-bottom-dock {
+        @apply inline-flex min-h-[52px] items-center gap-1.5 rounded-md border border-slate-200/90 bg-white/95 px-2 py-1.5 shadow-[0_10px_26px_-16px_rgba(15,23,42,0.45)] backdrop-blur-sm;
+    }
+
+    .inst-bottom-dock-btn {
+        @apply inline-flex min-h-[42px] items-center justify-center gap-1 rounded-sm border border-transparent bg-transparent px-2.5 sm:px-3 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.12em] text-slate-600 transition-[background-color,color,border-color] duration-200;
+    }
+
+    .inst-bottom-dock-btn:hover {
+        @apply border-slate-200 bg-slate-50 text-slate-800;
+    }
+
+    .inst-bottom-dock-pill {
+        @apply inline-flex min-h-[42px] min-w-[128px] items-center justify-center rounded-sm border border-slate-200 bg-slate-50/80 px-1;
+    }
+
+    .inst-bottom-dock-segment {
+        @apply inline-flex min-h-[36px] items-center justify-center gap-1 px-2.5 text-slate-600 transition-colors duration-200 hover:text-slate-800;
     }
 }
 
