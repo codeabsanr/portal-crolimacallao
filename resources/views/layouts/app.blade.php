@@ -32,7 +32,6 @@
     <x-navbar />
 
     <main class="flex-grow">
-        <x-page-context-nav />
         <x-page-standard-hero />
         @yield('content')
         {{ $slot ?? '' }}

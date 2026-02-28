@@ -2,14 +2,38 @@
 
 @section('content')
     <main id="main">
-        <x-page-subhero eyebrow="Capacitación / Cursos" title="Oferta de Cursos y Diplomados"
-            subtitle="Programas certificados de actualización y especialización para obstetras en ejercicio."
+        <x-page-subhero eyebrow="Capacitación / Cursos" title="Cursos para práctica obstétrica y crecimiento laboral"
+            subtitle="Seleccione cursos según necesidad clínica, objetivo profesional y disponibilidad horaria."
             icon="cast_for_education" backRoute="capacitacion" backLabel="Volver a Capacitación" />
 
         <section class="inst-section inst-bg-light-grid bg-background-light">
             <div class="max-w-7xl mx-auto inst-stack">
+                <x-page-section-intro eyebrow="Cómo elegir" title="Antes de inscribirse, valide estas 3 variables"
+                    subtitle="Objetivo clínico, modalidad compatible con su turno y fecha de inicio realista." />
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+                    <article class="inst-card p-5 border border-primary/15">
+                        <p class="inst-kicker">Variable 1</p>
+                        <p class="font-bold text-text-main mt-1">Aplicación inmediata</p>
+                        <p class="text-sm text-text-main mt-2">Priorice cursos que mejoren decisiones clínicas en su guardia actual.</p>
+                    </article>
+                    <article class="inst-card p-5 border border-primary/15">
+                        <p class="inst-kicker">Variable 2</p>
+                        <p class="font-bold text-text-main mt-1">Compatibilidad horaria</p>
+                        <p class="text-sm text-text-main mt-2">Revise modalidad y carga para evitar deserción por turnos rotativos.</p>
+                    </article>
+                    <article class="inst-card p-5 border border-primary/15">
+                        <p class="inst-kicker">Variable 3</p>
+                        <p class="font-bold text-text-main mt-1">Valor curricular</p>
+                        <p class="text-sm text-text-main mt-2">Elija programas que sumen para ascensos, concursos o docencia.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="inst-section inst-bg-light-grid bg-white">
+            <div class="max-w-7xl mx-auto inst-stack">
                 <x-page-section-intro eyebrow="Programas vigentes" title="Cursos disponibles para inscripción"
-                    subtitle="Esta lista se actualiza automáticamente según fechas de inscripción y ejecución." />
+                    subtitle="Información operativa para decidir y matricularse con rapidez." />
 
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-7">
                     @forelse ($currentCourses as $item)
@@ -25,28 +49,37 @@
                             <ul class="space-y-1 text-sm text-text-main">
                                 <li><strong>Inicio:</strong> {{ $item['start_date'] }}</li>
                                 <li><strong>Modalidad:</strong> {{ $item['modality'] }}</li>
+                                <li><strong>Duración:</strong> {{ $item['duration'] }}</li>
                                 <li><strong>Vacantes:</strong> {{ $item['seats'] }}</li>
                             </ul>
-                            <a href="{{ route('capacitacion.programa', ['slug' => $item['slug']]) }}"
-                                class="inst-btn-primary !py-2.5 !text-sm !w-full">Ver detalle</a>
+                            <div class="flex gap-2">
+                                <a href="{{ route('capacitacion.programa', ['slug' => $item['slug']]) }}"
+                                    class="inst-btn-primary !py-2.5 !text-sm !w-full">Ver detalle</a>
+                                <a href="{{ route('contacto') }}"
+                                    class="inst-btn-secondary !py-2.5 !text-sm !w-full">Asesoría</a>
+                            </div>
                         </article>
                     @empty
                         <p class="text-text-main md:col-span-2 xl:col-span-3">No hay cursos vigentes en este momento.</p>
                     @endforelse
                 </div>
+            </div>
+        </section>
 
+        <section class="inst-section inst-bg-light-grid bg-background-light">
+            <div class="max-w-7xl mx-auto inst-stack">
                 <article class="inst-card p-6 md:p-8 border border-primary/20 bg-white">
                     <div class="flex flex-wrap items-end justify-between gap-3">
                         <div>
                             <p class="inst-kicker">Histórico</p>
                             <h3 class="text-2xl font-black text-text-main">Cursos finalizados</h3>
-                            <p class="text-text-main mt-1">Las ediciones pasadas se conservan en archivo para consulta.</p>
+                            <p class="text-text-main mt-1">Útiles para revisar enfoque temático y esperar próxima edición.</p>
                         </div>
                         <a href="{{ route('capacitacion.archivo') }}" class="inst-btn-secondary !py-2.5">Ver archivo completo</a>
                     </div>
                     @if (!empty($archivedCourses))
                         <ul class="mt-5 divide-y divide-primary/15 border border-primary/15">
-                            @foreach (array_slice($archivedCourses, 0, 4) as $item)
+                            @foreach (array_slice($archivedCourses, 0, 5) as $item)
                                 <li class="p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                                     <div>
                                         <p class="font-bold text-text-main">{{ $item['title'] }}</p>

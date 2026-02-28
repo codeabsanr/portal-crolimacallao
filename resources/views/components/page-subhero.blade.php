@@ -27,47 +27,47 @@
     $themes = [
         'tramites' => [
             'label' => 'Trámites',
-            'accentText' => 'text-[#f6c24f]',
-            'accentDivider' => 'bg-[#f6c24f]',
-            'chipClasses' => 'border-[#f6c24f]/70 bg-[#f6c24f]/12 text-[#f6c24f]',
-            'iconRing' => 'border-[#f6c24f]/35 bg-[#f6c24f]/12',
-            'iconText' => 'text-[#f6c24f]/70',
+            'accentText' => 'text-brand-gold-light',
+            'accentDivider' => 'bg-brand-gold-light',
+            'chipClasses' => 'border-brand-gold-light/70 bg-brand-gold-soft/15 text-brand-gold-light',
+            'iconRing' => 'border-brand-gold-light/35 bg-brand-gold-soft/15',
+            'iconText' => 'text-brand-gold-light/70',
             'traceClass' => 'inst-trace-invert-a',
         ],
         'capacitacion' => [
             'label' => 'Capacitación',
-            'accentText' => 'text-[#75d6ff]',
-            'accentDivider' => 'bg-[#75d6ff]',
-            'chipClasses' => 'border-[#75d6ff]/70 bg-[#75d6ff]/12 text-[#75d6ff]',
-            'iconRing' => 'border-[#75d6ff]/35 bg-[#75d6ff]/12',
-            'iconText' => 'text-[#75d6ff]/70',
+            'accentText' => 'text-brand-gold-light',
+            'accentDivider' => 'bg-brand-gold-light',
+            'chipClasses' => 'border-brand-gold-light/70 bg-brand-gold-soft/15 text-brand-gold-light',
+            'iconRing' => 'border-brand-gold-light/35 bg-brand-gold-soft/15',
+            'iconText' => 'text-brand-gold-light/70',
             'traceClass' => 'inst-trace-invert-b',
         ],
         'colegiados' => [
             'label' => 'Colegiados',
-            'accentText' => 'text-[#7ce0b4]',
-            'accentDivider' => 'bg-[#7ce0b4]',
-            'chipClasses' => 'border-[#7ce0b4]/70 bg-[#7ce0b4]/12 text-[#7ce0b4]',
-            'iconRing' => 'border-[#7ce0b4]/35 bg-[#7ce0b4]/12',
-            'iconText' => 'text-[#7ce0b4]/70',
+            'accentText' => 'text-brand-gold-light',
+            'accentDivider' => 'bg-brand-gold-light',
+            'chipClasses' => 'border-brand-gold-light/70 bg-brand-gold-soft/15 text-brand-gold-light',
+            'iconRing' => 'border-brand-gold-light/35 bg-brand-gold-soft/15',
+            'iconText' => 'text-brand-gold-light/70',
             'traceClass' => 'inst-trace-invert-a',
         ],
         'actualidad' => [
             'label' => 'Actualidad',
-            'accentText' => 'text-[#ffb07a]',
-            'accentDivider' => 'bg-[#ffb07a]',
-            'chipClasses' => 'border-[#ffb07a]/70 bg-[#ffb07a]/12 text-[#ffb07a]',
-            'iconRing' => 'border-[#ffb07a]/35 bg-[#ffb07a]/12',
-            'iconText' => 'text-[#ffb07a]/70',
+            'accentText' => 'text-brand-gold-light',
+            'accentDivider' => 'bg-brand-gold-light',
+            'chipClasses' => 'border-brand-gold-light/70 bg-brand-gold-soft/15 text-brand-gold-light',
+            'iconRing' => 'border-brand-gold-light/35 bg-brand-gold-soft/15',
+            'iconText' => 'text-brand-gold-light/70',
             'traceClass' => 'inst-trace-invert-b',
         ],
         'normativa' => [
             'label' => 'Normativa',
-            'accentText' => 'text-[#a5c9ff]',
-            'accentDivider' => 'bg-[#a5c9ff]',
-            'chipClasses' => 'border-[#a5c9ff]/70 bg-[#a5c9ff]/12 text-[#a5c9ff]',
-            'iconRing' => 'border-[#a5c9ff]/35 bg-[#a5c9ff]/12',
-            'iconText' => 'text-[#a5c9ff]/70',
+            'accentText' => 'text-brand-gold-light',
+            'accentDivider' => 'bg-brand-gold-light',
+            'chipClasses' => 'border-brand-gold-light/70 bg-brand-gold-soft/15 text-brand-gold-light',
+            'iconRing' => 'border-brand-gold-light/35 bg-brand-gold-soft/15',
+            'iconText' => 'text-brand-gold-light/70',
             'traceClass' => 'inst-trace-invert-a',
         ],
         'default' => [
@@ -86,7 +86,7 @@
 
 <section class="relative overflow-hidden inst-bg-brand-grid {{ $theme['traceClass'] }} text-white">
     {{-- Barra decorativa dorada superior --}}
-    <div class="absolute inset-x-0 top-0 h-[3px] bg-[linear-gradient(90deg,#dba93b_0%,#ba7c00_46%,#f3cc79_100%)]"></div>
+    <div class="absolute inset-x-0 top-0 h-[3px] bg-brand-gold"></div>
 
     {{-- Capas de profundidad --}}
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_72%_44%,rgba(102,2,25,0.12),transparent_56%)] pointer-events-none"></div>
