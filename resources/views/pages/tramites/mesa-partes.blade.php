@@ -1,27 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-<main id="main">
-    <section class="py-10 md:py-14 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-6">
-                <div class="inst-card p-6 md:p-8">
-                    <h2 class="inst-section-title mb-4">Enviar expediente</h2>
-                    <form class="space-y-3">
-                        <input type="text" class="inst-input" placeholder="Asunto" />
-                        <textarea class="inst-input min-h-[120px]" placeholder="Descripcion breve"></textarea>
-                        <button type="button" class="inst-btn-primary w-full sm:w-auto">Registrar envio</button>
-                    </form>
-                </div>
-                <aside class="inst-card p-6 md:p-8 border-primary/30 bg-primary/5">
-                    <h3 class="text-slate-900">Estado de seguimiento</h3>
-                    <p class="text-slate-700 mt-2">Codigo simulado: MP-2026-00421</p>
-                    <p class="text-sm text-slate-600 mt-2">Ultima actualizacion: En revision documentaria.</p>
-                    <a href="{{ route('contacto') }}" class="inst-btn-secondary mt-4">Contactar mesa de partes</a>
-                </aside>
-            </div>
-        </div>
-    </section>
-</main>
-@endsection
+    <main id="main">
+        <x-page-subhero eyebrow="Trámites / Mesa de Partes" title="Mesa de Partes Virtual"
+            subtitle="Registre, envíe y haga seguimiento de sus expedientes administrativos de forma digital, sin necesidad de acudir a sede."
+            icon="forward_to_inbox" backRoute="tramites" backLabel="Volver al catálogo" />
 
+        <section class="py-10 md:py-14 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-6">
+                    <div class="inst-card p-6 md:p-8">
+                        <x-page-section-intro eyebrow="Envío digital" title="Enviar expediente"
+                            subtitle="Complete los datos del expediente y regístrelo para iniciar el proceso de revisión." />
+                        <form class="space-y-3">
+                            <input type="text" class="inst-input" placeholder="Asunto" />
+                            <textarea class="inst-input min-h-[120px]" placeholder="Descripción breve"></textarea>
+                            <button type="button" class="inst-btn-primary w-full sm:w-auto">Registrar envío</button>
+                        </form>
+                    </div>
+                    <aside class="inst-card p-6 md:p-8 border-primary/30 bg-primary/5">
+                        <p class="text-xs uppercase tracking-[0.14em] text-primary font-bold mb-2">Seguimiento</p>
+                        <h3 class="text-slate-900 text-xl font-black">Estado de seguimiento</h3>
+                        <div class="mt-3 h-[3px] w-12 bg-brand-gold-light"></div>
+                        <p class="text-slate-700 mt-4">Código simulado: <strong>MP-2026-00421</strong></p>
+                        <p class="text-sm text-slate-600 mt-2">Última actualización: En revisión documentaria.</p>
+                        <a href="{{ route('contacto') }}" class="inst-btn-secondary mt-5">Contactar mesa de partes</a>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+@endsection

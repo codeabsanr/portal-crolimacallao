@@ -1,20 +1,36 @@
 @extends('layouts.app')
 
 @section('content')
-<main id="main">
-    <section class="py-10 md:py-14 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="inst-card p-6 md:p-8 border-t-4 border-primary">
-                <h2 class="inst-section-title mb-5">Checklist de requisitos</h2>
-                <ul class="space-y-3 text-slate-700">
-                    <li class="border border-slate-200 p-3">Solicitud simple firmada.</li>
-                    <li class="border border-slate-200 p-3">Constancia de no adeudo institucional.</li>
-                    <li class="border border-slate-200 p-3">Voucher de pago por derecho de tramite.</li>
-                </ul>
-                <a href="{{ route('tramites') }}#habilidad" class="inst-btn-primary mt-6">Volver al catalogo</a>
-            </div>
-        </div>
-    </section>
-</main>
-@endsection
+    <main id="main">
+        <x-page-subhero eyebrow="Trámites / Habilidad profesional" title="Certificado de Habilidad Profesional"
+            subtitle="Requisitos, plazos y proceso de emisión y renovación del certificado con validación institucional."
+            icon="verified" backRoute="tramites" backLabel="Volver al catálogo" />
 
+        <section class="py-10 md:py-14 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="inst-card p-6 md:p-8 border-t-4 border-primary">
+                    <x-page-section-intro eyebrow="Documentación" title="Checklist de requisitos"
+                        subtitle="Prepare los siguientes documentos antes de iniciar su solicitud para agilizar el proceso." />
+                    <ul class="space-y-3 text-slate-700">
+                        <li class="flex items-start gap-3 border border-slate-200 p-3">
+                            <span
+                                class="material-icons-outlined text-primary mt-0.5 text-base">check_box_outline_blank</span>
+                            <span>Solicitud simple firmada.</span>
+                        </li>
+                        <li class="flex items-start gap-3 border border-slate-200 p-3">
+                            <span
+                                class="material-icons-outlined text-primary mt-0.5 text-base">check_box_outline_blank</span>
+                            <span>Constancia de no adeudo institucional.</span>
+                        </li>
+                        <li class="flex items-start gap-3 border border-slate-200 p-3">
+                            <span
+                                class="material-icons-outlined text-primary mt-0.5 text-base">check_box_outline_blank</span>
+                            <span>Voucher de pago por derecho de trámite.</span>
+                        </li>
+                    </ul>
+                    <a href="{{ route('tramites') }}#habilidad" class="inst-btn-primary mt-6">Volver al catálogo</a>
+                </div>
+            </div>
+        </section>
+    </main>
+@endsection

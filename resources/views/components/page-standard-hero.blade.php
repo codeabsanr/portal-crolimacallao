@@ -134,7 +134,30 @@
 
     $hero = $map[$routeName] ?? null;
 
-    if (!$hero && is_string($routeName)) {
+    // Subpages with their own x-page-subhero should NOT inherit the parent section hero
+    $subheroRoutes = [
+        'tramites.habilidad',
+        'tramites.colegiatura',
+        'tramites.registros',
+        'tramites.carne',
+        'tramites.mesa-partes',
+        'capacitacion.cursos',
+        'capacitacion.calendario',
+        'capacitacion.congresos',
+        'capacitacion.aula-virtual',
+        'colegiados.buscador',
+        'colegiados.listados',
+        'colegiados.guia',
+        'normativa.leyes',
+        'normativa.reglamentos',
+        'normativa.guias',
+        'normativa.repositorio',
+        'actualidad.noticias',
+        'actualidad.eventos',
+        'actualidad.comunicados',
+    ];
+
+    if (!$hero && is_string($routeName) && !in_array($routeName, $subheroRoutes)) {
         $prefixFallbacks = [
             'institucional.' => 'institucional',
             'tramites.' => 'tramites',
@@ -155,41 +178,51 @@
 @endphp
 
 @if ($hero)
-    @php($cta1Href = $hero['cta1']['href'] ?? (!empty($hero['cta1']['route']) ? route($hero['cta1']['route']) : null))
-    @php($cta2Href = $hero['cta2']['href'] ?? (!empty($hero['cta2']['route']) ? route($hero['cta2']['route']) : null))
-    @php($cta1IsAnchor = is_string($cta1Href) && str_starts_with($cta1Href, '#'))
+@php($cta1Href = $hero['cta1']['href'] ?? (!empty($hero['cta1']['route']) ? route($hero['cta1']['route']) : null))
+@php($cta2Href = $hero['cta2']['href'] ?? (!empty($hero['cta2']['route']) ? route($hero['cta2']['route']) : null))
+@php($cta1IsAnchor = is_string($cta1Href) && str_starts_with($cta1Href, '#'))
 
-    <section class="relative overflow-hidden min-h-0 bg-transparent">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-                <div class="lg:col-span-7 flex self-start">
-                    <div class="w-full rounded-sm border border-slate-200 bg-white p-5 sm:p-6 md:p-7 shadow-inst">
-                        <p class="text-xs sm:text-sm font-bold uppercase tracking-[0.14em] text-primary">{{ $hero['eyebrow'] }}</p>
-                        <h1 class="mt-3 text-3xl md:text-4xl font-black tracking-tight leading-tight text-secondary">{{ $hero['title'] }}</h1>
-                        <div class="mt-3 h-[3px] w-20 bg-brand-gold-light"></div>
-                        <p class="mt-4 text-base md:text-lg leading-relaxed text-slate-700">{{ $hero['summary'] }}</p>
+<section class="relative overflow-hidden bg-inst-hero text-white">
+    <div class="absolute inset-0 bg-inst-hero-overlay opacity-60 mix-blend-overlay"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 sm:py-16 md:py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <div class="lg:col-span-7 flex self-start">
+                <div class="w-full">
+                    <p
+                        class="text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-brand-gold-light drop-shadow-sm">
+                        {{ $hero['eyebrow'] }}
+                    </p>
+                    <h1
+                        class="mt-3 text-3xl md:text-5xl font-black tracking-tight leading-tight text-white drop-shadow-sm">
+                        {{ $hero['title'] }}
+                    </h1>
+                    <div class="mt-4 h-[3px] w-20 bg-brand-gold-light"></div>
+                    <p class="mt-5 text-base md:text-lg leading-relaxed text-white/90 drop-shadow-sm">
+                        {{ $hero['summary'] }}
+                    </p>
 
-                        <div class="mt-6 flex flex-col sm:flex-row gap-2.5">
-                            @if (!empty($hero['cta1']['text']) && $cta1Href)
-                                <a href="{{ $cta1Href }}" class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-sm bg-brand-gold px-5 py-2.5 text-sm sm:text-base font-bold text-primary transition-colors hover:bg-brand-gold-light {{ $routeName === 'contacto' && $cta1IsAnchor ? 'inst-btn-scroll-guide' : '' }}">
-                                    <span>{{ $hero['cta1']['text'] }}</span>
-                                    @if ($routeName === 'contacto' && $cta1IsAnchor)
-                                        <span aria-hidden="true" class="material-icons-outlined text-lg">south</span>
-                                    @endif
-                                </a>
-                            @endif
-                            @if (!empty($hero['cta2']['text']) && $cta2Href)
-                                <a href="{{ $cta2Href }}" class="inline-flex min-h-[44px] items-center justify-center rounded-sm border border-primary px-5 py-2.5 text-sm sm:text-base font-bold text-primary transition-colors hover:bg-brand-gold-soft">
-                                    {{ $hero['cta2']['text'] }}
-                                </a>
-                            @endif
-                        </div>
+                    <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                        @if (!empty($hero['cta1']['text']) && $cta1Href)
+                            <a href="{{ $cta1Href }}"
+                                class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-sm bg-brand-gold px-6 py-2.5 text-sm sm:text-base font-bold text-primary transition-colors hover:bg-brand-gold-light shadow-lg hover:shadow-xl {{ $routeName === 'contacto' && $cta1IsAnchor ? 'inst-btn-scroll-guide' : '' }}">
+                                <span>{{ $hero['cta1']['text'] }}</span>
+                                @if ($routeName === 'contacto' && $cta1IsAnchor)
+                                    <span aria-hidden="true" class="material-icons-outlined text-lg">south</span>
+                                @endif
+                            </a>
+                        @endif
+                        @if (!empty($hero['cta2']['text']) && $cta2Href)
+                            <a href="{{ $cta2Href }}"
+                                class="inline-flex min-h-[44px] items-center justify-center rounded-sm border border-brand-gold-light/40 bg-white/5 px-6 py-2.5 text-sm sm:text-base font-bold text-white transition-colors hover:bg-white/10 hover:border-brand-gold-light backdrop-blur-sm">
+                                {{ $hero['cta2']['text'] }}
+                            </a>
+                        @endif
                     </div>
                 </div>
+            </div>
 
-                <aside class="lg:col-span-5 flex self-start">
-                    <div
-                        x-data="{
+            <aside class="lg:col-span-5 flex flex-col self-start gap-2.5">
+                <div x-data="{
                             ads: @js($heroAds),
                             current: 0,
                             timer: null,
@@ -223,64 +256,60 @@
                                     this.timer = null;
                                 }
                             }
-                        }"
-                        x-init="start()"
-                        @mouseenter="stop()"
-                        @mouseleave="schedule()"
-                        class="w-full rounded-sm border border-slate-200 bg-white shadow-inst overflow-hidden"
-                    >
-                        <div class="relative inst-hero-ads-stage">
-                            <template x-for="(ad, idx) in ads" :key="idx">
-                                <article
-                                    class="absolute inset-0 transition-all duration-500 ease-[cubic-bezier(.2,.7,.2,1)]"
-                                    :class="idx === current ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-1 pointer-events-none'"
-                                    :aria-hidden="idx === current ? 'false' : 'true'"
-                                >
-                                    <div class="absolute inset-0 bg-slate-900"></div>
-                                    <img :src="ad.image" :alt="ad.titulo" class="absolute inset-0 h-full w-full object-contain object-center">
-                                    <div class="absolute inset-0" :style="`background: ${ad.overlay};`"></div>
-                                    <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/72 via-black/15 to-transparent"></div>
-                                    <div class="relative z-10 h-full flex items-end p-4 sm:p-5">
-                                        <a
-                                            :href="ad.cta_href"
-                                            class="inline-flex min-h-[44px] w-fit items-center justify-center rounded-sm px-4 py-2 text-sm font-bold text-white transition-colors"
-                                            :class="{
-                                                'bg-primary hover:bg-primary-dark': ad.tone === 'informacion',
-                                                'bg-cyan-700 hover:bg-cyan-800': ad.tone === 'desarrollo',
-                                                'bg-emerald-700 hover:bg-emerald-800': ad.tone === 'calendario',
-                                                'bg-brand-gold hover:bg-brand-gold-light !text-white': ad.tone === 'tramites',
-                                                'bg-indigo-700 hover:bg-indigo-800': ad.tone === 'normativa'
-                                            }"
-                                            x-text="ad.cta_text"
-                                        ></a>
-                                    </div>
-                                </article>
-                            </template>
+                        }" x-init="start()" @mouseenter="stop()" @mouseleave="schedule()">
 
-                            <div class="inst-hero-ads-dots" aria-label="Indicadores de publicidad">
-                                <template x-for="(ad, idx) in ads" :key="`dot-${idx}`">
-                                    <button
-                                        type="button"
-                                        @click="go(idx)"
-                                        class="inst-hero-ads-dot"
-                                        :class="idx === current ? 'is-active' : ''"
-                                        :aria-label="`Ir a publicidad ${idx + 1}`"
-                                        :aria-current="idx === current ? 'true' : 'false'"
-                                    >
-                                        <template x-if="idx === current">
-                                            <span
-                                                class="inst-hero-ads-dot-progress"
-                                                :key="`progress-${idx}-${progressKey}`"
-                                                :style="reducedMotion ? '' : `animation: heroDotDrain ${ads[current]?.duration_ms ?? 6000}ms linear forwards;`"
-                                            ></span>
-                                        </template>
-                                    </button>
-                                </template>
-                            </div>
+                    {{-- ── Card visual: imagen full-bleed ───────────────── --}}
+                    <div class="relative inst-hero-ads-stage rounded-sm overflow-hidden
+                                shadow-[0_22px_40px_-20px_rgba(0,0,0,0.65)] ring-1 ring-white/10 group">
+
+                        <template x-for="(ad, idx) in ads" :key="idx">
+                            <article
+                                class="absolute inset-0 transition-all duration-500 ease-[cubic-bezier(.2,.7,.2,1)]"
+                                :class="idx === current ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-1 pointer-events-none'"
+                                :aria-hidden="idx === current ? 'false' : 'true'">
+                                <div class="absolute inset-0 bg-slate-900"></div>
+                                <img :src="ad.image" :alt="ad.titulo"
+                                    class="absolute inset-0 h-full w-full object-contain object-center">
+                                <div class="absolute inset-0" :style="`background: ${ad.overlay};`"></div>
+
+                                {{-- Badge de categoría — top left --}}
+                                <div class="absolute top-3 left-3 z-10">
+                                    <span class="inline-flex px-2.5 py-1 text-[10px] font-black uppercase
+                                                 tracking-[0.12em] text-white bg-primary rounded-sm shadow"
+                                        x-text="ad.tipo"></span>
+                                </div>
+                            </article>
+                        </template>
+
+                        {{-- Dots navegación --}}
+                        <div class="inst-hero-ads-dots" aria-label="Indicadores de publicidad">
+                            <template x-for="(ad, idx) in ads" :key="`dot-${idx}`">
+                                <button type="button" @click="go(idx)" class="inst-hero-ads-dot"
+                                    :class="idx === current ? 'is-active' : ''"
+                                    :aria-label="`Ir a publicidad ${idx + 1}`"
+                                    :aria-current="idx === current ? 'true' : 'false'">
+                                    <template x-if="idx === current">
+                                        <span class="inst-hero-ads-dot-progress" :key="`progress-${idx}-${progressKey}`"
+                                            :style="reducedMotion ? '' : `animation: heroDotDrain ${ads[current]?.duration_ms ?? 6000}ms linear forwards;`"></span>
+                                    </template>
+                                </button>
+                            </template>
                         </div>
                     </div>
-                </aside>
-            </div>
+
+                    {{-- ── CTA fuera del card ────────────────────────────── --}}
+                    <a :href="ads[current].cta_href" class="flex w-full items-center justify-center gap-2 min-h-[44px] px-5 py-3
+                              text-sm font-bold uppercase tracking-[0.1em] text-white
+                              transition-all duration-200 hover:-translate-y-[1px] hover:opacity-90 shadow" :class="{
+                           'bg-primary hover:bg-primary-dark':          ads[current].tone === 'informacion',
+                           'bg-cyan-700 hover:bg-cyan-800':             ads[current].tone === 'desarrollo',
+                           'bg-emerald-700 hover:bg-emerald-800':       ads[current].tone === 'calendario',
+                           'bg-brand-gold hover:bg-brand-gold-light':   ads[current].tone === 'tramites',
+                           'bg-indigo-700 hover:bg-indigo-800':         ads[current].tone === 'normativa'
+                       }" x-text="ads[current].cta_text"></a>
+                </div>
+            </aside>
         </div>
-    </section>
+    </div>
+</section>
 @endif

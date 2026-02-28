@@ -1,19 +1,42 @@
 @extends('layouts.app')
 
 @section('content')
-<main id="main">
-    <section class="py-10 md:py-14 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="inst-card p-6 md:p-8 border-t-4 border-primary">
-                <h2 class="inst-section-title mb-5">Agenda de congresos 2026</h2>
-                <ul class="space-y-3 text-slate-700">
-                    <li class="border border-slate-200 p-4">Congreso Regional de Obstetricia - Lima | Junio 2026</li>
-                    <li class="border border-slate-200 p-4">Encuentro de Salud Materna - Callao | Agosto 2026</li>
-                    <li class="border border-slate-200 p-4">Foro de Innovacion Obstetrica - Nacional | Octubre 2026</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-</main>
-@endsection
+    <main id="main">
+        <x-page-subhero eyebrow="Capacitación / Congresos" title="Congresos y Jornadas Científicas"
+            subtitle="Eventos académicos regionales y nacionales de obstetricia para fortalecer el conocimiento profesional."
+            icon="festival" backRoute="capacitacion" backLabel="Volver a Capacitación" />
 
+        <section class="py-10 md:py-14 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="inst-card p-6 md:p-8 border-t-4 border-primary">
+                    <x-page-section-intro eyebrow="Eventos 2026" title="Agenda de congresos"
+                        subtitle="Participe en los eventos científicos más importantes del año para su especialidad." />
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 border border-slate-200 p-4">
+                            <span class="material-icons-outlined text-primary mt-0.5">event</span>
+                            <div>
+                                <p class="font-bold text-slate-900">Congreso Regional de Obstetricia — Lima</p>
+                                <p class="text-sm text-slate-600 mt-1">Junio 2026 | Presencial</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 border border-slate-200 p-4">
+                            <span class="material-icons-outlined text-primary mt-0.5">event</span>
+                            <div>
+                                <p class="font-bold text-slate-900">Encuentro de Salud Materna — Callao</p>
+                                <p class="text-sm text-slate-600 mt-1">Agosto 2026 | Híbrido</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 border border-slate-200 p-4">
+                            <span class="material-icons-outlined text-primary mt-0.5">event</span>
+                            <div>
+                                <p class="font-bold text-slate-900">Foro de Innovación Obstétrica — Nacional</p>
+                                <p class="text-sm text-slate-600 mt-1">Octubre 2026 | Virtual</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="{{ route('contacto') }}" class="inst-btn-primary mt-6">Consultar inscripción</a>
+                </div>
+            </div>
+        </section>
+    </main>
+@endsection

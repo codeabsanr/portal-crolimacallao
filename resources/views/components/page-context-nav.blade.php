@@ -64,7 +64,18 @@
     $currentLabel = $currentLabel ?? ($context['currentLabel'] ?? null);
 @endphp
 
-@if ($currentLabel && !request()->routeIs('home'))
+@php
+    $subheroRoutes = [
+        'tramites.habilidad', 'tramites.colegiatura', 'tramites.registros',
+        'tramites.carne', 'tramites.mesa-partes',
+        'capacitacion.cursos', 'capacitacion.calendario',
+        'capacitacion.congresos', 'capacitacion.aula-virtual',
+        'colegiados.buscador', 'colegiados.listados', 'colegiados.guia',
+        'normativa.leyes', 'normativa.reglamentos', 'normativa.guias', 'normativa.repositorio',
+        'actualidad.noticias', 'actualidad.eventos', 'actualidad.comunicados',
+    ];
+@endphp
+@if ($currentLabel && !request()->routeIs('home') && !in_array($routeName, $subheroRoutes))
     <section class="relative border-b border-[#C8D6EA] bg-[#EAF1FB]">
         <div class="absolute inset-x-0 top-0 h-[2px] bg-[linear-gradient(90deg,#D4A62A_0%,#BA7C00_48%,#D4A62A_100%)]"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">

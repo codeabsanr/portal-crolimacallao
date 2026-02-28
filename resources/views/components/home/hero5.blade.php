@@ -9,33 +9,47 @@
         <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_40%,rgba(255,255,255,0.32)_64%,rgba(255,255,255,0.82)_82%,rgba(255,255,255,0.97)_100%),radial-gradient(circle_at_14%_90%,rgba(255,255,255,0.98)_0%,rgba(255,255,255,0.88)_22%,rgba(255,255,255,0)_52%),radial-gradient(circle_at_44%_92%,rgba(255,255,255,0.98)_0%,rgba(255,255,255,0.9)_20%,rgba(255,255,255,0)_50%),radial-gradient(circle_at_74%_90%,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.84)_22%,rgba(255,255,255,0)_50%),radial-gradient(circle_at_96%_88%,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.74)_20%,rgba(255,255,255,0)_48%)]"
             style="clip-path: polygon(0 48%, 38% 52%, 100% 62%, 100% 100%, 0 100%);"></div>
     </div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-6 md:pt-8 md:pb-8 relative z-10 min-h-[inherit] flex items-end">
+    <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-6 md:pt-8 md:pb-8 relative z-10 min-h-[inherit] flex items-end">
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-8 lg:gap-10 w-full">
             <div class="relative min-h-[300px] md:min-h-[320px] flex items-end justify-start py-2 md:flex-1">
-                <div class="w-full max-w-2xl rounded-md border border-slate-300/80 bg-white/90 backdrop-blur-sm p-4 sm:p-6 md:p-7 shadow-[0_20px_40px_-28px_rgba(15,23,42,0.58)]">
-                    <div class="inline-flex items-center px-3 py-1 mb-4 text-[10px] sm:text-[11px] font-bold tracking-[0.14em] text-primary-dark uppercase bg-white border border-slate-300 rounded-md">
+                <div
+                    class="w-full max-w-2xl rounded-md border border-slate-300/80 bg-white/90 backdrop-blur-sm p-4 sm:p-6 md:p-7 shadow-[0_20px_40px_-28px_rgba(15,23,42,0.58)]">
+                    <div
+                        class="inline-flex items-center px-3 py-1 mb-4 text-[10px] sm:text-[11px] font-bold tracking-[0.14em] text-primary-dark uppercase bg-white border border-slate-300 rounded-md">
                         Portal institucional
                     </div>
-                    <h1 class="mb-4 leading-[1.08] tracking-[-0.02em] text-primary-dark text-[1.8rem] sm:text-[2.15rem] lg:text-[2.4rem] xl:text-[2.55rem]">
+                    <h1
+                        class="mb-4 leading-[1.08] tracking-[-0.02em] text-primary-dark text-[1.8rem] sm:text-[2.15rem] lg:text-[2.4rem] xl:text-[2.55rem]">
                         Servicios y trámites para la
                         <span class="block text-[#9a6600]">Comunidad Obstétrica</span>
                     </h1>
-                    <p class="text-slate-700 mb-6 max-w-xl text-[0.92rem] sm:text-[0.98rem] md:text-[1rem] leading-relaxed">
-                        Bienvenido al portal del CRO III Lima-Callao. Realice sus consultas, inscripciones y trámites administrativos de manera clara y segura.
+                    <p
+                        class="text-slate-700 mb-6 max-w-xl text-[0.92rem] sm:text-[0.98rem] md:text-[1rem] leading-relaxed">
+                        Bienvenido al portal del CRO III Lima-Callao. Realice sus consultas, inscripciones y trámites
+                        administrativos de manera clara y segura.
                     </p>
-                    <div class="inst-card p-2 max-w-xl flex flex-col sm:flex-row gap-2 border border-slate-300 bg-white transition-[box-shadow,border-color] duration-300 ease-[cubic-bezier(.2,.7,.2,1)] hover:border-primary/35 hover:shadow-[0_10px_26px_-16px_rgba(15,23,42,0.46)]">
+                    <div
+                        class="inst-card p-2 max-w-xl flex flex-col sm:flex-row gap-2 border border-slate-300 bg-white transition-[box-shadow,border-color] duration-300 ease-[cubic-bezier(.2,.7,.2,1)] hover:border-primary/35 hover:shadow-[0_10px_26px_-16px_rgba(15,23,42,0.46)]">
                         <div class="relative flex-grow">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <span class="material-icons-outlined text-primary/55">search</span>
                             </div>
-                            <input class="inst-input !border-transparent !shadow-none !py-3 !pl-12 placeholder:!text-slate-500 focus:!ring-primary/30" placeholder="¿Qué trámite desea realizar hoy?" type="text" />
+                            <input
+                                class="inst-input !border-transparent !shadow-none !py-3 !pl-12 placeholder:!text-slate-500 focus:!ring-primary/30"
+                                placeholder="¿Qué trámite desea realizar hoy?" type="text" />
                         </div>
-                        <button class="inst-btn-primary !px-6 !text-sm w-full sm:w-auto hover:-translate-y-[1px]">Buscar</button>
+                        <button
+                            class="inst-btn-primary !px-6 !text-sm w-full sm:w-auto hover:-translate-y-[1px]">Buscar</button>
                     </div>
                     <p class="mt-4 text-[0.78rem] sm:text-sm text-slate-600">
-                        Ejemplos: <a class="underline text-primary transition-colors duration-200 hover:text-primary-dark" href="{{ route('tramites') }}#colegiatura">Colegiatura</a>,
-                        <a class="underline text-primary transition-colors duration-200 hover:text-primary-dark" href="{{ route('tramites') }}#habilidad">Habilidad profesional</a>,
-                        <a class="underline text-primary transition-colors duration-200 hover:text-primary-dark" href="{{ route('tramites') }}#registros">Certificados</a>
+                        Ejemplos: <a
+                            class="underline text-primary transition-colors duration-200 hover:text-primary-dark"
+                            href="{{ route('tramites') }}#colegiatura">Colegiatura</a>,
+                        <a class="underline text-primary transition-colors duration-200 hover:text-primary-dark"
+                            href="{{ route('tramites') }}#habilidad">Habilidad profesional</a>,
+                        <a class="underline text-primary transition-colors duration-200 hover:text-primary-dark"
+                            href="{{ route('tramites') }}#registros">Certificados</a>
                     </p>
                 </div>
             </div>
@@ -44,7 +58,31 @@
                 panel-class="hidden md:block w-full md:w-[280px] self-end md:ml-auto border-white/30 shadow-[0_22px_40px_-28px_rgba(2,6,23,0.7)]" />
         </div>
     </div>
+
+    {{-- Scroll indicator --}}
+    <div id="hero-scroll-indicator" class="absolute bottom-5 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1
+                text-slate-500/70 pointer-events-none select-none transition-opacity duration-500" aria-hidden="true">
+        <span class="text-[9px] font-bold uppercase tracking-[0.18em]">Desplazar</span>
+        <span class="material-icons-outlined text-xl animate-bounce">expand_more</span>
+    </div>
 </section>
+
+<script>
+    (function () {
+        var el = document.getElementById('hero-scroll-indicator');
+        if (!el) return;
+        var hidden = false;
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 60 && !hidden) {
+                el.style.opacity = '0';
+                hidden = true;
+            } else if (window.scrollY <= 60 && hidden) {
+                el.style.opacity = '1';
+                hidden = false;
+            }
+        }, { passive: true });
+    })();
+</script>
 
 <section class="md:hidden bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 py-4">
@@ -55,7 +93,7 @@
 </section>
 
 <script>
-    (function() {
+    (function () {
         if (window.__heroFaceAutoCropInit) {
             return;
         }
