@@ -37,7 +37,10 @@
         'capacitacion.calendario' => ['sectionLabel' => 'Capacitación', 'sectionRoute' => 'capacitacion', 'parentLabel' => 'Oferta de capacitación', 'parentRoute' => 'capacitacion', 'currentLabel' => 'Calendario'],
         'capacitacion.cursos' => ['sectionLabel' => 'Capacitación', 'sectionRoute' => 'capacitacion', 'parentLabel' => 'Oferta de capacitación', 'parentRoute' => 'capacitacion', 'currentLabel' => 'Cursos'],
         'capacitacion.congresos' => ['sectionLabel' => 'Capacitación', 'sectionRoute' => 'capacitacion', 'parentLabel' => 'Oferta de capacitación', 'parentRoute' => 'capacitacion', 'currentLabel' => 'Congresos'],
+        'capacitacion.archivo' => ['sectionLabel' => 'Capacitación', 'sectionRoute' => 'capacitacion', 'parentLabel' => 'Oferta de capacitación', 'parentRoute' => 'capacitacion', 'currentLabel' => 'Archivo'],
         'capacitacion.aula-virtual' => ['sectionLabel' => 'Capacitación', 'sectionRoute' => 'capacitacion', 'parentLabel' => 'Oferta de capacitación', 'parentRoute' => 'capacitacion', 'currentLabel' => 'Aula virtual'],
+        'capacitacion.programa' => ['sectionLabel' => 'Capacitación', 'sectionRoute' => 'capacitacion', 'parentLabel' => 'Oferta de capacitación', 'parentRoute' => 'capacitacion', 'currentLabel' => 'Detalle de programa'],
+        'capacitacion.programa.preview' => ['sectionLabel' => 'Capacitación', 'sectionRoute' => 'capacitacion', 'parentLabel' => 'Oferta de capacitación', 'parentRoute' => 'capacitacion', 'currentLabel' => 'Vista previa'],
 
         'actualidad' => ['sectionLabel' => 'Actualidad', 'sectionRoute' => 'actualidad', 'currentLabel' => 'Portada de actualidad'],
         'actualidad.noticias' => ['sectionLabel' => 'Actualidad', 'sectionRoute' => 'actualidad', 'parentLabel' => 'Portada de actualidad', 'parentRoute' => 'actualidad', 'currentLabel' => 'Noticias'],
@@ -69,49 +72,49 @@
         'tramites.habilidad', 'tramites.colegiatura', 'tramites.registros',
         'tramites.carne', 'tramites.mesa-partes',
         'capacitacion.cursos', 'capacitacion.calendario',
-        'capacitacion.congresos', 'capacitacion.aula-virtual',
+        'capacitacion.congresos', 'capacitacion.archivo', 'capacitacion.aula-virtual', 'capacitacion.programa', 'capacitacion.programa.preview',
         'colegiados.buscador', 'colegiados.listados', 'colegiados.guia',
         'normativa.leyes', 'normativa.reglamentos', 'normativa.guias', 'normativa.repositorio',
         'actualidad.noticias', 'actualidad.eventos', 'actualidad.comunicados',
     ];
 @endphp
 @if ($currentLabel && !request()->routeIs('home') && !in_array($routeName, $subheroRoutes))
-    <section class="relative border-b border-primary/10 bg-gradient-to-b from-white via-white to-primary-tint/35">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-7">
-            <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+    <section class="relative border-b border-primary/15 bg-gradient-to-b from-white via-white to-primary-tint/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-5">
+            <div class="flex flex-col gap-2.5 md:flex-row md:items-center md:justify-between">
                 <nav aria-label="Breadcrumb"
-                    class="rounded-md border border-slate-200/80 bg-white/90 px-4 py-3 text-sm text-text-main shadow-[0_12px_30px_-26px_rgba(15,23,42,0.65)] backdrop-blur-sm md:text-[0.95rem]">
-                    <ol class="flex flex-wrap items-center gap-y-2 gap-x-1.5">
+                    class="rounded-none border border-primary/20 bg-white px-3 py-2 text-xs text-text-main shadow-[0_10px_24px_-26px_rgba(77,2,19,0.55)] backdrop-blur-sm md:text-sm">
+                    <ol class="flex flex-wrap items-center gap-y-1 gap-x-1">
                         <li><a href="{{ route('home') }}"
-                                class="inline-flex items-center rounded-full px-2.5 py-1 font-medium text-text-main transition-colors duration-150 hover:bg-primary-tint hover:text-primary">Inicio</a>
+                                class="inline-flex min-h-[34px] items-center rounded-none border border-transparent px-2 py-1 font-semibold text-text-main transition-colors duration-150 hover:border-primary/25 hover:bg-primary-tint hover:text-primary">Inicio</a>
                         </li>
-                        <li class="text-text-main">
-                            <span class="material-icons-outlined text-[1rem] leading-none">chevron_right</span>
+                        <li class="text-primary/65">
+                            <span class="material-icons-outlined text-[0.95rem] leading-none">chevron_right</span>
                         </li>
                         @if ($sectionLabel && $sectionRoute && !request()->routeIs($sectionRoute))
                             <li><a href="{{ route($sectionRoute) }}"
-                                    class="inline-flex items-center rounded-full px-2.5 py-1 font-medium text-text-main transition-colors duration-150 hover:bg-primary-tint hover:text-primary">{{ $sectionLabel }}</a>
+                                    class="inline-flex min-h-[34px] items-center rounded-none border border-transparent px-2 py-1 font-semibold text-text-main transition-colors duration-150 hover:border-primary/25 hover:bg-primary-tint hover:text-primary">{{ $sectionLabel }}</a>
                             </li>
-                            <li class="text-text-main">
-                                <span class="material-icons-outlined text-[1rem] leading-none">chevron_right</span>
+                            <li class="text-primary/65">
+                                <span class="material-icons-outlined text-[0.95rem] leading-none">chevron_right</span>
                             </li>
                         @elseif ($sectionLabel)
-                            <li class="inline-flex items-center rounded-full bg-primary-tint px-2.5 py-1 font-medium text-primary">
+                            <li class="inline-flex min-h-[34px] items-center rounded-none bg-primary-tint px-2 py-1 font-medium text-primary">
                                 {{ $sectionLabel }}
                             </li>
-                            <li class="text-text-main">
-                                <span class="material-icons-outlined text-[1rem] leading-none">chevron_right</span>
+                            <li class="text-primary/65">
+                                <span class="material-icons-outlined text-[0.95rem] leading-none">chevron_right</span>
                             </li>
                         @endif
                         @if ($parentLabel && $parentRoute)
                             <li><a href="{{ route($parentRoute) }}"
-                                    class="inline-flex items-center rounded-full px-2.5 py-1 font-medium text-text-main transition-colors duration-150 hover:bg-primary-tint hover:text-primary">{{ $parentLabel }}</a>
+                                    class="inline-flex min-h-[34px] items-center rounded-none border border-transparent px-2 py-1 font-semibold text-text-main transition-colors duration-150 hover:border-primary/25 hover:bg-primary-tint hover:text-primary">{{ $parentLabel }}</a>
                             </li>
-                            <li class="text-text-main">
-                                <span class="material-icons-outlined text-[1rem] leading-none">chevron_right</span>
+                            <li class="text-primary/65">
+                                <span class="material-icons-outlined text-[0.95rem] leading-none">chevron_right</span>
                             </li>
                         @endif
-                        <li class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-1 font-semibold text-text-main"
+                        <li class="inline-flex min-h-[34px] items-center rounded-none border border-primary/25 bg-primary-tint px-2 py-1 font-semibold text-primary-dark"
                             aria-current="page">{{ $currentLabel }}</li>
                     </ol>
                 </nav>
@@ -124,9 +127,9 @@
                 @endphp
                 @if ($showBackButton)
                     <a href="{{ route($backRoute) }}"
-                        class="group inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md border border-primary/20 bg-white px-4 py-2.5 text-sm font-semibold text-primary-dark shadow-[0_12px_24px_-20px_rgba(77,2,19,0.55)] transition-[border-color,background-color,color,transform,box-shadow] duration-200 ease-out hover:-translate-y-[1px] hover:border-primary/40 hover:bg-primary-tint/60 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-2">
+                        class="group inline-flex min-h-[40px] items-center justify-center gap-1.5 rounded-none border border-primary/20 bg-white px-3 py-2 text-xs font-semibold text-primary-dark shadow-[0_12px_24px_-20px_rgba(77,2,19,0.55)] transition-[border-color,background-color,color,transform,box-shadow] duration-200 ease-out hover:-translate-y-[1px] hover:border-primary/40 hover:bg-primary-tint/60 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-2 md:text-sm">
                         <span
-                            class="inline-flex size-7 items-center justify-center rounded-full bg-primary-tint text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                            class="inline-flex items-center justify-center text-primary transition-colors group-hover:text-primary-dark">
                             <span class="material-icons-outlined text-base leading-none">arrow_back</span>
                         </span>
                         <span class="whitespace-nowrap">Volver a {{ $backLabel }}</span>

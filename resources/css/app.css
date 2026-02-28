@@ -50,6 +50,18 @@
     }
 }
 
+@keyframes instScrollCueArrow {
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.38;
+    }
+    50% {
+        transform: translateY(4px);
+        opacity: 1;
+    }
+}
+
 :root {
     color-scheme: light;
     --inst-primary: #660219;
@@ -158,10 +170,14 @@ h6 {
 @layer components {
     .inst-bg-brand-grid {
         @apply relative isolate overflow-hidden;
+        --inst-brand-trace:
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 900 900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M642 118c-69 27-121 87-130 160-8 56 12 114 56 150 33 28 76 44 120 43 41-1 80-15 112-41' stroke='white' stroke-opacity='.72' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M500 186c-83 50-131 138-126 234 5 101 66 188 159 227 68 28 146 24 210-9' stroke='white' stroke-opacity='.52' stroke-width='2.1' stroke-linecap='round'/%3E%3C/svg%3E");
+        --inst-brand-trace-pos: right -80px top -20px;
+        --inst-brand-trace-size: min(58vw, 620px) auto;
         background-image:
-            radial-gradient(circle at 78% 12%, rgba(102, 2, 25, 0.1), transparent 34%),
-            radial-gradient(circle at 10% 88%, rgba(186, 124, 0, 0.09), transparent 26%),
-            linear-gradient(180deg, #ffffff 0%, #fffefe 64%, #fefbfd 100%);
+            radial-gradient(circle at 72% 8%, rgba(186, 124, 0, 0.16), transparent 38%),
+            radial-gradient(circle at 18% 84%, rgba(255, 255, 255, 0.08), transparent 42%),
+            linear-gradient(120deg, #4d0213 0%, #660219 42%, #8c0f2f 72%, #660219 100%);
     }
 
     .inst-bg-brand-grid::before {
@@ -170,10 +186,10 @@ h6 {
         inset: 0;
         pointer-events: none;
         background-image:
-            linear-gradient(rgba(102, 2, 25, 0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(102, 2, 25, 0.05) 1px, transparent 1px);
-        background-size: 42px 42px;
-        opacity: 0.34;
+            linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+        background-size: 38px 38px;
+        opacity: 0.5;
     }
 
     .inst-bg-brand-grid::after {
@@ -181,16 +197,19 @@ h6 {
         position: absolute;
         inset: 0;
         pointer-events: none;
-        background:
-            url("data:image/svg+xml,%3Csvg viewBox='0 0 900 900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M642 118c-69 27-121 87-130 160-8 56 12 114 56 150 33 28 76 44 120 43 41-1 80-15 112-41' stroke='%23660219' stroke-width='2.6' stroke-linecap='round'/%3E%3Cpath d='M500 186c-83 50-131 138-126 234 5 101 66 188 159 227 68 28 146 24 210-9' stroke='%23BA7C00' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M384 300c-64 43-104 117-102 194 1 71 37 140 96 180 74 51 174 58 255 20' stroke='%238c0f2f' stroke-width='2.1' stroke-linecap='round'/%3E%3Ccircle cx='688' cy='196' r='8' fill='%23660219'/%3E%3Ccircle cx='724' cy='236' r='6' fill='%23BA7C00'/%3E%3C/svg%3E");
+        background-image: var(--inst-brand-trace);
         background-repeat: no-repeat;
-        background-position: right -80px top -20px;
-        background-size: min(58vw, 620px) auto;
-        opacity: 0.16;
+        background-position: var(--inst-brand-trace-pos);
+        background-size: var(--inst-brand-trace-size);
+        opacity: 0.2;
     }
 
     .inst-bg-light-grid {
         @apply relative isolate overflow-hidden;
+        --inst-light-trace:
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 840 840' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M174 610c38-44 58-102 53-161-6-71-48-137-109-174' stroke='%238c0f2f' stroke-width='1.8' stroke-linecap='round'/%3E%3Cpath d='M234 654c58-28 105-81 127-145 24-69 17-148-20-211' stroke='%23660219' stroke-width='1.8' stroke-linecap='round'/%3E%3Cpath d='M300 680c64-10 124-46 165-99 45-57 64-131 54-203' stroke='%23BA7C00' stroke-width='1.7' stroke-linecap='round'/%3E%3C/svg%3E");
+        --inst-light-trace-pos: left -120px bottom -140px;
+        --inst-light-trace-size: min(44vw, 520px) auto;
         background-image:
             radial-gradient(circle at 84% 12%, rgba(102, 2, 25, 0.06), transparent 28%),
             radial-gradient(circle at 8% 90%, rgba(186, 124, 0, 0.06), transparent 24%),
@@ -214,12 +233,84 @@ h6 {
         position: absolute;
         inset: 0;
         pointer-events: none;
-        background:
-            url("data:image/svg+xml,%3Csvg viewBox='0 0 840 840' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M174 610c38-44 58-102 53-161-6-71-48-137-109-174' stroke='%238c0f2f' stroke-width='1.8' stroke-linecap='round'/%3E%3Cpath d='M234 654c58-28 105-81 127-145 24-69 17-148-20-211' stroke='%23660219' stroke-width='1.8' stroke-linecap='round'/%3E%3Cpath d='M300 680c64-10 124-46 165-99 45-57 64-131 54-203' stroke='%23BA7C00' stroke-width='1.7' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-image: var(--inst-light-trace);
         background-repeat: no-repeat;
-        background-position: left -120px bottom -140px;
-        background-size: min(44vw, 520px) auto;
+        background-position: var(--inst-light-trace-pos);
+        background-size: var(--inst-light-trace-size);
         opacity: 0.14;
+    }
+
+    /* Componentized trace variants for light backgrounds */
+    .inst-trace-a {
+        --inst-light-trace:
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 860 860' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M180 620c56-54 82-136 67-213-10-53-38-101-79-138' stroke='%23660219' stroke-width='1.9' stroke-linecap='round'/%3E%3Cpath d='M260 674c78-26 142-86 174-161 29-69 27-148-4-216' stroke='%23BA7C00' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+        --inst-light-trace-pos: left -120px bottom -140px;
+        --inst-light-trace-size: min(44vw, 520px) auto;
+    }
+
+    .inst-trace-b {
+        --inst-light-trace:
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 860 860' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M712 220c-49 43-79 107-78 173 0 62 27 123 74 164' stroke='%238c0f2f' stroke-width='1.9' stroke-linecap='round'/%3E%3Cpath d='M640 184c-74 29-133 90-161 164-25 66-22 140 8 202' stroke='%23660219' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+        --inst-light-trace-pos: right -130px top -90px;
+        --inst-light-trace-size: min(42vw, 500px) auto;
+    }
+
+    .inst-trace-c {
+        --inst-light-trace:
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 860 860' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M120 300c78 20 147 79 184 149 35 66 44 146 24 219' stroke='%23BA7C00' stroke-width='1.8' stroke-linecap='round'/%3E%3Cpath d='M88 236c102 34 188 114 227 214' stroke='%23660219' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+        --inst-light-trace-pos: left -140px top -80px;
+        --inst-light-trace-size: min(40vw, 480px) auto;
+    }
+
+    .inst-trace-d {
+        --inst-light-trace:
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 860 860' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M730 610c-80-26-147-89-182-164-31-67-34-144-9-211' stroke='%238c0f2f' stroke-width='1.8' stroke-linecap='round'/%3E%3Cpath d='M764 548c-104-36-186-122-220-227' stroke='%23660219' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+        --inst-light-trace-pos: right -140px bottom -150px;
+        --inst-light-trace-size: min(40vw, 490px) auto;
+    }
+
+    /* Inverted variants for dark/brand backgrounds */
+    .inst-trace-invert-a {
+        --inst-brand-trace:
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 900 900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M642 118c-69 27-121 87-130 160-8 56 12 114 56 150 33 28 76 44 120 43 41-1 80-15 112-41' stroke='white' stroke-opacity='.72' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M500 186c-83 50-131 138-126 234 5 101 66 188 159 227 68 28 146 24 210-9' stroke='white' stroke-opacity='.52' stroke-width='2.1' stroke-linecap='round'/%3E%3C/svg%3E");
+        --inst-brand-trace-pos: right -80px top -20px;
+        --inst-brand-trace-size: min(58vw, 620px) auto;
+    }
+
+    .inst-trace-invert-b {
+        --inst-brand-trace:
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 900 900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M210 690c62-52 101-130 103-212 2-72-25-143-75-195' stroke='white' stroke-opacity='.64' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M304 728c80-30 146-92 181-167 33-69 37-149 11-221' stroke='white' stroke-opacity='.48' stroke-width='2.1' stroke-linecap='round'/%3E%3C/svg%3E");
+        --inst-brand-trace-pos: left -110px bottom -100px;
+        --inst-brand-trace-size: min(52vw, 560px) auto;
+    }
+
+    /* Automatic variation by section position */
+    main > section.inst-bg-light-grid:nth-of-type(4n + 1) {
+        --inst-light-trace:
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 860 860' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M180 620c56-54 82-136 67-213-10-53-38-101-79-138' stroke='%23660219' stroke-width='1.9' stroke-linecap='round'/%3E%3Cpath d='M260 674c78-26 142-86 174-161 29-69 27-148-4-216' stroke='%23BA7C00' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+        --inst-light-trace-pos: left -120px bottom -140px;
+        --inst-light-trace-size: min(44vw, 520px) auto;
+    }
+
+    main > section.inst-bg-light-grid:nth-of-type(4n + 2) {
+        --inst-light-trace:
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 860 860' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M712 220c-49 43-79 107-78 173 0 62 27 123 74 164' stroke='%238c0f2f' stroke-width='1.9' stroke-linecap='round'/%3E%3Cpath d='M640 184c-74 29-133 90-161 164-25 66-22 140 8 202' stroke='%23660219' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+        --inst-light-trace-pos: right -130px top -90px;
+        --inst-light-trace-size: min(42vw, 500px) auto;
+    }
+
+    main > section.inst-bg-light-grid:nth-of-type(4n + 3) {
+        --inst-light-trace:
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 860 860' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M120 300c78 20 147 79 184 149 35 66 44 146 24 219' stroke='%23BA7C00' stroke-width='1.8' stroke-linecap='round'/%3E%3Cpath d='M88 236c102 34 188 114 227 214' stroke='%23660219' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+        --inst-light-trace-pos: left -140px top -80px;
+        --inst-light-trace-size: min(40vw, 480px) auto;
+    }
+
+    main > section.inst-bg-light-grid:nth-of-type(4n + 4) {
+        --inst-light-trace:
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 860 860' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M730 610c-80-26-147-89-182-164-31-67-34-144-9-211' stroke='%238c0f2f' stroke-width='1.8' stroke-linecap='round'/%3E%3Cpath d='M764 548c-104-36-186-122-220-227' stroke='%23660219' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+        --inst-light-trace-pos: right -140px bottom -150px;
+        --inst-light-trace-size: min(40vw, 490px) auto;
     }
 
     .inst-btn {
@@ -359,27 +450,118 @@ h6 {
     }
 
     .inst-scroll-assist-label {
-        @apply text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500;
+        @apply text-[11px] font-semibold uppercase tracking-[0.12em] text-primary/80;
     }
 
     .inst-bottom-dock {
-        @apply inline-flex min-h-[52px] items-center gap-1.5 rounded-md border border-slate-200/90 bg-white/95 px-2 py-1.5 shadow-[0_10px_26px_-16px_rgba(15,23,42,0.45)] backdrop-blur-sm;
+        @apply flex items-center gap-1.5;
+    }
+
+    .inst-bottom-dock--right-only {
+        @apply justify-end;
+    }
+
+    .inst-bottom-dock-slot {
+        @apply flex min-h-[44px];
+    }
+
+    .inst-bottom-dock-slot--left {
+        @apply justify-start;
+    }
+
+    .inst-bottom-dock-slot--center {
+        @apply justify-center;
+    }
+
+    .inst-bottom-dock-slot--right {
+        @apply justify-end;
     }
 
     .inst-bottom-dock-btn {
-        @apply inline-flex min-h-[42px] items-center justify-center gap-1 rounded-sm border border-transparent bg-transparent px-2.5 sm:px-3 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.12em] text-slate-600 transition-[background-color,color,border-color] duration-200;
+        @apply inline-flex min-h-[40px] min-w-[7.1rem] items-center justify-center gap-1.5 rounded-none border border-primary/30 bg-white/70 px-2.5 sm:px-3 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] text-primary-dark shadow-[0_8px_18px_-14px_rgba(77,2,19,0.45)] backdrop-blur-sm opacity-75 transition-[background-color,color,border-color,opacity,transform,box-shadow] duration-200;
     }
 
     .inst-bottom-dock-btn:hover {
-        @apply border-slate-200 bg-slate-50 text-slate-800;
+        @apply -translate-y-px border-primary/55 bg-white text-primary opacity-100 shadow-[0_10px_22px_-14px_rgba(77,2,19,0.6)];
     }
 
-    .inst-bottom-dock-pill {
-        @apply inline-flex min-h-[42px] min-w-[128px] items-center justify-center rounded-sm border border-slate-200 bg-slate-50/80 px-1;
+    .inst-bottom-dock-btn--center {
+        @apply border-primary/20 bg-transparent text-primary opacity-55;
     }
 
-    .inst-bottom-dock-segment {
-        @apply inline-flex min-h-[36px] items-center justify-center gap-1 px-2.5 text-slate-600 transition-colors duration-200 hover:text-slate-800;
+    .inst-bottom-dock-btn--center:hover {
+        @apply border-primary bg-primary text-white opacity-100;
+    }
+
+    .inst-bottom-dock-btn[aria-expanded="true"] {
+        @apply border-primary bg-primary text-white opacity-100;
+    }
+
+    .inst-bottom-dock-btn--edge-left {
+        @apply min-w-[6.9rem] border-l-0 bg-white/80 text-primary-dark opacity-95;
+    }
+
+    .inst-bottom-dock-btn--icon-square {
+        @apply min-w-0 w-10 px-0 border-primary/35 bg-white/80 text-primary-dark opacity-95;
+    }
+
+    .inst-bottom-dock-btn--surface-dark {
+        @apply border-white/40 bg-black/45 text-white opacity-100 shadow-[0_12px_22px_-14px_rgba(0,0,0,0.75)];
+    }
+
+    .inst-bottom-dock-btn--surface-dark:hover {
+        @apply border-brand-gold-light bg-black/60 text-white;
+    }
+
+    .inst-bottom-dock-btn--help {
+        @apply border-primary bg-primary text-white opacity-100;
+    }
+
+    .inst-bottom-dock-btn--help:hover {
+        @apply border-primary-dark bg-primary-dark text-white;
+    }
+
+    .inst-bottom-dock-btn .inst-scroll-assist-label {
+        @apply text-current;
+    }
+
+    @media (max-width: 640px) {
+        .inst-bottom-dock-btn {
+            @apply min-w-[5.85rem] px-2 text-[10px];
+        }
+
+        .inst-bottom-dock-btn--icon-square {
+            @apply min-w-0 w-10 px-0;
+        }
+    }
+
+    .inst-scroll-cue-btn {
+        @apply mt-2 inline-flex min-h-[44px] w-fit flex-col items-start justify-center gap-0.5 px-1 py-1 text-left text-white/90 transition-colors duration-200;
+    }
+
+    .inst-scroll-cue-btn:hover {
+        @apply text-white;
+    }
+
+    .inst-scroll-cue-btn:focus-visible {
+        @apply outline-none ring-2 ring-brand-gold-light/70 ring-offset-2 ring-offset-primary-dark;
+    }
+
+    .inst-scroll-cue-label {
+        @apply text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.13em];
+    }
+
+    .inst-scroll-cue-arrows {
+        @apply -mt-0.5 inline-flex flex-col items-center leading-none;
+    }
+
+    .inst-scroll-cue-icon {
+        @apply -my-1 text-[18px] sm:text-[20px] leading-none text-brand-gold-light;
+        animation: instScrollCueArrow 1.15s cubic-bezier(.2,.7,.2,1) infinite;
+    }
+
+    .inst-scroll-cue-icon--delay {
+        animation-delay: 0.18s;
     }
 }
 
@@ -510,6 +692,10 @@ html.a11y-text-2 .text-3xl {
 
 @media (prefers-reduced-motion: reduce) {
     .inst-help-fab.is-idle {
+        animation: none !important;
+    }
+
+    .inst-scroll-cue-icon {
         animation: none !important;
     }
 }

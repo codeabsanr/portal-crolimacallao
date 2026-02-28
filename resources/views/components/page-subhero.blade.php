@@ -9,23 +9,95 @@
 
 @php
     $backHref = $backRoute ? route($backRoute) : null;
+    $routeName = request()->route()?->getName() ?? '';
+
+    $sectionKey = 'default';
+    if (str_starts_with($routeName, 'tramites.')) {
+        $sectionKey = 'tramites';
+    } elseif (str_starts_with($routeName, 'capacitacion.')) {
+        $sectionKey = 'capacitacion';
+    } elseif (str_starts_with($routeName, 'colegiados.')) {
+        $sectionKey = 'colegiados';
+    } elseif (str_starts_with($routeName, 'actualidad.')) {
+        $sectionKey = 'actualidad';
+    } elseif (str_starts_with($routeName, 'normativa.')) {
+        $sectionKey = 'normativa';
+    }
+
+    $themes = [
+        'tramites' => [
+            'label' => 'Trámites',
+            'accentText' => 'text-[#f6c24f]',
+            'accentDivider' => 'bg-[#f6c24f]',
+            'chipClasses' => 'border-[#f6c24f]/70 bg-[#f6c24f]/12 text-[#f6c24f]',
+            'iconRing' => 'border-[#f6c24f]/35 bg-[#f6c24f]/12',
+            'iconText' => 'text-[#f6c24f]/70',
+            'traceClass' => 'inst-trace-invert-a',
+        ],
+        'capacitacion' => [
+            'label' => 'Capacitación',
+            'accentText' => 'text-[#75d6ff]',
+            'accentDivider' => 'bg-[#75d6ff]',
+            'chipClasses' => 'border-[#75d6ff]/70 bg-[#75d6ff]/12 text-[#75d6ff]',
+            'iconRing' => 'border-[#75d6ff]/35 bg-[#75d6ff]/12',
+            'iconText' => 'text-[#75d6ff]/70',
+            'traceClass' => 'inst-trace-invert-b',
+        ],
+        'colegiados' => [
+            'label' => 'Colegiados',
+            'accentText' => 'text-[#7ce0b4]',
+            'accentDivider' => 'bg-[#7ce0b4]',
+            'chipClasses' => 'border-[#7ce0b4]/70 bg-[#7ce0b4]/12 text-[#7ce0b4]',
+            'iconRing' => 'border-[#7ce0b4]/35 bg-[#7ce0b4]/12',
+            'iconText' => 'text-[#7ce0b4]/70',
+            'traceClass' => 'inst-trace-invert-a',
+        ],
+        'actualidad' => [
+            'label' => 'Actualidad',
+            'accentText' => 'text-[#ffb07a]',
+            'accentDivider' => 'bg-[#ffb07a]',
+            'chipClasses' => 'border-[#ffb07a]/70 bg-[#ffb07a]/12 text-[#ffb07a]',
+            'iconRing' => 'border-[#ffb07a]/35 bg-[#ffb07a]/12',
+            'iconText' => 'text-[#ffb07a]/70',
+            'traceClass' => 'inst-trace-invert-b',
+        ],
+        'normativa' => [
+            'label' => 'Normativa',
+            'accentText' => 'text-[#a5c9ff]',
+            'accentDivider' => 'bg-[#a5c9ff]',
+            'chipClasses' => 'border-[#a5c9ff]/70 bg-[#a5c9ff]/12 text-[#a5c9ff]',
+            'iconRing' => 'border-[#a5c9ff]/35 bg-[#a5c9ff]/12',
+            'iconText' => 'text-[#a5c9ff]/70',
+            'traceClass' => 'inst-trace-invert-a',
+        ],
+        'default' => [
+            'label' => 'Institucional',
+            'accentText' => 'text-brand-gold-light',
+            'accentDivider' => 'bg-brand-gold-light',
+            'chipClasses' => 'border-brand-gold-light/70 bg-brand-gold-soft/20 text-brand-gold-light',
+            'iconRing' => 'border-white/15 bg-white/5',
+            'iconText' => 'text-white/25',
+            'traceClass' => 'inst-trace-invert-a',
+        ],
+    ];
+
+    $theme = $themes[$sectionKey] ?? $themes['default'];
 @endphp
 
-<section class="relative overflow-hidden inst-bg-brand-grid text-text-main">
+<section class="relative overflow-hidden inst-bg-brand-grid {{ $theme['traceClass'] }} text-white">
     {{-- Barra decorativa dorada superior --}}
     <div class="absolute inset-x-0 top-0 h-[3px] bg-[linear-gradient(90deg,#dba93b_0%,#ba7c00_46%,#f3cc79_100%)]"></div>
 
     {{-- Capas de profundidad --}}
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_72%_44%,rgba(102,2,25,0.08),transparent_56%)] pointer-events-none"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_24%_88%,rgba(186,124,0,0.08),transparent_40%)] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_72%_44%,rgba(102,2,25,0.12),transparent_56%)] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_24%_88%,rgba(186,124,0,0.1),transparent_40%)] pointer-events-none"></div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center">
             <div class="inst-stack-tight">
-                {{-- Breadcrumb / enlace de regreso --}}
                 @if ($backHref)
                     <a href="{{ $backHref }}"
-                       class="inline-flex min-h-[44px] items-center gap-1.5 text-text-main/80 hover:text-primary text-xs font-semibold uppercase tracking-[0.14em] transition-colors group">
+                        class="inline-flex min-h-[44px] items-center gap-1.5 text-white/75 hover:text-white text-xs font-semibold uppercase tracking-[0.14em] transition-colors group">
                         <span class="material-icons-outlined text-base group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
                         {{ $backLabel }}
                     </a>
@@ -33,37 +105,53 @@
 
                 {{-- Eyebrow --}}
                 @if ($eyebrow)
-                    <p class="inst-eyebrow text-primary drop-shadow-sm">
+                    <p class="inst-eyebrow text-brand-gold-light drop-shadow-sm">
                         {{ $eyebrow }}
                     </p>
                 @endif
 
+                <span class="inline-flex w-fit items-center gap-1.5 border px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.1em] {{ $theme['chipClasses'] }}">
+                    <span class="material-icons-outlined text-sm">verified</span>
+                    {{ $theme['label'] }}
+                </span>
+
                 {{-- Título h1 --}}
                 @if ($title)
-                    <h1 class="inst-title text-text-main">
+                    <h1 class="inst-title text-white">
                         {{ $title }}
                     </h1>
-                    <div class="h-[3px] w-16 bg-primary"></div>
+                    <div class="h-[3px] w-16 {{ $theme['accentDivider'] }}"></div>
                 @endif
 
                 {{-- Subtítulo --}}
                 @if ($subtitle)
-                    <p class="max-w-2xl text-text-main text-sm sm:text-base leading-relaxed">
+                    <p class="max-w-2xl text-white/90 text-sm sm:text-base leading-relaxed">
                         {{ $subtitle }}
                     </p>
                 @endif
+
+                <button type="button"
+                    class="inst-scroll-cue-btn"
+                    aria-label="Desplazar al siguiente contenido"
+                    onclick="window.scrollBy({ top: Math.max(window.innerHeight * 0.72, 420), behavior: 'smooth' });">
+                    <span class="inst-scroll-cue-label">Desplazar</span>
+                    <span class="inst-scroll-cue-arrows" aria-hidden="true">
+                        <span class="material-icons-outlined inst-scroll-cue-icon">expand_more</span>
+                        <span class="material-icons-outlined inst-scroll-cue-icon inst-scroll-cue-icon--delay">expand_more</span>
+                    </span>
+                </button>
             </div>
 
             {{-- Ícono decorativo desktop --}}
             @if ($icon)
-                <div class="hidden lg:flex items-center justify-center w-28 h-28 rounded-full
-                            border border-primary/20 bg-primary-tint/55 backdrop-blur-sm shrink-0"
-                     aria-hidden="true">
-                    <span class="material-icons-outlined text-[3.5rem] text-primary/35">{{ $icon }}</span>
+                <div class="hidden lg:flex items-center justify-center w-28 h-28 rounded-full border backdrop-blur-sm shrink-0 {{ $theme['iconRing'] }}"
+                    aria-hidden="true">
+                    <span class="material-icons-outlined text-[3.5rem] {{ $theme['iconText'] }}">{{ $icon }}</span>
                 </div>
             @endif
         </div>
     </div>
+
 </section>
 
 

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Support\TrainingCatalog;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -39,11 +40,52 @@ Route::view('/colegiados', 'pages.colegiados.index')->name('colegiados');
 Route::view('/colegiados/buscador', 'pages.colegiados.buscador')->name('colegiados.buscador');
 Route::view('/colegiados/listados', 'pages.colegiados.listados')->name('colegiados.listados');
 Route::view('/colegiados/guia', 'pages.colegiados.guia')->name('colegiados.guia');
-Route::view('/capacitacion', 'pages.capacitacion.index')->name('capacitacion');
-Route::view('/capacitacion/calendario', 'pages.capacitacion.calendario')->name('capacitacion.calendario');
-Route::view('/capacitacion/cursos', 'pages.capacitacion.cursos')->name('capacitacion.cursos');
-Route::view('/capacitacion/congresos', 'pages.capacitacion.congresos')->name('capacitacion.congresos');
+Route::get('/capacitacion', function () {
+    $destacados = TrainingCatalog::featuredCurrent();
+    return view('pages.capacitacion.index', compact('destacados'));
+})->name('capacitacion');
+
+Route::get('/capacitacion/calendario', function () {
+    $calendario = TrainingCatalog::calendarCurrent();
+    return view('pages.capacitacion.calendario', compact('calendario'));
+})->name('capacitacion.calendario');
+
+Route::get('/capacitacion/cursos', function () {
+    $currentCourses = TrainingCatalog::current('Curso');
+    $archivedCourses = TrainingCatalog::archived('Curso');
+    return view('pages.capacitacion.cursos', compact('currentCourses', 'archivedCourses'));
+})->name('capacitacion.cursos');
+
+Route::get('/capacitacion/congresos', function () {
+    $currentConferences = TrainingCatalog::current('Conferencia');
+    $archivedConferences = TrainingCatalog::archived('Conferencia');
+    return view('pages.capacitacion.congresos', compact('currentConferences', 'archivedConferences'));
+})->name('capacitacion.congresos');
+
+Route::get('/capacitacion/archivo', function () {
+    $archivedCourses = TrainingCatalog::archived('Curso');
+    $archivedConferences = TrainingCatalog::archived('Conferencia');
+    return view('pages.capacitacion.archivo', compact('archivedCourses', 'archivedConferences'));
+})->name('capacitacion.archivo');
+
 Route::view('/capacitacion/aula-virtual', 'pages.capacitacion.aula-virtual')->name('capacitacion.aula-virtual');
+Route::get('/capacitacion/programa/{slug}/vista-previa', function (string $slug) {
+    $program = TrainingCatalog::find($slug);
+    if (!$program) {
+        abort(404);
+    }
+
+    return view('pages.capacitacion.preview', compact('program', 'slug'));
+})->name('capacitacion.programa.preview');
+
+Route::get('/capacitacion/programa/{slug}', function (string $slug) {
+    $program = TrainingCatalog::find($slug);
+    if (!$program) {
+        abort(404);
+    }
+
+    return view('pages.capacitacion.programa', compact('program', 'slug'));
+})->name('capacitacion.programa');
 Route::view('/obstetras', 'pages.busca-tu-obstetra')->name('obstetras.index');
 Route::get('/obstetras/{cop}', function (string $cop) {
     $mockByCode = [
@@ -138,6 +180,7 @@ Route::get('/sitemap.xml', function () {
         'capacitacion.calendario',
         'capacitacion.cursos',
         'capacitacion.congresos',
+        'capacitacion.archivo',
         'capacitacion.aula-virtual',
         'actualidad',
         'actualidad.noticias',

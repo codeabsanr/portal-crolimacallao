@@ -68,7 +68,7 @@
 
     <section class="pb-8 bg-background-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <x-institucional-quick-links compact="true" />
+            <x-institucional-quick-links :compact="true" />
         </div>
     </section>
 
