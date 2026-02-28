@@ -30,7 +30,7 @@
                             CRO III LIMA - CALLAO
                         </p>
                         <h2 class="inst-section-title">Recuperar contrasena</h2>
-                        <p class="mt-3 text-base md:text-lg text-slate-600">Ingresa tu correo y te enviaremos un enlace para restablecer tu contrasena.</p>
+                        <p class="mt-3 text-base md:text-lg text-text-main">Ingresa tu correo y te enviaremos un enlace para restablecer tu contrasena.</p>
                     </div>
 
                     <x-auth-session-status class="mb-4 rounded-sm border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700" :status="session('status')" />
@@ -38,7 +38,7 @@
                     <form method="POST" action="{{ route('password.email') }}" class="space-y-4">
                         @csrf
                         <div>
-                            <label for="email" class="mb-2 block text-sm font-bold text-slate-700">Correo electronico</label>
+                            <label for="email" class="mb-2 block text-sm font-bold text-text-main">Correo electronico</label>
                             <input id="email" name="email" type="email" value="{{ old('email') }}" required autofocus placeholder="usuario@correo.pe" class="inst-input !bg-primary-tint !border-slate-200">
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
                         </div>
@@ -52,4 +52,6 @@
         </div>
     </main>
 </x-guest-layout>
+
+
 

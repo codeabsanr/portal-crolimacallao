@@ -9,11 +9,11 @@
         <article class="inst-card overflow-hidden">
             <div class="grid lg:grid-cols-[1.15fr_1fr]">
                 <div class="p-6 md:p-8">
-                    <h2 class="text-2xl font-black text-slate-900 mb-4">Marco reglamentario institucional</h2>
-                    <p class="text-slate-700 mb-3">
+                    <h2 class="text-2xl font-black text-text-main mb-4">Marco reglamentario institucional</h2>
+                    <p class="text-text-main mb-3">
                         Los reglamentos ordenan la vida institucional del colegio y orientan procedimientos, responsabilidades y protocolos.
                     </p>
-                    <p class="text-slate-700">
+                    <p class="text-text-main">
                         Este repositorio resume los principales documentos de cumplimiento para gestión directiva, representación y ejercicio profesional.
                     </p>
                 </div>
@@ -22,17 +22,17 @@
         </article>
 
         <article class="inst-card p-6 md:p-8">
-            <h3 class="text-2xl font-black text-slate-900 mb-4">Documentos disponibles</h3>
+            <h3 class="text-2xl font-black text-text-main mb-4">Documentos disponibles</h3>
             <div class="overflow-x-auto">
                 <table class="w-full border border-slate-200 text-sm">
-                    <thead class="bg-primary-tint text-slate-800">
+                    <thead class="bg-primary-tint text-text-main">
                         <tr>
                             <th class="text-left px-4 py-3 border-b border-slate-200">Categoría</th>
                             <th class="text-left px-4 py-3 border-b border-slate-200">Documento</th>
                             <th class="text-left px-4 py-3 border-b border-slate-200">Formato</th>
                         </tr>
                     </thead>
-                    <tbody class="text-slate-700">
+                    <tbody class="text-text-main">
                         <tr class="border-b border-slate-200 hover:bg-primary-mist transition-colors">
                             <td class="px-4 py-3">Institucional</td>
                             <td class="px-4 py-3">Reglamento de insignia y uniforme oficial</td>
@@ -60,14 +60,16 @@
 
         <div class="grid md:grid-cols-2 gap-4">
             <article class="inst-card p-5 border-t-2 border-t-primary hover:shadow-hard transition-all">
-                <p class="font-bold text-slate-900 mb-2">Aplicación institucional</p>
-                <p class="text-sm text-slate-700">Regula procedimientos administrativos, representación y protocolos oficiales.</p>
+                <p class="font-bold text-text-main mb-2">Aplicación institucional</p>
+                <p class="text-sm text-text-main">Regula procedimientos administrativos, representación y protocolos oficiales.</p>
             </article>
             <article class="inst-card p-5 border-t-2 border-t-primary hover:shadow-hard transition-all">
-                <p class="font-bold text-slate-900 mb-2">Actualización y control</p>
-                <p class="text-sm text-slate-700">Todo documento debe revisarse según su vigencia y resoluciones complementarias.</p>
+                <p class="font-bold text-text-main mb-2">Actualización y control</p>
+                <p class="text-sm text-text-main">Todo documento debe revisarse según su vigencia y resoluciones complementarias.</p>
             </article>
         </div>
     </x-institucional-page-shell>
 @endsection
+
+
 

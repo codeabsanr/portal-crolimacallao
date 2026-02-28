@@ -26,16 +26,16 @@
                             <span class="material-icons-outlined text-primary mt-0.5 shrink-0">article</span>
                             <div>
                                 <p class="text-xs uppercase tracking-[0.12em] text-primary font-bold">REG-2026-003</p>
-                                <h3 class="text-slate-900 text-lg">Lineamientos para trámite de colegiatura</h3>
-                                <p class="text-sm text-slate-600">Actualizado: 2026-01-22</p>
+                                <h3 class="text-text-main text-lg">Lineamientos para trámite de colegiatura</h3>
+                                <p class="text-sm text-text-main">Actualizado: 2026-01-22</p>
                             </div>
                         </article>
                         <article class="border border-slate-200 p-4 flex items-start gap-4">
                             <span class="material-icons-outlined text-primary mt-0.5 shrink-0">article</span>
                             <div>
                                 <p class="text-xs uppercase tracking-[0.12em] text-primary font-bold">GUI-2025-011</p>
-                                <h3 class="text-slate-900 text-lg">Manual de mesa de partes virtual</h3>
-                                <p class="text-sm text-slate-600">Actualizado: 2025-11-08</p>
+                                <h3 class="text-text-main text-lg">Manual de mesa de partes virtual</h3>
+                                <p class="text-sm text-text-main">Actualizado: 2025-11-08</p>
                             </div>
                         </article>
                     </div>
@@ -44,4 +44,6 @@
         </section>
     </main>
 @endsection
+
+
 

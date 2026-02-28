@@ -5,8 +5,8 @@
         <section class="border-b border-slate-200 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
                 <p class="text-xs uppercase tracking-[0.16em] text-primary font-bold">Propuesta única de rediseño</p>
-                <h1 class="text-slate-900 mt-2">Hero de contacto con objetivo operativo</h1>
-                <p class="mt-3 text-slate-600 max-w-4xl">
+                <h1 class="text-text-main mt-2">Hero de contacto con objetivo operativo</h1>
+                <p class="mt-3 text-text-main max-w-4xl">
                     <strong>Fin:</strong> que una persona elija canal y ejecute una acción en menos de 20 segundos.
                     La composición prioriza claridad, ruta y confianza institucional.
                 </p>
@@ -65,21 +65,21 @@
 
                             <div class="mt-4 space-y-3">
                                 <div class="inst-card p-4 border-l-4 border-primary">
-                                    <p class="text-xs uppercase tracking-[0.13em] text-slate-500">Teléfono</p>
-                                    <p class="text-2xl font-black text-slate-900 mt-1">+51 982 520 891</p>
+                                    <p class="text-xs uppercase tracking-[0.13em] text-text-main">Teléfono</p>
+                                    <p class="text-2xl font-black text-text-main mt-1">+51 982 520 891</p>
                                 </div>
                                 <div class="inst-card p-4 border-l-4 border-secondary">
-                                    <p class="text-xs uppercase tracking-[0.13em] text-slate-500">Correo</p>
-                                    <p class="text-xl md:text-2xl font-black text-slate-900 mt-1 break-words">tramitedocumentario@crolimacallao.org.pe</p>
+                                    <p class="text-xs uppercase tracking-[0.13em] text-text-main">Correo</p>
+                                    <p class="text-xl md:text-2xl font-black text-text-main mt-1 break-words">tramitedocumentario@crolimacallao.org.pe</p>
                                 </div>
                                 <div class="inst-card p-4 border-l-4 border-brand-gold">
-                                    <p class="text-xs uppercase tracking-[0.13em] text-slate-500">Atención</p>
-                                    <p class="text-2xl font-black text-slate-900 mt-1">Virtual y presencial</p>
+                                    <p class="text-xs uppercase tracking-[0.13em] text-text-main">Atención</p>
+                                    <p class="text-2xl font-black text-text-main mt-1">Virtual y presencial</p>
                                 </div>
                             </div>
 
                             <div class="mt-5 border-t border-slate-200 pt-4">
-                                <p class="text-xs uppercase tracking-[0.14em] text-slate-500">Ruta recomendada</p>
+                                <p class="text-xs uppercase tracking-[0.14em] text-text-main">Ruta recomendada</p>
                                 <div class="mt-2 grid gap-2">
                                     <a href="{{ route('tramites.mesa-partes') }}" class="inst-btn-primary !w-full !justify-between !px-4 !py-2.5">
                                         Enviar documento
@@ -98,4 +98,6 @@
         </section>
     </main>
 @endsection
+
+
 

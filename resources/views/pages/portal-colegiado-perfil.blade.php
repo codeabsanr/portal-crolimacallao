@@ -18,10 +18,10 @@
                     <img src="{{ asset('assets/img/logo-circular.png') }}" alt="Logo CRO III Lima-Callao" class="h-11 w-11 object-contain" />
                     <div class="leading-tight">
                         <p class="text-2xl font-black tracking-tight text-secondary">CRO III LIMA-CALLAO</p>
-                        <p class="text-xs uppercase tracking-[0.18em] text-slate-500">Sistema de Gestion Institucional</p>
+                        <p class="text-xs uppercase tracking-[0.18em] text-text-main">Sistema de Gestion Institucional</p>
                     </div>
                 </div>
-                <p class="inline-flex items-center gap-2 text-sm uppercase tracking-[0.14em] text-slate-500">
+                <p class="inline-flex items-center gap-2 text-sm uppercase tracking-[0.14em] text-text-main">
                     <span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
                     Sistema operativo
                 </p>
@@ -54,7 +54,7 @@
                             <span class="inline-flex items-center rounded-sm border {{ $isHabilitado ? 'border-emerald-300 bg-emerald-50 text-emerald-700' : 'border-primary/20 bg-primary/5 text-primary' }} px-3 py-1 text-xs font-black uppercase tracking-[0.12em]">
                                 {{ $item['habilitado'] }}
                             </span>
-                            <span class="inline-flex items-center rounded-sm border border-slate-300 bg-white px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-slate-700">
+                            <span class="inline-flex items-center rounded-sm border border-slate-300 bg-white px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-text-main">
                                 {{ $item['situacion'] }}
                             </span>
                             <span class="inline-flex items-center rounded-sm border border-primary/20 bg-brand-gold-soft/80 px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-primary">
@@ -62,19 +62,19 @@
                             </span>
                         </div>
 
-                        <p class="mt-3 text-slate-600">{{ $item['resumen'] ?? 'Perfil profesional de consulta publica del colegio.' }}</p>
+                        <p class="mt-3 text-text-main">{{ $item['resumen'] ?? 'Perfil profesional de consulta publica del colegio.' }}</p>
 
                         <div class="mt-4 grid sm:grid-cols-3 gap-3">
                             <div class="border border-slate-200 bg-white p-3">
-                                <p class="text-[11px] uppercase tracking-[0.12em] text-slate-500 font-bold">Experiencia</p>
+                                <p class="text-[11px] uppercase tracking-[0.12em] text-text-main font-bold">Experiencia</p>
                                 <p class="mt-1 text-xl font-black text-secondary">{{ $item['experiencia_anios'] ?? '0' }} anos</p>
                             </div>
                             <div class="border border-slate-200 bg-white p-3">
-                                <p class="text-[11px] uppercase tracking-[0.12em] text-slate-500 font-bold">Modalidad</p>
+                                <p class="text-[11px] uppercase tracking-[0.12em] text-text-main font-bold">Modalidad</p>
                                 <p class="mt-1 text-base font-bold text-secondary">{{ $item['modalidad'] ?? 'No registrado' }}</p>
                             </div>
                             <div class="border border-slate-200 bg-white p-3">
-                                <p class="text-[11px] uppercase tracking-[0.12em] text-slate-500 font-bold">Disponibilidad</p>
+                                <p class="text-[11px] uppercase tracking-[0.12em] text-text-main font-bold">Disponibilidad</p>
                                 <p class="mt-1 text-base font-bold {{ $isHabilitado && $isActivo ? 'text-emerald-700' : 'text-primary' }}">{{ $item['disponibilidad'] ?? 'No registrado' }}</p>
                             </div>
                         </div>
@@ -83,8 +83,8 @@
 
                 <div class="mt-5 grid md:grid-cols-2 gap-4">
                     <section class="border border-slate-200 bg-white p-4">
-                        <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold">Datos profesionales</p>
-                        <div class="mt-3 space-y-2 text-sm text-slate-700">
+                        <p class="text-xs uppercase tracking-[0.12em] text-text-main font-bold">Datos profesionales</p>
+                        <div class="mt-3 space-y-2 text-sm text-text-main">
                             <p><span class="font-bold text-secondary">Carrera:</span> {{ $item['carrera'] }}</p>
                             <p><span class="font-bold text-secondary">Especialidad:</span> {{ $item['especialidad'] }}</p>
                             <p><span class="font-bold text-secondary">Colegiatura desde:</span> {{ $item['colegiatura_desde'] }}</p>
@@ -94,14 +94,14 @@
                         </div>
                     </section>
                     <section class="border border-slate-200 bg-white p-4">
-                        <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold">Ultima experiencia</p>
+                        <p class="text-xs uppercase tracking-[0.12em] text-text-main font-bold">Ultima experiencia</p>
                         <p class="mt-2 text-base font-black text-secondary">{{ $item['ultimo_centro'] ?? 'No registrado' }}</p>
                         <div class="mt-3 space-y-2">
                             @foreach (($item['experiencia'] ?? []) as $job)
                                 <article class="border border-slate-200 bg-primary-mist p-3">
                                     <p class="text-sm font-bold text-secondary">{{ $job['cargo'] }}</p>
-                                    <p class="text-sm text-slate-600">{{ $job['institucion'] }}</p>
-                                    <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold mt-1">{{ $job['periodo'] }}</p>
+                                    <p class="text-sm text-text-main">{{ $job['institucion'] }}</p>
+                                    <p class="text-xs uppercase tracking-[0.12em] text-text-main font-bold mt-1">{{ $job['periodo'] }}</p>
                                 </article>
                             @endforeach
                         </div>
@@ -110,7 +110,7 @@
 
                 <div class="mt-4 grid md:grid-cols-2 gap-4">
                     <section class="border border-slate-200 bg-white p-4">
-                        <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold">Areas de desempeno</p>
+                        <p class="text-xs uppercase tracking-[0.12em] text-text-main font-bold">Areas de desempeno</p>
                         <div class="mt-3 flex flex-wrap gap-2">
                             @foreach (($item['areas'] ?? []) as $area)
                                 <span class="inline-flex rounded-sm border border-primary/20 bg-primary/5 px-2.5 py-1 text-xs font-bold text-primary">{{ $area }}</span>
@@ -118,8 +118,8 @@
                         </div>
                     </section>
                     <section class="border border-slate-200 bg-white p-4">
-                        <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold">Certificaciones</p>
-                        <ul class="mt-3 space-y-2 text-sm text-slate-700">
+                        <p class="text-xs uppercase tracking-[0.12em] text-text-main font-bold">Certificaciones</p>
+                        <ul class="mt-3 space-y-2 text-sm text-text-main">
                             @foreach (($item['certificaciones'] ?? []) as $cert)
                                 <li class="flex items-start gap-2">
                                     <span class="material-icons-outlined text-base text-brand-gold mt-0.5">verified</span>
@@ -134,7 +134,7 @@
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                         <div>
                             <p class="text-xs uppercase tracking-[0.12em] text-primary font-bold">Oportunidades laborales y convenios</p>
-                            <p class="text-sm text-slate-700 mt-1">Conecta perfiles colegiados con vacantes y alianzas institucionales.</p>
+                            <p class="text-sm text-text-main mt-1">Conecta perfiles colegiados con vacantes y alianzas institucionales.</p>
                         </div>
                         <div class="flex gap-2">
                             <a href="{{ route('bolsa.trabajo') }}" class="inst-btn-primary !px-4 !py-2 !text-xs">Ir a bolsa de trabajo</a>
@@ -145,7 +145,7 @@
             </article>
         </div>
 
-        <footer class="relative z-10 mt-auto border-t border-slate-300 bg-white/95 px-6 lg:px-10 py-3.5 text-sm text-slate-500 flex items-center justify-between">
+        <footer class="relative z-10 mt-auto border-t border-slate-300 bg-white/95 px-6 lg:px-10 py-3.5 text-sm text-text-main flex items-center justify-between">
             <span>© {{ date('Y') }} CRO III LIMA-CALLAO</span>
             <span>v2.4.0-release</span>
         </footer>
@@ -191,5 +191,7 @@
     </aside>
 </main>
 @endsection
+
+
 
 

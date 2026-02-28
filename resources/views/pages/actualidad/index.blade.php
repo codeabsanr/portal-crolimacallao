@@ -73,17 +73,17 @@
                             <table class="w-full text-sm">
                                 <thead>
                                     <tr class="text-left border-b border-slate-200">
-                                        <th class="py-2 pr-4 font-bold text-slate-700">Fecha</th>
-                                        <th class="py-2 pr-4 font-bold text-slate-700">Actividad</th>
-                                        <th class="py-2 font-bold text-slate-700">Modalidad</th>
+                                        <th class="py-2 pr-4 font-bold text-text-main">Fecha</th>
+                                        <th class="py-2 pr-4 font-bold text-text-main">Actividad</th>
+                                        <th class="py-2 font-bold text-text-main">Modalidad</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($eventos as $evento)
                                         <tr class="border-b border-slate-100">
-                                            <td class="py-3 pr-4 text-slate-700">{{ $evento['fecha'] }}</td>
-                                            <td class="py-3 pr-4 text-slate-900 font-medium">{{ $evento['actividad'] }}</td>
-                                            <td class="py-3 text-slate-600">{{ $evento['modalidad'] }}</td>
+                                            <td class="py-3 pr-4 text-text-main">{{ $evento['fecha'] }}</td>
+                                            <td class="py-3 pr-4 text-text-main font-medium">{{ $evento['actividad'] }}</td>
+                                            <td class="py-3 text-text-main">{{ $evento['modalidad'] }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -98,7 +98,7 @@
                     <aside class="lg:col-span-2 rounded-xl border border-primary/25 bg-white p-8 shadow-[0_22px_40px_-30px_rgba(15,23,42,0.45)]">
                         <p class="text-xs uppercase tracking-[0.15em] text-primary font-bold mb-2">Comunicados</p>
                         <h3 class="text-secondary text-2xl font-black mb-4">Estado de publicaciones</h3>
-                        <ul class="space-y-3 text-slate-700 text-sm md:text-base">
+                        <ul class="space-y-3 text-text-main text-sm md:text-base">
                             <li class="inline-flex items-start gap-2"><span class="material-icons-outlined text-brand-gold text-base mt-0.5">check_circle</span><span>Canal oficial para avisos administrativos vigentes.</span></li>
                             <li class="inline-flex items-start gap-2"><span class="material-icons-outlined text-brand-gold text-base mt-0.5">check_circle</span><span>Publicaciones de carácter informativo y gremial.</span></li>
                             <li class="inline-flex items-start gap-2"><span class="material-icons-outlined text-brand-gold text-base mt-0.5">check_circle</span><span>Actualización periódica según agenda institucional.</span></li>
@@ -112,5 +112,7 @@
         </section>
     </main>
 @endsection
+
+
 
 

@@ -16,13 +16,15 @@
                         <button class="inst-btn-primary">Consultar</button>
                     </div>
                     <div class="mt-6 border border-slate-200 p-4">
-                        <p class="text-xs uppercase tracking-[0.12em] text-slate-500">Resultado simulado</p>
-                        <p class="text-slate-900 font-bold mt-2">OBS-01425 | María Elena Ramos Cáceres</p>
-                        <p class="text-sm text-slate-600">Estado: Hábil | Vigencia: 31/12/2026 | Región: Lima-Callao</p>
+                        <p class="text-xs uppercase tracking-[0.12em] text-text-main">Resultado simulado</p>
+                        <p class="text-text-main font-bold mt-2">OBS-01425 | María Elena Ramos Cáceres</p>
+                        <p class="text-sm text-text-main">Estado: Hábil | Vigencia: 31/12/2026 | Región: Lima-Callao</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 @endsection
+
+
 

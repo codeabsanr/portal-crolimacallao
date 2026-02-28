@@ -16,8 +16,8 @@
                             class="h-10 w-10 rounded-full bg-primary text-white text-lg font-black flex items-center justify-center mb-4">
                             1</div>
                         <span class="material-icons-outlined text-primary text-2xl mb-2">description</span>
-                        <h3 class="text-slate-900 font-black mt-2">Registro y carga</h3>
-                        <p class="text-sm text-slate-600 mt-2">Ingrese sus datos, cargue los documentos requeridos y
+                        <h3 class="text-text-main font-black mt-2">Registro y carga</h3>
+                        <p class="text-sm text-text-main mt-2">Ingrese sus datos, cargue los documentos requeridos y
                             registre su solicitud en el portal.</p>
                         <a href="{{ route('contacto') }}" class="inst-btn-secondary mt-4 !text-xs !py-2">Solicitar
                             orientación</a>
@@ -27,8 +27,8 @@
                             class="h-10 w-10 rounded-full bg-primary text-white text-lg font-black flex items-center justify-center mb-4">
                             2</div>
                         <span class="material-icons-outlined text-primary text-2xl mb-2">fact_check</span>
-                        <h3 class="text-slate-900 font-black mt-2">Revisión administrativa</h3>
-                        <p class="text-sm text-slate-600 mt-2">Los documentos son validados por el área administrativa. Se
+                        <h3 class="text-text-main font-black mt-2">Revisión administrativa</h3>
+                        <p class="text-sm text-text-main mt-2">Los documentos son validados por el área administrativa. Se
                             emitirán observaciones si corresponde.</p>
                         <a href="{{ route('contacto') }}" class="inst-btn-secondary mt-4 !text-xs !py-2">Consultar
                             estado</a>
@@ -38,8 +38,8 @@
                             class="h-10 w-10 rounded-full bg-primary text-white text-lg font-black flex items-center justify-center mb-4">
                             3</div>
                         <span class="material-icons-outlined text-primary text-2xl mb-2">task_alt</span>
-                        <h3 class="text-slate-900 font-black mt-2">Alta en el padrón</h3>
-                        <p class="text-sm text-slate-600 mt-2">Una vez aprobada, su colegiatura queda registrada. Puede
+                        <h3 class="text-text-main font-black mt-2">Alta en el padrón</h3>
+                        <p class="text-sm text-text-main mt-2">Una vez aprobada, su colegiatura queda registrada. Puede
                             verificar su estado en el buscador oficial.</p>
                         <a href="{{ route('colegiados.buscador') }}" class="inst-btn-secondary mt-4 !text-xs !py-2">Ver
                             buscador</a>
@@ -49,4 +49,6 @@
         </section>
     </main>
 @endsection
+
+
 

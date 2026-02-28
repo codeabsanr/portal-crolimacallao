@@ -14,15 +14,15 @@
                     <ul class="space-y-3">
                         <li class="flex items-start gap-3 border border-slate-200 p-4">
                             <span class="material-icons-outlined text-primary mt-0.5 shrink-0">description</span>
-                            <span class="text-slate-700">Guía para certificación de habilidad profesional.</span>
+                            <span class="text-text-main">Guía para certificación de habilidad profesional.</span>
                         </li>
                         <li class="flex items-start gap-3 border border-slate-200 p-4">
                             <span class="material-icons-outlined text-primary mt-0.5 shrink-0">description</span>
-                            <span class="text-slate-700">Guía de atención administrativa para colegiatura.</span>
+                            <span class="text-text-main">Guía de atención administrativa para colegiatura.</span>
                         </li>
                         <li class="flex items-start gap-3 border border-slate-200 p-4">
                             <span class="material-icons-outlined text-primary mt-0.5 shrink-0">description</span>
-                            <span class="text-slate-700">Guía de archivo documentario y mesa de partes.</span>
+                            <span class="text-text-main">Guía de archivo documentario y mesa de partes.</span>
                         </li>
                     </ul>
                 </div>
@@ -30,4 +30,6 @@
         </section>
     </main>
 @endsection
+
+
 

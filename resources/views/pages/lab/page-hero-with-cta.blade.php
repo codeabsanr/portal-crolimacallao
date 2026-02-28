@@ -3,28 +3,28 @@
 @section('content')
     <main id="main" class="bg-background-light py-8 md:py-10">
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
-            <h1 class="text-slate-900">Page Hero With CTA: Familia A</h1>
-            <p class="text-slate-600 mt-2">Mismo diseño base, distintos tratamientos visuales y pista sutil para guiar el scroll.</p>
+            <h1 class="text-text-main">Page Hero With CTA: Familia A</h1>
+            <p class="text-text-main mt-2">Mismo diseño base, distintos tratamientos visuales y pista sutil para guiar el scroll.</p>
         </section>
 
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 md:space-y-8">
             <article class="inst-card overflow-hidden border-slate-300">
                 <header class="bg-white border-b border-slate-200 px-5 py-3">
-                    <p class="text-sm font-bold text-slate-900">A1: Plano claro (ultra legible)</p>
+                    <p class="text-sm font-bold text-text-main">A1: Plano claro (ultra legible)</p>
                 </header>
                 <div class="bg-white grid lg:grid-cols-[1.05fr_0.95fr] gap-6 p-6 md:p-8">
                     <div>
                         <p class="text-xs uppercase tracking-[0.15em] text-primary font-bold">Usted está en: Contacto</p>
-                        <h2 class="text-slate-900 mt-2 text-4xl md:text-5xl font-black leading-[1.08]">Canales de atención</h2>
-                        <p class="mt-4 text-slate-700 text-base md:text-lg max-w-2xl">Elija el canal correcto para consulta, trámite o seguimiento.</p>
+                        <h2 class="text-text-main mt-2 text-4xl md:text-5xl font-black leading-[1.08]">Canales de atención</h2>
+                        <p class="mt-4 text-text-main text-base md:text-lg max-w-2xl">Elija el canal correcto para consulta, trámite o seguimiento.</p>
                         <div class="mt-6 flex flex-col sm:flex-row gap-3">
                             <a href="{{ route('tramites') }}" class="inst-btn-primary w-full sm:w-auto">Ver trámites</a>
                             <a href="{{ route('tramites.mesa-partes') }}" class="inst-btn-secondary w-full sm:w-auto">Enviar documento</a>
                         </div>
                     </div>
                     <aside class="inst-card p-4 md:p-5 border-primary/20 bg-background-light">
-                        <p class="text-xs uppercase tracking-[0.14em] text-slate-500">¿Te perdiste?</p>
-                        <p class="text-slate-900 font-bold mt-1">Atajos de navegación</p>
+                        <p class="text-xs uppercase tracking-[0.14em] text-text-main">¿Te perdiste?</p>
+                        <p class="text-text-main font-bold mt-1">Atajos de navegación</p>
                         <div class="mt-3 grid sm:grid-cols-2 gap-2">
                             <a href="{{ route('home') }}" class="inst-btn-secondary !px-3 !py-2.5">Volver a inicio</a>
                             <a href="{{ route('institucional') }}" class="inst-btn-secondary !px-3 !py-2.5">Ir a institucional</a>
@@ -33,7 +33,7 @@
                         </div>
                     </aside>
                 </div>
-                <a href="#seccion-siguiente" class="block border-t border-slate-200 bg-background-light px-6 py-3 text-center text-sm text-slate-600 hover:text-primary transition-colors">
+                <a href="#seccion-siguiente" class="block border-t border-slate-200 bg-background-light px-6 py-3 text-center text-sm text-text-main hover:text-primary transition-colors">
                     Desliza para continuar
                     <span class="material-icons-outlined text-base align-middle ml-1 animate-bounce">south</span>
                 </a>
@@ -41,7 +41,7 @@
 
             <article class="inst-card overflow-hidden border-slate-300">
                 <header class="bg-white border-b border-slate-200 px-5 py-3">
-                    <p class="text-sm font-bold text-slate-900">A2: Color puro (azul dominante + vino)</p>
+                    <p class="text-sm font-bold text-text-main">A2: Color puro (azul dominante + vino)</p>
                 </header>
                 <div class="relative text-white">
                     <div class="absolute inset-0 bg-[linear-gradient(122deg,#4d0213_0%,#660219_58%,#660219_100%)]"></div>
@@ -73,7 +73,7 @@
 
             <article class="inst-card overflow-hidden border-slate-300">
                 <header class="bg-white border-b border-slate-200 px-5 py-3">
-                    <p class="text-sm font-bold text-slate-900">A3: Foto de fondo difuminada + filtro color</p>
+                    <p class="text-sm font-bold text-text-main">A3: Foto de fondo difuminada + filtro color</p>
                 </header>
                 <div class="relative text-white">
                     <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ asset('assets/img/foto_gestion_2025_2028.jpg') }}');"></div>
@@ -103,7 +103,7 @@
                         </aside>
                     </div>
                 </div>
-                <a href="#seccion-siguiente" class="block border-t border-slate-200 bg-primary/5 px-6 py-3 text-center text-sm text-slate-700 hover:text-primary transition-colors">
+                <a href="#seccion-siguiente" class="block border-t border-slate-200 bg-primary/5 px-6 py-3 text-center text-sm text-text-main hover:text-primary transition-colors">
                     Continuar hacia contenido de la sección
                     <span class="material-icons-outlined text-base align-middle ml-1">south</span>
                 </a>
@@ -111,7 +111,7 @@
 
             <article class="inst-card overflow-hidden border-slate-300">
                 <header class="bg-white border-b border-slate-200 px-5 py-3">
-                    <p class="text-sm font-bold text-slate-900">A4: Corte diagonal + borde interno</p>
+                    <p class="text-sm font-bold text-text-main">A4: Corte diagonal + borde interno</p>
                 </header>
                 <div class="relative overflow-hidden bg-white">
                     <div class="absolute inset-y-0 right-0 w-[46%] bg-[linear-gradient(145deg,#660219_0%,#660219_100%)]"></div>
@@ -119,8 +119,8 @@
                     <div class="relative z-10 grid lg:grid-cols-[1.05fr_0.95fr] gap-6 p-6 md:p-8">
                         <div class="border border-slate-200 p-5 md:p-6 bg-background-light">
                             <p class="text-xs uppercase tracking-[0.15em] text-primary font-bold">Usted está en: Contacto</p>
-                            <h2 class="text-slate-900 mt-2 text-4xl md:text-5xl font-black leading-[1.08]">Canales de atención</h2>
-                            <p class="mt-4 text-slate-700 text-base md:text-lg">Composición con corte para separar información principal y rescate de navegación.</p>
+                            <h2 class="text-text-main mt-2 text-4xl md:text-5xl font-black leading-[1.08]">Canales de atención</h2>
+                            <p class="mt-4 text-text-main text-base md:text-lg">Composición con corte para separar información principal y rescate de navegación.</p>
                             <div class="mt-6 flex flex-col sm:flex-row gap-3">
                                 <a href="{{ route('tramites') }}" class="inst-btn-primary w-full sm:w-auto">Ver trámites</a>
                                 <a href="{{ route('tramites.mesa-partes') }}" class="inst-btn-secondary w-full sm:w-auto">Enviar documento</a>
@@ -145,8 +145,8 @@
         <section id="seccion-siguiente" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
             <article class="inst-card p-6 md:p-8 border-t-4 border-primary">
                 <p class="text-xs uppercase tracking-[0.15em] text-primary font-bold">Sección siguiente (simulación)</p>
-                <h2 class="text-slate-900 mt-2">Contenido principal después del hero</h2>
-                <p class="text-slate-600 mt-3">Esta sección está para validar que el cambio desde el hero se sienta natural durante el scroll.</p>
+                <h2 class="text-text-main mt-2">Contenido principal después del hero</h2>
+                <p class="text-text-main mt-3">Esta sección está para validar que el cambio desde el hero se sienta natural durante el scroll.</p>
                 <div class="mt-5 grid md:grid-cols-3 gap-4">
                     <x-card title="Mesa de Partes" icon="forward_to_inbox" description="Registro y seguimiento documentario." link="{{ route('tramites.mesa-partes') }}" linkText="Ingresar" />
                     <x-card title="Trámites" icon="folder_open" description="Catálogo de gestiones institucionales." link="{{ route('tramites') }}" linkText="Ver catálogo" />
@@ -156,5 +156,7 @@
         </section>
     </main>
 @endsection
+
+
 
 

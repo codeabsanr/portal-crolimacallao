@@ -11,7 +11,7 @@
                 <div class="inst-card p-6 md:p-8 inst-stack-tight">
                     <x-page-section-intro eyebrow="Próximamente" title="Acceso al campus"
                         subtitle="Este módulo está en implementación. Regístrese para recibir aviso de activación." />
-                    <p class="text-slate-600 mb-5">Una vez activo, el campus virtual ofrecerá cursos autogestionados,
+                    <p class="text-text-main mb-5">Una vez activo, el campus virtual ofrecerá cursos autogestionados,
                         materiales descargables, evaluaciones y constancias institucionales.</p>
                     <form class="mt-5 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-3">
                         <input type="email" class="inst-input" placeholder="correo@ejemplo.com" />
@@ -22,4 +22,6 @@
         </section>
     </main>
 @endsection
+
+
 

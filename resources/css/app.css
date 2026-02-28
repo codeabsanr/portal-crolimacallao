@@ -59,8 +59,8 @@
     --inst-gold-soft: #f8ecd0;
     --inst-bg: #fbfaf9;
     --inst-surface: #ffffff;
-    --inst-text: #1f2230;
-    --inst-text-muted: #6f5560;
+    --inst-text: #0f1117;
+    --inst-text-muted: #232630;
     --inst-radius: 0.125rem;
 }
 
@@ -177,7 +177,7 @@ h6 {
     }
 
     .inst-card {
-        @apply rounded-xl border border-primary/15 bg-surface-light shadow-inst;
+        @apply rounded-xl border border-primary/15 bg-surface-light shadow-[0_18px_36px_-30px_rgba(15,23,42,0.55)];
     }
 
     .inst-section-title {
@@ -239,32 +239,37 @@ h6 {
 
     /* Vertical rhythm & breathing space */
     .inst-section {
-        @apply w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16;
+        @apply relative w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20;
+        min-height: clamp(30rem, 74vh, 56rem);
     }
 
     .inst-stack {
-        @apply flex flex-col gap-4 sm:gap-5 lg:gap-6;
+        @apply flex flex-col gap-5 sm:gap-6 lg:gap-8;
     }
 
     .inst-stack-tight {
-        @apply flex flex-col gap-2.5 sm:gap-3.5;
+        @apply flex flex-col gap-3 sm:gap-4;
     }
 
     .inst-stack-loose {
-        @apply flex flex-col gap-6 sm:gap-8;
+        @apply flex flex-col gap-8 sm:gap-10;
+    }
+
+    .inst-panel {
+        @apply rounded-xl border border-primary/20 bg-white/95 p-6 sm:p-8 shadow-[0_20px_34px_-28px_rgba(15,23,42,0.5)];
     }
 
     /* Typographic hierarchy */
     .inst-eyebrow {
-        @apply text-[11px] sm:text-xs font-semibold uppercase tracking-[0.16em] text-primary-dark/80;
+        @apply text-[11px] sm:text-xs font-bold uppercase tracking-[0.16em] text-primary-dark/80;
     }
 
     .inst-title {
-        @apply text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-text-main;
+        @apply text-[1.7rem] sm:text-[2rem] lg:text-[2.4rem] font-black tracking-tight text-text-main leading-[1.14];
     }
 
     .inst-subtitle {
-        @apply text-base sm:text-lg text-text-muted leading-relaxed;
+        @apply text-base sm:text-lg text-text-main leading-[1.72];
     }
 
     .inst-kicker {
@@ -272,7 +277,11 @@ h6 {
     }
 
     .inst-section-meta {
-        @apply text-sm text-text-muted leading-relaxed;
+        @apply text-sm text-text-main leading-relaxed;
+    }
+
+    .inst-link {
+        @apply text-primary underline-offset-4 transition-colors duration-200 hover:text-primary-dark hover:underline;
     }
 
     .inst-scroll-assist {

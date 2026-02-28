@@ -11,9 +11,9 @@
                 <img src="{{ asset('assets/img/foto_gestion_2025_2028.jpg') }}" alt="Consejo directivo del CRO III Lima-Callao" class="h-full w-full object-cover min-h-[320px]" />
                 <div class="p-6 md:p-8">
                     <p class="text-xs uppercase tracking-[0.16em] text-primary font-bold mb-2">Conducción institucional</p>
-                    <h2 class="text-2xl font-black text-slate-900">Obst. Jenny Elenisse Zavaleta Luján</h2>
+                    <h2 class="text-2xl font-black text-text-main">Obst. Jenny Elenisse Zavaleta Luján</h2>
                     <p class="text-primary font-semibold mt-1">Decana Regional | Periodo 2025-2028</p>
-                    <p class="text-slate-700 mt-4">Lidera la ejecución del plan de gestión, la representación gremial y la articulación con entidades del sistema de salud, académico y social.</p>
+                    <p class="text-text-main mt-4">Lidera la ejecución del plan de gestión, la representación gremial y la articulación con entidades del sistema de salud, académico y social.</p>
                     <div class="grid sm:grid-cols-2 gap-2 mt-5">
                         <div class="border border-slate-300 bg-primary-mist px-3 py-2 text-sm"><span class="font-semibold">Jurisdicción:</span> Lima - Callao</div>
                         <div class="border border-slate-300 bg-primary-mist px-3 py-2 text-sm"><span class="font-semibold">Estructura:</span> 8 cargos directivos</div>
@@ -24,7 +24,7 @@
 
         <article class="inst-card p-6 md:p-8">
             <div class="flex flex-wrap items-end justify-between gap-3 mb-5">
-                <h3 class="text-2xl font-black text-slate-900">Integrantes y cargos</h3>
+                <h3 class="text-2xl font-black text-text-main">Integrantes y cargos</h3>
                 <span class="text-xs uppercase tracking-[0.16em] text-primary font-bold">Gestión vigente</span>
             </div>
             @php
@@ -48,7 +48,7 @@
                                 class="h-full w-full object-cover"
                                 loading="lazy"
                                 onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');" />
-                            <div class="hidden absolute inset-0 flex items-center justify-center text-center bg-primary-tint text-slate-500 p-4">
+                            <div class="hidden absolute inset-0 flex items-center justify-center text-center bg-primary-tint text-text-main p-4">
                                 <div>
                                     <span class="material-icons-outlined text-3xl text-primary/70">portrait</span>
                                     <p class="text-xs uppercase tracking-[0.12em] mt-2">Espacio para foto</p>
@@ -56,7 +56,7 @@
                             </div>
                         </div>
                         <div class="p-4 min-h-[96px]">
-                            <p class="font-bold text-slate-900 leading-tight">{{ $integrante['nombre'] }}</p>
+                            <p class="font-bold text-text-main leading-tight">{{ $integrante['nombre'] }}</p>
                             <p class="text-primary text-sm font-semibold mt-1">{{ $integrante['cargo'] }}</p>
                         </div>
                     </article>
@@ -65,15 +65,17 @@
         </article>
 
         <article class="inst-card p-6 md:p-8 bg-primary-mist border-slate-200">
-            <h3 class="text-xl font-black text-slate-900 mb-4">Líneas estratégicas de la gestión</h3>
+            <h3 class="text-xl font-black text-text-main mb-4">Líneas estratégicas de la gestión</h3>
             <div class="grid md:grid-cols-4 gap-4">
-                <div class="bg-white border border-slate-200 p-4 hover:shadow-hard transition-all"><p class="font-bold text-slate-900">Ética y deontología</p><p class="text-sm text-slate-700 mt-1">Fortalecimiento del ejercicio responsable.</p></div>
-                <div class="bg-white border border-slate-200 p-4 hover:shadow-hard transition-all"><p class="font-bold text-slate-900">Capacitación</p><p class="text-sm text-slate-700 mt-1">Actualización académica continua.</p></div>
-                <div class="bg-white border border-slate-200 p-4 hover:shadow-hard transition-all"><p class="font-bold text-slate-900">Gestión administrativa</p><p class="text-sm text-slate-700 mt-1">Mejora de procesos y servicios.</p></div>
-                <div class="bg-white border border-slate-200 p-4 hover:shadow-hard transition-all"><p class="font-bold text-slate-900">Representación gremial</p><p class="text-sm text-slate-700 mt-1">Articulación con instituciones clave.</p></div>
+                <div class="bg-white border border-slate-200 p-4 hover:shadow-hard transition-all"><p class="font-bold text-text-main">Ética y deontología</p><p class="text-sm text-text-main mt-1">Fortalecimiento del ejercicio responsable.</p></div>
+                <div class="bg-white border border-slate-200 p-4 hover:shadow-hard transition-all"><p class="font-bold text-text-main">Capacitación</p><p class="text-sm text-text-main mt-1">Actualización académica continua.</p></div>
+                <div class="bg-white border border-slate-200 p-4 hover:shadow-hard transition-all"><p class="font-bold text-text-main">Gestión administrativa</p><p class="text-sm text-text-main mt-1">Mejora de procesos y servicios.</p></div>
+                <div class="bg-white border border-slate-200 p-4 hover:shadow-hard transition-all"><p class="font-bold text-text-main">Representación gremial</p><p class="text-sm text-text-main mt-1">Articulación con instituciones clave.</p></div>
             </div>
         </article>
     </x-institucional-page-shell>
 @endsection
+
+
 
 

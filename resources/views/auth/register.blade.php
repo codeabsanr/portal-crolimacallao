@@ -32,7 +32,7 @@
                             CRO III LIMA - CALLAO
                         </p>
                         <h2 class="inst-section-title">Crear cuenta</h2>
-                        <p class="mt-3 text-base md:text-lg text-slate-600">Completa tus datos para activar tu acceso al portal.</p>
+                        <p class="mt-3 text-base md:text-lg text-text-main">Completa tus datos para activar tu acceso al portal.</p>
                     </div>
 
                     @if ($errors->any())
@@ -45,25 +45,25 @@
                         @csrf
 
                         <div>
-                            <label for="name" class="mb-2 block text-sm font-bold text-slate-700">Nombres y apellidos</label>
+                            <label for="name" class="mb-2 block text-sm font-bold text-text-main">Nombres y apellidos</label>
                             <input id="name" name="name" type="text" value="{{ old('name') }}" required autofocus autocomplete="name" placeholder="Ingrese su nombre completo" class="inst-input !bg-primary-tint !border-slate-200">
                             <x-input-error :messages="$errors->get('name')" class="mt-2" />
                         </div>
 
                         <div>
-                            <label for="email" class="mb-2 block text-sm font-bold text-slate-700">Correo electronico</label>
+                            <label for="email" class="mb-2 block text-sm font-bold text-text-main">Correo electronico</label>
                             <input id="email" name="email" type="email" value="{{ old('email') }}" required autocomplete="username" placeholder="usuario@correo.pe" class="inst-input !bg-primary-tint !border-slate-200">
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
                         </div>
 
                         <div>
-                            <label for="password" class="mb-2 block text-sm font-bold text-slate-700">Contrasena</label>
+                            <label for="password" class="mb-2 block text-sm font-bold text-text-main">Contrasena</label>
                             <input id="password" name="password" type="password" required autocomplete="new-password" placeholder="Cree una contrasena segura" class="inst-input !bg-primary-tint !border-slate-200">
                             <x-input-error :messages="$errors->get('password')" class="mt-2" />
                         </div>
 
                         <div>
-                            <label for="password_confirmation" class="mb-2 block text-sm font-bold text-slate-700">Confirmar contrasena</label>
+                            <label for="password_confirmation" class="mb-2 block text-sm font-bold text-text-main">Confirmar contrasena</label>
                             <input id="password_confirmation" name="password_confirmation" type="password" required autocomplete="new-password" placeholder="Repita su contrasena" class="inst-input !bg-primary-tint !border-slate-200">
                             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                         </div>
@@ -73,16 +73,16 @@
                         </button>
                     </form>
 
-                    <div class="mt-8 border-t border-slate-200 pt-6 text-center text-sm text-slate-600">
+                    <div class="mt-8 border-t border-slate-200 pt-6 text-center text-sm text-text-main">
                         Ya tienes una cuenta activa?
                         <a href="{{ route('login') }}" class="font-bold text-secondary underline decoration-primary/40 underline-offset-4 hover:text-primary">Inicia sesion aqui</a>
                     </div>
 
-                    <div class="mt-6 border-t border-slate-200 pt-5 flex flex-wrap items-center justify-center gap-3 text-sm text-slate-500">
+                    <div class="mt-6 border-t border-slate-200 pt-5 flex flex-wrap items-center justify-center gap-3 text-sm text-text-main">
                         <a href="{{ route('terminos') }}" class="hover:text-primary">Terminos y Condiciones</a>
-                        <span class="text-slate-300">•</span>
+                        <span class="text-text-main">•</span>
                         <a href="{{ route('privacidad') }}" class="hover:text-primary">Politica de Privacidad</a>
-                        <span class="text-slate-300">•</span>
+                        <span class="text-text-main">•</span>
                         <a href="{{ route('contacto') }}" class="hover:text-primary">Ayuda</a>
                     </div>
                 </div>
@@ -90,4 +90,6 @@
         </div>
     </main>
 </x-guest-layout>
+
+
 

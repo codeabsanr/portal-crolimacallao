@@ -27,7 +27,7 @@
                 <button type="button" @click="go(idx)"
                     class="h-9 border text-[10px] font-bold uppercase tracking-[0.08em] px-1 transition-all inline-flex items-center justify-center gap-1"
                     :style="current === idx ? `background-color: ${item.color}; border-color: ${item.color}; color: white;` : ''"
-                    :class="current !== idx ? 'bg-white text-slate-600 border-slate-300 hover:border-primary hover:text-primary' : ''">
+                    :class="current !== idx ? 'bg-white text-text-main border-slate-300 hover:border-primary hover:text-primary' : ''">
                     <span class="material-icons-outlined text-sm" x-text="item.icono"></span>
                 </button>
             </template>
@@ -67,8 +67,8 @@
         </div>
 
         <div class="p-4 sm:p-5" :style="`background-color: ${items[current].superficie}`">
-            <p class="text-sm text-slate-700" x-text="items[current].descripcion"></p>
-            <p class="text-sm text-slate-700 mt-1" x-text="items[current].detalle"></p>
+            <p class="text-sm text-text-main" x-text="items[current].descripcion"></p>
+            <p class="text-sm text-text-main mt-1" x-text="items[current].detalle"></p>
             <div class="mt-4 flex gap-2">
                 <a :href="items[current].cta1_link" class="inst-btn !py-2 !px-3 !text-xs !text-white" :style="`background-color: ${items[current].color}`" x-text="items[current].cta1_texto"></a>
                 <a :href="items[current].cta2_link" class="inst-btn-secondary !py-2 !px-3 !text-xs" x-text="items[current].cta2_texto"></a>
@@ -76,5 +76,7 @@
         </div>
     </div>
 </aside>
+
+
 
 

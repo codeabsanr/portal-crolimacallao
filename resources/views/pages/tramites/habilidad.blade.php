@@ -11,7 +11,7 @@
                 <div class="inst-card p-6 md:p-8 border-t-4 border-primary inst-stack-tight">
                     <x-page-section-intro eyebrow="Documentación" title="Checklist de requisitos"
                         subtitle="Prepare los siguientes documentos antes de iniciar su solicitud para agilizar el proceso." />
-                    <ul class="space-y-3 text-slate-700">
+                    <ul class="space-y-3 text-text-main">
                         <li class="flex items-start gap-3 border border-slate-200 p-3">
                             <span
                                 class="material-icons-outlined text-primary mt-0.5 text-base">check_box_outline_blank</span>
@@ -34,4 +34,6 @@
         </section>
     </main>
 @endsection
+
+
 

@@ -11,7 +11,7 @@
                 <div class="inst-card p-6 md:p-8 border-t-4 border-primary inst-stack-tight">
                     <x-page-section-intro eyebrow="Instrucciones" title="Pasos recomendados"
                         subtitle="Siga estas instrucciones para aprovechar al máximo las herramientas del portal institucional." />
-                    <ol class="space-y-4 text-slate-700">
+                    <ol class="space-y-4 text-text-main">
                         <li class="flex gap-3">
                             <span
                                 class="h-7 w-7 bg-primary text-white text-sm font-bold flex items-center justify-center shrink-0">1</span>
@@ -37,4 +37,6 @@
         </section>
     </main>
 @endsection
+
+
 

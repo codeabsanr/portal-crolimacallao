@@ -9,7 +9,7 @@
                         <p class="text-xs uppercase tracking-[0.15em] text-primary font-bold">Respuestas clave</p>
                         <h2 class="text-secondary text-3xl md:text-4xl font-black tracking-tight mt-1">Trámites más consultados</h2>
                         <div class="mt-3 h-[3px] w-20 bg-brand-gold-light"></div>
-                        <p class="mt-4 text-slate-600">Encuentre respuestas rápidas antes de iniciar su solicitud formal.</p>
+                        <p class="mt-4 text-text-main">Encuentre respuestas rápidas antes de iniciar su solicitud formal.</p>
 
                         <div class="mt-6 rounded-xl border border-primary/20 bg-[linear-gradient(180deg,#ffffff_0%,#fbf4f7_100%)] p-5 md:p-6">
                             <ul class="space-y-5">
@@ -58,23 +58,25 @@
                     <article class="rounded-xl border border-primary/20 bg-white p-5">
                         <p class="text-xs uppercase tracking-[0.12em] text-primary font-bold">Pagos</p>
                         <h3 class="mt-2 text-xl font-black text-secondary">Tasas y validación</h3>
-                        <p class="mt-2 text-sm text-slate-600">Los pagos se confirman según el canal declarado en su solicitud.</p>
+                        <p class="mt-2 text-sm text-text-main">Los pagos se confirman según el canal declarado en su solicitud.</p>
                     </article>
                     <article class="rounded-xl border border-primary/20 bg-white p-5">
                         <p class="text-xs uppercase tracking-[0.12em] text-primary font-bold">Documentos</p>
                         <h3 class="mt-2 text-xl font-black text-secondary">Formato y legibilidad</h3>
-                        <p class="mt-2 text-sm text-slate-600">Presente archivos completos y legibles para evitar observaciones.</p>
+                        <p class="mt-2 text-sm text-text-main">Presente archivos completos y legibles para evitar observaciones.</p>
                     </article>
                     <article class="rounded-xl border border-primary/20 bg-white p-5">
                         <p class="text-xs uppercase tracking-[0.12em] text-primary font-bold">Seguimiento</p>
                         <h3 class="mt-2 text-xl font-black text-secondary">Respuesta institucional</h3>
-                        <p class="mt-2 text-sm text-slate-600">Conserve su código para consultar estado y notificaciones del trámite.</p>
+                        <p class="mt-2 text-sm text-text-main">Conserve su código para consultar estado y notificaciones del trámite.</p>
                     </article>
                 </div>
             </div>
         </section>
     </main>
 @endsection
+
+
 
 
 

@@ -15,22 +15,22 @@
                         <li class="flex items-start gap-3 border border-slate-200 p-4">
                             <span class="material-icons-outlined text-primary mt-0.5">event</span>
                             <div>
-                                <p class="font-bold text-slate-900">Congreso Regional de Obstetricia — Lima</p>
-                                <p class="text-sm text-slate-600 mt-1">Junio 2026 | Presencial</p>
+                                <p class="font-bold text-text-main">Congreso Regional de Obstetricia — Lima</p>
+                                <p class="text-sm text-text-main mt-1">Junio 2026 | Presencial</p>
                             </div>
                         </li>
                         <li class="flex items-start gap-3 border border-slate-200 p-4">
                             <span class="material-icons-outlined text-primary mt-0.5">event</span>
                             <div>
-                                <p class="font-bold text-slate-900">Encuentro de Salud Materna — Callao</p>
-                                <p class="text-sm text-slate-600 mt-1">Agosto 2026 | Híbrido</p>
+                                <p class="font-bold text-text-main">Encuentro de Salud Materna — Callao</p>
+                                <p class="text-sm text-text-main mt-1">Agosto 2026 | Híbrido</p>
                             </div>
                         </li>
                         <li class="flex items-start gap-3 border border-slate-200 p-4">
                             <span class="material-icons-outlined text-primary mt-0.5">event</span>
                             <div>
-                                <p class="font-bold text-slate-900">Foro de Innovación Obstétrica — Nacional</p>
-                                <p class="text-sm text-slate-600 mt-1">Octubre 2026 | Virtual</p>
+                                <p class="font-bold text-text-main">Foro de Innovación Obstétrica — Nacional</p>
+                                <p class="text-sm text-text-main mt-1">Octubre 2026 | Virtual</p>
                             </div>
                         </li>
                     </ul>
@@ -40,4 +40,6 @@
         </section>
     </main>
 @endsection
+
+
 

@@ -77,41 +77,41 @@
 @endphp
 @if ($currentLabel && !request()->routeIs('home') && !in_array($routeName, $subheroRoutes))
     <section class="relative border-b border-primary/10 bg-gradient-to-b from-white via-white to-primary-tint/35">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 md:py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-7">
             <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <nav aria-label="Breadcrumb"
-                    class="rounded-md border border-slate-200/80 bg-white/90 px-3.5 py-2.5 text-sm text-text-main shadow-[0_12px_30px_-26px_rgba(15,23,42,0.65)] backdrop-blur-sm md:text-[0.95rem]">
+                    class="rounded-md border border-slate-200/80 bg-white/90 px-4 py-3 text-sm text-text-main shadow-[0_12px_30px_-26px_rgba(15,23,42,0.65)] backdrop-blur-sm md:text-[0.95rem]">
                     <ol class="flex flex-wrap items-center gap-y-2 gap-x-1.5">
                         <li><a href="{{ route('home') }}"
-                                class="inline-flex items-center rounded-full px-2.5 py-1 font-medium text-text-muted transition-colors duration-150 hover:bg-primary-tint hover:text-primary">Inicio</a>
+                                class="inline-flex items-center rounded-full px-2.5 py-1 font-medium text-text-main transition-colors duration-150 hover:bg-primary-tint hover:text-primary">Inicio</a>
                         </li>
-                        <li class="text-slate-300">
+                        <li class="text-text-main">
                             <span class="material-icons-outlined text-[1rem] leading-none">chevron_right</span>
                         </li>
                         @if ($sectionLabel && $sectionRoute && !request()->routeIs($sectionRoute))
                             <li><a href="{{ route($sectionRoute) }}"
-                                    class="inline-flex items-center rounded-full px-2.5 py-1 font-medium text-text-muted transition-colors duration-150 hover:bg-primary-tint hover:text-primary">{{ $sectionLabel }}</a>
+                                    class="inline-flex items-center rounded-full px-2.5 py-1 font-medium text-text-main transition-colors duration-150 hover:bg-primary-tint hover:text-primary">{{ $sectionLabel }}</a>
                             </li>
-                            <li class="text-slate-300">
+                            <li class="text-text-main">
                                 <span class="material-icons-outlined text-[1rem] leading-none">chevron_right</span>
                             </li>
                         @elseif ($sectionLabel)
                             <li class="inline-flex items-center rounded-full bg-primary-tint px-2.5 py-1 font-medium text-primary">
                                 {{ $sectionLabel }}
                             </li>
-                            <li class="text-slate-300">
+                            <li class="text-text-main">
                                 <span class="material-icons-outlined text-[1rem] leading-none">chevron_right</span>
                             </li>
                         @endif
                         @if ($parentLabel && $parentRoute)
                             <li><a href="{{ route($parentRoute) }}"
-                                    class="inline-flex items-center rounded-full px-2.5 py-1 font-medium text-text-muted transition-colors duration-150 hover:bg-primary-tint hover:text-primary">{{ $parentLabel }}</a>
+                                    class="inline-flex items-center rounded-full px-2.5 py-1 font-medium text-text-main transition-colors duration-150 hover:bg-primary-tint hover:text-primary">{{ $parentLabel }}</a>
                             </li>
-                            <li class="text-slate-300">
+                            <li class="text-text-main">
                                 <span class="material-icons-outlined text-[1rem] leading-none">chevron_right</span>
                             </li>
                         @endif
-                        <li class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-1 font-semibold text-slate-700"
+                        <li class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-1 font-semibold text-text-main"
                             aria-current="page">{{ $currentLabel }}</li>
                     </ol>
                 </nav>
@@ -136,3 +136,5 @@
         </div>
     </section>
 @endif
+
+

@@ -16,3 +16,4 @@
         <p class="text-gray-500 italic">No se encontraron normativas que coincidan con la búsqueda.</p>
     </div>
 </div>
+

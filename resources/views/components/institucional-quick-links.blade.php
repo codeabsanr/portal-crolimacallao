@@ -20,8 +20,8 @@
 <article {{ $attributes->class(['inst-card p-5 md:p-6']) }}>
     <div class="flex flex-wrap items-end justify-between gap-3 mb-5">
         <div>
-            <h3 class="text-2xl font-black text-slate-900">{{ $title }}</h3>
-            <p class="text-sm text-slate-600 mt-1">{{ $subtitle }}</p>
+            <h3 class="text-2xl font-black text-text-main">{{ $title }}</h3>
+            <p class="text-sm text-text-main mt-1">{{ $subtitle }}</p>
         </div>
         <a href="{{ route('institucional') }}" class="inst-btn-secondary !py-2 !px-4 !text-xs">Ver portada institucional</a>
     </div>
@@ -29,10 +29,12 @@
         @foreach ($items as $item)
             <a href="{{ route($item['route']) }}"
                 class="border border-slate-200 bg-white px-4 py-4 border-t-2 {{ request()->routeIs($item['route']) ? 'border-t-primary ring-1 ring-primary/20' : 'border-t-slate-200 hover:border-t-primary hover:bg-primary-mist' }} transition-colors">
-                <p class="font-bold text-slate-900">{{ $item['label'] }}</p>
-                <p class="text-xs text-slate-600 mt-1">{{ $item['description'] }}</p>
+                <p class="font-bold text-text-main">{{ $item['label'] }}</p>
+                <p class="text-xs text-text-main mt-1">{{ $item['description'] }}</p>
             </a>
         @endforeach
     </div>
 </article>
+
+
 

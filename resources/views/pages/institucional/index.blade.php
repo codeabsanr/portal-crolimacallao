@@ -7,11 +7,11 @@
                 <nav aria-label="Navegación interna institucional" class="overflow-x-auto">
                     <ul class="flex items-center gap-2 min-w-max">
                         <li><a href="#resumen" class="inline-flex items-center gap-1.5 border border-primary/30 text-primary bg-primary/5 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary/10 transition-colors">Resumen</a></li>
-                        <li><a href="#perfil" class="inline-flex items-center gap-1.5 border border-primary/20 text-slate-700 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary-mist transition-colors">Perfil</a></li>
-                        <li><a href="#objetivos" class="inline-flex items-center gap-1.5 border border-primary/20 text-slate-700 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary-mist transition-colors">Objetivos</a></li>
-                        <li><a href="#consejo" class="inline-flex items-center gap-1.5 border border-primary/20 text-slate-700 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary-mist transition-colors">Consejo</a></li>
-                        <li><a href="#normativa" class="inline-flex items-center gap-1.5 border border-primary/20 text-slate-700 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary-mist transition-colors">Normativa</a></li>
-                        <li><a href="#enlaces" class="inline-flex items-center gap-1.5 border border-primary/20 text-slate-700 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary-mist transition-colors">Enlaces</a></li>
+                        <li><a href="#perfil" class="inline-flex items-center gap-1.5 border border-primary/20 text-text-main bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary-mist transition-colors">Perfil</a></li>
+                        <li><a href="#objetivos" class="inline-flex items-center gap-1.5 border border-primary/20 text-text-main bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary-mist transition-colors">Objetivos</a></li>
+                        <li><a href="#consejo" class="inline-flex items-center gap-1.5 border border-primary/20 text-text-main bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary-mist transition-colors">Consejo</a></li>
+                        <li><a href="#normativa" class="inline-flex items-center gap-1.5 border border-primary/20 text-text-main bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary-mist transition-colors">Normativa</a></li>
+                        <li><a href="#enlaces" class="inline-flex items-center gap-1.5 border border-primary/20 text-text-main bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.11em] hover:bg-primary-mist transition-colors">Enlaces</a></li>
                     </ul>
                 </nav>
             </div>
@@ -21,24 +21,24 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
                     <a href="{{ route('institucional.quienes-somos') }}" class="inst-card p-5 border border-primary/30 border-l-4 border-l-primary bg-[linear-gradient(180deg,#ffffff_0%,#fffdfa_100%)] hover:border-primary hover:shadow-[0_16px_30px_-24px_rgba(102,2,25,0.55)] transition-[border-color,box-shadow,background-color] duration-300">
-                        <p class="text-xs uppercase tracking-[0.14em] text-slate-500">Identidad</p>
-                        <p class="font-black text-slate-900 mt-2">Quiénes Somos</p>
-                        <p class="text-sm text-slate-600 mt-2">Misión, visión y propósito institucional.</p>
+                        <p class="text-xs uppercase tracking-[0.14em] text-text-main">Identidad</p>
+                        <p class="font-black text-text-main mt-2">Quiénes Somos</p>
+                        <p class="text-sm text-text-main mt-2">Misión, visión y propósito institucional.</p>
                     </a>
                     <a href="{{ route('institucional.consejo-directivo') }}" class="inst-card p-5 border border-primary/30 border-l-4 border-l-primary bg-[linear-gradient(180deg,#ffffff_0%,#fffdfa_100%)] hover:border-primary hover:shadow-[0_16px_30px_-24px_rgba(102,2,25,0.55)] transition-[border-color,box-shadow,background-color] duration-300">
-                        <p class="text-xs uppercase tracking-[0.14em] text-slate-500">Gobierno</p>
-                        <p class="font-black text-slate-900 mt-2">Consejo Directivo</p>
-                        <p class="text-sm text-slate-600 mt-2">Estructura de liderazgo y cargos.</p>
+                        <p class="text-xs uppercase tracking-[0.14em] text-text-main">Gobierno</p>
+                        <p class="font-black text-text-main mt-2">Consejo Directivo</p>
+                        <p class="text-sm text-text-main mt-2">Estructura de liderazgo y cargos.</p>
                     </a>
                     <a href="{{ route('institucional.normatividad') }}" class="inst-card p-5 border border-primary/30 border-l-4 border-l-primary bg-[linear-gradient(180deg,#ffffff_0%,#fffdfa_100%)] hover:border-primary hover:shadow-[0_16px_30px_-24px_rgba(102,2,25,0.55)] transition-[border-color,box-shadow,background-color] duration-300">
-                        <p class="text-xs uppercase tracking-[0.14em] text-slate-500">Legal</p>
-                        <p class="font-black text-slate-900 mt-2">Normatividad</p>
-                        <p class="text-sm text-slate-600 mt-2">Leyes, reglamentos y documentos vigentes.</p>
+                        <p class="text-xs uppercase tracking-[0.14em] text-text-main">Legal</p>
+                        <p class="font-black text-text-main mt-2">Normatividad</p>
+                        <p class="text-sm text-text-main mt-2">Leyes, reglamentos y documentos vigentes.</p>
                     </a>
                     <a href="{{ route('institucional.convenios') }}" class="inst-card p-5 border border-primary/30 border-l-4 border-l-primary bg-[linear-gradient(180deg,#ffffff_0%,#fffdfa_100%)] hover:border-primary hover:shadow-[0_16px_30px_-24px_rgba(102,2,25,0.55)] transition-[border-color,box-shadow,background-color] duration-300">
-                        <p class="text-xs uppercase tracking-[0.14em] text-slate-500">Cooperación</p>
-                        <p class="font-black text-slate-900 mt-2">Convenios</p>
-                        <p class="text-sm text-slate-600 mt-2">Alianzas y beneficios para colegiadas.</p>
+                        <p class="text-xs uppercase tracking-[0.14em] text-text-main">Cooperación</p>
+                        <p class="font-black text-text-main mt-2">Convenios</p>
+                        <p class="text-sm text-text-main mt-2">Alianzas y beneficios para colegiadas.</p>
                     </a>
                 </div>
             </div>
@@ -58,20 +58,20 @@
                     </div>
                     <div>
                         <p class="text-xs uppercase tracking-[0.16em] text-primary font-bold">Perfil institucional</p>
-                        <h2 class="text-slate-900 mt-2">Trayectoria, representación y servicio</h2>
-                        <div class="space-y-3 mt-4 text-slate-700 text-sm md:text-base">
+                        <h2 class="text-text-main mt-2">Trayectoria, representación y servicio</h2>
+                        <div class="space-y-3 mt-4 text-text-main text-sm md:text-base">
                             <p>Somos una institución autónoma de derecho público interno que representa el ejercicio de la obstetricia en Lima y Callao.</p>
                             <p>Promovemos la ética profesional, la actualización científica continua y la protección de los derechos de nuestras colegiadas.</p>
                             <p>Nuestro enfoque combina liderazgo gremial, transparencia documental y trabajo articulado con el sistema de salud.</p>
                         </div>
                         <div class="grid sm:grid-cols-2 gap-4 mt-6">
                             <div class="inst-card p-4 border-primary/20">
-                                <p class="text-xs uppercase tracking-[0.14em] text-slate-500">Misión</p>
-                                <p class="text-sm text-slate-700 mt-2">Representar e integrar a las obstetras, velando por un ejercicio profesional legal, ético y humano.</p>
+                                <p class="text-xs uppercase tracking-[0.14em] text-text-main">Misión</p>
+                                <p class="text-sm text-text-main mt-2">Representar e integrar a las obstetras, velando por un ejercicio profesional legal, ético y humano.</p>
                             </div>
                             <div class="inst-card p-4 border-primary/20">
-                                <p class="text-xs uppercase tracking-[0.14em] text-slate-500">Visión</p>
-                                <p class="text-sm text-slate-700 mt-2">Consolidar una gestión líder y democrática reconocida por su excelencia institucional.</p>
+                                <p class="text-xs uppercase tracking-[0.14em] text-text-main">Visión</p>
+                                <p class="text-sm text-text-main mt-2">Consolidar una gestión líder y democrática reconocida por su excelencia institucional.</p>
                             </div>
                         </div>
                     </div>
@@ -83,29 +83,29 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto">
                     <p class="text-xs uppercase tracking-[0.16em] text-primary font-bold">Líneas de gestión</p>
-                    <h2 class="text-slate-900 mt-2">Objetivos estratégicos institucionales</h2>
-                    <p class="text-slate-600 mt-3 text-sm md:text-base">Acciones priorizadas para fortalecer la colegiatura, la calidad profesional y la atención en salud de la mujer.</p>
+                    <h2 class="text-text-main mt-2">Objetivos estratégicos institucionales</h2>
+                    <p class="text-text-main mt-3 text-sm md:text-base">Acciones priorizadas para fortalecer la colegiatura, la calidad profesional y la atención en salud de la mujer.</p>
                 </div>
                 <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5 mt-8">
                     <article class="inst-card p-5 border-t-4 border-t-primary">
                         <span class="material-icons-outlined text-primary text-2xl">school</span>
-                        <h3 class="text-lg font-black text-slate-900 mt-3">Formación continua</h3>
-                        <p class="text-sm text-slate-600 mt-2">Programas de actualización y especialización basados en evidencia.</p>
+                        <h3 class="text-lg font-black text-text-main mt-3">Formación continua</h3>
+                        <p class="text-sm text-text-main mt-2">Programas de actualización y especialización basados en evidencia.</p>
                     </article>
                     <article class="inst-card p-5 border-t-4 border-t-primary">
                         <span class="material-icons-outlined text-primary text-2xl">gavel</span>
-                        <h3 class="text-lg font-black text-slate-900 mt-3">Ética y vigilancia</h3>
-                        <p class="text-sm text-slate-600 mt-2">Supervisión del cumplimiento del marco legal y deontológico.</p>
+                        <h3 class="text-lg font-black text-text-main mt-3">Ética y vigilancia</h3>
+                        <p class="text-sm text-text-main mt-2">Supervisión del cumplimiento del marco legal y deontológico.</p>
                     </article>
                     <article class="inst-card p-5 border-t-4 border-t-primary">
                         <span class="material-icons-outlined text-primary text-2xl">diversity_3</span>
-                        <h3 class="text-lg font-black text-slate-900 mt-3">Bienestar colegiado</h3>
-                        <p class="text-sm text-slate-600 mt-2">Impulso de servicios y beneficios para el desarrollo profesional.</p>
+                        <h3 class="text-lg font-black text-text-main mt-3">Bienestar colegiado</h3>
+                        <p class="text-sm text-text-main mt-2">Impulso de servicios y beneficios para el desarrollo profesional.</p>
                     </article>
                     <article class="inst-card p-5 border-t-4 border-t-primary">
                         <span class="material-icons-outlined text-primary text-2xl">verified</span>
-                        <h3 class="text-lg font-black text-slate-900 mt-3">Calidad asistencial</h3>
-                        <p class="text-sm text-slate-600 mt-2">Promoción de buenas prácticas en salud sexual y reproductiva.</p>
+                        <h3 class="text-lg font-black text-text-main mt-3">Calidad asistencial</h3>
+                        <p class="text-sm text-text-main mt-2">Promoción de buenas prácticas en salud sexual y reproductiva.</p>
                     </article>
                 </div>
             </div>
@@ -122,20 +122,20 @@
                         <div class="grid md:grid-cols-[220px_1fr]">
                             <img src="{{ asset('assets/img/foto_gestion_2025_2028.jpg') }}" alt="Consejo regional CRO III Lima-Callao" class="w-full h-full min-h-[220px] object-cover">
                             <div class="p-6">
-                                <h3 class="text-xl font-black text-slate-900">Obst. Jenny Elenisse Zavaleta Luján</h3>
+                                <h3 class="text-xl font-black text-text-main">Obst. Jenny Elenisse Zavaleta Luján</h3>
                                 <p class="text-sm font-semibold text-primary mt-1">Decana Regional</p>
-                                <p class="text-sm text-slate-600 italic mt-3">"Comprometida con la defensa de derechos profesionales y la mejora continua del ejercicio obstétrico."</p>
+                                <p class="text-sm text-text-main italic mt-3">"Comprometida con la defensa de derechos profesionales y la mejora continua del ejercicio obstétrico."</p>
                                 <a href="{{ route('institucional.consejo-directivo') }}" class="inst-btn-primary mt-5 !py-2.5 !px-4 !text-xs">Ver equipo completo</a>
                             </div>
                         </div>
                     </article>
 
                     <div class="grid sm:grid-cols-2 gap-4">
-                        <article class="inst-card p-4 border-primary/20 hover:shadow-hard transition-all"><p class="text-[11px] uppercase tracking-[0.13em] text-slate-500">Nivel directivo</p><p class="font-bold text-slate-900 mt-1">Obst. Alicia Isla López</p><p class="text-xs text-primary font-semibold uppercase tracking-[0.12em] mt-1">Vicedecana</p></article>
-                        <article class="inst-card p-4 border-primary/20 hover:shadow-hard transition-all"><p class="text-[11px] uppercase tracking-[0.13em] text-slate-500">Administrativo</p><p class="font-bold text-slate-900 mt-1">Obst. Sara Carolina Zamora Chávez</p><p class="text-xs text-primary font-semibold uppercase tracking-[0.12em] mt-1">Secretaria Regional Administrativa</p></article>
-                        <article class="inst-card p-4 border-primary/20 hover:shadow-hard transition-all"><p class="text-[11px] uppercase tracking-[0.13em] text-slate-500">Administrativo</p><p class="font-bold text-slate-900 mt-1">Obst. Miriam Letona Gonzáles</p><p class="text-xs text-primary font-semibold uppercase tracking-[0.12em] mt-1">Secretaria de Asuntos Internos</p></article>
-                        <article class="inst-card p-4 border-primary/20 hover:shadow-hard transition-all"><p class="text-[11px] uppercase tracking-[0.13em] text-slate-500">Administrativo</p><p class="font-bold text-slate-900 mt-1">Obst. Paulia Emiliana Alhuay Puca</p><p class="text-xs text-primary font-semibold uppercase tracking-[0.12em] mt-1">Secretaria de Asuntos Internos (Adj.)</p></article>
-                        <article class="inst-card p-4 border-primary/20 sm:col-span-2 hover:shadow-hard transition-all"><p class="text-[11px] uppercase tracking-[0.13em] text-slate-500">Gestión económica</p><p class="font-bold text-slate-900 mt-1">Obst. Elizabeth Soria Peña</p><p class="text-xs text-primary font-semibold uppercase tracking-[0.12em] mt-1">Tesorera</p></article>
+                        <article class="inst-card p-4 border-primary/20 hover:shadow-hard transition-all"><p class="text-[11px] uppercase tracking-[0.13em] text-text-main">Nivel directivo</p><p class="font-bold text-text-main mt-1">Obst. Alicia Isla López</p><p class="text-xs text-primary font-semibold uppercase tracking-[0.12em] mt-1">Vicedecana</p></article>
+                        <article class="inst-card p-4 border-primary/20 hover:shadow-hard transition-all"><p class="text-[11px] uppercase tracking-[0.13em] text-text-main">Administrativo</p><p class="font-bold text-text-main mt-1">Obst. Sara Carolina Zamora Chávez</p><p class="text-xs text-primary font-semibold uppercase tracking-[0.12em] mt-1">Secretaria Regional Administrativa</p></article>
+                        <article class="inst-card p-4 border-primary/20 hover:shadow-hard transition-all"><p class="text-[11px] uppercase tracking-[0.13em] text-text-main">Administrativo</p><p class="font-bold text-text-main mt-1">Obst. Miriam Letona Gonzáles</p><p class="text-xs text-primary font-semibold uppercase tracking-[0.12em] mt-1">Secretaria de Asuntos Internos</p></article>
+                        <article class="inst-card p-4 border-primary/20 hover:shadow-hard transition-all"><p class="text-[11px] uppercase tracking-[0.13em] text-text-main">Administrativo</p><p class="font-bold text-text-main mt-1">Obst. Paulia Emiliana Alhuay Puca</p><p class="text-xs text-primary font-semibold uppercase tracking-[0.12em] mt-1">Secretaria de Asuntos Internos (Adj.)</p></article>
+                        <article class="inst-card p-4 border-primary/20 sm:col-span-2 hover:shadow-hard transition-all"><p class="text-[11px] uppercase tracking-[0.13em] text-text-main">Gestión económica</p><p class="font-bold text-text-main mt-1">Obst. Elizabeth Soria Peña</p><p class="text-xs text-primary font-semibold uppercase tracking-[0.12em] mt-1">Tesorera</p></article>
                     </div>
                 </div>
             </div>
@@ -146,27 +146,27 @@
                 <div class="grid lg:grid-cols-2 gap-6 md:gap-8">
                     <div>
                         <p class="text-xs uppercase tracking-[0.16em] text-primary font-bold">Normativa institucional</p>
-                        <h2 class="text-slate-900 mt-2">Marco legal y deontológico</h2>
-                        <p class="text-slate-600 mt-3 text-sm md:text-base">Base documental que sustenta la organización y el ejercicio profesional del obstetra en el Perú.</p>
+                        <h2 class="text-text-main mt-2">Marco legal y deontológico</h2>
+                        <p class="text-text-main mt-3 text-sm md:text-base">Base documental que sustenta la organización y el ejercicio profesional del obstetra en el Perú.</p>
                         <div class="space-y-3 mt-5">
                             <article class="inst-card p-4 border-l-4 border-l-primary">
-                                <h3 class="text-base font-black text-slate-900">Ley N.° 27853</h3>
-                                <p class="text-sm text-slate-600 mt-1">Regula el trabajo del obstetra y sus responsabilidades profesionales.</p>
+                                <h3 class="text-base font-black text-text-main">Ley N.° 27853</h3>
+                                <p class="text-sm text-text-main mt-1">Regula el trabajo del obstetra y sus responsabilidades profesionales.</p>
                             </article>
                             <article class="inst-card p-4 border-l-4 border-l-primary">
-                                <h3 class="text-base font-black text-slate-900">D.L. N.° 21210</h3>
-                                <p class="text-sm text-slate-600 mt-1">Crea el Colegio de Obstetras del Perú y define su naturaleza jurídica.</p>
+                                <h3 class="text-base font-black text-text-main">D.L. N.° 21210</h3>
+                                <p class="text-sm text-text-main mt-1">Crea el Colegio de Obstetras del Perú y define su naturaleza jurídica.</p>
                             </article>
                             <article class="inst-card p-4 border-l-4 border-l-primary">
-                                <h3 class="text-base font-black text-slate-900">Estatuto y Reglamentos</h3>
-                                <p class="text-sm text-slate-600 mt-1">Norman la organización regional, procesos y funciones institucionales.</p>
+                                <h3 class="text-base font-black text-text-main">Estatuto y Reglamentos</h3>
+                                <p class="text-sm text-text-main mt-1">Norman la organización regional, procesos y funciones institucionales.</p>
                             </article>
                         </div>
                     </div>
                     <aside class="inst-card p-6 md:p-7 bg-primary/5 border-primary/30">
                         <span class="material-icons-outlined text-primary text-4xl">library_books</span>
-                        <h3 class="text-2xl font-black text-slate-900 mt-3">Repositorio documental</h3>
-                        <p class="text-sm text-slate-700 mt-3">Consulta leyes, reglamentos, resoluciones y compendios desde una sola sección institucional.</p>
+                        <h3 class="text-2xl font-black text-text-main mt-3">Repositorio documental</h3>
+                        <p class="text-sm text-text-main mt-3">Consulta leyes, reglamentos, resoluciones y compendios desde una sola sección institucional.</p>
                         <div class="mt-6 flex flex-wrap gap-3">
                             <a href="{{ route('institucional.normatividad') }}" class="inst-btn-primary !py-2.5 !px-4 !text-xs">Ver normatividad</a>
                             <a href="{{ route('institucional.compendio-de-normas') }}" class="inst-btn-secondary !py-2.5 !px-4 !text-xs">Compendio</a>
@@ -195,4 +195,6 @@
         </section>
     </main>
 @endsection
+
+
 

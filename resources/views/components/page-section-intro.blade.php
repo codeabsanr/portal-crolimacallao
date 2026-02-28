@@ -18,7 +18,7 @@
     @endif
 
     @if ($title)
-        <h2 class="inst-title text-slate-900 leading-tight">
+        <h2 class="inst-title text-text-main leading-tight">
             {{ $title }}
         </h2>
         <div class="mt-3 h-[3px] w-16 bg-brand-gold-light {{ $barAlignClass }}"></div>
@@ -30,3 +30,5 @@
         </p>
     @endif
 </div>
+
+

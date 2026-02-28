@@ -112,8 +112,8 @@
                     </div>
                     <aside class="inst-card p-8 bg-primary/10 border-primary/20 flex flex-col justify-center text-center">
                         <span class="material-icons-outlined text-5xl text-primary mb-4">support_agent</span>
-                        <h3 class="text-slate-900 mb-2">Central de ayuda</h3>
-                        <p class="text-slate-600">¿Tiene dudas con algún trámite? Nuestro equipo administrativo está listo para asistirle.</p>
+                        <h3 class="text-text-main mb-2">Central de ayuda</h3>
+                        <p class="text-text-main">¿Tiene dudas con algún trámite? Nuestro equipo administrativo está listo para asistirle.</p>
                         <a href="{{ route('contacto') }}" class="inst-btn-primary mt-5 self-center">Contactar soporte</a>
                     </aside>
                 </div>
@@ -121,6 +121,8 @@
         </section>
     </main>
 @endsection
+
+
 
 
 

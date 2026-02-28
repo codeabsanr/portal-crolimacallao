@@ -25,7 +25,7 @@
                         <span class="block text-[#9a6600]">Comunidad Obstétrica</span>
                     </h1>
                     <p
-                        class="text-slate-700 mb-6 max-w-xl text-[0.92rem] sm:text-[0.98rem] md:text-[1rem] leading-relaxed">
+                        class="text-text-main mb-6 max-w-xl text-[0.92rem] sm:text-[0.98rem] md:text-[1rem] leading-relaxed">
                         Bienvenido al portal del CRO III Lima-Callao. Realice sus consultas, inscripciones y trámites
                         administrativos de manera clara y segura.
                     </p>
@@ -36,13 +36,13 @@
                                 <span class="material-icons-outlined text-primary/55">search</span>
                             </div>
                             <input
-                                class="inst-input !border-transparent !shadow-none !py-3 !pl-12 placeholder:!text-slate-500 focus:!ring-primary/30"
+                                class="inst-input !border-transparent !shadow-none !py-3 !pl-12 placeholder:!text-text-main focus:!ring-primary/30"
                                 placeholder="¿Qué trámite desea realizar hoy?" type="text" />
                         </div>
                         <button
                             class="inst-btn-primary !px-6 !text-sm w-full sm:w-auto hover:-translate-y-[1px]">Buscar</button>
                     </div>
-                    <p class="mt-4 text-[0.78rem] sm:text-sm text-slate-600">
+                    <p class="mt-4 text-[0.78rem] sm:text-sm text-text-main">
                         Ejemplos: <a
                             class="underline text-primary transition-colors duration-200 hover:text-primary-dark"
                             href="{{ route('tramites') }}#colegiatura">Colegiatura</a>,
@@ -61,7 +61,7 @@
 
     {{-- Scroll indicator --}}
     <div id="hero-scroll-indicator" class="absolute bottom-5 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1
-                text-slate-500/70 pointer-events-none select-none transition-opacity duration-500" aria-hidden="true">
+                text-text-main pointer-events-none select-none transition-opacity duration-500" aria-hidden="true">
         <span class="text-[9px] font-bold uppercase tracking-[0.18em]">Desplazar</span>
         <span class="material-icons-outlined text-xl animate-bounce">expand_more</span>
     </div>
@@ -192,3 +192,4 @@
         }
     })();
 </script>
+

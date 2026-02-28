@@ -8,7 +8,7 @@
         <div class="inst-card p-5 md:p-6 border-primary/25">
             <p class="text-xs uppercase tracking-[0.14em] text-primary font-bold">Portal colegiado privado</p>
             <h1 class="mt-2 text-3xl md:text-4xl font-black text-secondary">Mi perfil</h1>
-            <p class="mt-2 text-slate-600">Gestiona tu informacion profesional y credenciales de acceso.</p>
+            <p class="mt-2 text-text-main">Gestiona tu informacion profesional y credenciales de acceso.</p>
             @include('pages.portal-privado.partials.nav')
         </div>
 
@@ -16,10 +16,10 @@
             <article class="inst-card p-5 border-primary/20 lg:col-span-2">
                 <h2 class="text-2xl font-black text-secondary">Datos del colegiado</h2>
                 <div class="mt-4 grid sm:grid-cols-2 gap-3 text-sm">
-                    <div class="border border-slate-200 bg-white p-4"><p class="text-xs font-bold uppercase tracking-[0.12em] text-slate-500">Nombre</p><p class="mt-1 font-bold text-secondary">{{ auth()->user()->name }}</p></div>
-                    <div class="border border-slate-200 bg-white p-4"><p class="text-xs font-bold uppercase tracking-[0.12em] text-slate-500">Correo</p><p class="mt-1 font-bold text-secondary">{{ auth()->user()->email }}</p></div>
-                    <div class="border border-slate-200 bg-white p-4"><p class="text-xs font-bold uppercase tracking-[0.12em] text-slate-500">Estado de cuenta</p><p class="mt-1 font-bold text-emerald-700">Activa</p></div>
-                    <div class="border border-slate-200 bg-white p-4"><p class="text-xs font-bold uppercase tracking-[0.12em] text-slate-500">Ultimo acceso</p><p class="mt-1 font-bold text-secondary">{{ now()->format('d/m/Y H:i') }}</p></div>
+                    <div class="border border-slate-200 bg-white p-4"><p class="text-xs font-bold uppercase tracking-[0.12em] text-text-main">Nombre</p><p class="mt-1 font-bold text-secondary">{{ auth()->user()->name }}</p></div>
+                    <div class="border border-slate-200 bg-white p-4"><p class="text-xs font-bold uppercase tracking-[0.12em] text-text-main">Correo</p><p class="mt-1 font-bold text-secondary">{{ auth()->user()->email }}</p></div>
+                    <div class="border border-slate-200 bg-white p-4"><p class="text-xs font-bold uppercase tracking-[0.12em] text-text-main">Estado de cuenta</p><p class="mt-1 font-bold text-emerald-700">Activa</p></div>
+                    <div class="border border-slate-200 bg-white p-4"><p class="text-xs font-bold uppercase tracking-[0.12em] text-text-main">Ultimo acceso</p><p class="mt-1 font-bold text-secondary">{{ now()->format('d/m/Y H:i') }}</p></div>
                 </div>
             </article>
             <article class="inst-card p-5 border-primary/20">
@@ -33,3 +33,5 @@
     </div>
 </section>
 @endsection
+
+

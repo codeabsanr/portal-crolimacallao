@@ -19,19 +19,19 @@
                         Servicios y trámites para la<br class="hidden lg:block" />
                         <span class="text-primary">Comunidad Obstétrica</span>
                     </h1>
-                    <p class="text-slate-700 mb-8 max-w-2xl text-[1.08rem]">
+                    <p class="text-text-main mb-8 max-w-2xl text-[1.08rem]">
                         Bienvenido al portal del CRO III Lima-Callao. Realice sus consultas, inscripciones y trámites administrativos de manera clara y segura.
                     </p>
                     <div class="inst-card p-2 max-w-2xl flex flex-col sm:flex-row gap-2 border border-slate-200 shadow-[0_10px_25px_-16px_rgba(15,23,42,0.45)]">
                         <div class="relative flex-grow">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <span class="material-icons-outlined text-slate-400">search</span>
+                                <span class="material-icons-outlined text-text-main">search</span>
                             </div>
                             <input class="inst-input !border-transparent !shadow-none !py-3 !pl-12" placeholder="¿Qué trámite desea realizar hoy?" type="text" />
                         </div>
                         <button class="inst-btn-primary !px-6 w-full sm:w-auto">Buscar</button>
                     </div>
-                    <p class="mt-4 text-sm text-slate-600">
+                    <p class="mt-4 text-sm text-text-main">
                         Ejemplos: <a class="underline hover:text-primary" href="{{ route('tramites') }}#colegiatura">Colegiatura</a>,
                         <a class="underline hover:text-primary" href="{{ route('tramites') }}#habilidad">Habilidad profesional</a>,
                         <a class="underline hover:text-primary" href="{{ route('tramites') }}#registros">Certificados</a>
@@ -42,3 +42,5 @@
         </div>
     </div>
 </section>
+
+

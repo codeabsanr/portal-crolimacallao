@@ -113,20 +113,20 @@
                                 <div>
                                     <div class="flex flex-wrap gap-2">
                                         <span class="inline-flex items-center rounded-sm border {{ $isHabilitado ? 'border-emerald-300 bg-emerald-50 text-emerald-700' : 'border-primary/20 bg-primary/5 text-primary' }} px-3 py-1 text-xs font-black uppercase tracking-[0.12em]">{{ $item['habilitado'] }}</span>
-                                        <span class="inline-flex items-center rounded-sm border border-slate-300 bg-white px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-slate-700">{{ $item['situacion'] }}</span>
-                                        <span class="inline-flex items-center rounded-sm border border-slate-300 bg-white px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-slate-700">{{ $item['documento'] }}</span>
+                                        <span class="inline-flex items-center rounded-sm border border-slate-300 bg-white px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-text-main">{{ $item['situacion'] }}</span>
+                                        <span class="inline-flex items-center rounded-sm border border-slate-300 bg-white px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-text-main">{{ $item['documento'] }}</span>
                                     </div>
                                     <div class="mt-4 grid grid-cols-3 gap-2">
                                         <article class="border border-slate-200 bg-primary-mist p-2.5">
-                                            <p class="text-[11px] uppercase tracking-[0.12em] text-slate-500 font-bold">Experiencia</p>
-                                            <p class="mt-1 text-lg font-black text-slate-900">{{ $item['experiencia_anios'] ?? '0' }} anos</p>
+                                            <p class="text-[11px] uppercase tracking-[0.12em] text-text-main font-bold">Experiencia</p>
+                                            <p class="mt-1 text-lg font-black text-text-main">{{ $item['experiencia_anios'] ?? '0' }} anos</p>
                                         </article>
                                         <article class="border border-slate-200 bg-primary-mist p-2.5">
-                                            <p class="text-[11px] uppercase tracking-[0.12em] text-slate-500 font-bold">Modalidad</p>
-                                            <p class="mt-1 text-sm font-bold text-slate-900">{{ $item['modalidad'] ?? 'No registrado' }}</p>
+                                            <p class="text-[11px] uppercase tracking-[0.12em] text-text-main font-bold">Modalidad</p>
+                                            <p class="mt-1 text-sm font-bold text-text-main">{{ $item['modalidad'] ?? 'No registrado' }}</p>
                                         </article>
                                         <article class="border border-slate-200 bg-primary-mist p-2.5">
-                                            <p class="text-[11px] uppercase tracking-[0.12em] text-slate-500 font-bold">Disponibilidad</p>
+                                            <p class="text-[11px] uppercase tracking-[0.12em] text-text-main font-bold">Disponibilidad</p>
                                             <p class="mt-1 text-sm font-bold {{ $isHabilitado && $isActivo ? 'text-emerald-700' : 'text-primary' }}">{{ $item['disponibilidad'] ?? 'No registrado' }}</p>
                                         </article>
                                     </div>
@@ -143,8 +143,8 @@
 
                     <section class="grid md:grid-cols-2 gap-4">
                         <article class="border border-slate-200 bg-white p-4">
-                            <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold">Datos profesionales</p>
-                            <div class="mt-3 space-y-2 text-sm text-slate-700">
+                            <p class="text-xs uppercase tracking-[0.12em] text-text-main font-bold">Datos profesionales</p>
+                            <div class="mt-3 space-y-2 text-sm text-text-main">
                                 <p><span class="font-bold text-secondary">Carrera:</span> {{ $item['carrera'] }}</p>
                                 <p><span class="font-bold text-secondary">Especialidad:</span> {{ $item['especialidad'] }}</p>
                                 <p><span class="font-bold text-secondary">Colegiatura desde:</span> {{ $item['colegiatura_desde'] }}</p>
@@ -154,14 +154,14 @@
                         </article>
 
                         <article class="border border-slate-200 bg-white p-4">
-                            <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold">Ultima experiencia</p>
+                            <p class="text-xs uppercase tracking-[0.12em] text-text-main font-bold">Ultima experiencia</p>
                             <p class="mt-2 text-base font-black text-secondary">{{ $item['ultimo_centro'] ?? 'No registrado' }}</p>
                             <div class="mt-3 space-y-2">
                                 @foreach (($item['experiencia'] ?? []) as $job)
                                     <div class="border border-slate-200 bg-primary-mist p-3">
                                         <p class="text-sm font-bold text-secondary">{{ $job['cargo'] }}</p>
-                                        <p class="text-sm text-slate-600">{{ $job['institucion'] }}</p>
-                                        <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold mt-1">{{ $job['periodo'] }}</p>
+                                        <p class="text-sm text-text-main">{{ $job['institucion'] }}</p>
+                                        <p class="text-xs uppercase tracking-[0.12em] text-text-main font-bold mt-1">{{ $job['periodo'] }}</p>
                                     </div>
                                 @endforeach
                             </div>
@@ -173,10 +173,10 @@
                     <section class="border border-slate-200 bg-white p-4">
                         <div class="flex items-center justify-between gap-2">
                             <div>
-                                <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold">Cartelera institucional</p>
-                                <h2 class="mt-1 text-xl font-black text-slate-900">Ads segun tipo de contenido</h2>
+                                <p class="text-xs uppercase tracking-[0.12em] text-text-main font-bold">Cartelera institucional</p>
+                                <h2 class="mt-1 text-xl font-black text-text-main">Ads segun tipo de contenido</h2>
                             </div>
-                            <span class="inline-flex rounded-sm border border-slate-300 px-2.5 py-1 text-[11px] font-black uppercase tracking-[0.12em] text-slate-700">3 ads</span>
+                            <span class="inline-flex rounded-sm border border-slate-300 px-2.5 py-1 text-[11px] font-black uppercase tracking-[0.12em] text-text-main">3 ads</span>
                         </div>
 
                         <div class="mt-4 space-y-3">
@@ -242,7 +242,7 @@
 
                     <section class="grid sm:grid-cols-2 gap-3">
                         <article class="border border-slate-200 bg-white p-3">
-                            <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold">Areas</p>
+                            <p class="text-xs uppercase tracking-[0.12em] text-text-main font-bold">Areas</p>
                             <div class="mt-2 flex flex-wrap gap-2">
                                 @foreach (($item['areas'] ?? []) as $area)
                                     <span class="inline-flex rounded-sm border border-primary/20 bg-primary/5 px-2.5 py-1 text-xs font-bold text-primary">{{ $area }}</span>
@@ -250,8 +250,8 @@
                             </div>
                         </article>
                         <article class="border border-slate-200 bg-white p-3">
-                            <p class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold">Certificaciones</p>
-                            <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
+                            <p class="text-xs uppercase tracking-[0.12em] text-text-main font-bold">Certificaciones</p>
+                            <ul class="mt-2 space-y-1.5 text-sm text-text-main">
                                 @foreach (($item['certificaciones'] ?? []) as $cert)
                                     <li class="flex items-start gap-2">
                                         <span class="material-icons-outlined text-base text-brand-gold mt-0.5">verified</span>
@@ -265,7 +265,7 @@
             </div>
         </div>
 
-        <footer class="relative z-10 mt-auto border-t border-slate-300 bg-white/95 px-6 lg:px-10 py-3.5 text-sm text-slate-500 flex items-center justify-between">
+        <footer class="relative z-10 mt-auto border-t border-slate-300 bg-white/95 px-6 lg:px-10 py-3.5 text-sm text-text-main flex items-center justify-between">
             <span>© {{ date('Y') }} CRO III LIMA-CALLAO</span>
             <span>v2.4.0-release</span>
         </footer>
@@ -311,5 +311,7 @@
     </aside>
 </main>
 @endsection
+
+
 
 

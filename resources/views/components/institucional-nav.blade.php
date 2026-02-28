@@ -23,7 +23,7 @@
                     class="flex items-center justify-between px-3 py-2.5 text-sm font-semibold transition-colors border-l-2 {{ $embedded
                         ? ($active
                             ? 'text-primary border-primary bg-primary/5'
-                            : 'text-slate-700 border-transparent hover:text-primary hover:bg-primary-mist')
+                            : 'text-text-main border-transparent hover:text-primary hover:bg-primary-mist')
                         : ($active
                             ? 'text-white border-brand-gold-light bg-white/10'
                             : 'text-white/90 border-transparent hover:text-white hover:bg-white/10') }}">
@@ -34,4 +34,6 @@
         @endforeach
     </ul>
 </nav>
+
+
 

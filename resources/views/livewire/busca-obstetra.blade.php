@@ -10,3 +10,4 @@
         <p class="text-gray-500">Ingrese datos para buscar.</p>
     </div>
 </div>
+

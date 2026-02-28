@@ -25,7 +25,7 @@
                 <div class="grid lg:grid-cols-5 gap-6 lg:gap-10">
                     <div class="lg:col-span-3 inst-card p-8 border-t-4 border-primary inst-stack-tight">
                         <h2 class="inst-title mb-2">Uso recomendado del módulo</h2>
-                        <ol class="space-y-3 text-slate-700 leading-relaxed">
+                        <ol class="space-y-3 text-text-main leading-relaxed">
                             <li><strong>1.</strong> Ingrese DNI o número de colegiatura.</li>
                             <li><strong>2.</strong> Verifique nombre completo y estado de habilitación.</li>
                             <li><strong>3.</strong> Descargue constancias cuando estén disponibles.</li>
@@ -43,3 +43,5 @@
         </section>
     </main>
 @endsection
+
+

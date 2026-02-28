@@ -58,7 +58,7 @@
                                 <div class="bg-white/95 p-6">
                                     <p class="inline-flex items-center px-2 py-1 text-[11px] uppercase tracking-[0.12em] font-bold rounded border border-primary/40 text-primary">Guia</p>
                                     <p class="mt-3 text-4xl font-black leading-tight text-secondary">Ingreso rapido paso a paso</p>
-                                    <p class="mt-3 text-[1.5rem] leading-[1.45] text-slate-700">Use COP o correo, luego su contrasena. Si la olvido, use recuperacion de clave.</p>
+                                    <p class="mt-3 text-[1.5rem] leading-[1.45] text-text-main">Use COP o correo, luego su contrasena. Si la olvido, use recuperacion de clave.</p>
                                     <div class="mt-5 grid grid-cols-2 gap-2">
                                         <a href="{{ route('password.request') }}" class="inst-btn !py-2.5 !px-3 !text-base !text-white !justify-center !bg-primary hover:!bg-primary-dark">Recuperar clave</a>
                                         <a href="{{ route('register') }}" class="inst-btn-secondary !py-2.5 !px-3 !text-base !justify-center">Activar cuenta</a>
@@ -79,7 +79,7 @@
                                 <div class="bg-white/95 p-6">
                                     <p class="inline-flex items-center px-2 py-1 text-[11px] uppercase tracking-[0.12em] font-bold rounded border border-primary/40 text-primary">Comunicado</p>
                                     <p class="mt-3 text-4xl font-black leading-tight text-secondary">Mesa de partes: horario extraordinario</p>
-                                    <p class="mt-3 text-[1.5rem] leading-[1.45] text-slate-700">Atencion extendida para recepcion documentaria hasta las 18:30.</p>
+                                    <p class="mt-3 text-[1.5rem] leading-[1.45] text-text-main">Atencion extendida para recepcion documentaria hasta las 18:30.</p>
                                     <div class="mt-5 grid grid-cols-2 gap-2">
                                         <a href="{{ route('actualidad.comunicados') }}" class="inst-btn !py-2.5 !px-3 !text-base !text-white !justify-center !bg-primary hover:!bg-primary-dark">Ver comunicado</a>
                                         <a href="{{ route('contacto') }}" class="inst-btn-secondary !py-2.5 !px-3 !text-base !justify-center">Detalle</a>
@@ -100,7 +100,7 @@
                                 <div class="bg-white/95 p-6">
                                     <p class="inline-flex items-center px-2 py-1 text-[11px] uppercase tracking-[0.12em] font-bold rounded border border-primary/40 text-primary">Evento</p>
                                     <p class="mt-3 text-4xl font-black leading-tight text-secondary">Jornada regional de actualizacion obstetrica</p>
-                                    <p class="mt-3 text-[1.5rem] leading-[1.45] text-slate-700">Inscripciones abiertas para modalidad presencial y virtual.</p>
+                                    <p class="mt-3 text-[1.5rem] leading-[1.45] text-text-main">Inscripciones abiertas para modalidad presencial y virtual.</p>
                                     <div class="mt-5 grid grid-cols-2 gap-2">
                                         <a href="{{ route('capacitacion.calendario') }}" class="inst-btn !py-2.5 !px-3 !text-base !text-white !justify-center !bg-[#8c0f2f] hover:!bg-[#660219]">Ver agenda</a>
                                         <a href="{{ route('capacitacion.cursos') }}" class="inst-btn-secondary !py-2.5 !px-3 !text-base !justify-center">Inscribirme</a>
@@ -121,7 +121,7 @@
                                 <div class="bg-white/95 p-6">
                                     <p class="inline-flex items-center px-2 py-1 text-[11px] uppercase tracking-[0.12em] font-bold rounded border border-primary/40 text-primary">Capacitacion</p>
                                     <p class="mt-3 text-4xl font-black leading-tight text-secondary">Programa de fortalecimiento clinico</p>
-                                    <p class="mt-3 text-[1.5rem] leading-[1.45] text-slate-700">Cupos limitados con constancia institucional para colegiadas.</p>
+                                    <p class="mt-3 text-[1.5rem] leading-[1.45] text-text-main">Cupos limitados con constancia institucional para colegiadas.</p>
                                     <div class="mt-5 grid grid-cols-2 gap-2">
                                         <a href="{{ route('capacitacion.cursos') }}" class="inst-btn !py-2.5 !px-3 !text-base !text-white !justify-center !bg-[#8c0f2f] hover:!bg-[#660219]">Ver cursos</a>
                                         <a href="{{ route('bolsa.trabajo') }}" class="inst-btn-secondary !py-2.5 !px-3 !text-base !justify-center">Postular</a>
@@ -146,7 +146,7 @@
                             CRO III LIMA - CALLAO
                         </p>
                         <h2 class="inst-section-title">Bienvenida</h2>
-                        <p class="mt-3 text-base md:text-lg text-slate-600">Ingresa tus credenciales para acceder al portal.</p>
+                        <p class="mt-3 text-base md:text-lg text-text-main">Ingresa tus credenciales para acceder al portal.</p>
                     </div>
 
                     <x-auth-session-status class="mb-4 rounded-sm border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700" :status="session('status')" />
@@ -162,19 +162,19 @@
                         <div class="relative">
                             <label for="email" class="sr-only">Numero de Colegiatura o Email</label>
                             <input id="email" name="email" type="text" value="{{ old('email') }}" required autofocus autocomplete="username" placeholder="Numero de Colegiatura o Email" class="inst-input !bg-primary-tint !border-slate-200 !pr-11">
-                            <span class="material-icons-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">badge</span>
+                            <span class="material-icons-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-text-main">badge</span>
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
                         </div>
 
                         <div class="relative">
                             <label for="password" class="sr-only">Contrasena</label>
                             <input id="password" name="password" type="password" required autocomplete="current-password" placeholder="Contrasena" class="inst-input !bg-primary-tint !border-slate-200 !pr-11">
-                            <span class="material-icons-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">visibility_off</span>
+                            <span class="material-icons-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-text-main">visibility_off</span>
                             <x-input-error :messages="$errors->get('password')" class="mt-2" />
                         </div>
 
                         <div class="flex items-center justify-between gap-3 text-sm">
-                            <label class="inline-flex items-center gap-2 text-slate-600">
+                            <label class="inline-flex items-center gap-2 text-text-main">
                                 <input type="checkbox" name="remember" class="h-4 w-4 border-slate-300 text-primary focus:ring-primary/30">
                                 <span>Recordarme</span>
                             </label>
@@ -188,18 +188,18 @@
                         </button>
                     </form>
 
-                    <div class="mt-8 border-t border-slate-200 pt-6 text-center text-sm text-slate-600">
+                    <div class="mt-8 border-t border-slate-200 pt-6 text-center text-sm text-text-main">
                         Aun no tienes una cuenta activa?
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="font-bold text-secondary underline decoration-primary/40 underline-offset-4 hover:text-primary">Registrate aqui</a>
                         @endif
                     </div>
 
-                    <div class="mt-6 border-t border-slate-200 pt-5 flex flex-wrap items-center justify-center gap-3 text-sm text-slate-500">
+                    <div class="mt-6 border-t border-slate-200 pt-5 flex flex-wrap items-center justify-center gap-3 text-sm text-text-main">
                         <a href="{{ route('terminos') }}" class="hover:text-primary">Terminos y Condiciones</a>
-                        <span class="text-slate-300">•</span>
+                        <span class="text-text-main">•</span>
                         <a href="{{ route('privacidad') }}" class="hover:text-primary">Politica de Privacidad</a>
-                        <span class="text-slate-300">•</span>
+                        <span class="text-text-main">•</span>
                         <a href="{{ route('contacto') }}" class="hover:text-primary">Ayuda</a>
                     </div>
                 </div>
@@ -303,5 +303,7 @@
         });
     </script>
 </x-guest-layout>
+
+
 
 

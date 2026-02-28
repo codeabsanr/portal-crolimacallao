@@ -20,10 +20,10 @@
                     </div>
                     <aside class="inst-card p-6 md:p-8 border-primary/30 bg-primary/5">
                         <p class="text-xs uppercase tracking-[0.14em] text-primary font-bold mb-2">Seguimiento</p>
-                        <h3 class="text-slate-900 text-xl font-black">Estado de seguimiento</h3>
+                        <h3 class="text-text-main text-xl font-black">Estado de seguimiento</h3>
                         <div class="mt-3 h-[3px] w-12 bg-brand-gold-light"></div>
-                        <p class="text-slate-700 mt-4">Código simulado: <strong>MP-2026-00421</strong></p>
-                        <p class="text-sm text-slate-600 mt-2">Última actualización: En revisión documentaria.</p>
+                        <p class="text-text-main mt-4">Código simulado: <strong>MP-2026-00421</strong></p>
+                        <p class="text-sm text-text-main mt-2">Última actualización: En revisión documentaria.</p>
                         <a href="{{ route('contacto') }}" class="inst-btn-secondary mt-5">Contactar mesa de partes</a>
                     </aside>
                 </div>
@@ -31,4 +31,6 @@
         </section>
     </main>
 @endsection
+
+
 

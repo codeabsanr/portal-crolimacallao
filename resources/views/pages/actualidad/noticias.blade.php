@@ -23,11 +23,11 @@
                             <article
                                 class="border border-slate-200 p-4 hover:shadow-sm transition-[box-shadow,border-color] duration-300 hover:border-primary/30">
                                 <div class="flex flex-wrap items-center justify-between gap-2">
-                                    <h3 class="text-slate-900 text-lg font-bold">{{ $item['titulo'] }}</h3>
+                                    <h3 class="text-text-main text-lg font-bold">{{ $item['titulo'] }}</h3>
                                     <span
                                         class="text-xs uppercase tracking-[0.12em] px-2 py-1 border border-primary/25 text-primary">{{ $item['estado'] }}</span>
                                 </div>
-                                <p class="text-sm text-slate-600 mt-2">Fecha: {{ $item['fecha'] }}</p>
+                                <p class="text-sm text-text-main mt-2">Fecha: {{ $item['fecha'] }}</p>
                             </article>
                         @endforeach
                     </div>
@@ -39,4 +39,6 @@
         </section>
     </main>
 @endsection
+
+
 

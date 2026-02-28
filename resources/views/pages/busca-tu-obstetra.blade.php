@@ -14,7 +14,7 @@
                     <img src="{{ asset('assets/img/logo-circular.png') }}" alt="Logo CRO III Lima-Callao" class="h-11 w-11 object-contain" />
                     <div class="leading-tight">
                         <p class="text-2xl font-black tracking-tight text-secondary">CRO III LIMA-CALLAO</p>
-                        <p class="text-xs uppercase tracking-[0.18em] text-slate-500">Sistema de Gestion Institucional</p>
+                        <p class="text-xs uppercase tracking-[0.18em] text-text-main">Sistema de Gestion Institucional</p>
                     </div>
                 </div>
                 <div class="flex items-center gap-2">
@@ -27,33 +27,33 @@
         <div class="relative z-10 mx-auto w-full max-w-5xl px-5 sm:px-6 lg:px-10 py-8 md:py-12">
             <span class="inline-flex items-center rounded-sm border border-primary/25 bg-brand-gold-soft px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-primary">Busqueda publica</span>
             <h1 class="mt-5 text-4xl lg:text-5xl font-black leading-[1.06] tracking-tight text-secondary">Busca tu obstetra</h1>
-            <p class="mt-4 max-w-3xl text-base md:text-lg text-slate-600">Consulta por COP, DNI o nombre completo y revisa el perfil profesional en segundos.</p>
+            <p class="mt-4 max-w-3xl text-base md:text-lg text-text-main">Consulta por COP, DNI o nombre completo y revisa el perfil profesional en segundos.</p>
 
             <form id="buscador-obstetra-form" class="mt-8 rounded-md border border-primary/35 bg-white p-2">
                 <div class="flex flex-col sm:flex-row sm:items-center gap-2">
                     <label for="buscador-obstetra-input" class="sr-only">Buscar obstetra</label>
                     <div class="flex items-center gap-3 px-3 sm:px-4 py-3 sm:py-0 w-full">
-                        <span class="material-icons-outlined text-3xl text-slate-400">search</span>
-                        <input id="buscador-obstetra-input" type="text" class="w-full border-none bg-transparent text-xl sm:text-2xl font-medium tracking-wide text-secondary placeholder:text-slate-300 focus:ring-0" placeholder="Ejemplo: 12874, 43658791 o Maria Fernanda">
+                        <span class="material-icons-outlined text-3xl text-text-main">search</span>
+                        <input id="buscador-obstetra-input" type="text" class="w-full border-none bg-transparent text-xl sm:text-2xl font-medium tracking-wide text-secondary placeholder:text-text-main focus:ring-0" placeholder="Ejemplo: 12874, 43658791 o Maria Fernanda">
                     </div>
                     <button id="buscador-obstetra-submit" type="submit" class="inst-btn-primary !h-12 !min-w-[180px] !rounded-sm !px-6 !text-sm">Buscar perfil</button>
                 </div>
             </form>
 
             <div class="mt-4 flex flex-wrap gap-2 text-xs">
-                <button type="button" data-example="12874" class="search-example rounded-sm border border-slate-300 bg-white px-3 py-1.5 font-semibold text-slate-600 hover:border-primary hover:text-primary">COP: 12874</button>
-                <button type="button" data-example="30951" class="search-example rounded-sm border border-slate-300 bg-white px-3 py-1.5 font-semibold text-slate-600 hover:border-primary hover:text-primary">COP: 30951</button>
-                <button type="button" data-example="maria" class="search-example rounded-sm border border-slate-300 bg-white px-3 py-1.5 font-semibold text-slate-600 hover:border-primary hover:text-primary">Nombre: Maria</button>
+                <button type="button" data-example="12874" class="search-example rounded-sm border border-slate-300 bg-white px-3 py-1.5 font-semibold text-text-main hover:border-primary hover:text-primary">COP: 12874</button>
+                <button type="button" data-example="30951" class="search-example rounded-sm border border-slate-300 bg-white px-3 py-1.5 font-semibold text-text-main hover:border-primary hover:text-primary">COP: 30951</button>
+                <button type="button" data-example="maria" class="search-example rounded-sm border border-slate-300 bg-white px-3 py-1.5 font-semibold text-text-main hover:border-primary hover:text-primary">Nombre: Maria</button>
             </div>
 
             <section class="mt-8 space-y-4">
                 <div class="flex items-center justify-between gap-3">
                     <h2 class="text-xl md:text-2xl font-black text-secondary">Resultados</h2>
-                    <span id="buscador-count" class="text-xs uppercase tracking-[0.14em] text-slate-500 font-bold">2 perfiles</span>
+                    <span id="buscador-count" class="text-xs uppercase tracking-[0.14em] text-text-main font-bold">2 perfiles</span>
                 </div>
 
                 <div id="buscador-resultados" class="grid gap-3"></div>
-                <p id="buscador-vacio" class="hidden rounded-sm border border-primary/20 bg-white p-4 text-sm text-slate-600">No se encontraron perfiles con ese termino. Intenta con COP, DNI o nombre.</p>
+                <p id="buscador-vacio" class="hidden rounded-sm border border-primary/20 bg-white p-4 text-sm text-text-main">No se encontraron perfiles con ese termino. Intenta con COP, DNI o nombre.</p>
             </section>
         </div>
     </section>
@@ -143,12 +143,12 @@
                             <img src="${item.foto}" alt="Foto de perfil" class="h-20 w-20 object-cover border border-primary/20">
                             <div class="min-w-0 flex-1">
                                 <h3 class="text-2xl font-black text-secondary leading-tight">${item.nombre}</h3>
-                                <p class="mt-1 text-sm text-slate-600">COP ${item.cop} · DNI ${item.dni}</p>
-                                <p class="text-sm text-slate-600">${item.especialidad}</p>
+                                <p class="mt-1 text-sm text-text-main">COP ${item.cop} · DNI ${item.dni}</p>
+                                <p class="text-sm text-text-main">${item.especialidad}</p>
                             </div>
                             <div class="flex flex-col items-start sm:items-end gap-2">
                                 <span class="inline-flex items-center rounded-sm border px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] ${statusClass}">${item.habilitado}</span>
-                                <span class="text-xs uppercase tracking-[0.12em] text-slate-500 font-bold">${item.situacion}</span>
+                                <span class="text-xs uppercase tracking-[0.12em] text-text-main font-bold">${item.situacion}</span>
                                 <a href="${profileUrl}" class="inst-btn-secondary !px-4 !py-2 !text-xs">Ver perfil completo</a>
                             </div>
                         </div>
@@ -186,4 +186,7 @@
     });
 </script>
 @endsection
+
+
+
 

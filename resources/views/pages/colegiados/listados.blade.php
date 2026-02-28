@@ -23,8 +23,8 @@
                             <article
                                 class="border border-slate-200 p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                                 <div>
-                                    <h3 class="text-slate-900 text-lg font-bold">{{ $item['nombre'] }}</h3>
-                                    <p class="text-sm text-slate-600">Período: {{ $item['periodo'] }} | Registros:
+                                    <h3 class="text-text-main text-lg font-bold">{{ $item['nombre'] }}</h3>
+                                    <p class="text-sm text-text-main">Período: {{ $item['periodo'] }} | Registros:
                                         {{ $item['registros'] }}</p>
                                 </div>
                                 <a href="{{ route('colegiados') }}" class="inst-btn-secondary !px-4 !py-2 shrink-0">Ver
@@ -37,4 +37,6 @@
         </section>
     </main>
 @endsection
+
+
 

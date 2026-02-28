@@ -52,22 +52,22 @@
                         <p class="inst-kicker text-primary">Ruta de atención</p>
                         <h2 class="inst-title text-secondary mt-1 mb-4">Proceso general de atención</h2>
                         <div class="mb-5 h-[3px] w-20 bg-brand-gold-light"></div>
-                        <ol class="space-y-4 leading-relaxed text-slate-700">
+                        <ol class="space-y-4 leading-relaxed text-text-main">
                             <li class="flex gap-3">
                                 <span class="h-7 w-7 rounded-full bg-primary text-white ring-2 ring-brand-gold-light/60 flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">1</span>
-                                <p class="text-slate-700"><strong class="text-secondary">Registro:</strong> Ingrese su solicitud por canal virtual o presencial.</p>
+                                <p class="text-text-main"><strong class="text-secondary">Registro:</strong> Ingrese su solicitud por canal virtual o presencial.</p>
                             </li>
                             <li class="flex gap-3">
                                 <span class="h-7 w-7 rounded-full bg-primary text-white ring-2 ring-brand-gold-light/60 flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">2</span>
-                                <p class="text-slate-700"><strong class="text-secondary">Verificación:</strong> Validación de requisitos y observaciones, si corresponde.</p>
+                                <p class="text-text-main"><strong class="text-secondary">Verificación:</strong> Validación de requisitos y observaciones, si corresponde.</p>
                             </li>
                             <li class="flex gap-3">
                                 <span class="h-7 w-7 rounded-full bg-primary text-white ring-2 ring-brand-gold-light/60 flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">3</span>
-                                <p class="text-slate-700"><strong class="text-secondary">Pago y regularización:</strong> Confirmación de tasas, cuotas y documentación final.</p>
+                                <p class="text-text-main"><strong class="text-secondary">Pago y regularización:</strong> Confirmación de tasas, cuotas y documentación final.</p>
                             </li>
                             <li class="flex gap-3">
                                 <span class="h-7 w-7 rounded-full bg-primary text-white ring-2 ring-brand-gold-light/60 flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">4</span>
-                                <p class="text-slate-700"><strong class="text-secondary">Respuesta:</strong> Emisión de constancia, certificado o resolución administrativa.</p>
+                                <p class="text-text-main"><strong class="text-secondary">Respuesta:</strong> Emisión de constancia, certificado o resolución administrativa.</p>
                             </li>
                         </ol>
                     </div>
@@ -93,12 +93,14 @@
                     <p class="inst-kicker text-primary">Ayuda al colegiado</p>
                     <h2 class="inst-title text-secondary mt-2">Preguntas frecuentes</h2>
                     <div class="mx-auto mt-3 h-[3px] w-24 bg-brand-gold-light"></div>
-                    <p class="mt-4 text-slate-600">Revisa respuestas rápidas en una página dedicada para orientación de trámites.</p>
+                    <p class="mt-4 text-text-main">Revisa respuestas rápidas en una página dedicada para orientación de trámites.</p>
                     <a href="{{ route('tramites.faq') }}" class="inst-btn-primary mt-6 !px-6 !py-2.5">Ver preguntas frecuentes</a>
                 </div>
             </div>
         </section>
     </main>
 @endsection
+
+
 
 

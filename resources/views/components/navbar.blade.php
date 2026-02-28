@@ -33,24 +33,24 @@
                     <div class="leading-tight min-w-0">
                         <p class="text-base md:text-lg font-black text-primary truncate">CRO III</p>
                         <p
-                            class="text-[11px] md:text-xs tracking-[0.14em] md:tracking-[0.18em] uppercase text-slate-600 truncate">
+                            class="text-[11px] md:text-xs tracking-[0.14em] md:tracking-[0.18em] uppercase text-text-main truncate">
                             Lima - Callao</p>
                     </div>
                 </a>
 
                 <nav class="hidden md:flex items-center gap-1 lg:gap-2">
                     <a href="{{ route('home') }}"
-                        class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('home') ? 'text-primary border-primary' : 'text-slate-700 border-transparent hover:text-primary' }}">Inicio</a>
+                        class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('home') ? 'text-primary border-primary' : 'text-text-main border-transparent hover:text-primary' }}">Inicio</a>
                     <a href="{{ route('institucional') }}"
-                        class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('institucional*') ? 'text-primary border-primary' : 'text-slate-700 border-transparent hover:text-primary' }}">Institucional</a>
+                        class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('institucional*') ? 'text-primary border-primary' : 'text-text-main border-transparent hover:text-primary' }}">Institucional</a>
                     <a href="{{ route('tramites') }}"
-                        class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('tramites*') ? 'text-primary border-primary' : 'text-slate-700 border-transparent hover:text-primary' }}">Trámites</a>
+                        class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('tramites*') ? 'text-primary border-primary' : 'text-text-main border-transparent hover:text-primary' }}">Trámites</a>
                     <a href="{{ route('capacitacion') }}"
-                        class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('capacitacion*') ? 'text-primary border-primary' : 'text-slate-700 border-transparent hover:text-primary' }}">Capacitación</a>
+                        class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('capacitacion*') ? 'text-primary border-primary' : 'text-text-main border-transparent hover:text-primary' }}">Capacitación</a>
                     <a href="{{ route('actualidad') }}"
-                        class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('actualidad*') ? 'text-primary border-primary' : 'text-slate-700 border-transparent hover:text-primary' }}">Actualidad</a>
+                        class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('actualidad*') ? 'text-primary border-primary' : 'text-text-main border-transparent hover:text-primary' }}">Actualidad</a>
                     <a href="{{ route('contacto') }}"
-                        class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('contacto') ? 'text-primary border-primary' : 'text-slate-700 border-transparent hover:text-primary' }}">Contacto</a>
+                        class="px-3 py-2 text-sm font-semibold border-b-2 transition-colors {{ request()->routeIs('contacto') ? 'text-primary border-primary' : 'text-text-main border-transparent hover:text-primary' }}">Contacto</a>
                 </nav>
 
                 <div class="hidden md:flex items-center">
@@ -59,7 +59,7 @@
                 </div>
 
                 <button @click="open = true; activeGroup = null"
-                    class="md:hidden inline-flex items-center justify-center p-2 text-slate-700"
+                    class="md:hidden inline-flex items-center justify-center p-2 text-text-main"
                     aria-label="Abrir navegación" aria-controls="mobile-drawer" :aria-expanded="open.toString()"
                     type="button">
                     <span class="material-icons-outlined text-3xl">menu</span>
@@ -220,3 +220,5 @@
 </div>
 
 <div class="h-16 md:h-[7rem]" aria-hidden="true"></div>
+
+

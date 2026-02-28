@@ -30,7 +30,7 @@
                             CRO III LIMA - CALLAO
                         </p>
                         <h2 class="inst-section-title">Restablecer contrasena</h2>
-                        <p class="mt-3 text-base md:text-lg text-slate-600">Completa tus datos y guarda tu nueva contrasena.</p>
+                        <p class="mt-3 text-base md:text-lg text-text-main">Completa tus datos y guarda tu nueva contrasena.</p>
                     </div>
 
                     <form method="POST" action="{{ route('password.store') }}" class="space-y-4">
@@ -38,19 +38,19 @@
                         <input type="hidden" name="token" value="{{ $request->route('token') }}">
 
                         <div>
-                            <label for="email" class="mb-2 block text-sm font-bold text-slate-700">Correo electronico</label>
+                            <label for="email" class="mb-2 block text-sm font-bold text-text-main">Correo electronico</label>
                             <input id="email" name="email" type="email" value="{{ old('email', $request->email) }}" required autofocus autocomplete="username" class="inst-input !bg-primary-tint !border-slate-200">
                             <x-input-error :messages="$errors->get('email')" class="mt-2" />
                         </div>
 
                         <div>
-                            <label for="password" class="mb-2 block text-sm font-bold text-slate-700">Contrasena nueva</label>
+                            <label for="password" class="mb-2 block text-sm font-bold text-text-main">Contrasena nueva</label>
                             <input id="password" name="password" type="password" required autocomplete="new-password" class="inst-input !bg-primary-tint !border-slate-200">
                             <x-input-error :messages="$errors->get('password')" class="mt-2" />
                         </div>
 
                         <div>
-                            <label for="password_confirmation" class="mb-2 block text-sm font-bold text-slate-700">Confirmar contrasena</label>
+                            <label for="password_confirmation" class="mb-2 block text-sm font-bold text-text-main">Confirmar contrasena</label>
                             <input id="password_confirmation" name="password_confirmation" type="password" required autocomplete="new-password" class="inst-input !bg-primary-tint !border-slate-200">
                             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                         </div>
@@ -64,4 +64,6 @@
         </div>
     </main>
 </x-guest-layout>
+
+
 

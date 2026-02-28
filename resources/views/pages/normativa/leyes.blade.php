@@ -25,8 +25,8 @@
                                 <div>
                                     <p class="text-xs uppercase tracking-[0.12em] text-primary font-bold">{{ $ley['norma'] }}
                                     </p>
-                                    <h3 class="text-slate-900 text-lg mt-1">{{ $ley['tema'] }}</h3>
-                                    <p class="text-sm text-slate-600 mt-1">Estado: {{ $ley['vigencia'] }}</p>
+                                    <h3 class="text-text-main text-lg mt-1">{{ $ley['tema'] }}</h3>
+                                    <p class="text-sm text-text-main mt-1">Estado: {{ $ley['vigencia'] }}</p>
                                 </div>
                             </article>
                         @endforeach
@@ -36,4 +36,6 @@
         </section>
     </main>
 @endsection
+
+
 
