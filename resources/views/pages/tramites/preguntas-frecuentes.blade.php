@@ -2,9 +2,9 @@
 
 @section('content')
     <main id="main">
-        <section class="py-10 md:py-14 bg-background-light">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-3 gap-6">
+        <section class="inst-section bg-background-light">
+            <div class="max-w-7xl mx-auto inst-stack">
+                <div class="grid lg:grid-cols-3 gap-6 md:gap-7">
                     <article class="lg:col-span-2 rounded-xl border border-primary/25 bg-white p-6 md:p-8 shadow-[0_22px_40px_-30px_rgba(15,23,42,0.45)]">
                         <p class="text-xs uppercase tracking-[0.15em] text-primary font-bold">Respuestas clave</p>
                         <h2 class="text-secondary text-3xl md:text-4xl font-black tracking-tight mt-1">Trámites más consultados</h2>
@@ -52,8 +52,8 @@
             </div>
         </section>
 
-        <section class="py-10 md:py-14 bg-[linear-gradient(180deg,#faf3f5_0%,#f3e7eb_100%)] border-y border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="inst-section bg-[linear-gradient(180deg,#faf3f5_0%,#f3e7eb_100%)] border-y border-slate-200">
+            <div class="max-w-7xl mx-auto inst-stack">
                 <div class="grid md:grid-cols-3 gap-4">
                     <article class="rounded-xl border border-primary/20 bg-white p-5">
                         <p class="text-xs uppercase tracking-[0.12em] text-primary font-bold">Pagos</p>
@@ -75,5 +75,7 @@
         </section>
     </main>
 @endsection
+
+
 
 

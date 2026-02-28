@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <header x-data="{ open: false, panel: 'main' }" @keydown.escape.window="open = false; panel = 'main'"
+    <header x-data="{ open: false, activeGroup: null, toggleGroup(group) { this.activeGroup = this.activeGroup === group ? null : group; } }" @keydown.escape.window="open = false; activeGroup = null"
         class="relative w-full bg-surface-light shadow-md">
         {{-- Borde inferior dorado --}}
         <div class="absolute inset-x-0 bottom-0 h-[2px] bg-[linear-gradient(90deg,#D4A62A_0%,#BA7C00_48%,#D4A62A_100%)]"
@@ -58,7 +58,7 @@
                         class="inst-btn-primary !py-2">Portal colegiado</a>
                 </div>
 
-                <button @click="open = true; panel = 'main'"
+                <button @click="open = true; activeGroup = null"
                     class="md:hidden inline-flex items-center justify-center p-2 text-slate-700"
                     aria-label="Abrir navegación" aria-controls="mobile-drawer" :aria-expanded="open.toString()"
                     type="button">
@@ -68,132 +68,150 @@
         </div>
 
         <div x-cloak x-show="open" x-transition.opacity.duration.200ms class="fixed inset-0 z-[120] md:hidden">
-            <div class="absolute inset-0 bg-black/40" @click="open = false; panel = 'main'" aria-hidden="true"></div>
+            <div class="absolute inset-0 bg-black/40" @click="open = false; activeGroup = null" aria-hidden="true"></div>
 
             <aside id="mobile-drawer" role="dialog" aria-modal="true"
                 class="relative z-10 h-[100dvh] w-full bg-primary-dark text-white overflow-y-auto">
                 <div class="px-4 py-4 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
                     <div class="flex items-center justify-end mb-4">
-                        <button @click="open = false; panel = 'main'" class="text-white p-1"
+                        <button @click="open = false; activeGroup = null" class="text-white p-1"
                             aria-label="Cerrar navegación" type="button">
                             <span class="material-icons-outlined text-4xl">close</span>
                         </button>
                     </div>
 
-                    <div x-show="panel === 'main'" x-transition.opacity>
-                        <nav class="space-y-1 mb-6">
-                            <a @click="open = false; panel = 'main'" href="{{ route('home') }}"
-                                class="flex items-center justify-between py-3.5 text-white font-semibold">
-                                <span>Inicio</span><span class="material-icons-outlined">chevron_right</span>
-                            </a>
-                            <a @click="open = false; panel = 'main'" href="{{ route('institucional') }}"
-                                class="flex items-center justify-between py-3.5 text-white font-semibold">
-                                <span>Institucional</span><span class="material-icons-outlined">chevron_right</span>
-                            </a>
-                            <a @click="open = false; panel = 'main'" href="{{ route('tramites') }}"
-                                class="flex items-center justify-between py-3.5 text-white font-semibold">
-                                <span>Trámites</span><span class="material-icons-outlined">chevron_right</span>
-                            </a>
-                            <button @click="panel = 'servicios'" type="button"
-                                class="w-full flex items-center justify-between py-3.5 text-white font-semibold">
-                                <span>Servicios</span><span class="material-icons-outlined">chevron_right</span>
-                            </button>
-                            <a @click="open = false; panel = 'main'" href="{{ route('actualidad') }}"
-                                class="flex items-center justify-between py-3.5 text-white font-semibold">
-                                <span>Actualidad</span><span class="material-icons-outlined">chevron_right</span>
-                            </a>
-                            <a @click="open = false; panel = 'main'" href="{{ route('contacto') }}"
-                                class="flex items-center justify-between py-3.5 text-white font-semibold">
-                                <span>Contacto</span><span class="material-icons-outlined">chevron_right</span>
-                            </a>
-                        </nav>
+                    <nav class="space-y-1 mb-6">
+                        <a @click="open = false; activeGroup = null" href="{{ route('home') }}"
+                            class="inline-flex min-h-[44px] w-full items-center justify-between py-3 text-white font-semibold">
+                            <span>Inicio</span><span class="material-icons-outlined">chevron_right</span>
+                        </a>
 
-                        <div class="mt-6 space-y-3">
-                            <a @click="open = false; panel = 'main'" href="{{ route('tramites') }}#mesa-partes"
-                                class="flex items-center justify-between border border-white/50 p-4">
-                                <div class="flex items-center gap-3">
-                                    <span class="material-icons-outlined">forward_to_inbox</span>
-                                    <span class="font-semibold">Mesa de Partes Virtual</span>
+                        <div class="border-y border-white/15 divide-y divide-white/15">
+                            <div>
+                                <button @click="toggleGroup('institucional')" type="button"
+                                    class="inline-flex min-h-[44px] w-full items-center justify-between py-3 text-white font-semibold"
+                                    :aria-expanded="(activeGroup === 'institucional').toString()" aria-controls="group-institucional">
+                                    <span>Institucional</span>
+                                    <span class="material-icons-outlined"
+                                        x-text="activeGroup === 'institucional' ? 'expand_less' : 'expand_more'"></span>
+                                </button>
+                                <div id="group-institucional" x-show="activeGroup === 'institucional'" x-transition.opacity.duration.150ms
+                                    class="pb-2 pl-4 pr-1 space-y-1">
+                                    <a @click="open = false; activeGroup = null" href="{{ route('institucional.quienes-somos') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Quiénes somos</a>
+                                    <a @click="open = false; activeGroup = null" href="{{ route('institucional.consejo-directivo') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Consejo directivo</a>
+                                    <a @click="open = false; activeGroup = null" href="{{ route('institucional.normatividad') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Normatividad</a>
+                                    <a @click="open = false; activeGroup = null" href="{{ route('institucional.convenios') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Convenios</a>
                                 </div>
-                                <span
-                                    class="material-icons-outlined bg-white text-primary-dark p-1">arrow_forward</span>
-                            </a>
-                            <a @click="open = false; panel = 'main'"
-                                href="{{ auth()->check() ? route('portal.colegiado') : route('login') }}"
-                                class="flex items-center justify-between border border-white/50 p-4">
-                                <div class="flex items-center gap-3">
-                                    <span class="material-icons-outlined">person</span>
-                                    <span class="font-semibold">Portal del Colegiado</span>
+                            </div>
+
+                            <div>
+                                <button @click="toggleGroup('tramites')" type="button"
+                                    class="inline-flex min-h-[44px] w-full items-center justify-between py-3 text-white font-semibold"
+                                    :aria-expanded="(activeGroup === 'tramites').toString()" aria-controls="group-tramites">
+                                    <span>Trámites</span>
+                                    <span class="material-icons-outlined"
+                                        x-text="activeGroup === 'tramites' ? 'expand_less' : 'expand_more'"></span>
+                                </button>
+                                <div id="group-tramites" x-show="activeGroup === 'tramites'" x-transition.opacity.duration.150ms
+                                    class="pb-2 pl-4 pr-1 space-y-1">
+                                    <a @click="open = false; activeGroup = null" href="{{ route('tramites.habilidad') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Habilidad profesional</a>
+                                    <a @click="open = false; activeGroup = null" href="{{ route('tramites.colegiatura') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Colegiatura</a>
+                                    <a @click="open = false; activeGroup = null" href="{{ route('tramites.registros') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Registros académicos</a>
+                                    <a @click="open = false; activeGroup = null" href="{{ route('tramites.mesa-partes') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Mesa de partes</a>
                                 </div>
-                                <span
-                                    class="material-icons-outlined bg-white text-primary-dark p-1">arrow_forward</span>
-                            </a>
+                            </div>
+
+                            <div>
+                                <button @click="toggleGroup('colegiados')" type="button"
+                                    class="inline-flex min-h-[44px] w-full items-center justify-between py-3 text-white font-semibold"
+                                    :aria-expanded="(activeGroup === 'colegiados').toString()" aria-controls="group-colegiados">
+                                    <span>Colegiados</span>
+                                    <span class="material-icons-outlined"
+                                        x-text="activeGroup === 'colegiados' ? 'expand_less' : 'expand_more'"></span>
+                                </button>
+                                <div id="group-colegiados" x-show="activeGroup === 'colegiados'" x-transition.opacity.duration.150ms
+                                    class="pb-2 pl-4 pr-1 space-y-1">
+                                    <a @click="open = false; activeGroup = null" href="{{ route('colegiados.buscador') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Buscador</a>
+                                    <a @click="open = false; activeGroup = null" href="{{ route('colegiados.listados') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Listados oficiales</a>
+                                    <a @click="open = false; activeGroup = null" href="{{ route('colegiados.guia') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Guía de uso</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button @click="toggleGroup('capacitacion')" type="button"
+                                    class="inline-flex min-h-[44px] w-full items-center justify-between py-3 text-white font-semibold"
+                                    :aria-expanded="(activeGroup === 'capacitacion').toString()" aria-controls="group-capacitacion">
+                                    <span>Capacitación</span>
+                                    <span class="material-icons-outlined"
+                                        x-text="activeGroup === 'capacitacion' ? 'expand_less' : 'expand_more'"></span>
+                                </button>
+                                <div id="group-capacitacion" x-show="activeGroup === 'capacitacion'" x-transition.opacity.duration.150ms
+                                    class="pb-2 pl-4 pr-1 space-y-1">
+                                    <a @click="open = false; activeGroup = null" href="{{ route('capacitacion.cursos') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Cursos</a>
+                                    <a @click="open = false; activeGroup = null" href="{{ route('capacitacion.calendario') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Calendario</a>
+                                    <a @click="open = false; activeGroup = null" href="{{ route('capacitacion.congresos') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Congresos</a>
+                                    <a @click="open = false; activeGroup = null" href="{{ route('capacitacion.aula-virtual') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Aula virtual</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button @click="toggleGroup('actualidad')" type="button"
+                                    class="inline-flex min-h-[44px] w-full items-center justify-between py-3 text-white font-semibold"
+                                    :aria-expanded="(activeGroup === 'actualidad').toString()" aria-controls="group-actualidad">
+                                    <span>Actualidad</span>
+                                    <span class="material-icons-outlined"
+                                        x-text="activeGroup === 'actualidad' ? 'expand_less' : 'expand_more'"></span>
+                                </button>
+                                <div id="group-actualidad" x-show="activeGroup === 'actualidad'" x-transition.opacity.duration.150ms
+                                    class="pb-2 pl-4 pr-1 space-y-1">
+                                    <a @click="open = false; activeGroup = null" href="{{ route('actualidad.noticias') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Noticias</a>
+                                    <a @click="open = false; activeGroup = null" href="{{ route('actualidad.eventos') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Eventos</a>
+                                    <a @click="open = false; activeGroup = null" href="{{ route('actualidad.comunicados') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Comunicados</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button @click="toggleGroup('normativa')" type="button"
+                                    class="inline-flex min-h-[44px] w-full items-center justify-between py-3 text-white font-semibold"
+                                    :aria-expanded="(activeGroup === 'normativa').toString()" aria-controls="group-normativa">
+                                    <span>Normativa</span>
+                                    <span class="material-icons-outlined"
+                                        x-text="activeGroup === 'normativa' ? 'expand_less' : 'expand_more'"></span>
+                                </button>
+                                <div id="group-normativa" x-show="activeGroup === 'normativa'" x-transition.opacity.duration.150ms
+                                    class="pb-2 pl-4 pr-1 space-y-1">
+                                    <a @click="open = false; activeGroup = null" href="{{ route('normativa.leyes') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Leyes</a>
+                                    <a @click="open = false; activeGroup = null" href="{{ route('normativa.reglamentos') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Reglamentos</a>
+                                    <a @click="open = false; activeGroup = null" href="{{ route('normativa.guias') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Guías</a>
+                                    <a @click="open = false; activeGroup = null" href="{{ route('normativa.repositorio') }}" class="inline-flex min-h-[44px] w-full items-center text-white/90">Repositorio</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div x-show="panel === 'servicios'" x-transition.opacity>
-                        <div class="bg-white/10 px-3 py-3 mb-4 flex items-center justify-between">
-                            <button @click="panel = 'main'" class="inline-flex items-center gap-1 text-white"
-                                type="button">
-                                <span class="material-icons-outlined">arrow_back</span>
-                                <span class="sr-only">Volver</span>
-                            </button>
-                            <span class="font-semibold">Servicios</span>
-                        </div>
+                        <a @click="open = false; activeGroup = null" href="{{ route('contacto') }}"
+                            class="inline-flex min-h-[44px] w-full items-center justify-between py-3 text-white font-semibold">
+                            <span>Contacto</span><span class="material-icons-outlined">chevron_right</span>
+                        </a>
+                    </nav>
 
-                        <nav class="border-y border-white/15 divide-y divide-white/15">
-                            <a @click="open = false; panel = 'main'" href="{{ route('colegiados') }}"
-                                class="flex items-center justify-between py-4 text-white font-semibold">
-                                <span>Busca Obstetra</span><span class="material-icons-outlined">chevron_right</span>
-                            </a>
-                            <a @click="open = false; panel = 'main'" href="{{ route('normativa') }}"
-                                class="flex items-center justify-between py-4 text-white font-semibold">
-                                <span>Repositorio Normativo</span><span
-                                    class="material-icons-outlined">chevron_right</span>
-                            </a>
-                            <a @click="open = false; panel = 'main'" href="{{ route('capacitacion') }}"
-                                class="flex items-center justify-between py-4 text-white font-semibold">
-                                <span>Capacitación</span><span class="material-icons-outlined">chevron_right</span>
-                            </a>
-                            <button @click="panel = 'tramites_servicios'" type="button"
-                                class="w-full flex items-center justify-between py-4 text-white font-semibold">
-                                <span>Trámites especializados</span><span
-                                    class="material-icons-outlined">chevron_right</span>
-                            </button>
-                            <a @click="open = false; panel = 'main'"
-                                href="{{ auth()->check() ? route('portal.colegiado') : route('login') }}"
-                                class="flex items-center justify-between py-4 text-white font-semibold">
-                                <span>Portal colegiado</span><span class="material-icons-outlined">chevron_right</span>
-                            </a>
-                        </nav>
-                    </div>
-
-                    <div x-show="panel === 'tramites_servicios'" x-transition.opacity>
-                        <div class="bg-white/10 px-3 py-3 mb-4 flex items-center justify-between">
-                            <button @click="panel = 'servicios'" class="inline-flex items-center gap-1 text-white"
-                                type="button">
-                                <span class="material-icons-outlined">arrow_back</span>
-                                <span class="sr-only">Volver</span>
-                            </button>
-                            <span class="font-semibold">Trámites especializados</span>
-                        </div>
-
-                        <nav class="border-y border-white/15 divide-y divide-white/15">
-                            <a @click="open = false; panel = 'main'" href="{{ route('tramites') }}#habilidad"
-                                class="flex items-center justify-between py-4 text-white font-semibold">
-                                <span>Habilidad profesional</span><span
-                                    class="material-icons-outlined">chevron_right</span>
-                            </a>
-                            <a @click="open = false; panel = 'main'" href="{{ route('tramites') }}#registros"
-                                class="flex items-center justify-between py-4 text-white font-semibold">
-                                <span>Registros académicos</span><span
-                                    class="material-icons-outlined">chevron_right</span>
-                            </a>
-                            <a @click="open = false; panel = 'main'" href="{{ route('tramites') }}#mesa-partes"
-                                class="flex items-center justify-between py-4 text-white font-semibold">
-                                <span>Mesa de partes</span><span class="material-icons-outlined">chevron_right</span>
-                            </a>
-                        </nav>
+                    <div class="mt-6 space-y-3">
+                        <a @click="open = false; activeGroup = null" href="{{ route('tramites') }}#mesa-partes"
+                            class="flex items-center justify-between border border-white/50 p-4">
+                            <div class="flex items-center gap-3">
+                                <span class="material-icons-outlined">forward_to_inbox</span>
+                                <span class="font-semibold">Mesa de Partes Virtual</span>
+                            </div>
+                            <span class="material-icons-outlined bg-white text-primary-dark p-1">arrow_forward</span>
+                        </a>
+                        <a @click="open = false; activeGroup = null"
+                            href="{{ auth()->check() ? route('portal.colegiado') : route('login') }}"
+                            class="flex items-center justify-between border border-white/50 p-4">
+                            <div class="flex items-center gap-3">
+                                <span class="material-icons-outlined">person</span>
+                                <span class="font-semibold">Portal del Colegiado</span>
+                            </div>
+                            <span class="material-icons-outlined bg-white text-primary-dark p-1">arrow_forward</span>
+                        </a>
                     </div>
                 </div>
             </aside>

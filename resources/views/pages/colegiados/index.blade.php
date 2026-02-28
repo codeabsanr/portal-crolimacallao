@@ -2,11 +2,11 @@
 
 @section('content')
     <main id="main">
-        <section class="py-10 md:py-14 bg-background-light">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="inst-section bg-background-light">
+            <div class="max-w-7xl mx-auto inst-stack">
                 <x-page-section-intro eyebrow="Servicios para colegiados" title="Portal de consultas institucionales"
                     subtitle="Acceda al buscador de obstetras, padrones oficiales y guía de navegación del portal." />
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
                     <x-card title="Busca obstetra" icon="person_search"
                         description="Verifica estado y habilitación profesional." link="{{ url('colegiados/buscador') }}"
                         linkText="Consultar" />
@@ -20,12 +20,12 @@
             </div>
         </section>
 
-        <section class="py-10 md:py-14 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-5 gap-6">
-                    <div class="lg:col-span-3 inst-card p-8 border-t-4 border-primary">
-                        <h2 class="inst-section-title mb-4">Uso recomendado del módulo</h2>
-                        <ol class="space-y-3 text-slate-700">
+        <section class="inst-section bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-5 gap-6 lg:gap-10">
+                    <div class="lg:col-span-3 inst-card p-8 border-t-4 border-primary inst-stack-tight">
+                        <h2 class="inst-title mb-2">Uso recomendado del módulo</h2>
+                        <ol class="space-y-3 text-slate-700 leading-relaxed">
                             <li><strong>1.</strong> Ingrese DNI o número de colegiatura.</li>
                             <li><strong>2.</strong> Verifique nombre completo y estado de habilitación.</li>
                             <li><strong>3.</strong> Descargue constancias cuando estén disponibles.</li>

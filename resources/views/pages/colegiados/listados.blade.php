@@ -6,8 +6,8 @@
             subtitle="Padrones oficiales de obstetras hábiles, nuevas colegiaturas y especialidades registradas del CRO III."
             icon="format_list_bulleted" backRoute="colegiados" backLabel="Volver a Colegiados" />
 
-        <section class="py-10 md:py-14 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="inst-section bg-white">
+            <div class="max-w-7xl mx-auto inst-stack">
                 @php
                     $listados = [
                         ['nombre' => 'Padrón de obstetras hábiles', 'periodo' => 'Febrero 2026', 'registros' => 2431],
@@ -15,7 +15,7 @@
                         ['nombre' => 'Padrón de especialidades registradas', 'periodo' => '2025', 'registros' => 488],
                     ];
                 @endphp
-                <div class="inst-card p-6 md:p-8">
+                <div class="inst-card p-6 md:p-8 inst-stack-tight">
                     <x-page-section-intro eyebrow="Documentos disponibles" title="Listados y padrones"
                         subtitle="Consulte los padrones oficiales actualizados del Colegio Regional de Obstetras III Lima-Callao." />
                     <div class="space-y-3">
@@ -37,3 +37,4 @@
         </section>
     </main>
 @endsection
+

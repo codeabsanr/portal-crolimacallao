@@ -6,11 +6,11 @@
             subtitle="Reglamentos internos, estatutos institucionales y disposiciones regionales vigentes del CRO III Lima-Callao."
             icon="rule" backRoute="normativa" backLabel="Volver a Normativa" />
 
-        <section class="py-10 md:py-14 bg-background-light">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="inst-section bg-background-light">
+            <div class="max-w-7xl mx-auto inst-stack">
                 <x-page-section-intro eyebrow="Documentos disponibles" title="Reglamentos institucionales"
                     subtitle="Consulte los documentos normativos que rigen la organización y el ejercicio profesional." />
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7">
                     <x-card title="Reglamento general" icon="gavel"
                         description="Disposiciones administrativas generales de la orden profesional."
                         link="{{ route('normativa') }}" linkText="Ver base normativa" />
@@ -22,3 +22,4 @@
         </section>
     </main>
 @endsection
+

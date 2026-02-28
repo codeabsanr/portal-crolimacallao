@@ -6,9 +6,9 @@
             subtitle="Requisitos, plazos y proceso de emisión y renovación del certificado con validación institucional."
             icon="verified" backRoute="tramites" backLabel="Volver al catálogo" />
 
-        <section class="py-10 md:py-14 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="inst-card p-6 md:p-8 border-t-4 border-primary">
+        <section class="inst-section bg-white">
+            <div class="max-w-7xl mx-auto inst-stack">
+                <div class="inst-card p-6 md:p-8 border-t-4 border-primary inst-stack-tight">
                     <x-page-section-intro eyebrow="Documentación" title="Checklist de requisitos"
                         subtitle="Prepare los siguientes documentos antes de iniciar su solicitud para agilizar el proceso." />
                     <ul class="space-y-3 text-slate-700">
@@ -34,3 +34,4 @@
         </section>
     </main>
 @endsection
+

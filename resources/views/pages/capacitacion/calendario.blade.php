@@ -6,8 +6,8 @@
             subtitle="Fechas, vacantes y modalidades de todos los cursos, talleres y webinars programados." icon="event"
             backRoute="capacitacion" backLabel="Volver a Capacitación" />
 
-        <section class="py-10 md:py-14 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="inst-section bg-white">
+            <div class="max-w-7xl mx-auto inst-stack">
                 @php
                     $calendario = [
                         ['mes' => 'Marzo 2026', 'actividad' => 'Taller de monitoreo fetal', 'vacantes' => 40],
@@ -17,7 +17,7 @@
                 @endphp
                 <x-page-section-intro eyebrow="Agenda" title="Actividades programadas"
                     subtitle="Revise la oferta vigente y reserve su cupo con anticipación." />
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-7">
                     @foreach ($calendario as $item)
                         <article class="inst-card p-6 border-l-4 border-primary">
                             <p class="text-xs uppercase tracking-[0.12em] text-primary font-bold">{{ $item['mes'] }}</p>
@@ -31,3 +31,4 @@
         </section>
     </main>
 @endsection
+

@@ -6,9 +6,9 @@
             subtitle="Documentación para el registro de especialidades, maestrías y doctorados en el perfil del colegiado."
             icon="workspace_premium" backRoute="tramites" backLabel="Volver al catálogo" />
 
-        <section class="py-10 md:py-14 bg-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="inst-card p-6 md:p-8">
+        <section class="inst-section bg-white">
+            <div class="max-w-6xl mx-auto inst-stack">
+                <div class="inst-card p-6 md:p-8 inst-stack-tight">
                     <x-page-section-intro eyebrow="Documentación" title="Documentos aceptados"
                         subtitle="Presente los siguientes documentos para actualizar su perfil académico en el padrón institucional." />
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-700">
@@ -35,3 +35,4 @@
         </section>
     </main>
 @endsection
+

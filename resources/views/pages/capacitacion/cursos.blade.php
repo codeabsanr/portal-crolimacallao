@@ -6,11 +6,11 @@
             subtitle="Programas certificados de actualización y especialización para obstetras en ejercicio."
             icon="cast_for_education" backRoute="capacitacion" backLabel="Volver a Capacitación" />
 
-        <section class="py-10 md:py-14 bg-background-light">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="inst-section bg-background-light">
+            <div class="max-w-7xl mx-auto inst-stack">
                 <x-page-section-intro eyebrow="Programas disponibles" title="Cursos vigentes 2026"
                     subtitle="Seleccione el programa de su interés e inicie su proceso de inscripción." />
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-7">
                     <x-card title="Emergencias obstétricas" icon="local_hospital"
                         description="Módulo intensivo con enfoque clínico-práctico." link="{{ route('capacitacion') }}"
                         linkText="Ver detalle" />
@@ -25,3 +25,4 @@
         </section>
     </main>
 @endsection
+

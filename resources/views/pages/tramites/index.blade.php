@@ -2,15 +2,16 @@
 
 @section('content')
     <main id="main">
-        <section id="tramites-contenido" class="scroll-mt-28 py-10 md:py-14 bg-background-light">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-8">
-                    <h2 class="inst-section-title">Catálogo de trámites</h2>
-                    <div class="mt-2 h-[3px] w-20 bg-brand-gold-light"></div>
-                    <p class="text-slate-600 mt-3">Seleccione el trámite según su necesidad profesional.</p>
+        <section id="tramites-contenido" class="scroll-mt-28 inst-section bg-background-light">
+            <div class="max-w-7xl mx-auto inst-stack">
+                <div class="inst-stack-tight">
+                    <p class="inst-eyebrow">Trámites y servicios</p>
+                    <h2 class="inst-title">Catálogo de trámites</h2>
+                    <div class="h-[3px] w-20 bg-brand-gold-light"></div>
+                    <p class="inst-subtitle">Seleccione el trámite según su necesidad profesional.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-7">
                     <x-card id="habilidad" title="Habilidad profesional" icon="verified"
                         description="Emisión y renovación del certificado de habilidad con validación institucional."
                         link="{{ url('tramites/habilidad') }}" linkText="Iniciar trámite"
@@ -44,14 +45,14 @@
             </div>
         </section>
 
-        <section class="py-10 md:py-14 bg-[linear-gradient(180deg,#ffffff_0%,#f8f4ea_100%)]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-5 gap-8">
+        <section class="inst-section bg-[linear-gradient(180deg,#ffffff_0%,#f8f4ea_100%)]">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-5 gap-8 lg:gap-10">
                     <div class="lg:col-span-3 rounded-xl border border-primary/25 bg-white p-8 shadow-[0_22px_40px_-30px_rgba(15,23,42,0.45)]">
-                        <p class="text-xs uppercase tracking-[0.15em] text-primary font-bold">Ruta de atención</p>
-                        <h2 class="text-secondary text-3xl md:text-4xl font-black tracking-tight mt-1 mb-4">Proceso general de atención</h2>
+                        <p class="inst-kicker text-primary">Ruta de atención</p>
+                        <h2 class="inst-title text-secondary mt-1 mb-4">Proceso general de atención</h2>
                         <div class="mb-5 h-[3px] w-20 bg-brand-gold-light"></div>
-                        <ol class="space-y-4">
+                        <ol class="space-y-4 leading-relaxed text-slate-700">
                             <li class="flex gap-3">
                                 <span class="h-7 w-7 rounded-full bg-primary text-white ring-2 ring-brand-gold-light/60 flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">1</span>
                                 <p class="text-slate-700"><strong class="text-secondary">Registro:</strong> Ingrese su solicitud por canal virtual o presencial.</p>
@@ -86,11 +87,11 @@
             </div>
         </section>
 
-        <section id="tramites-faq" class="scroll-mt-28 py-10 md:py-14 bg-[linear-gradient(180deg,#faf3f5_0%,#f3e7eb_100%)]">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="tramites-faq" class="scroll-mt-28 inst-section bg-[linear-gradient(180deg,#faf3f5_0%,#f3e7eb_100%)]">
+            <div class="max-w-5xl mx-auto">
                 <div class="rounded-xl border border-primary/20 bg-white p-6 md:p-8 shadow-[0_18px_34px_-30px_rgba(15,23,42,0.45)] text-center">
-                    <p class="text-xs uppercase tracking-[0.15em] text-primary font-bold">Ayuda al colegiado</p>
-                    <h2 class="text-secondary text-3xl md:text-4xl font-black tracking-tight mt-2">Preguntas frecuentes</h2>
+                    <p class="inst-kicker text-primary">Ayuda al colegiado</p>
+                    <h2 class="inst-title text-secondary mt-2">Preguntas frecuentes</h2>
                     <div class="mx-auto mt-3 h-[3px] w-24 bg-brand-gold-light"></div>
                     <p class="mt-4 text-slate-600">Revisa respuestas rápidas en una página dedicada para orientación de trámites.</p>
                     <a href="{{ route('tramites.faq') }}" class="inst-btn-primary mt-6 !px-6 !py-2.5">Ver preguntas frecuentes</a>

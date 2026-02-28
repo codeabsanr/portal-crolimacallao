@@ -6,8 +6,8 @@
             subtitle="Calendario de webinars, jornadas académicas, asambleas y actividades institucionales del CRO III."
             icon="calendar_month" backRoute="actualidad" backLabel="Volver a Actualidad" />
 
-        <section class="py-10 md:py-14 bg-background-light">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="inst-section bg-background-light">
+            <div class="max-w-7xl mx-auto inst-stack">
                 @php
                     $eventos = [
                         ['fecha' => '2026-03-04', 'actividad' => 'Webinar de salud materna', 'modalidad' => 'Virtual'],
@@ -15,7 +15,7 @@
                         ['fecha' => '2026-04-02', 'actividad' => 'Taller de actualización normativa', 'modalidad' => 'Híbrida'],
                     ];
                 @endphp
-                <div class="inst-card p-6 md:p-8">
+                <div class="inst-card p-6 md:p-8 inst-stack-tight">
                     <x-page-section-intro eyebrow="Agenda institucional" title="Próximas actividades"
                         subtitle="Revise las fechas y reserve su participación con anticipación." />
                     <div class="overflow-x-auto">
@@ -46,3 +46,4 @@
         </section>
     </main>
 @endsection
+

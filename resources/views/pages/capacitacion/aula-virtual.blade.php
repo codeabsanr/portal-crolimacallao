@@ -6,9 +6,9 @@
             subtitle="Plataforma de aprendizaje en línea con recursos, actividades y certificación institucional para colegiadas."
             icon="desktop_windows" backRoute="capacitacion" backLabel="Volver a Capacitación" />
 
-        <section class="py-10 md:py-14 bg-background-light">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="inst-card p-6 md:p-8">
+        <section class="inst-section bg-background-light">
+            <div class="max-w-5xl mx-auto inst-stack">
+                <div class="inst-card p-6 md:p-8 inst-stack-tight">
                     <x-page-section-intro eyebrow="Próximamente" title="Acceso al campus"
                         subtitle="Este módulo está en implementación. Regístrese para recibir aviso de activación." />
                     <p class="text-slate-600 mb-5">Una vez activo, el campus virtual ofrecerá cursos autogestionados,
@@ -22,3 +22,4 @@
         </section>
     </main>
 @endsection
+

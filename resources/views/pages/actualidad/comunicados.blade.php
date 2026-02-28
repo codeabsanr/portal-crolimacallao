@@ -6,8 +6,8 @@
             subtitle="Pronunciamientos, avisos y comunicaciones formales del Consejo Directivo y la secretaría institucional."
             icon="campaign" backRoute="actualidad" backLabel="Volver a Actualidad" />
 
-        <section class="py-10 md:py-14 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="inst-section bg-white">
+            <div class="max-w-7xl mx-auto inst-stack">
                 @php
                     $comunicados = [
                         ['codigo' => 'COM-2026-014', 'asunto' => 'Actualización de horarios de atención', 'estado' => 'Vigente'],
@@ -17,7 +17,7 @@
                 @endphp
                 <x-page-section-intro eyebrow="Canal oficial" title="Comunicados institucionales"
                     subtitle="Información verificada y actualizada sobre decisiones, avisos y pronunciamientos institucionales." />
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7">
                     @foreach ($comunicados as $item)
                         <article
                             class="inst-card p-6 border border-primary/30 border-l-4 border-l-primary bg-[linear-gradient(180deg,#ffffff_0%,#fffdfa_100%)] hover:border-primary hover:shadow-[0_16px_30px_-24px_rgba(102,2,25,0.55)] transition-[border-color,box-shadow,background-color] duration-300">
@@ -32,3 +32,4 @@
         </section>
     </main>
 @endsection
+

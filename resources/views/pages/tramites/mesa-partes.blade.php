@@ -6,10 +6,10 @@
             subtitle="Registre, envíe y haga seguimiento de sus expedientes administrativos de forma digital, sin necesidad de acudir a sede."
             icon="forward_to_inbox" backRoute="tramites" backLabel="Volver al catálogo" />
 
-        <section class="py-10 md:py-14 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-6">
-                    <div class="inst-card p-6 md:p-8">
+        <section class="inst-section bg-white">
+            <div class="max-w-7xl mx-auto inst-stack">
+                <div class="grid lg:grid-cols-2 gap-6 md:gap-7">
+                    <div class="inst-card p-6 md:p-8 inst-stack-tight">
                         <x-page-section-intro eyebrow="Envío digital" title="Enviar expediente"
                             subtitle="Complete los datos del expediente y regístrelo para iniciar el proceso de revisión." />
                         <form class="space-y-3">
@@ -31,3 +31,4 @@
         </section>
     </main>
 @endsection
+

@@ -6,8 +6,8 @@
             subtitle="Marco legal vigente que regula el trabajo del obstetra y la organización del colegio en el Perú."
             icon="balance" backRoute="normativa" backLabel="Volver a Normativa" />
 
-        <section class="py-10 md:py-14 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="inst-section bg-white">
+            <div class="max-w-7xl mx-auto inst-stack">
                 @php
                     $leyes = [
                         ['norma' => 'Ley N.° 28686', 'tema' => 'Ley del trabajo de la obstetra', 'vigencia' => 'Vigente'],
@@ -15,7 +15,7 @@
                         ['norma' => 'Ley N.° 26842', 'tema' => 'Ley general de salud', 'vigencia' => 'Vigente'],
                     ];
                 @endphp
-                <div class="inst-card p-6 md:p-8">
+                <div class="inst-card p-6 md:p-8 inst-stack-tight">
                     <x-page-section-intro eyebrow="Listado referencial" title="Normas aplicables vigentes"
                         subtitle="Base legal que sustenta el ejercicio profesional de la obstetra y las funciones del Colegio." />
                     <div class="space-y-3">
@@ -36,3 +36,4 @@
         </section>
     </main>
 @endsection
+

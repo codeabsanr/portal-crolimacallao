@@ -2,11 +2,11 @@
 
 @section('content')
     <main id="main">
-        <section class="py-10 md:py-14 bg-background-light">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="inst-section bg-background-light">
+            <div class="max-w-7xl mx-auto inst-stack">
                 <x-page-section-intro eyebrow="Marco normativo" title="Normativa y documentación legal"
                     subtitle="Leyes, reglamentos, guías técnicas y repositorio documental del ejercicio profesional." />
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7">
                     <x-card title="Leyes" icon="balance" description="Normas base del ejercicio profesional y del colegio."
                         link="{{ url('normativa/leyes') }}" linkText="Ver leyes" />
                     <x-card id="reglamentos" title="Reglamentos" icon="rule"
@@ -22,11 +22,11 @@
             </div>
         </section>
 
-        <section class="py-10 md:py-14 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="inst-card p-8 border-t-4 border-primary">
-                    <h2 class="inst-section-title mb-4">Consulta rápida de documentos</h2>
-                    <p class="text-slate-600 mb-6">Use filtros por tipo de norma, año y entidad emisora para encontrar la
+        <section class="inst-section bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="inst-card p-8 border-t-4 border-primary inst-stack-tight">
+                    <h2 class="inst-title mb-2">Consulta rápida de documentos</h2>
+                    <p class="inst-subtitle">Use filtros por tipo de norma, año y entidad emisora para encontrar la
                         documentación aplicable.</p>
                     <a href="{{ url('normativa/repositorio') }}" class="inst-btn-primary">Buscar en repositorio</a>
                 </div>

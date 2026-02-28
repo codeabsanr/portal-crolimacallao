@@ -6,9 +6,9 @@
             subtitle="Solicite la emisión, renovación o duplicado de su carné institucional de forma rápida y en línea."
             icon="credit_card" backRoute="tramites" backLabel="Volver al catálogo" />
 
-        <section class="py-10 md:py-14 bg-background-light">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="inst-card p-6 md:p-8 border-t-4 border-primary">
+        <section class="inst-section bg-background-light">
+            <div class="max-w-6xl mx-auto inst-stack">
+                <div class="inst-card p-6 md:p-8 border-t-4 border-primary inst-stack-tight">
                     <x-page-section-intro eyebrow="Formulario" title="Solicitud rápida"
                         subtitle="Complete los datos a continuación para iniciar el proceso de emisión o renovación de su carné." />
                     <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -27,3 +27,4 @@
         </section>
     </main>
 @endsection
+

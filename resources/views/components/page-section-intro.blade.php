@@ -12,20 +12,20 @@
 
 <div class="mb-8 {{ $alignClass }} max-w-3xl">
     @if ($eyebrow)
-        <p class="text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-primary mb-2">
+        <p class="inst-eyebrow text-primary mb-2">
             {{ $eyebrow }}
         </p>
     @endif
 
     @if ($title)
-        <h2 class="inst-section-title text-slate-900 leading-tight">
+        <h2 class="inst-title text-slate-900 leading-tight">
             {{ $title }}
         </h2>
         <div class="mt-3 h-[3px] w-16 bg-brand-gold-light {{ $barAlignClass }}"></div>
     @endif
 
     @if ($subtitle)
-        <p class="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+        <p class="inst-subtitle mt-4">
             {{ $subtitle }}
         </p>
     @endif

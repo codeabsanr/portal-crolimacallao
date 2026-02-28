@@ -6,9 +6,9 @@
             subtitle="Pasos recomendados para navegar el portal, usar el buscador y gestionar sus trámites en línea."
             icon="menu_book" backRoute="colegiados" backLabel="Volver a Colegiados" />
 
-        <section class="py-10 md:py-14 bg-background-light">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="inst-card p-6 md:p-8 border-t-4 border-primary">
+        <section class="inst-section bg-background-light">
+            <div class="max-w-5xl mx-auto inst-stack">
+                <div class="inst-card p-6 md:p-8 border-t-4 border-primary inst-stack-tight">
                     <x-page-section-intro eyebrow="Instrucciones" title="Pasos recomendados"
                         subtitle="Siga estas instrucciones para aprovechar al máximo las herramientas del portal institucional." />
                     <ol class="space-y-4 text-slate-700">
@@ -37,3 +37,4 @@
         </section>
     </main>
 @endsection
+

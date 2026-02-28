@@ -2,11 +2,11 @@
 
 @section('content')
     <main id="main">
-        <section class="py-10 md:py-14 bg-background-light">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="inst-section bg-background-light">
+            <div class="max-w-7xl mx-auto inst-stack">
                 <x-page-section-intro eyebrow="Oferta académica" title="Capacitación institucional"
                     subtitle="Cursos, congresos, calendario y aula virtual para el desarrollo profesional continuo de la obstetra." />
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7">
                     <x-card title="Calendario" icon="event" description="Fechas de cursos, talleres, webinars y jornadas."
                         link="{{ url('capacitacion/calendario') }}" linkText="Ver calendario" />
                     <x-card title="Cursos" icon="cast_for_education"
@@ -21,12 +21,12 @@
             </div>
         </section>
 
-        <section class="py-10 md:py-14 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-5 gap-6">
-                    <div class="lg:col-span-3 inst-card p-8 border-t-4 border-primary">
-                        <h2 class="inst-section-title mb-4">Ruta de participación académica</h2>
-                        <ol class="space-y-3 text-slate-700">
+        <section class="inst-section bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-5 gap-8 lg:gap-10">
+                    <div class="lg:col-span-3 inst-card p-8 border-t-4 border-primary inst-stack-tight">
+                        <h2 class="inst-title mb-2">Ruta de participación académica</h2>
+                        <ol class="space-y-3 text-slate-700 leading-relaxed">
                             <li><strong>1.</strong> Revise la oferta vigente y requisitos de inscripción.</li>
                             <li><strong>2.</strong> Registre su participación y confirme datos de contacto.</li>
                             <li><strong>3.</strong> Complete asistencia y actividades programadas.</li>

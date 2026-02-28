@@ -74,13 +74,14 @@
 
         <x-home.hero5 :hero-ads="$heroAds" />
 
-        <section class="py-10 md:py-12 bg-primary-mist border-t border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-8">
-                    <h2 class="inst-section-title">Accesos directos</h2>
-                    <p class="text-slate-600 mt-2">Gestione sus necesidades más frecuentes.</p>
+        <section class="inst-section bg-primary-mist border-t border-slate-200">
+            <div class="max-w-7xl mx-auto inst-stack">
+                <div class="inst-stack-tight">
+                    <p class="inst-eyebrow text-primary-dark">Accesos rápidos</p>
+                    <h2 class="inst-title">Accesos directos</h2>
+                    <p class="inst-subtitle">Gestione sus necesidades más frecuentes.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                     <x-card title="Colegiatura" icon="badge"
                         description="Inicie su proceso de inscripción oficial para ejercer legalmente la profesión en la región."
                         link="{{ route('tramites') }}" linkText="Iniciar trámite" />
@@ -96,15 +97,16 @@
             </div>
         </section>
 
-        <section class="py-10 md:py-14 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-                    <div class="inst-card p-8">
-                        <div class="border-l-4 border-primary pl-4 mb-6">
-                            <h2 class="inst-section-title">Noticias recientes</h2>
+        <section class="inst-section bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+                    <div class="inst-card p-8 inst-stack">
+                        <div class="border-l-4 border-primary pl-4 inst-stack-tight">
+                            <p class="inst-kicker text-primary">Actualidad</p>
+                            <h2 class="inst-title">Noticias recientes</h2>
                         </div>
                         @livewire('listado-noticias', ['limit' => 2])
-                        <div class="mt-6">
+                        <div>
                             <a class="inst-btn-secondary" href="{{ route('actualidad') }}">Ver todas las noticias</a>
                         </div>
                     </div>

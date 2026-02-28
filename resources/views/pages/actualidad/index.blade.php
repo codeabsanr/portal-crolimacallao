@@ -2,15 +2,16 @@
 
 @section('content')
     <main id="main">
-        <section id="actualidad-contenido" class="scroll-mt-28 py-10 md:py-14 bg-background-light">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-8">
-                    <h2 class="inst-section-title">Actualidad institucional</h2>
-                    <div class="mt-2 h-[3px] w-20 bg-brand-gold-light"></div>
-                    <p class="text-slate-600 mt-3">Consulte noticias, agenda de actividades y comunicados oficiales del CRO III Lima-Callao.</p>
+        <section id="actualidad-contenido" class="scroll-mt-28 inst-section bg-background-light">
+            <div class="max-w-7xl mx-auto inst-stack">
+                <div class="inst-stack-tight">
+                    <p class="inst-eyebrow">Información institucional</p>
+                    <h2 class="inst-title">Actualidad institucional</h2>
+                    <div class="h-[3px] w-20 bg-brand-gold-light"></div>
+                    <p class="inst-subtitle">Consulte noticias, agenda de actividades y comunicados oficiales del CRO III Lima-Callao.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
                     <x-card title="Noticias" icon="newspaper"
                         description="Mantente informado sobre comunicados, acuerdos y novedades del colegio."
                         link="{{ url('actualidad/noticias') }}" linkText="Ver noticias" />
@@ -26,12 +27,12 @@
             </div>
         </section>
 
-        <section class="py-10 md:py-14 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-3 gap-6">
+        <section class="inst-section bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-3 gap-6 lg:gap-8">
                     <div class="lg:col-span-2 rounded-xl border border-primary/25 bg-white p-8 shadow-[0_22px_40px_-30px_rgba(15,23,42,0.45)]">
-                        <p class="text-xs uppercase tracking-[0.15em] text-primary font-bold">Publicaciones recientes</p>
-                        <h2 class="text-secondary text-3xl md:text-4xl font-black tracking-tight mt-1 mb-4">Últimas publicaciones</h2>
+                        <p class="inst-kicker text-primary">Publicaciones recientes</p>
+                        <h2 class="inst-title text-secondary mt-1 mb-4">Últimas publicaciones</h2>
                         <div class="mb-5 h-[3px] w-20 bg-brand-gold-light"></div>
                         @livewire('listado-noticias', ['limit' => 3])
                     </div>
@@ -52,8 +53,8 @@
             </div>
         </section>
 
-        <section id="eventos" class="py-10 md:py-14 bg-[linear-gradient(180deg,#faf3f5_0%,#f3e7eb_100%)] border-y border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="eventos" class="inst-section bg-[linear-gradient(180deg,#faf3f5_0%,#f3e7eb_100%)] border-y border-slate-200">
+            <div class="max-w-7xl mx-auto">
                 @php
                     $eventos = [
                         ['fecha' => '2026-03-04', 'actividad' => 'Webinar de salud materna y perinatal', 'modalidad' => 'Virtual'],
@@ -62,10 +63,10 @@
                     ];
                 @endphp
 
-                <div class="grid lg:grid-cols-5 gap-8">
+                <div class="grid lg:grid-cols-5 gap-8 lg:gap-10">
                     <div class="lg:col-span-3 rounded-xl border border-primary/25 bg-white p-8 shadow-[0_22px_40px_-30px_rgba(15,23,42,0.45)]">
-                        <p class="text-xs uppercase tracking-[0.15em] text-primary font-bold">Agenda institucional</p>
-                        <h2 class="text-secondary text-3xl md:text-4xl font-black tracking-tight mt-1 mb-4">Próximas actividades</h2>
+                        <p class="inst-kicker text-primary">Agenda institucional</p>
+                        <h2 class="inst-title text-secondary mt-1 mb-4">Próximas actividades</h2>
                         <div class="mb-5 h-[3px] w-20 bg-brand-gold-light"></div>
 
                         <div class="overflow-x-auto">

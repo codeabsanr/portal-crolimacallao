@@ -237,6 +237,44 @@ h6 {
         @apply mb-0;
     }
 
+    /* Vertical rhythm & breathing space */
+    .inst-section {
+        @apply w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16;
+    }
+
+    .inst-stack {
+        @apply flex flex-col gap-4 sm:gap-5 lg:gap-6;
+    }
+
+    .inst-stack-tight {
+        @apply flex flex-col gap-2.5 sm:gap-3.5;
+    }
+
+    .inst-stack-loose {
+        @apply flex flex-col gap-6 sm:gap-8;
+    }
+
+    /* Typographic hierarchy */
+    .inst-eyebrow {
+        @apply text-[11px] sm:text-xs font-semibold uppercase tracking-[0.16em] text-primary-dark/80;
+    }
+
+    .inst-title {
+        @apply text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-text-main;
+    }
+
+    .inst-subtitle {
+        @apply text-base sm:text-lg text-text-muted leading-relaxed;
+    }
+
+    .inst-kicker {
+        @apply text-xs sm:text-sm font-semibold uppercase tracking-[0.14em] text-brand-gold;
+    }
+
+    .inst-section-meta {
+        @apply text-sm text-text-muted leading-relaxed;
+    }
+
     .inst-scroll-assist {
         @apply inline-flex min-h-[44px] items-center justify-center gap-1.5 rounded-sm border border-slate-200 bg-white px-4 py-2 text-slate-600 shadow-[0_8px_18px_-14px_rgba(15,23,42,0.35)] transition-[border-color,color,box-shadow,transform] duration-200;
     }

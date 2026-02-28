@@ -6,9 +6,9 @@
             subtitle="Archivo institucional de leyes, resoluciones, compendios y documentos de gestión en un solo lugar."
             icon="folder_open" backRoute="normativa" backLabel="Volver a Normativa" />
 
-        <section class="py-10 md:py-14 bg-background-light">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="inst-card p-6 md:p-8">
+        <section class="inst-section bg-background-light">
+            <div class="max-w-7xl mx-auto inst-stack">
+                <div class="inst-card p-6 md:p-8 inst-stack-tight">
                     <x-page-section-intro eyebrow="Búsqueda" title="Consulta el repositorio"
                         subtitle="Use filtros por tipo de norma, año y entidad emisora para encontrar la documentación aplicable." />
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
@@ -44,3 +44,4 @@
         </section>
     </main>
 @endsection
+

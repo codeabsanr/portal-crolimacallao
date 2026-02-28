@@ -184,24 +184,16 @@
 
 <section class="relative overflow-hidden bg-inst-hero text-white">
     <div class="absolute inset-0 bg-inst-hero-overlay opacity-60 mix-blend-overlay"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 sm:py-16 md:py-20">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div class="lg:col-span-7 flex self-start">
-                <div class="w-full">
-                    <p
-                        class="text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-brand-gold-light drop-shadow-sm">
-                        {{ $hero['eyebrow'] }}
-                    </p>
-                    <h1
-                        class="mt-3 text-3xl md:text-5xl font-black tracking-tight leading-tight text-white drop-shadow-sm">
-                        {{ $hero['title'] }}
-                    </h1>
-                    <div class="mt-4 h-[3px] w-20 bg-brand-gold-light"></div>
-                    <p class="mt-5 text-base md:text-lg leading-relaxed text-white/90 drop-shadow-sm">
-                        {{ $hero['summary'] }}
-                    </p>
+                <div class="w-full inst-stack-tight">
+                    <p class="inst-eyebrow text-brand-gold-light drop-shadow-sm">{{ $hero['eyebrow'] }}</p>
+                    <h1 class="inst-title text-white drop-shadow-sm">{{ $hero['title'] }}</h1>
+                    <div class="h-[3px] w-20 bg-brand-gold-light"></div>
+                    <p class="inst-subtitle text-white/90 drop-shadow-sm">{{ $hero['summary'] }}</p>
 
-                    <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                    <div class="flex flex-col sm:flex-row gap-3">
                         @if (!empty($hero['cta1']['text']) && $cta1Href)
                             <a href="{{ $cta1Href }}"
                                 class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-sm bg-brand-gold px-6 py-2.5 text-sm sm:text-base font-bold text-primary transition-colors hover:bg-brand-gold-light shadow-lg hover:shadow-xl {{ $routeName === 'contacto' && $cta1IsAnchor ? 'inst-btn-scroll-guide' : '' }}">
