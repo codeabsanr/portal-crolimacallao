@@ -10,6 +10,7 @@
 </head>
 <body class="min-h-screen bg-white text-text-main antialiased">
     @yield('content')
+    <x-site-end-reached-note />
     <x-site-scroll-assist />
 </body>
 </html>

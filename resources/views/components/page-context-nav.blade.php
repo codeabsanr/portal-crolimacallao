@@ -131,6 +131,7 @@
                 @endphp
                 @if ($showBackButton)
                     <a href="{{ route($backRoute) }}"
+                        data-inst-page-back
                         class="group inline-flex min-h-[40px] items-center justify-center gap-1.5 rounded-none border border-primary/20 bg-white px-3 py-2 text-xs font-semibold text-primary-dark shadow-[0_12px_24px_-20px_rgba(77,2,19,0.55)] transition-[border-color,background-color,color,transform,box-shadow] duration-200 ease-out hover:-translate-y-[1px] hover:border-primary/40 hover:bg-primary-tint/60 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 focus-visible:ring-offset-2 md:text-sm">
                         <span
                             class="inline-flex items-center justify-center text-primary transition-colors group-hover:text-primary-dark">

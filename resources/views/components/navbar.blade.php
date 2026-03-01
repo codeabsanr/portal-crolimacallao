@@ -5,7 +5,7 @@
     }
 }" x-init="updateTopStripState()"
     @scroll.window.throttle.50ms="updateTopStripState()">
-    <div class="fixed top-0 z-50 w-full" style="left: 0; right: 0;">
+    <div class="fixed top-0 z-50 w-full" style="left: 0; right: 0;" data-inst-navbar-fixed>
     <a href="#main"
         class="sr-only focus:not-sr-only bg-primary text-white px-4 py-2 absolute top-0 left-0 z-[60]">Saltar al
         contenido principal</a>

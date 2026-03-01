@@ -33,6 +33,7 @@
             </div>
         @endif
 
+        <x-site-end-reached-note />
         <x-site-scroll-assist />
     </body>
 </html>

@@ -37,6 +37,7 @@
         {{ $slot ?? '' }}
     </main>
 
+    <x-site-end-reached-note />
     <x-site-scroll-assist />
     <x-footer />
 

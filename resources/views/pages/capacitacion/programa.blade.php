@@ -269,7 +269,8 @@
             </div>
         </section>
 
-        <div class="fixed bottom-0 inset-x-0 z-50 lg:hidden border-t border-primary/20 bg-white/95 backdrop-blur-sm">
+        <div class="fixed bottom-0 inset-x-0 z-50 lg:hidden border-t border-primary/20 bg-white/95 backdrop-blur-sm inst-mobile-action-bar"
+            data-inst-mobile-action-bar>
             <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
                 <div>
                     <p class="text-3xl font-black text-primary leading-none">{{ $program['price'] }}</p>

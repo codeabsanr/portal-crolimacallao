@@ -97,6 +97,7 @@
             <div class="inst-stack-tight">
                 @if ($backHref)
                     <a href="{{ $backHref }}"
+                        data-inst-page-back
                         class="inline-flex min-h-[44px] items-center gap-1.5 text-white/75 hover:text-white text-xs font-semibold uppercase tracking-[0.14em] transition-colors group">
                         <span class="material-icons-outlined text-base group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
                         {{ $backLabel }}
