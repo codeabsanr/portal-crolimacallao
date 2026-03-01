@@ -2,7 +2,9 @@
     $routeName = request()->route()?->getName() ?? '';
 
     $subheroRoutes = [
+        'tramites.tracking',
         'tramites.habilidad',
+        'tramites.habilidad.tracking',
         'tramites.colegiatura',
         'tramites.registros',
         'tramites.carne',

@@ -92,8 +92,8 @@
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_72%_44%,rgba(102,2,25,0.12),transparent_56%)] pointer-events-none"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_24%_88%,rgba(186,124,0,0.1),transparent_40%)] pointer-events-none"></div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-6 sm:gap-8 items-center">
             <div class="inst-stack-tight">
                 @if ($backHref)
                     <a href="{{ $backHref }}"

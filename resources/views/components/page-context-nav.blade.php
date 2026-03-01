@@ -21,8 +21,10 @@
         'institucional.convenios' => ['sectionLabel' => 'Institucional', 'sectionRoute' => 'institucional', 'currentLabel' => 'Convenios'],
 
         'tramites' => ['sectionLabel' => 'Trámites', 'sectionRoute' => 'tramites', 'currentLabel' => 'Catálogo de trámites'],
+        'tramites.tracking' => ['sectionLabel' => 'Trámites', 'sectionRoute' => 'tramites', 'parentLabel' => 'Catálogo de trámites', 'parentRoute' => 'tramites', 'currentLabel' => 'Seguimiento de trámites'],
         'tramites.faq' => ['sectionLabel' => 'Trámites', 'sectionRoute' => 'tramites', 'parentLabel' => 'Catálogo de trámites', 'parentRoute' => 'tramites', 'currentLabel' => 'Preguntas frecuentes'],
         'tramites.habilidad' => ['sectionLabel' => 'Trámites', 'sectionRoute' => 'tramites', 'parentLabel' => 'Catálogo de trámites', 'parentRoute' => 'tramites', 'currentLabel' => 'Habilidad profesional'],
+        'tramites.habilidad.tracking' => ['sectionLabel' => 'Trámites', 'sectionRoute' => 'tramites', 'parentLabel' => 'Habilidad profesional', 'parentRoute' => 'tramites.habilidad', 'currentLabel' => 'Seguimiento de trámite'],
         'tramites.colegiatura' => ['sectionLabel' => 'Trámites', 'sectionRoute' => 'tramites', 'parentLabel' => 'Catálogo de trámites', 'parentRoute' => 'tramites', 'currentLabel' => 'Colegiatura'],
         'tramites.registros' => ['sectionLabel' => 'Trámites', 'sectionRoute' => 'tramites', 'parentLabel' => 'Catálogo de trámites', 'parentRoute' => 'tramites', 'currentLabel' => 'Registros académicos'],
         'tramites.carne' => ['sectionLabel' => 'Trámites', 'sectionRoute' => 'tramites', 'parentLabel' => 'Catálogo de trámites', 'parentRoute' => 'tramites', 'currentLabel' => 'Carné institucional'],
@@ -69,7 +71,9 @@
 
 @php
     $subheroRoutes = [
+        'tramites.tracking',
         'tramites.habilidad', 'tramites.colegiatura', 'tramites.registros',
+        'tramites.habilidad.tracking',
         'tramites.carne', 'tramites.mesa-partes',
         'capacitacion.cursos', 'capacitacion.calendario',
         'capacitacion.congresos', 'capacitacion.archivo', 'capacitacion.aula-virtual', 'capacitacion.programa', 'capacitacion.programa.preview',

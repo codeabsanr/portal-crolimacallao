@@ -72,7 +72,7 @@
         <section class="inst-section bg-[linear-gradient(180deg,#ffffff_0%,#f8f4ea_100%)]">
             <div class="max-w-7xl mx-auto">
                 <div class="grid lg:grid-cols-5 gap-8 lg:gap-10">
-                    <article class="lg:col-span-3 rounded-xl border border-primary/25 bg-white p-8 shadow-[0_22px_40px_-30px_rgba(15,23,42,0.45)]">
+                    <article class="lg:col-span-3 rounded-xl border border-primary/25 bg-white p-5 sm:p-6 lg:p-8 shadow-[0_22px_40px_-30px_rgba(15,23,42,0.45)]">
                         <p class="inst-kicker text-primary">Guía paso a paso</p>
                         <h2 class="inst-title text-secondary mt-1 mb-4">Cómo funciona un trámite</h2>
                         <div class="mb-5 h-[3px] w-20 bg-brand-gold-light"></div>
@@ -96,14 +96,14 @@
                         </ol>
                     </article>
 
-                    <aside class="lg:col-span-2 rounded-xl border border-primary/30 p-8 bg-inst-hero text-white shadow-[0_22px_40px_-30px_rgba(15,23,42,0.55)] relative overflow-hidden">
+                    <aside class="lg:col-span-2 rounded-xl border border-primary/30 p-5 sm:p-6 lg:p-8 bg-inst-hero text-white shadow-[0_22px_40px_-30px_rgba(15,23,42,0.55)] relative overflow-hidden">
                         <div class="absolute inset-x-0 top-0 h-[2px] bg-brand-gold"></div>
                         <p class="text-xs uppercase tracking-[0.15em] text-brand-gold-light font-semibold mb-2">Canal prioritario</p>
                         <h2 class="text-white text-2xl font-black mb-3">Mesa de Partes 24/7</h2>
                         <p class="text-white/90 mb-6">Si su trámite requiere expediente o documento formal, este canal acelera el registro y seguimiento.</p>
                         <a href="{{ url('tramites/mesa-partes') }}" class="inst-btn !bg-white !text-primary hover:!bg-brand-gold-soft w-full">Ir a Mesa de Partes</a>
                         <div class="mt-5 pt-5 border-t border-white/20 text-sm text-white/80 space-y-2">
-                            <p class="inline-flex items-center gap-2"><span class="material-icons-outlined text-base">mail</span>tramitedocumentario@crolimacallao.org.pe</p>
+                            <p class="inline-flex items-start gap-2 break-all"><span class="material-icons-outlined text-base mt-0.5">mail</span>tramitedocumentario@crolimacallao.org.pe</p>
                             <p class="inline-flex items-center gap-2"><span class="material-icons-outlined text-base">call</span>+51 982 520 891</p>
                         </div>
                     </aside>
@@ -113,7 +113,7 @@
 
         <section id="tramites-faq" class="scroll-mt-28 inst-section bg-[linear-gradient(180deg,#faf3f5_0%,#f3e7eb_100%)]">
             <div class="max-w-5xl mx-auto">
-                <div class="rounded-xl border border-primary/20 bg-white p-6 md:p-8 shadow-[0_18px_34px_-30px_rgba(15,23,42,0.45)] text-center">
+                <div class="rounded-xl border border-primary/20 bg-white p-5 sm:p-6 md:p-8 shadow-[0_18px_34px_-30px_rgba(15,23,42,0.45)] text-center">
                     <p class="inst-kicker text-primary">Antes de enviar</p>
                     <h2 class="inst-title text-secondary mt-2">Preguntas frecuentes</h2>
                     <div class="mx-auto mt-3 h-[3px] w-24 bg-brand-gold-light"></div>

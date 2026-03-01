@@ -28,7 +28,7 @@
                     </article>
                 </div>
 
-                <div class="grid lg:grid-cols-2 gap-6 md:gap-7">
+                <div class="grid lg:grid-cols-2 gap-5 md:gap-7">
                     <div class="inst-card p-6 md:p-8 inst-stack-tight">
                         <x-page-section-intro eyebrow="Registro digital" title="Enviar expediente"
                             subtitle="Complete datos mínimos y adjunte su documentación." />
@@ -38,9 +38,9 @@
                             <button type="button" class="inst-btn-primary w-full sm:w-auto">Registrar envío</button>
                         </form>
                     </div>
-                    <aside class="inst-card p-6 md:p-8 border-primary/30 bg-primary/5 inst-stack-tight">
+                    <aside class="inst-card p-5 sm:p-6 md:p-8 border-primary/30 bg-primary/5 inst-stack-tight">
                         <p class="inst-kicker">Seguimiento</p>
-                        <h3 class="text-text-main text-xl font-black">Estado de solicitud</h3>
+                        <h3 class="text-text-main text-lg sm:text-xl font-black">Estado de solicitud</h3>
                         <div class="h-[3px] w-12 bg-brand-gold-light"></div>
                         <p class="text-text-main">Código simulado: <strong>MP-2026-00421</strong></p>
                         <p class="text-sm text-text-main">Última actualización: En revisión documentaria.</p>

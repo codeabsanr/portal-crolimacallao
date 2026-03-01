@@ -24,7 +24,142 @@ Route::view('/normativa/guias', 'pages.normativa.guias')->name('normativa.guias'
 Route::view('/normativa/repositorio', 'pages.normativa.repositorio')->name('normativa.repositorio');
 Route::view('/tramites', 'pages.tramites.index')->name('tramites');
 Route::view('/tramites/preguntas-frecuentes', 'pages.tramites.preguntas-frecuentes')->name('tramites.faq');
-Route::view('/tramites/habilidad', 'pages.tramites.habilidad')->name('tramites.habilidad');
+Route::get('/tramites/habilidad', function () {
+    $trackingExamples = ['HAB-2026-00127', 'HAB-2026-00421', 'HAB-2026-00605'];
+    return view('pages.tramites.habilidad', compact('trackingExamples'));
+})->name('tramites.habilidad');
+Route::get('/tramites/seguimiento', function () {
+    $trackingCatalog = [
+        'habilidad' => [
+            'label' => 'Habilidad profesional',
+            'sampleCode' => 'HAB-2026-00421',
+            'sla' => '3 a 5 días hábiles',
+            'stages' => [
+                ['title' => 'Registro de expediente', 'detail' => 'Ingreso del expediente por canal virtual o presencial.', 'owner' => 'Mesa de Partes'],
+                ['title' => 'Validación documentaria', 'detail' => 'Verificación de requisitos y consistencia de anexos.', 'owner' => 'Unidad de Trámites'],
+                ['title' => 'Evaluación administrativa', 'detail' => 'Revisión interna para aprobación y emisión.', 'owner' => 'Secretaría técnica'],
+                ['title' => 'Emisión de constancia', 'detail' => 'Publicación de resultado y habilitación de descarga digital.', 'owner' => 'Plataforma institucional'],
+            ],
+            'documents' => ['Solicitud simple firmada', 'Constancia de no adeudo', 'Comprobante de pago'],
+        ],
+        'colegiatura' => [
+            'label' => 'Colegiatura',
+            'sampleCode' => 'COL-2026-00158',
+            'sla' => '7 a 10 días hábiles',
+            'stages' => [
+                ['title' => 'Registro de expediente', 'detail' => 'Recepción del expediente de colegiatura.', 'owner' => 'Mesa de Partes'],
+                ['title' => 'Control documentario', 'detail' => 'Revisión de títulos, identidad y requisitos reglamentarios.', 'owner' => 'Unidad de Colegiatura'],
+                ['title' => 'Evaluación de cumplimiento', 'detail' => 'Validación administrativa para continuidad del trámite.', 'owner' => 'Secretaría técnica'],
+                ['title' => 'Resolución y alta', 'detail' => 'Emisión de resolución y actualización en padrón institucional.', 'owner' => 'Registro institucional'],
+            ],
+            'documents' => ['Solicitud de colegiatura', 'Título o grado académico', 'Comprobante de pago de derecho'],
+        ],
+        'registros' => [
+            'label' => 'Registros académicos',
+            'sampleCode' => 'REG-2026-00092',
+            'sla' => '4 a 6 días hábiles',
+            'stages' => [
+                ['title' => 'Ingreso de solicitud', 'detail' => 'Registro de actualización académica y anexos.', 'owner' => 'Mesa de Partes'],
+                ['title' => 'Validación de soporte', 'detail' => 'Revisión de certificados, grados o constancias.', 'owner' => 'Unidad de Registros'],
+                ['title' => 'Consolidación en sistema', 'detail' => 'Actualización de datos en el perfil institucional.', 'owner' => 'Registro institucional'],
+                ['title' => 'Cierre de trámite', 'detail' => 'Confirmación de actualización y notificación.', 'owner' => 'Atención al colegiado'],
+            ],
+            'documents' => ['Formato de actualización', 'Documento académico de sustento', 'Comprobante de pago (si aplica)'],
+        ],
+        'carne' => [
+            'label' => 'Carné institucional',
+            'sampleCode' => 'CAR-2026-00231',
+            'sla' => '2 a 4 días hábiles',
+            'stages' => [
+                ['title' => 'Solicitud registrada', 'detail' => 'Recepción de solicitud de emisión, renovación o duplicado.', 'owner' => 'Mesa de Partes'],
+                ['title' => 'Validación de datos', 'detail' => 'Verificación de identidad y estado de colegiatura.', 'owner' => 'Atención al colegiado'],
+                ['title' => 'Producción de carné', 'detail' => 'Generación del carné institucional.', 'owner' => 'Unidad administrativa'],
+                ['title' => 'Entrega o habilitación', 'detail' => 'Notificación para entrega física o constancia digital.', 'owner' => 'Atención al colegiado'],
+            ],
+            'documents' => ['Solicitud de carné', 'Documento de identidad vigente', 'Comprobante de pago'],
+        ],
+        'mesa-partes' => [
+            'label' => 'Mesa de Partes',
+            'sampleCode' => 'MDP-2026-01844',
+            'sla' => '24 a 72 horas para derivación',
+            'stages' => [
+                ['title' => 'Documento recibido', 'detail' => 'Registro inicial y asignación de número de expediente.', 'owner' => 'Mesa de Partes'],
+                ['title' => 'Control de admisibilidad', 'detail' => 'Revisión básica de formato y anexos mínimos.', 'owner' => 'Mesa de Partes'],
+                ['title' => 'Derivación interna', 'detail' => 'Envío al área competente según materia.', 'owner' => 'Secretaría general'],
+                ['title' => 'Trámite en área', 'detail' => 'Gestión interna según procedimiento aplicable.', 'owner' => 'Área responsable'],
+            ],
+            'documents' => ['Documento principal', 'Anexos de sustento', 'Datos de contacto del solicitante'],
+        ],
+    ];
+
+    $trackingCode = trim((string) request('codigo', ''));
+    $trackingType = trim((string) request('tipo', ''));
+
+    if ($trackingType === '' && $trackingCode !== '') {
+        $prefixMap = [
+            'HAB-' => 'habilidad',
+            'COL-' => 'colegiatura',
+            'REG-' => 'registros',
+            'CAR-' => 'carne',
+            'MDP-' => 'mesa-partes',
+        ];
+        $normalizedCode = strtoupper($trackingCode);
+        foreach ($prefixMap as $prefix => $type) {
+            if (str_starts_with($normalizedCode, $prefix)) {
+                $trackingType = $type;
+                break;
+            }
+        }
+    }
+
+    if (!array_key_exists($trackingType, $trackingCatalog)) {
+        $trackingType = 'habilidad';
+    }
+
+    $typeConfig = $trackingCatalog[$trackingType];
+    if ($trackingCode === '') {
+        $trackingCode = $typeConfig['sampleCode'];
+    }
+
+    $statusByIndex = ['completed', 'completed', 'current', 'pending'];
+    $dateByIndex = ['28 Feb 2026 - 09:12', '28 Feb 2026 - 14:45', '01 Mar 2026 - 10:30', 'Pendiente'];
+    $timeline = [];
+    foreach ($typeConfig['stages'] as $index => $stage) {
+        $timeline[] = [
+            'title' => $stage['title'],
+            'detail' => $stage['detail'],
+            'datetime' => $dateByIndex[$index] ?? 'Pendiente',
+            'status' => $statusByIndex[$index] ?? 'pending',
+            'owner' => $stage['owner'],
+        ];
+    }
+
+    $documentStatusByIndex = ['Validado', 'Validado', 'En revisión'];
+    $documents = [];
+    foreach ($typeConfig['documents'] as $index => $name) {
+        $documents[] = ['name' => $name, 'status' => $documentStatusByIndex[$index] ?? 'Recibido'];
+    }
+
+    $summary = [
+        'tramite' => $typeConfig['label'],
+        'estado' => 'En evaluación administrativa',
+        'sla' => 'Plazo referencial: ' . $typeConfig['sla'],
+        'lastUpdate' => 'Actualizado el 01 Mar 2026 a las 10:30',
+    ];
+
+    $typeOptions = [];
+    foreach ($trackingCatalog as $key => $config) {
+        $typeOptions[] = ['value' => $key, 'label' => $config['label']];
+    }
+
+    return view('pages.tramites.seguimiento', compact('trackingCode', 'trackingType', 'timeline', 'documents', 'summary', 'typeOptions'));
+})->name('tramites.tracking');
+Route::get('/tramites/habilidad/seguimiento', function () {
+    return redirect()->route('tramites.tracking', [
+        'tipo' => 'habilidad',
+        'codigo' => request('codigo'),
+    ]);
+})->name('tramites.habilidad.tracking');
 Route::view('/tramites/colegiatura', 'pages.tramites.colegiatura')->name('tramites.colegiatura');
 Route::view('/tramites/registros', 'pages.tramites.registros')->name('tramites.registros');
 Route::view('/tramites/carne', 'pages.tramites.carne')->name('tramites.carne');
@@ -165,6 +300,7 @@ Route::get('/sitemap.xml', function () {
         'institucional.convenios',
         'tramites',
         'tramites.faq',
+        'tramites.tracking',
         'tramites.habilidad',
         'tramites.colegiatura',
         'tramites.registros',

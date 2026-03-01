@@ -4,8 +4,8 @@
     <main id="main">
         <section class="inst-section inst-bg-light-grid bg-background-light">
             <div class="max-w-7xl mx-auto inst-stack">
-                <div class="grid lg:grid-cols-3 gap-6 md:gap-7">
-                    <article class="lg:col-span-2 rounded-xl border border-primary/25 bg-white p-6 md:p-8 shadow-[0_22px_40px_-30px_rgba(15,23,42,0.45)]">
+                <div class="grid lg:grid-cols-3 gap-5 md:gap-7">
+                    <article class="lg:col-span-2 rounded-xl border border-primary/25 bg-white p-5 sm:p-6 md:p-8 shadow-[0_22px_40px_-30px_rgba(15,23,42,0.45)]">
                         <p class="inst-kicker">Ayuda operativa</p>
                         <h2 class="text-secondary text-3xl md:text-4xl font-black tracking-tight mt-1">Preguntas frecuentes de trámites</h2>
                         <div class="mt-3 h-[3px] w-20 bg-brand-gold-light"></div>
@@ -22,10 +22,10 @@
                         </div>
                     </article>
 
-                    <aside class="rounded-xl border border-primary/30 bg-inst-hero text-white p-6 md:p-8 shadow-[0_22px_40px_-30px_rgba(15,23,42,0.55)] relative overflow-hidden">
+                    <aside class="rounded-xl border border-primary/30 bg-inst-hero text-white p-5 sm:p-6 md:p-8 shadow-[0_22px_40px_-30px_rgba(15,23,42,0.55)] relative overflow-hidden">
                         <div class="absolute inset-x-0 top-0 h-[2px] bg-brand-gold"></div>
                         <p class="text-xs uppercase tracking-[0.15em] text-brand-gold-light font-semibold">Soporte directo</p>
-                        <h3 class="text-2xl font-black mt-2">¿Aún tienes dudas?</h3>
+                        <h3 class="text-xl sm:text-2xl font-black mt-2">¿Aún tienes dudas?</h3>
                         <p class="mt-3 text-white/90">Te orientamos para elegir trámite, preparar documentos y evitar observaciones.</p>
 
                         <div class="mt-6 space-y-3">
@@ -34,7 +34,7 @@
                         </div>
 
                         <div class="mt-6 border-t border-white/20 pt-5 space-y-2 text-sm text-white/85">
-                            <p class="inline-flex items-center gap-2"><span class="material-icons-outlined text-base text-brand-gold-light">mail</span>tramitedocumentario@crolimacallao.org.pe</p>
+                            <p class="inline-flex items-start gap-2 break-all"><span class="material-icons-outlined text-base text-brand-gold-light mt-0.5">mail</span>tramitedocumentario@crolimacallao.org.pe</p>
                             <p class="inline-flex items-center gap-2"><span class="material-icons-outlined text-base text-brand-gold-light">call</span>+51 982 520 891</p>
                         </div>
                     </aside>
