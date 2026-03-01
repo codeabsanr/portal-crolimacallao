@@ -1,17 +1,28 @@
 <div x-data="{
     hideTopStrip: false,
+    collapseThreshold: 36,
+    expandThreshold: 12,
     updateTopStripState() {
-        this.hideTopStrip = window.scrollY > 24;
+        const y = window.scrollY || 0;
+
+        if (!this.hideTopStrip && y > this.collapseThreshold) {
+            this.hideTopStrip = true;
+            return;
+        }
+
+        if (this.hideTopStrip && y < this.expandThreshold) {
+            this.hideTopStrip = false;
+        }
     }
 }" x-init="updateTopStripState()"
-    @scroll.window.throttle.50ms="updateTopStripState()">
+    @scroll.window="updateTopStripState()">
     <div class="fixed top-0 z-50 w-full" style="left: 0; right: 0;" data-inst-navbar-fixed>
     <a href="#main"
         class="sr-only focus:not-sr-only bg-primary text-white px-4 py-2 absolute top-0 left-0 z-[60]">Saltar al
         contenido principal</a>
 
-    <div class="hidden md:block w-full bg-secondary text-white text-xs border-b border-primary/20 overflow-hidden transition-all duration-300 ease-out"
-        :class="hideTopStrip ? 'max-h-0 opacity-0 border-transparent pointer-events-none' : 'max-h-16 opacity-100'">
+    <div x-cloak x-show="!hideTopStrip"
+        class="hidden md:block w-full bg-secondary text-white text-xs border-b border-primary/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-2">
             <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-white/90">
                 <span class="inline-flex items-center gap-1.5"><span
@@ -198,7 +209,7 @@
             }
         }"
         @keydown.escape.window="closeMenu()"
-        class="relative w-full bg-surface-light shadow-md">
+        class="relative w-full bg-surface-light shadow-none">
         {{-- Borde inferior dorado --}}
         <div class="absolute inset-x-0 bottom-0 h-[2px] bg-[linear-gradient(90deg,#D4A62A_0%,#BA7C00_48%,#D4A62A_100%)]"
             aria-hidden="true"></div>
@@ -368,7 +379,7 @@
     </header>
     </div>
 
-    <div class="h-16 transition-all duration-300 ease-out" :class="hideTopStrip ? 'md:h-20' : 'md:h-[7rem]'"
+    <div class="h-16" :class="hideTopStrip ? 'md:h-20' : 'md:h-[7rem]'"
         aria-hidden="true"></div>
 </div>
 
