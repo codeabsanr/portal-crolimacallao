@@ -80,20 +80,22 @@
                     </div>
                 </article>
 
-                <aside class="inst-card p-5 sm:p-6 border border-primary/20 bg-white inst-stack-tight">
-                    <p class="inst-kicker">Acciones</p>
-                    <h3 class="text-xl sm:text-2xl font-black text-text-main">Registrar y monitorear</h3>
-                    <a href="{{ route('tramites.mesa-partes') }}" class="inst-btn-primary !w-full">Registrar expediente</a>
-                    <a href="{{ route('tramites.tracking', ['tipo' => 'colegiatura']) }}" class="inst-btn-secondary !w-full">Seguimiento del trámite</a>
-                    <a href="{{ route('contacto') }}" class="inst-btn-secondary !w-full">Orientación institucional</a>
-                    <div class="border-t border-primary/15 pt-4">
-                        <p class="text-xs uppercase tracking-[0.12em] text-primary font-bold">Código de referencia</p>
-                        <a class="inst-link inline-flex items-center gap-2 mt-2 break-all"
-                            href="{{ route('tramites.tracking', ['tipo' => 'colegiatura', 'codigo' => 'COL-2026-00158']) }}">
-                            <span class="material-icons-outlined text-base text-primary">tag</span>COL-2026-00158
-                        </a>
-                    </div>
-                </aside>
+                <x-tramites-action-panel
+                    title="Registrar y monitorear"
+                    primary-label="Registrar expediente"
+                    :primary-href="route('tramites.mesa-partes')"
+                    primary-icon="upload_file"
+                    secondary-label="Seguimiento del trámite"
+                    :secondary-href="route('tramites.tracking', ['tipo' => 'colegiatura'])"
+                    secondary-icon="timeline"
+                    tertiary-label="Orientación institucional"
+                    :tertiary-href="route('contacto')"
+                    tertiary-icon="support_agent"
+                    reference-code="COL-2026-00158"
+                    :reference-href="route('tramites.tracking', ['tipo' => 'colegiatura', 'codigo' => 'COL-2026-00158'])"
+                    hint-text="Si ya reuniste requisitos, registra el expediente y luego monitorea el avance."
+                    hint-cta-label="Abrir Mesa de Partes"
+                    :hint-cta-href="route('tramites.mesa-partes')" />
             </div>
         </section>
     </main>

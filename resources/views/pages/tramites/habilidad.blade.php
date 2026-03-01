@@ -120,24 +120,23 @@
                     </div>
                 </article>
 
-                <aside class="inst-card p-5 sm:p-6 border border-primary/20 bg-white inst-stack-tight">
-                    <p class="inst-kicker">Acciones</p>
-                    <h3 class="text-xl sm:text-2xl font-black text-text-main">Registro y seguimiento</h3>
-                    <a href="{{ route('tramites.mesa-partes') }}" class="inst-btn-primary !w-full">Registrar solicitud</a>
-                    <a href="{{ route('tramites.tracking', ['tipo' => 'habilidad']) }}" class="inst-btn-secondary !w-full">Seguimiento del trámite</a>
-                    <a href="{{ route('contacto') }}" class="inst-btn-secondary !w-full">Solicitar orientación</a>
-                    <div class="border-t border-primary/15 pt-4">
-                        <p class="text-xs uppercase tracking-[0.12em] text-primary font-bold">Prueba seguimiento (demo)</p>
-                        <ul class="mt-2 space-y-1 text-sm text-text-main">
-                            @foreach ($trackingExamples as $code)
-                                <li class="inline-flex items-center gap-2 break-all">
-                                    <span class="material-icons-outlined text-base text-primary">tag</span>
-                                    <a class="inst-link" href="{{ route('tramites.tracking', ['tipo' => 'habilidad', 'codigo' => $code]) }}">{{ $code }}</a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </aside>
+                <x-tramites-action-panel
+                    title="Registro y seguimiento"
+                    primary-label="Registrar solicitud"
+                    :primary-href="route('tramites.mesa-partes')"
+                    primary-icon="upload_file"
+                    secondary-label="Seguimiento del trámite"
+                    :secondary-href="route('tramites.tracking', ['tipo' => 'habilidad'])"
+                    secondary-icon="timeline"
+                    tertiary-label="Solicitar orientación"
+                    :tertiary-href="route('contacto')"
+                    tertiary-icon="support_agent"
+                    reference-label="Prueba seguimiento (demo)"
+                    reference-code="HAB-2026-00421"
+                    :reference-href="route('tramites.tracking', ['tipo' => 'habilidad', 'codigo' => 'HAB-2026-00421'])"
+                    hint-text="En esta página, el siguiente paso esperado es registrar solicitud y validar su estado."
+                    hint-cta-label="Registrar ahora"
+                    :hint-cta-href="route('tramites.mesa-partes')" />
             </div>
         </section>
 
