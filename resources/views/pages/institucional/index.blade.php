@@ -74,6 +74,12 @@
                                 <p class="text-sm text-text-main mt-2">Consolidar una gestión líder y democrática reconocida por su excelencia institucional.</p>
                             </div>
                         </div>
+                        <div class="mt-6 flex justify-start">
+                            <a href="{{ route('institucional.quienes-somos') }}" class="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-bold text-sm tracking-[0.05em] transition-colors group">
+                                Conoce más sobre nuestra identidad
+                                <span class="material-icons-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -181,11 +187,10 @@
                 <p class="text-xs uppercase tracking-[0.16em] text-brand-gold-light font-bold">Participación institucional</p>
                 <h2 class="text-white mt-2">Accede a nuestras subpáginas institucionales</h2>
                 <p class="text-white/80 mt-3 text-sm md:text-base">Navega por historia, normativa, símbolos, convenios y documentos de gestión.</p>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-7 text-left">
-                    <a href="{{ route('institucional.resena-historica') }}" class="border border-white/25 bg-white/5 p-4 hover:bg-white/10 transition-colors"><p class="font-semibold">Reseña Histórica</p></a>
-                    <a href="{{ route('institucional.simbolos') }}" class="border border-white/25 bg-white/5 p-4 hover:bg-white/10 transition-colors"><p class="font-semibold">Símbolos</p></a>
-                    <a href="{{ route('institucional.reglamento') }}" class="border border-white/25 bg-white/5 p-4 hover:bg-white/10 transition-colors"><p class="font-semibold">Reglamento</p></a>
-                    <a href="{{ route('institucional.convenios') }}" class="border border-white/25 bg-white/5 p-4 hover:bg-white/10 transition-colors"><p class="font-semibold">Convenios</p></a>
+                <div class="grid sm:grid-cols-3 gap-3 mt-7 text-left">
+                    <a href="{{ route('institucional.resena-historica') }}" class="border border-white/25 bg-white/5 p-4 hover:bg-white/10 transition-colors"><p class="font-semibold text-center">Reseña Histórica</p></a>
+                    <a href="{{ route('institucional.simbolos') }}" class="border border-white/25 bg-white/5 p-4 hover:bg-white/10 transition-colors"><p class="font-semibold text-center">Símbolos</p></a>
+                    <a href="{{ route('institucional.reglamento') }}" class="border border-white/25 bg-white/5 p-4 hover:bg-white/10 transition-colors"><p class="font-semibold text-center">Reglamento</p></a>
                 </div>
                 <div class="mt-8 flex flex-wrap justify-center gap-3">
                     <a href="{{ route('tramites') }}" class="inst-btn !bg-white !text-primary hover:!bg-brand-gold-soft">¿Cómo colegiarme?</a>

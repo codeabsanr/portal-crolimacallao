@@ -1,10 +1,10 @@
 @php
     $hero = [
-        'eyebrow' => 'Gestion institucional',
-        'title' => 'Informacion institucional',
-        'summary' => 'Conozca autoridades, reglamentos y convenios del Colegio Regional de Obstetras III Lima-Callao.',
-        'cta1' => ['text' => 'Ver quienes somos', 'route' => 'institucional.quienes-somos'],
-        'cta2' => ['text' => 'Ver normatividad', 'route' => 'institucional.normatividad'],
+        'eyebrow' => 'Identidad y Gestion',
+        'title' => 'Nuestra Institucion',
+        'summary' => 'Representamos el ejercicio etico y profesional de la obstetricia en Lima y Callao, impulsando el bienestar y el desarrollo continuo de nuestras colegiadas.',
+        'cta1' => [],
+        'cta2' => [],
     ];
     $theme = [
         'trace' => 'inst-trace-invert-b',

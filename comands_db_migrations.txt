@@ -1,0 +1,75 @@
+=== CONFIGURACION LARAGON PARA EL PROYECTO ===
+
+RUTAS UTILIZADAS:
+- PHP: C:\laragon\bin\php\php-8.3.30-Win32-vs16-x64
+- MySQL: C:\laragon\bin\mysql\mysql-8.4.3-winx64
+- Node.js: C:\laragon\bin\nodejs\node-v22
+
+=== SCRIPTS DE CONFIGURACION AUTO ===
+
+Para PowerShell:
+  powershell -ExecutionPolicy Bypass -File setup-laragon.ps1
+
+Para CMD:
+  setup-laragon.bat
+
+=== COMANDOS PRINCIPALES ===
+
+1. Instalar dependencias:
+   composer install
+   npm install
+
+2. Configurar .env (ya hecho):
+   - Cambiar DB_CONNECTION a mysql
+   - Configurar credenciales de BD
+
+3. Crear base de datos:
+   mysql -u root -e "CREATE DATABASE IF NOT EXISTS portal_crolimacallao;"
+
+4. Ejecutar migraciones:
+   php artisan migrate
+
+5. Compilar assets (CSS, JS):
+   npm run build
+
+6. Iniciar servidor development:
+   php artisan serve
+
+7. Iniciar servidor con watch mode (desarrollo):
+   npm run dev
+
+=== CONFIGURACION .ENV ===
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=portal_crolimacallao
+DB_USERNAME=root
+DB_PASSWORD=
+
+=== ACCESO A LA APLICACION ===
+
+URL Local: http://127.0.0.1:8000
+Servidor PHP Artisan: puerto 8000
+MySQL: puerto 3306 (usuario root, sin contraseña)
+
+=== COMANDOS LARAGON CON PATH CONFIGURADO ===
+
+Ejecutar en PowerShell con PATH configurado:
+  $env:PATH = "C:\laragon\bin\nodejs\node-v22;C:\laragon\bin\php\php-8.3.30-Win32-vs16-x64;C:\laragon\bin\mysql\mysql-8.4.3-winx64\bin;$env:PATH"
+
+Luego cualquier comando funcionara:
+  php artisan serve
+  npm run dev
+  mysql -u root
+  composer install
+  etc...
+
+
+
+
+$env:PATH = "C:\laragon\bin\php\php-8.3.30-Win32-vs16-x64;C:\laragon\bin\mysql\mysql-8.4.3-winx64\bin;$env:PATH"; cd "c:\laragon\www\portal-crolimacallao" ; php artisan migrate
+
+
+
+$env:PATH = "C:\laragon\bin\php\php-8.3.30-Win32-vs16-x64;C:\laragon\bin\mysql\mysql-8.4.3-winx64\bin;$env:PATH"; cd "c:\laragon\www\portal-crolimacallao" ; php artisan serve

@@ -17,3 +17,7 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+setup-laragon.bat
+setup-laragon.ps1
+setup-ssh.ps1
+ssh-config

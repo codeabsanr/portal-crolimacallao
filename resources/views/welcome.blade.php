@@ -4,6 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'Portal CRO Lima-Callao') }}</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('site.webmanifest') }}">
+
 </head>
 <body style="font-family: Roboto, Arial, sans-serif; background: #f8f1f4; color: #1f2230;">
     <main style="max-width: 720px; margin: 4rem auto; padding: 1.5rem; background: #fff; border: 1px solid #e7d8dd;">
