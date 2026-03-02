@@ -48,7 +48,6 @@
 
         if (!$heroComponent) {
             $prefixFallbacks = [
-                'institucional.' => 'institucional',
                 'tramites.' => 'tramites',
                 'colegiados.' => 'colegiados',
                 'capacitacion.' => 'capacitacion',
